@@ -1,34 +1,60 @@
 ---
 layout: about
-title: about
+title: home
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
-
+subtitle: Department of Life Science, Hanyang University
+nav: true
+nav_order: 1
 profile:
   align: right
-  image: prof_pic.jpg
-  image_circular: false # crops the image to make it circular
+  image: lab_group.jpg
+  image_circular: false
   more_info: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
-
-selected_papers: true # includes a list of papers marked as "selected={true}"
-social: true # includes social icons at the bottom of the page
-
+    <p><strong>Lab of Cancer Biology</strong></p>
+    <p>Department of Life Science</p>
+    <p>Hanyang University</p>
+    <p>Natural Science Building, Room 516</p>
+    <p>222 Wangsimni-ro, Seongdong-gu, Seoul, Korea</p>
+selected_papers: true
+social: true
 announcements:
-  enabled: true # includes a list of news items
-  scrollable: true # adds a vertical scroll bar if there are more than 3 news items
-  limit: 5 # leave blank to include all the news in the `_news` folder
-
-latest_posts:
   enabled: true
-  scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
-  limit: 3 # leave blank to include all the blog posts
+  scrollable: true
+  limit: 5
+latest_posts:
+  enabled: false
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](https://www.reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+# Lab of Cancer Biology
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+한양대학교 생명과학과 암생물학연구실은 암세포가 항암 치료에 반응하고, 적응하며, 내성을 획득하는 과정을 연구합니다.
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+Our laboratory investigates how cancer cells adapt, evolve, and acquire resistance to anti-cancer therapies through translational cancer biology, omics-based analysis, and molecular biology approaches.
+
+## Research Mission
+
+Cancer therapy resistance remains a major barrier to durable patient responses. We aim to identify molecular vulnerabilities of aggressive cancer cells, define biomarkers that predict therapeutic response, and understand how tumor heterogeneity, cancer metabolism, and immune evasion shape treatment failure.
+
+## Main Research Areas
+
+- Mechanisms of cancer drug resistance
+- Vulnerabilities of malignant cancer cells
+- Epigenetic regulation of cancer immune evasion
+- Oncogenic metabolites and cancer metabolism
+- Biomarker discovery using patient-derived omics and bio-big data
+- Translational approaches for immunotherapy, including TIL and cancer vaccine strategies
+
+## People
+
+We are looking for self-motivated and passionate students and researchers who are interested in translational cancer biology. Prospective graduate students are welcome to contact Prof. Kyung-min Lee.
+
+📧 kyungminlee@hanyang.ac.kr
+
+<div class="row mt-4">
+  <div class="col-sm mt-3 mt-md-0">
+    <a href="{{ '/research/' | relative_url }}" class="btn btn-outline-primary btn-sm">Research</a>
+    <a href="{{ '/publications/' | relative_url }}" class="btn btn-outline-primary btn-sm">Publications</a>
+    <a href="{{ '/members/' | relative_url }}" class="btn btn-outline-primary btn-sm">Members</a>
+    <a href="{{ '/contact/' | relative_url }}" class="btn btn-outline-primary btn-sm">Contact</a>
+  </div>
+</div>

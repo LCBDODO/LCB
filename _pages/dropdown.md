@@ -1,13 +1,8 @@
 ---
 layout: page
-title: submenus
-nav: true
-nav_order: 8
-dropdown: true
-children:
-  - title: bookshelf
-    permalink: /books/
-  - title: divider
-  - title: blog
-    permalink: /blog/
+title: dropdown
+permalink: /dropdown/
+nav: false
 ---
+
+This page is hidden from the navigation menu.

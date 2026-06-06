@@ -2,6 +2,7 @@
 layout: page
 title: news
 permalink: /news/
+nav: false
 ---
 
-{% include news.liquid %}
+This page is hidden from the navigation menu.
