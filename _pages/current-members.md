@@ -1,11 +1,10 @@
 ---
 layout: page
-title: Current members
+title: Current Members
 permalink: /current-members/
 nav: false
 ---
 
 {% include lcb_style.html %}
 
-<div class="lcb-page"><p>Please see the <a href="{{ '/members/' | relative_url }}">Members</a> page.</p></div>
-
+<div class="lcb-page"><section class="lcb-section"><h1 class="lcb-section-title">Current Members</h1><p><a href="{{ '/members/#current-members' | relative_url }}">Go to Current Members</a></p></section></div>

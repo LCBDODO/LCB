@@ -10,13 +10,13 @@ contact_note: >
   Lab of Cancer Biology, Department of Life Science, Hanyang University.
   For graduate student inquiries, contact Prof. Kyung-min Lee at kyungminlee@hanyang.ac.kr.
 description: >
-  The Lab of Cancer Biology at Hanyang University studies cancer drug resistance, immune evasion,
-  oncogenic metabolism, immunotherapy, and translational cancer biology.
+  The Lab of Cancer Biology at Hanyang University studies cancer therapy resistance,
+  immune evasion, cancer metabolism, tumor heterogeneity, and translational cancer biology.
 footer_text: >
-  © Lab of Cancer Biology, Department of Life Science, Hanyang University.
+  © 2026 Lab of Cancer Biology, Department of Life Science, Hanyang University.
 keywords: cancer biology, therapy resistance, translational research, Hanyang University, omics, immune evasion
 lang: en
-icon: 🧬
+icon:
 url: https://lcbdodo.github.io
 baseurl: /LCB
 last_updated: false # set to true if you want to display last updated in the footer
@@ -59,7 +59,7 @@ al_folio:
     allow_remote_loader: true
   features:
     cv:
-      enabled: false
+      enabled: true
     distill:
       enabled: true
   compat:
@@ -83,14 +83,14 @@ al_folio:
 # -----------------------------------------------------------------------------
 
 navbar_fixed: true
-footer_fixed: true
-search_enabled: true
+footer_fixed: false
+search_enabled: false
 socials_in_search: false
 posts_in_search: false
 bib_search: true
 
 # Dimensions
-max_width: 930px
+max_width: 1180px
 
 # -----------------------------------------------------------------------------
 # Open Graph & Schema.org
@@ -122,7 +122,7 @@ bing_site_verification: # out your bing-site-verification ID (Bing Webmaster)
 # -----------------------------------------------------------------------------
 
 blog_name:
-blog_description: 
+blog_description:
 external_sources: []
 
 # Pagination
@@ -324,7 +324,7 @@ display_categories: ["external-services"] # these categories will be displayed o
 
 scholar:
   last_name: [Lee]
-  first_name: [Kyung-min ]
+  first_name: [Kyung-min]
 
   style: apa
   locale: en
@@ -445,11 +445,11 @@ enable_cookie_consent: false # enables GDPR-compliant cookie consent dialog (htt
 enable_masonry: true # enables automatic project cards arrangement
 enable_math: true # enables math typesetting (uses MathJax)
 enable_tooltips: false # enables automatic tooltip links generated for each section titles on pages and posts
-enable_darkmode: true # enables switching between light/dark modes
+enable_darkmode: false # enables switching between light/dark modes
 enable_navbar_social: false # enables displaying social links in the navbar on the about page
 enable_project_categories: true # enables categorization of projects into multiple categories
 enable_medium_zoom: true # enables image zoom feature (as on medium.com)
-enable_progressbar: true # enables a horizontal progress bar linked to the vertical scroll position
+enable_progressbar: false # enables a horizontal progress bar linked to the vertical scroll position
 enable_video_embedding: false # enables video embedding for bibtex entries. If false, the button opens the video link in a new window.
 
 # -----------------------------------------------------------------------------

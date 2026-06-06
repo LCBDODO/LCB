@@ -7,5 +7,4 @@ nav: false
 
 {% include lcb_style.html %}
 
-<div class="lcb-page"><p>Please see the <a href="{{ '/members/' | relative_url }}">Members</a> page.</p></div>
-
+<div class="lcb-page"><section class="lcb-section"><h1 class="lcb-section-title">Alumni</h1><p><a href="{{ '/members/#alumni' | relative_url }}">Go to Alumni</a></p></section></div>

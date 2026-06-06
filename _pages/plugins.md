@@ -1,7 +1,8 @@
 ---
 layout: page
-title: Plugins
-permalink: /plugins/
+title: plugins
+permalink: /hidden-plugins/
 nav: false
 ---
 
+This page is hidden for the Lab of Cancer Biology website.

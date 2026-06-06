@@ -1,7 +1,8 @@
 ---
 layout: page
-title: Books
-permalink: /books/
+title: books
+permalink: /hidden-books/
 nav: false
 ---
 
+This page is hidden for the Lab of Cancer Biology website.
