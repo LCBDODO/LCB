@@ -1,8 +1,7 @@
 ---
 layout: page
-title: blog
+title: Blog
 permalink: /blog/
 nav: false
 ---
 
-This page is hidden from the navigation menu.

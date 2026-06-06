@@ -1,8 +1,7 @@
 ---
 layout: page
-title: about_einstein
+title: About Einstein
 permalink: /about_einstein/
 nav: false
 ---
 
-This page is hidden from the navigation menu.

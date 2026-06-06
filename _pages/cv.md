@@ -1,8 +1,7 @@
 ---
 layout: page
-title: cv
+title: CV
 permalink: /cv/
 nav: false
 ---
 
-This page is hidden from the navigation menu.

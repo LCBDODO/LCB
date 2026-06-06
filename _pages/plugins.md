@@ -1,8 +1,7 @@
 ---
 layout: page
-title: plugins
+title: Plugins
 permalink: /plugins/
 nav: false
 ---
 
-This page is hidden from the navigation menu.

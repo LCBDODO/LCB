@@ -1,8 +1,7 @@
 ---
 layout: page
-title: news
+title: News
 permalink: /news/
 nav: false
 ---
 
-This page is hidden from the navigation menu.

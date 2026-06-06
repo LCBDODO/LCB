@@ -1,8 +1,7 @@
 ---
 layout: page
-title: dropdown
+title: Submenus
 permalink: /dropdown/
 nav: false
 ---
 
-This page is hidden from the navigation menu.

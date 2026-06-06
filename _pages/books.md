@@ -1,8 +1,7 @@
 ---
 layout: page
-title: books
+title: Books
 permalink: /books/
 nav: false
 ---
 
-This page is hidden from the navigation menu.

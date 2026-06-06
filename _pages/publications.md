@@ -1,16 +1,20 @@
 ---
 layout: page
+title: Publications
 permalink: /publications/
-title: publications
-description: Publications from the Lab of Cancer Biology.
 nav: true
-nav_order: 7
+nav_order: 5
+description: Publications from the Lab of Cancer Biology.
 ---
 
-# Publications
+{% include lcb_style.html %}
 
-Selected publications are listed in reverse chronological order. The bibliography is managed through `_bibliography/papers.bib`.
 
-{% include bib_search.liquid %}
+<div class="lcb-page">
+  <section class="lcb-section">
+    <h1 class="lcb-rule-title">Publications</h1>
+    <p class="lcb-small-note">Publications are listed in reverse chronological order.</p>
+  </section>
+</div>
 
 {% bibliography %}

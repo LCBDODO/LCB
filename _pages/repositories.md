@@ -1,8 +1,7 @@
 ---
 layout: page
-title: repositories
+title: Repositories
 permalink: /repositories/
 nav: false
 ---
 
-This page is hidden from the navigation menu.

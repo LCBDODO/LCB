@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="160" viewBox="0 0 560 160">
+  <rect width="560" height="160" rx="18" fill="#ffffff"/>
+  <circle cx="72" cy="80" r="42" fill="#162B6F" opacity="0.10"/>
+  <circle cx="72" cy="80" r="24" fill="#162B6F" opacity="0.95"/>
+  <text x="130" y="72" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="700" fill="#162B6F">Lab of Cancer Biology</text>
+  <text x="132" y="108" font-family="Arial, Helvetica, sans-serif" font-size="18" fill="#555">Hanyang University</text>
+</svg>

@@ -1,42 +1,71 @@
 ---
 layout: page
-title: research
+title: Research
 permalink: /research/
-description: Research overview of the Lab of Cancer Biology.
 nav: true
 nav_order: 2
+description: Research of the Lab of Cancer Biology.
 ---
 
-# Research
+{% include lcb_style.html %}
 
-We study the biological mechanisms that allow cancer cells to survive therapy, adapt to selective pressure, and acquire resistance. Our long-term goal is to improve patient survival and quality of life by translating molecular discoveries into therapeutic strategies.
 
-## Core Questions
+<div class="lcb-page">
+  <section class="lcb-section">
+    <h1 class="lcb-rule-title">Research</h1>
+    <p>We are wholly dedicated to acquiring a better understanding of the mechanisms of cancer drug resistance in order to vastly improve patient survival and quality of life.</p>
+  </section>
 
-### How do cancer cells acquire therapy resistance?
+  <section class="lcb-section">
+    <h2 class="lcb-rule-title">Projects</h2>
+    <p>We conduct research to find a way to selectively eliminate virulent cancer cells.</p>
 
-We investigate the molecular mechanisms that enable cancer cells to survive chemotherapy, targeted therapy, and immunotherapy. This includes the identification of resistance drivers, adaptive signaling pathways, and context-dependent vulnerabilities.
+    <div class="lcb-card-grid">
+      <div class="lcb-card">
+        <h3>Identifying vulnerability of cancer cells</h3>
+        <p>Discovery of biomarker-based vulnerabilities and therapeutic dependencies in malignant cancer cells.</p>
+      </div>
+      <div class="lcb-card">
+        <h3>Epigenetic mechanism for immune evasion</h3>
+        <p>Understanding how cancer cells suppress anti-tumor immune responses through epigenetic regulation.</p>
+      </div>
+      <div class="lcb-card">
+        <h3>Novel oncogenic metabolites</h3>
+        <p>Discovering metabolic alterations that promote cancer progression and therapeutic resistance.</p>
+      </div>
+      <div class="lcb-card">
+        <h3>Novel modality for immunotherapy</h3>
+        <p>Exploring immunotherapy approaches including TIL and cancer vaccine strategies.</p>
+      </div>
+    </div>
+  </section>
 
-### Which vulnerabilities can selectively eliminate aggressive cancer cells?
+  <section class="lcb-section">
+    <h2 class="lcb-rule-title">Previous Projects</h2>
+    <div class="lcb-card-grid">
+      <div class="lcb-card">
+        <h3>Epigenetic Repression of STING by MYC</h3>
+        <p>MYC promotes immune evasion and resistance to immune checkpoint inhibitors in triple-negative breast cancer.</p>
+      </div>
+      <div class="lcb-card">
+        <h3>MYC and MCL1 in chemoresistant breast cancer stem cells</h3>
+        <p>MYC and MCL1 cooperatively promote chemotherapy-resistant breast cancer stem cells through mitochondrial oxidative phosphorylation.</p>
+      </div>
+      <div class="lcb-card">
+        <h3>PRR11 and antiestrogen resistance</h3>
+        <p>Proline rich 11 overexpression amplifies PI3K signaling and promotes antiestrogen resistance in breast cancer.</p>
+      </div>
+    </div>
+  </section>
 
-A central goal of the lab is to discover cancer cell dependencies that can be exploited therapeutically. We focus on molecular vulnerabilities that emerge from oncogenic signaling, altered metabolism, and epigenetic dysregulation.
-
-### How does immune evasion arise in cancer?
-
-We study how cancer cells suppress anti-tumor immunity, with interest in epigenetic regulation of immune signaling pathways and resistance to immune checkpoint blockade.
-
-### How can patient-derived data guide translational research?
-
-We integrate patient-derived clinical information, omics data, and molecular biology assays to generate experimentally testable hypotheses.
-
-## Research Topics
-
-- Identifying vulnerabilities of cancer cells
-- Understanding epigenetic mechanisms of immune evasion
-- Discovering novel oncogenic metabolites
-- Developing new modalities for immunotherapy, including TIL and cancer vaccine approaches
-- Defining biomarkers and resistance mechanisms using omics and bio-big data
-
-## Approach
-
-Our research combines patient-derived bio-big data, comprehensive omics interpretation, and molecular biology experiments. We use this integrated workflow to connect clinical observations to mechanistic cancer biology.
+  <section class="lcb-section">
+    <h2 class="lcb-rule-title">Approaches</h2>
+    <p>We seek to solve problems raised by patient-derived clinical information through comprehensive interpretation of omics data and results from molecular biology assays.</p>
+    <div class="lcb-card-grid">
+      <div class="lcb-card"><h3>Clinical information</h3><p>Patient-derived clinical questions guide hypothesis generation.</p></div>
+      <div class="lcb-card"><h3>Omics analysis</h3><p>Bio-big data and multi-omics interpretation identify candidate mechanisms.</p></div>
+      <div class="lcb-card"><h3>Molecular biology assay</h3><p>Experimental assays validate mechanistic models and therapeutic vulnerabilities.</p></div>
+      <div class="lcb-card"><h3>Translational insight</h3><p>Integrated results are used to inform biomarker and therapeutic strategy development.</p></div>
+    </div>
+  </section>
+</div>

@@ -1,43 +1,45 @@
 ---
 layout: page
-title: professor
+title: Professor
 permalink: /professor/
-description: Principal Investigator of the Lab of Cancer Biology.
 nav: true
-nav_order: 5
+nav_order: 3
+description: Principal Investigator of the Lab of Cancer Biology.
 ---
 
-# Kyung-min Lee, PhD
+{% include lcb_style.html %}
 
-## 이경민
 
-**Associate Professor**  
-Department of Life Science, Hanyang University
+<div class="lcb-page">
+  <section class="lcb-section">
+    <h1 class="lcb-rule-title">Kyung-min Lee, PhD<br><span style="font-size: 1.55rem;">이경민</span></h1>
+    <div class="lcb-profile-grid">
+      <div>
+        <img src="https://static.wixstatic.com/media/b4730b_78195c20f0804cdda45881fd6b2c4657~mv2.jpg/v1/fill/w_337%2Ch_450%2Cal_c%2Cq_80%2Cusm_0.66_1.00_0.01%2Cenc_avif%2Cquality_auto/KakaoTalk_20250313_140318111_edited.jpg" alt="Kyung-min Lee" class="lcb-profile-img" />
+      </div>
+      <div>
+        <div class="lcb-timeline">
+          <div class="lcb-timeline-item"><div class="lcb-timeline-year">2024-Current</div><div>Associate professor, Dept. of Life Science, Hanyang Univ.</div></div>
+          <div class="lcb-timeline-item"><div class="lcb-timeline-year">2021-2024</div><div>Assistant professor, Dept. of Life Science, Hanyang Univ.</div></div>
+          <div class="lcb-timeline-item"><div class="lcb-timeline-year">2020-2021</div><div>Research Scientist, Simmons Comprehensive Cancer Center, UT Southwestern Medical Center</div></div>
+          <div class="lcb-timeline-item"><div class="lcb-timeline-year">2017-2020</div><div>PostDoc, Simmons Comprehensive Cancer Center, UT Southwestern Medical Center</div></div>
+          <div class="lcb-timeline-item"><div class="lcb-timeline-year">2014-2017</div><div>PostDoc, Dept. of Medicine, Vanderbilt-Ingram Cancer Center, Vanderbilt Univ.</div></div>
+          <div class="lcb-timeline-item"><div class="lcb-timeline-year">2008-2014</div><div>PhD, Dept. of Life Science, Hanyang Univ.</div></div>
+          <div class="lcb-timeline-item"><div class="lcb-timeline-year">2001-2008</div><div>BS, Dept. of Life Science, Hanyang Univ.</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-📧 kyungminlee@hanyang.ac.kr  
-☎ 02-2220-0956
+  <section class="lcb-section">
+    <h2 class="lcb-rule-title">About</h2>
+    <p>Prof. Lee received a PhD in Life Science from Hanyang University, where he studied the molecular mechanisms of development and metastasis of cancer. After completing his doctoral studies, he focused on the mechanisms of resistance to anti-cancer drugs including chemotherapy, target therapy and immunotherapy in the laboratory of Carlos L. Arteaga at the Vanderbilt-Ingram Cancer Center of Vanderbilt University Medical Center.</p>
+    <p>Since Prof. Lee joined the Dept. of Life Science at Hanyang University in 2021 as a faculty member, he has conducted research for curing malignant cancer. In particular, he is conducting research for identifying biomarker-based vulnerability and mechanisms of cancer immune evasion using bio-big data.</p>
+  </section>
 
-<div class="row mt-4 mb-4">
-  <div class="col-sm-4">
-    <img src="{{ '/assets/img/prof_kyungmin_lee.jpg' | relative_url }}" class="img-fluid rounded z-depth-1" alt="Prof. Kyung-min Lee">
-  </div>
-  <div class="col-sm-8 mt-3 mt-sm-0">
-    <p>Prof. Kyung-min Lee leads the Lab of Cancer Biology at Hanyang University. His research focuses on molecular mechanisms of cancer progression, therapeutic resistance, biomarker-based vulnerability, and cancer immune evasion using translational and bio-big-data-based approaches.</p>
-  </div>
+  <section class="lcb-section">
+    <h2 class="lcb-rule-title">Get in Touch</h2>
+    <p><strong>Email:</strong> <a href="mailto:kyungminlee@hanyang.ac.kr">kyungminlee@hanyang.ac.kr</a></p>
+    <p><strong>Tel:</strong> 02-2220-0956</p>
+  </section>
 </div>
-
-## Career and Education
-
-| Period | Position |
-|---|---|
-| 2024–Current | Associate Professor, Department of Life Science, Hanyang University |
-| 2021–2024 | Assistant Professor, Department of Life Science, Hanyang University |
-| 2020–2021 | Research Scientist, Simmons Comprehensive Cancer Center, UT Southwestern Medical Center |
-| 2017–2020 | Postdoctoral Fellow, Simmons Comprehensive Cancer Center, UT Southwestern Medical Center |
-| 2014–2017 | Postdoctoral Fellow, Department of Medicine, Vanderbilt-Ingram Cancer Center, Vanderbilt University |
-| 2008–2014 | PhD, Department of Life Science, Hanyang University |
-| 2001–2008 | BS, Department of Life Science, Hanyang University |
-
-## About
-
-Prof. Lee received his PhD in Life Science from Hanyang University, where he studied molecular mechanisms related to cancer development and metastasis. During his postdoctoral training and research appointments in the United States, he studied resistance to anti-cancer therapies, including chemotherapy, targeted therapy, and immunotherapy. Since joining Hanyang University as a faculty member in 2021, his laboratory has focused on translational cancer biology, biomarker-based vulnerabilities, and mechanisms of cancer immune evasion.

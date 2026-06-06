@@ -1,8 +1,7 @@
 ---
 layout: page
-title: teaching
+title: Teaching
 permalink: /teaching/
 nav: false
 ---
 
-This page is hidden from the navigation menu.
