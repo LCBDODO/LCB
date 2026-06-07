@@ -19,8 +19,8 @@ description:
         <div class="lcb-hero-rule"></div>
         <p class="lcb-hero-lead">We study how cancer cells adapt, evolve, and acquire resistance to anti-cancer therapies in a perspective of translational research.</p>
         <div class="lcb-hero-actions">
-          <a href="{{ '/research/' | relative_url }}">Research</a>
-          <a href="{{ '/publications/' | relative_url }}">Publications</a>
+          <a class="lcb-hero-btn primary" href="{{ '/research/' | relative_url }}">Research</a>
+          <a class="lcb-hero-btn secondary" href="{{ '/publications/' | relative_url }}">Publications</a>
         </div>
       </div>
     </div>

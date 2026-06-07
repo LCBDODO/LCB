@@ -1,39 +1,17 @@
-{% assign nav_home_class = "" %}
-{% assign nav_research_class = "" %}
-{% assign nav_professor_class = "" %}
-{% assign nav_members_class = "" %}
-{% assign nav_publications_class = "" %}
-{% assign nav_gallery_class = "" %}
-{% assign nav_contact_class = "" %}
-{% if page.permalink == "/" or page.url == "/" %}
-  {% assign nav_home_class = "active" %}
-{% endif %}
-{% if page.url contains "/research/" %}
-  {% assign nav_research_class = "active" %}
-{% endif %}
-{% if page.url contains "/professor/" %}
-  {% assign nav_professor_class = "active" %}
-{% endif %}
-{% if page.url contains "/members/" %}
-  {% assign nav_members_class = "active" %}
-{% endif %}
-{% if page.url contains "/publications/" %}
-  {% assign nav_publications_class = "active" %}
-{% endif %}
-{% if page.url contains "/gallery/" %}
-  {% assign nav_gallery_class = "active" %}
-{% endif %}
-{% if page.url contains "/contact/" %}
-  {% assign nav_contact_class = "active" %}
+{% assign nav_home_class = "" %} {% assign nav_research_class = "" %} {% assign nav_professor_class = "" %} {% assign nav_members_class = "" %} {%
+assign nav_publications_class = "" %} {% assign nav_gallery_class = "" %} {% assign nav_contact_class = "" %} {% if page.permalink == "/" %} {% assign
+nav_home_class = "active" %} {% endif %} {% if page.url contains "/research/" %} {% assign nav_research_class = "active" %} {% endif %} {% if page.url
+contains "/professor/" %} {% assign nav_professor_class = "active" %} {% endif %} {% if page.url contains "/members/" %} {% assign nav_members_class =
+"active" %} {% endif %} {% if page.url contains "/publications/" %} {% assign nav_publications_class = "active" %} {% endif %} {% if page.url contains
+"/gallery/" %} {% assign nav_gallery_class = "active" %} {% endif %} {% if page.url contains "/contact/" %} {% assign nav_contact_class = "active" %}
 {% endif %}
 
 <header class="lcb-topbar" role="banner">
   <div class="lcb-topbar-inner">
-    <a class="lcb-topbar-brand" href="{{ '/' | relative_url }}" aria-label="Lab of Cancer Biology home">
+    <a class="lcb-topbar-brand" href="{{ '/' | relative_url }}">
       <img src="{{ '/assets/img/lab_logo_mark_transparent.png' | relative_url }}" alt="" class="lcb-topbar-logo" />
-      <span>Lab of Cancer Biology</span>
+      Lab of Cancer Biology
     </a>
-
     <button
       class="lcb-hamburger"
       aria-label="Toggle menu"
@@ -41,7 +19,6 @@
     >
       <span></span><span></span><span></span>
     </button>
-
     <nav class="lcb-topbar-links" aria-label="Main navigation">
       <a class="{{ nav_home_class }}" href="{{ '/' | relative_url }}">Home</a>
       <a class="{{ nav_research_class }}" href="{{ '/research/' | relative_url }}">Research</a>
