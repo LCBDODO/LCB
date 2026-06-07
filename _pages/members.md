@@ -59,7 +59,7 @@ description: Members of the Lab of Cancer Biology.
         <p>2025.3-</p>
       </div>
       <div class="lcb-member">
-        <img src="{{ '/assets/img/members/placeholder_kim_jinsung.jpg' | relative_url }}" alt="김진성" />
+        <img src="{{ '/assets/img/members/kim_jinsung.jpg' | relative_url }}" alt="김진성" />
         <h3>김진성</h3>
         <p class="lcb-role">M.S./Ph.D. Integrated Course</p>
         <p>2026.03-</p>
