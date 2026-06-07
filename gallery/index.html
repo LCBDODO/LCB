@@ -310,6 +310,310 @@
     .lcb-home-hero::after { display:block !important; top:0 !important; right:-210px !important; width:560px !important; opacity:0.16 !important; background-position:top right !important; }
   }
 
+</style> <style>
+  /* Make the white topbar physically thinner; no extra top/bottom spacing. */
+  .lcb-topbar,
+  .lcb-topbar-inner {
+    height:24px !important;
+    min-height:24px !important;
+    max-height:24px !important;
+  }
+  .lcb-topbar {
+    overflow:visible !important;
+    border-bottom:1px solid rgba(226,232,240,0.9) !important;
+  }
+  .lcb-topbar-inner {
+    padding-top:0 !important;
+    padding-bottom:0 !important;
+    line-height:1 !important;
+  }
+
+  /* Restore top-left lab brand and menu text size. */
+  .lcb-topbar-brand {
+    font-size:0.86rem !important;
+    font-weight:700 !important;
+    transform:none !important;
+    line-height:1 !important;
+  }
+  .lcb-topbar-logo {
+    width:22px !important;
+    height:22px !important;
+    opacity:0.88 !important;
+    transform:none !important;
+  }
+  .lcb-topbar-links {
+    height:24px !important;
+    gap:clamp(0.55rem, 1.25vw, 1.15rem) !important;
+    align-items:center !important;
+  }
+  .lcb-topbar-links a {
+    height:24px !important;
+    font-size:0.79rem !important;
+    font-weight:400 !important;
+    line-height:1 !important;
+  }
+  .lcb-topbar-links a.active { font-weight:600 !important; }
+  .lcb-topbar-links a::after { bottom:0 !important; }
+
+  /* Remove the feeling of a gap between browser/topbar and the blue hero. */
+  .lcb-home-hero {
+    margin-top:0 !important;
+    min-height:clamp(455px, 58vh, 570px) !important;
+  }
+  .lcb-home-inner {
+    padding-top:clamp(0.85rem, 1.5vw, 1.25rem) !important;
+  }
+
+  /* Reduce the oversized central title. */
+  .lcb-hero-title {
+    font-size:clamp(3.55rem, 5vw, 5.25rem) !important;
+    line-height:1.05 !important;
+    margin-bottom:0.9rem !important;
+  }
+
+  /* Put cancer-cell image exactly under the nav line, on the right, as a muted background. */
+  .lcb-home-hero::after {
+    display:block !important;
+    top:0 !important;
+    right:0 !important;
+    bottom:0 !important;
+    width:clamp(410px, 42vw, 680px) !important;
+    background-image:url("/LCB/assets/img/home/hero_cancer_cells_transparent.png") !important;
+    background-repeat:no-repeat !important;
+    background-position:top right !important;
+    background-size:cover !important;
+    opacity:0.18 !important;
+    mix-blend-mode:screen !important;
+    filter:grayscale(1) sepia(0.18) hue-rotate(170deg) saturate(1.35) brightness(1.15) contrast(0.72) blur(0.2px) !important;
+    pointer-events:none !important;
+  }
+
+  @media (max-width:800px) {
+    .lcb-topbar,
+    .lcb-topbar-inner {
+      height:24px !important;
+      min-height:24px !important;
+      max-height:24px !important;
+    }
+    .lcb-topbar-logo { width:20px !important; height:20px !important; }
+    .lcb-topbar-brand { font-size:0.82rem !important; }
+    .lcb-topbar-links { top:24px !important; }
+    .lcb-topbar-links a { height:auto !important; font-size:0.9rem !important; }
+  }
+
+  @media (max-width:720px) {
+    .lcb-home-inner { padding-top:1.4rem !important; }
+    .lcb-hero-title { font-size:2.9rem !important; line-height:1.07 !important; }
+    .lcb-home-hero::after {
+      top:0 !important;
+      right:-170px !important;
+      width:520px !important;
+      opacity:0.13 !important;
+      background-position:top right !important;
+    }
+  }
+</style> <style>
+  /* topbar: keep it thin; do not enlarge the white area */
+  .lcb-topbar,
+  .lcb-topbar-inner {
+    height:22px !important;
+    min-height:22px !important;
+    max-height:22px !important;
+  }
+  .lcb-topbar {
+    overflow:visible !important;
+    margin:0 !important;
+    padding:0 !important;
+    border-bottom:1px solid rgba(226,232,240,0.9) !important;
+  }
+  .lcb-topbar-inner {
+    padding-top:0 !important;
+    padding-bottom:0 !important;
+    line-height:1 !important;
+  }
+
+  /* restore menu text size */
+  .lcb-topbar-brand {
+    font-size:0.86rem !important;
+    font-weight:700 !important;
+    line-height:1 !important;
+    transform:none !important;
+  }
+  .lcb-topbar-logo {
+    width:20px !important;
+    height:20px !important;
+    opacity:0.88 !important;
+    transform:none !important;
+  }
+  .lcb-topbar-links {
+    height:22px !important;
+    gap:clamp(0.55rem, 1.25vw, 1.15rem) !important;
+    align-items:center !important;
+  }
+  .lcb-topbar-links a {
+    height:22px !important;
+    font-size:0.79rem !important;
+    font-weight:400 !important;
+    line-height:1 !important;
+    padding-top:0 !important;
+    padding-bottom:0 !important;
+  }
+  .lcb-topbar-links a.active { font-weight:600 !important; }
+  .lcb-topbar-links a::after { bottom:0 !important; }
+
+  /* blue hero starts immediately below the thin topbar */
+  .lcb-home-hero {
+    margin-top:0 !important;
+    min-height:clamp(430px, 56vh, 540px) !important;
+  }
+  .lcb-home-inner {
+    padding-top:clamp(0.75rem, 1.15vw, 1rem) !important;
+  }
+
+  /* central Lab of Cancer Biology: shrink back down */
+  .lcb-hero-title {
+    font-size:clamp(3rem, 4.2vw, 4.6rem) !important;
+    line-height:1.05 !important;
+    margin-bottom:0.75rem !important;
+    letter-spacing:-0.035em !important;
+  }
+  .lcb-hero-kr {
+    font-size:clamp(1.02rem, 1.32vw, 1.2rem) !important;
+    line-height:1.72 !important;
+  }
+  .lcb-hero-lead {
+    font-size:clamp(0.9rem, 1.05vw, 1rem) !important;
+    line-height:1.68 !important;
+  }
+
+  /* cancer-cell: left edge begins around the Home menu position, then fills to the right */
+  .lcb-home-hero::after {
+    content:"" !important;
+    display:block !important;
+    position:absolute !important;
+    z-index:1 !important;
+    top:0 !important;
+    right:0 !important;
+    bottom:0 !important;
+    left:calc(50% - 120px) !important;
+    width:auto !important;
+    height:auto !important;
+    background-image:url("/LCB/assets/img/home/hero_cancer_cells_transparent.png") !important;
+    background-repeat:no-repeat !important;
+    background-position:top right !important;
+    background-size:cover !important;
+    opacity:0.16 !important;
+    mix-blend-mode:screen !important;
+    filter:grayscale(100%) brightness(1.32) contrast(0.72) saturate(0.7) blur(0.15px) !important;
+    pointer-events:none !important;
+  }
+
+  @media (max-width:800px) {
+    .lcb-topbar,
+    .lcb-topbar-inner {
+      height:24px !important;
+      min-height:24px !important;
+      max-height:24px !important;
+    }
+    .lcb-topbar-logo { width:20px !important; height:20px !important; }
+    .lcb-topbar-brand { font-size:0.82rem !important; }
+    .lcb-topbar-links { top:24px !important; height:auto !important; }
+    .lcb-topbar-links a { height:auto !important; font-size:0.9rem !important; }
+    .lcb-home-hero::after { left:42% !important; opacity:0.14 !important; }
+  }
+
+  @media (max-width:720px) {
+    .lcb-home-inner { padding-top:1.2rem !important; }
+    .lcb-hero-title { font-size:2.55rem !important; line-height:1.06 !important; }
+    .lcb-home-hero::after {
+      left:30% !important;
+      right:-180px !important;
+      opacity:0.11 !important;
+      background-position:top right !important;
+    }
+  }
+</style> <style>
+  /* 상단 흰 바: 더 얇게, 하지만 메뉴 글씨는 원상복구 */
+  .lcb-topbar,
+  .lcb-topbar-inner {
+    height:22px !important;
+    min-height:22px !important;
+    max-height:22px !important;
+  }
+  .lcb-topbar { margin:0 !important; padding:0 !important; overflow:visible !important; }
+  .lcb-topbar-inner { padding-top:0 !important; padding-bottom:0 !important; }
+  .lcb-topbar-brand { font-size:0.86rem !important; font-weight:700 !important; line-height:1 !important; transform:none !important; }
+  .lcb-topbar-logo { width:20px !important; height:20px !important; opacity:0.9 !important; transform:none !important; }
+  .lcb-topbar-links { height:22px !important; align-items:center !important; gap:clamp(0.55rem, 1.25vw, 1.15rem) !important; }
+  .lcb-topbar-links a { height:22px !important; font-size:0.79rem !important; font-weight:400 !important; line-height:1 !important; padding:0 !important; }
+  .lcb-topbar-links a.active { font-weight:600 !important; }
+
+  /* 파란 hero가 상단바 바로 아래 붙게 */
+  .lcb-home-hero {
+    margin-top:0 !important;
+    min-height:clamp(420px, 54vh, 520px) !important;
+  }
+  .lcb-home-inner {
+    padding-top:clamp(0.75rem, 1vw, 0.95rem) !important;
+  }
+
+  /* 중앙 Lab of Cancer Biology 너무 커진 것 확실히 축소 */
+  .lcb-hero-title {
+    font-size:clamp(2.75rem, 3.75vw, 4.0rem) !important;
+    line-height:1.08 !important;
+    margin-bottom:0.72rem !important;
+    letter-spacing:-0.035em !important;
+  }
+  .lcb-hero-kicker { margin-bottom:0.75rem !important; }
+  .lcb-hero-kr {
+    font-size:clamp(0.98rem, 1.22vw, 1.14rem) !important;
+    line-height:1.7 !important;
+  }
+  .lcb-hero-rule { margin:1.05rem 0 0.85rem !important; }
+  .lcb-hero-lead {
+    font-size:clamp(0.88rem, 1vw, 0.96rem) !important;
+    line-height:1.65 !important;
+    max-width:620px !important;
+  }
+
+  /* cancer cell: Home 메뉴 아래 x좌표부터 이미지가 시작되게 */
+  .lcb-home-hero::after {
+    content:"" !important;
+    display:block !important;
+    position:absolute !important;
+    z-index:1 !important;
+    top:0 !important;
+    bottom:0 !important;
+    left:42.5% !important;      /* Home 메뉴 아래쪽부터 시작 */
+    right:0 !important;
+    width:auto !important;
+    height:auto !important;
+    background-image:url("/LCB/assets/img/home/hero_cancer_cells_transparent.png") !important;
+    background-repeat:no-repeat !important;
+    background-position:left top !important;
+    background-size:auto 100% !important;
+    opacity:0.15 !important;
+    mix-blend-mode:screen !important;
+    filter:grayscale(100%) brightness(1.35) contrast(0.72) saturate(0.65) blur(0.12px) !important;
+    pointer-events:none !important;
+  }
+
+  @media (max-width:800px) {
+    .lcb-topbar,
+    .lcb-topbar-inner { height:24px !important; min-height:24px !important; max-height:24px !important; }
+    .lcb-topbar-logo { width:20px !important; height:20px !important; }
+    .lcb-topbar-brand { font-size:0.82rem !important; }
+    .lcb-topbar-links { top:24px !important; height:auto !important; }
+    .lcb-topbar-links a { height:auto !important; font-size:0.9rem !important; }
+    .lcb-hero-title { font-size:2.75rem !important; }
+    .lcb-home-hero::after { left:38% !important; opacity:0.12 !important; background-size:auto 100% !important; }
+  }
+
+  @media (max-width:720px) {
+    .lcb-home-inner { padding-top:1.2rem !important; }
+    .lcb-hero-title { font-size:2.4rem !important; line-height:1.07 !important; }
+    .lcb-home-hero::after { left:26% !important; opacity:0.1 !important; }
+  }
 </style> <header class="lcb-topbar" role="banner"> <div class="lcb-topbar-inner"> <a class="lcb-topbar-brand" href="/LCB/"> <img src="/LCB/assets/img/lab_logo_mark_transparent.png" alt="" class="lcb-topbar-logo"> Lab of Cancer Biology </a> <button class="lcb-hamburger" aria-label="Toggle menu" onclick="this.closest('.lcb-topbar').querySelector('.lcb-topbar-links').classList.toggle('open')"> <span></span><span></span><span></span> </button> <nav class="lcb-topbar-links" aria-label="Main navigation"> <a class="" href="/LCB/">Home</a> <a class="" href="/LCB/research/">Research</a> <a class="" href="/LCB/professor/">Professor</a> <a class="" href="/LCB/members/">Members</a> <a class="" href="/LCB/publications/">Publications</a> <a class="active" href="/LCB/gallery/">Gallery</a> <a class="" href="/LCB/contact/">Contact</a> </nav> </div> </header> <div class="lcb-page"> <section class="lcb-section"> <h1 class="lcb-section-title">Gallery</h1> </section> <section class="lcb-section compact"> <div class="lcb-gallery-grid"> <figure class="lcb-gallery-item"> <img src="/LCB/assets/img/gallery/2025_ksmcb_overview.jpg" alt="2025 KSMCB"> <figcaption><strong>2025 KSMCB</strong></figcaption> </figure> <figure class="lcb-gallery-item"> <img src="/LCB/assets/img/gallery/2025_ksmcb_son_seunghan.jpg" alt="손승한 포스터 발표"> <figcaption><strong>2025 KSMCB</strong><br>Poster presentation by 손승한</figcaption> </figure> <figure class="lcb-gallery-item"> <img src="/LCB/assets/img/gallery/2025_ksmcb_jo_dayoung.jpg" alt="조다영 포스터 발표"> <figcaption><strong>2025 KSMCB</strong><br>Poster presentation by 조다영</figcaption> </figure> <figure class="lcb-gallery-item"> <img src="/LCB/assets/img/gallery/teacher_day_2025.jpg" alt="스승의 날 2025"> <figcaption><strong>스승의 날</strong> (2025)</figcaption> </figure> <figure class="lcb-gallery-item"> <img src="/LCB/assets/img/gallery/lab_picnic_spring_2024.jpg" alt="Lab picnic"> <figcaption><strong>Lab Picnic</strong> (Spring, 2024)</figcaption> </figure> <figure class="lcb-gallery-item"> <img src="/LCB/assets/img/gallery/dr_shigeri_visit_2024.jpg" alt="Dr. Shigeri visit"> <figcaption><strong>Dr. Shigeri Visit</strong> (2024)</figcaption> </figure> <figure class="lcb-gallery-item"> <img src="/LCB/assets/img/gallery/graduate_lee_taewon_2024.jpg" alt="이태원 졸업"> <figcaption><strong>Graduation</strong> - 이태원 (MS, 2024)</figcaption> </figure> <figure class="lcb-gallery-item"> <img src="/LCB/assets/img/gallery/graduate_lee_changjun_2023.jpg" alt="이창준 졸업"> <figcaption><strong>Graduation</strong> - 이창준 (MS, 2023)</figcaption> </figure> <figure class="lcb-gallery-item"> <img src="/LCB/assets/img/gallery/kogo_winter_2023.jpg" alt="KOGO Winter Conference 2023"> <figcaption><strong>KOGO Winter Conference</strong> (2023)<br>Poster presentation by 이창준</figcaption> </figure> </div> </section> </div> </article> </div> </div> <footer class="lcb-footer"> © Lab of Cancer Biology, Department of Life Science, Hanyang University. All rights reserved. </footer> <script>
   window.alFolio = {
     compatBootstrap: false
