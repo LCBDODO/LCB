@@ -11,7 +11,6 @@ description: Publications of the Lab of Cancer Biology.
 <div class="lcb-page lcb-publications">
   <section class="lcb-section">
     <h1 class="lcb-section-title">Publications</h1>
-    <p class="lcb-section-lead">Publications are listed in reverse chronological order.</p>
   </section>
   <section class="lcb-section compact">
     <h2 class="lcb-year">2025</h2>

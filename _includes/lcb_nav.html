@@ -1,17 +1,20 @@
-<header class="lcb-force-header" role="banner">
-  <div class="lcb-force-nav-wrap">
-    <a class="lcb-force-brand" href="{{ '/' | relative_url }}" aria-label="Lab of Cancer Biology home">
-      <img src="{{ '/assets/img/lab_logo_mark_transparent.png' | relative_url }}" alt="Lab of Cancer Biology logo" />
-      <span>Lab of Cancer Biology</span>
+<header class="lcb-topbar" role="banner">
+  <div class="lcb-topbar-inner">
+    <a class="lcb-topbar-brand" href="{{ '/' | relative_url }}">
+      <img src="{{ '/assets/img/lab_logo_mark_transparent.png' | relative_url }}" alt="" class="lcb-topbar-logo" />
+      Lab of Cancer Biology
     </a>
-    <nav class="lcb-force-nav" aria-label="Main navigation">
-      <a class="{% if page.permalink == '/' %}active{% endif %}" href="{{ '/' | relative_url }}">Home</a>
-      <a class="{% if page.url contains '/research/' or page.url contains '/projects/' or page.url contains '/approaches/' %}active{% endif %}" href="{{ '/research/' | relative_url }}">Research</a>
-      <a class="{% if page.url contains '/professor/' %}active{% endif %}" href="{{ '/professor/' | relative_url }}">Professor</a>
-      <a class="{% if page.url contains '/members/' or page.url contains '/current-members/' or page.url contains '/alumni/' %}active{% endif %}" href="{{ '/members/' | relative_url }}">Members</a>
-      <a class="{% if page.url contains '/publications/' %}active{% endif %}" href="{{ '/publications/' | relative_url }}">Publications</a>
-      <a class="{% if page.url contains '/gallery/' %}active{% endif %}" href="{{ '/gallery/' | relative_url }}">Gallery</a>
-      <a class="{% if page.url contains '/contact/' %}active{% endif %}" href="{{ '/contact/' | relative_url }}">Contact</a>
+    <button class="lcb-hamburger" aria-label="Toggle menu" onclick="this.closest('.lcb-topbar').querySelector('.lcb-topbar-links').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="lcb-topbar-links" aria-label="Main navigation">
+      <a {% if page.permalink == '/' %}class="active"{% endif %} href="{{ '/' | relative_url }}">Home</a>
+      <a {% if page.url contains '/research/' %}class="active"{% endif %} href="{{ '/research/' | relative_url }}">Research</a>
+      <a {% if page.url contains '/professor/' %}class="active"{% endif %} href="{{ '/professor/' | relative_url }}">Professor</a>
+      <a {% if page.url contains '/members/' %}class="active"{% endif %} href="{{ '/members/' | relative_url }}">Members</a>
+      <a {% if page.url contains '/publications/' %}class="active"{% endif %} href="{{ '/publications/' | relative_url }}">Publications</a>
+      <a {% if page.url contains '/gallery/' %}class="active"{% endif %} href="{{ '/gallery/' | relative_url }}">Gallery</a>
+      <a {% if page.url contains '/contact/' %}class="active"{% endif %} href="{{ '/contact/' | relative_url }}">Contact</a>
     </nav>
   </div>
 </header>
