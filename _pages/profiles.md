@@ -1,9 +1,8 @@
 ---
 layout: page
 title: Members
-permalink: /members/
+permalink: /hidden-profiles/
 nav: false
-nav_order: 4
 description: Members of the Lab of Cancer Biology.
 ---
 

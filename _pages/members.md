@@ -2,7 +2,8 @@
 layout: page
 title: Members
 permalink: /members/
-nav: false
+nav: true
+nav_order: 4
 description: Members of the Lab of Cancer Biology.
 ---
 

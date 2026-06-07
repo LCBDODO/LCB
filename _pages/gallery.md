@@ -2,7 +2,8 @@
 layout: page
 title: Gallery
 permalink: /gallery/
-nav: false
+nav: true
+nav_order: 6
 description: Gallery of the Lab of Cancer Biology.
 ---
 
