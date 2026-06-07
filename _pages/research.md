@@ -44,7 +44,7 @@ description: Research of the Lab of Cancer Biology.
     <h2 class="lcb-section-title">Previous Projects</h2>
     <div class="lcb-project-grid">
       <div class="lcb-project-card">
-        <img src="https://static.wixstatic.com/media/b4730b_24d7f7f29c0b40029dc0d84fa504ebb2~mv2.jpg/v1/crop/x_598,y_90,w_1842,h_1230/fill/w_543,h_362,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/%EC%8A%AC%EB%9D%BC%EC%9D%B4%EB%93%9C9_edited_edited_edited_edited.jpg" alt="MYC–STING immune evasion" />
+        <img src="{{ '/assets/img/projects/sting_myc_immune_evasion.jpg' | relative_url }}" alt="MYC-STING immune evasion" />
         <div class="lcb-project-body">
           <h3>Epigenetic Repression of STING by MYC</h3>
           <p>MYC-mediated epigenetic repression of STING promotes immune evasion and resistance to immune checkpoint inhibitors in triple-negative breast cancer.</p>
@@ -86,8 +86,8 @@ description: Research of the Lab of Cancer Biology.
         <p>Connecting molecular mechanisms to therapeutic response, resistance, and patient-relevant hypotheses.</p>
       </div>
     </div>
-    <div style="margin-top:1.5rem; text-align:center;">
-      <img src="https://static.wixstatic.com/media/b4730b_ef749cd3367b45c7a5aa66661b5cc03f~mv2.png/v1/crop/x_596,y_159,w_2533,h_1972/fill/w_737,h_573,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/%EC%8A%AC%EB%9D%BC%EC%9D%B4%EB%93%9C3_TIF.png" alt="Research strategy" style="max-width:680px; width:100%; border-radius:12px; border:1px solid var(--lcb-line);" />
+    <div style="margin-top: 1.2rem; text-align: center;">
+      <img src="{{ '/assets/img/projects/research_strategy.png' | relative_url }}" alt="Research strategy" style="max-width: 680px; width: 100%; border-radius: 8px; border: 1px solid var(--lcb-line);" />
     </div>
   </section>
 </div>

@@ -61,7 +61,32 @@ if (/gem 'al_math',\s*:git =>/.test(gemfile)) {
   failures.push("`Gemfile` must not use git-branch pin for `al_math`; use released gem version.");
 }
 
-for (const forbiddenPath of ["_includes", "_layouts", "_sass", "_scripts", "assets/tailwind", "tailwind.config.js", "assets/webfonts"]) {
+const allowedIncludes = new Set(["footer.liquid", "header.liquid", "layout/header.liquid", "lcb_nav.html", "lcb_style.html"]);
+const collectFiles = (relPath) => {
+  const absPath = path.join(root, relPath);
+  const files = [];
+  const walk = (dir) => {
+    for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+      const entryPath = path.join(dir, entry.name);
+      if (entry.isDirectory()) {
+        walk(entryPath);
+      } else {
+        files.push(path.relative(absPath, entryPath).replaceAll(path.sep, "/"));
+      }
+    }
+  };
+  walk(absPath);
+  return files;
+};
+
+if (exists("_includes")) {
+  const unexpectedIncludes = collectFiles("_includes").filter((file) => !allowedIncludes.has(file));
+  if (unexpectedIncludes.length > 0) {
+    failures.push(`Starter must not own unexpected core include files: ${unexpectedIncludes.join(", ")}.`);
+  }
+}
+
+for (const forbiddenPath of ["_layouts", "_sass", "_scripts", "assets/tailwind", "tailwind.config.js", "assets/webfonts"]) {
   if (exists(forbiddenPath)) {
     failures.push(`Starter must not own core component path \`${forbiddenPath}\`; move ownership to the corresponding gem.`);
   }

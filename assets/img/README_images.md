@@ -1,14 +1,11 @@
-# Image files to add manually
+# LCB image asset map
 
-The overlay does not include photos from the original Wix site. Add authorized original images to `assets/img/` with these filenames, or edit the page files to match your actual filenames.
+The active Lab of Cancer Biology pages use local images from these folders:
 
-Recommended filenames:
+- `assets/img/home/` — home hero/background images
+- `assets/img/gallery/` — gallery and home slider photos
+- `assets/img/members/` — current member and alumni portraits
+- `assets/img/professor/` — professor portrait
+- `assets/img/projects/` — research and previous project figures
 
-- `lab_group.jpg` — main lab group photo for the home page
-- `prof_kyungmin_lee.jpg` — Prof. Kyung-min Lee profile photo
-- `gallery_01.jpg`
-- `gallery_02.jpg`
-- `gallery_03.jpg`
-- `gallery_04.jpg`
-
-You can publish the site without these images, but broken image icons may appear until the files are added or the image blocks are removed.
+To replace an image without editing page code, keep the same filename and replace the file in the matching folder. The gallery frames are fixed to one size in CSS and use `object-fit: contain`, so photos should show without cutting off heads. Member portraits use square frames; 고다연 has a separate focus rule in `_includes/lcb_style.html`.

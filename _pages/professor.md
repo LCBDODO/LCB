@@ -15,7 +15,7 @@ description: Principal Investigator of the Lab of Cancer Biology.
     <h1 class="lcb-section-title">Professor</h1>
     <div class="lcb-profile-grid">
       <div>
-        <img class="lcb-profile-img" src="https://static.wixstatic.com/media/b4730b_78195c20f0804cdda45881fd6b2c4657~mv2.jpg/v1/fill/w_337%2Ch_450%2Cal_c%2Cq_80%2Cusm_0.66_1.00_0.01%2Cenc_avif%2Cquality_auto/KakaoTalk_20250313_140318111_edited.jpg" alt="Kyung-min Lee" />
+        <img class="lcb-profile-img" src="{{ '/assets/img/professor/kyungmin_lee_portrait.jpg' | relative_url }}" alt="Kyung-min Lee" />
       </div>
       <div>
         <h2 style="color: var(--lcb-blue); font-weight: 900; margin-top: 0;">Kyung-min Lee, PhD<br />이경민</h2>

@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "lint:prettier": "prettier . --check",
+    "lint:prettier": "prettier _config.yml .github/workflows/deploy.yml .github/workflows/prettier.yml .github/workflows/unit-tests.yml .github/workflows/visual-regression.yml _includes/lcb_nav.html _includes/lcb_style.html _pages/about.md _pages/gallery.md _pages/members.md _pages/professor.md _pages/research.md assets/img/README_images.md assets/img/gallery/README_gallery_images.md test/style_contract.js --check",
     "lint:style-contract": "node test/style_contract.js",
     "test:visual": "playwright test --config test/visual/playwright.config.js",
     "test:visual:update": "playwright test --config test/visual/playwright.config.js --update-snapshots"

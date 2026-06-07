@@ -14,14 +14,10 @@ description:
     <div class="lcb-home-inner">
       <div class="lcb-hero-copy">
         <div class="lcb-hero-kicker">SINCE 2021 · HANYANG UNIVERSITY</div>
-        <h1 class="lcb-hero-title">Lab of Cancer<br>Biology</h1>
-        <p class="lcb-hero-kr">암생물학연구실<br>한양대학교 생명과학과</p>
+        <h1 class="lcb-hero-title">Lab of Cancer<br />Biology</h1>
+        <p class="lcb-hero-kr">암생물학연구실<br />한양대학교 생명과학과</p>
         <div class="lcb-hero-rule"></div>
         <p class="lcb-hero-lead">We study how cancer cells adapt, evolve, and acquire resistance to anti-cancer therapies in a perspective of translational research.</p>
-        <div class="lcb-hero-buttons">
-          <a class="lcb-hero-btn primary" href="{{ '/research/' | relative_url }}">Research</a>
-          <a class="lcb-hero-btn" href="{{ '/publications/' | relative_url }}">Publications</a>
-        </div>
       </div>
     </div>
   </section>
@@ -49,19 +45,19 @@ description:
     </div>
   </section>
 
-  <section class="lcb-home-gallery">
+  <section class="lcb-home-gallery lcb-full-bleed">
     <div class="lcb-gallery-head">
       <span class="lcb-eyebrow">Gallery</span>
-      <h2>Moments from Our Lab</h2>
+      <h2>Recent Lab Moments</h2>
     </div>
     <div class="lcb-slider">
       <div class="lcb-slide"><img src="{{ '/assets/img/gallery/2025_ksmcb_overview.jpg' | relative_url }}" alt="2025 KSMCB" /><div class="lcb-slide-caption"><strong>2025 KSMCB</strong></div></div>
-      <div class="lcb-slide"><img src="{{ '/assets/img/gallery/2025_ksmcb_son_seunghan.jpg' | relative_url }}" alt="손승한 포스터" /><div class="lcb-slide-caption"><strong>2025 KSMCB</strong><br>Poster by 손승한</div></div>
-      <div class="lcb-slide"><img src="{{ '/assets/img/gallery/2025_ksmcb_jo_dayoung.jpg' | relative_url }}" alt="조다영 포스터" /><div class="lcb-slide-caption"><strong>2025 KSMCB</strong><br>Poster by 조다영</div></div>
-      <div class="lcb-slide"><img src="{{ '/assets/img/gallery/teacher_day_2025.jpg' | relative_url }}" alt="스승의 날" /><div class="lcb-slide-caption"><strong>스승의 날 (2025)</strong></div></div>
+      <div class="lcb-slide"><img src="{{ '/assets/img/gallery/2025_ksmcb_son_seunghan.jpg' | relative_url }}" alt="손승한 포스터" /><div class="lcb-slide-caption"><strong>2025 KSMCB</strong><br />Poster by 손승한</div></div>
+      <div class="lcb-slide"><img src="{{ '/assets/img/gallery/2025_ksmcb_jo_dayoung.jpg' | relative_url }}" alt="조다영 포스터" /><div class="lcb-slide-caption"><strong>2025 KSMCB</strong><br />Poster by 조다영</div></div>
+      <div class="lcb-slide"><img src="{{ '/assets/img/gallery/teacher_day_2025.jpg' | relative_url }}" alt="스승의 날" /><div class="lcb-slide-caption"><strong>스승의 날</strong> (2025)</div></div>
       <div class="lcb-slide"><img src="{{ '/assets/img/gallery/lab_picnic_spring_2024.jpg' | relative_url }}" alt="Lab picnic" /><div class="lcb-slide-caption"><strong>Lab Picnic</strong> (Spring 2024)</div></div>
       <div class="lcb-slide"><img src="{{ '/assets/img/gallery/dr_shigeri_visit_2024.jpg' | relative_url }}" alt="Dr. Shigeri visit" /><div class="lcb-slide-caption"><strong>Dr. Shigeri Visit</strong> (2024)</div></div>
-      <div class="lcb-slide"><img src="{{ '/assets/img/gallery/graduate_lee_taewon_2024.jpg' | relative_url }}" alt="이태원 졸업" /><div class="lcb-slide-caption"><strong>Graduation</strong> — 이태원 (MS 2024)</div></div>
+      <div class="lcb-slide"><img src="{{ '/assets/img/gallery/graduate_lee_taewon_2024.jpg' | relative_url }}" alt="이태원 졸업" /><div class="lcb-slide-caption"><strong>Graduation</strong> - 이태원 (MS 2024)</div></div>
     </div>
   </section>
 </div>

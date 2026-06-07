@@ -1,20 +1,32 @@
+{% assign nav_home_class = "" %} {% assign nav_research_class = "" %} {% assign nav_professor_class = "" %} {% assign nav_members_class = "" %} {%
+assign nav_publications_class = "" %} {% assign nav_gallery_class = "" %} {% assign nav_contact_class = "" %} {% if page.permalink == "/" %} {% assign
+nav_home_class = "active" %} {% endif %} {% if page.url contains "/research/" %} {% assign nav_research_class = "active" %} {% endif %} {% if page.url
+contains "/professor/" %} {% assign nav_professor_class = "active" %} {% endif %} {% if page.url contains "/members/" %} {% assign nav_members_class =
+"active" %} {% endif %} {% if page.url contains "/publications/" %} {% assign nav_publications_class = "active" %} {% endif %} {% if page.url contains
+"/gallery/" %} {% assign nav_gallery_class = "active" %} {% endif %} {% if page.url contains "/contact/" %} {% assign nav_contact_class = "active" %}
+{% endif %}
+
 <header class="lcb-topbar" role="banner">
   <div class="lcb-topbar-inner">
     <a class="lcb-topbar-brand" href="{{ '/' | relative_url }}">
       <img src="{{ '/assets/img/lab_logo_mark_transparent.png' | relative_url }}" alt="" class="lcb-topbar-logo" />
       Lab of Cancer Biology
     </a>
-    <button class="lcb-hamburger" aria-label="Toggle menu" onclick="this.closest('.lcb-topbar').querySelector('.lcb-topbar-links').classList.toggle('open')">
+    <button
+      class="lcb-hamburger"
+      aria-label="Toggle menu"
+      onclick="this.closest('.lcb-topbar').querySelector('.lcb-topbar-links').classList.toggle('open')"
+    >
       <span></span><span></span><span></span>
     </button>
     <nav class="lcb-topbar-links" aria-label="Main navigation">
-      <a {% if page.permalink == '/' %}class="active"{% endif %} href="{{ '/' | relative_url }}">Home</a>
-      <a {% if page.url contains '/research/' %}class="active"{% endif %} href="{{ '/research/' | relative_url }}">Research</a>
-      <a {% if page.url contains '/professor/' %}class="active"{% endif %} href="{{ '/professor/' | relative_url }}">Professor</a>
-      <a {% if page.url contains '/members/' %}class="active"{% endif %} href="{{ '/members/' | relative_url }}">Members</a>
-      <a {% if page.url contains '/publications/' %}class="active"{% endif %} href="{{ '/publications/' | relative_url }}">Publications</a>
-      <a {% if page.url contains '/gallery/' %}class="active"{% endif %} href="{{ '/gallery/' | relative_url }}">Gallery</a>
-      <a {% if page.url contains '/contact/' %}class="active"{% endif %} href="{{ '/contact/' | relative_url }}">Contact</a>
+      <a class="{{ nav_home_class }}" href="{{ '/' | relative_url }}">Home</a>
+      <a class="{{ nav_research_class }}" href="{{ '/research/' | relative_url }}">Research</a>
+      <a class="{{ nav_professor_class }}" href="{{ '/professor/' | relative_url }}">Professor</a>
+      <a class="{{ nav_members_class }}" href="{{ '/members/' | relative_url }}">Members</a>
+      <a class="{{ nav_publications_class }}" href="{{ '/publications/' | relative_url }}">Publications</a>
+      <a class="{{ nav_gallery_class }}" href="{{ '/gallery/' | relative_url }}">Gallery</a>
+      <a class="{{ nav_contact_class }}" href="{{ '/contact/' | relative_url }}">Contact</a>
     </nav>
   </div>
 </header>
