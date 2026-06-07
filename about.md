@@ -1,63 +1,41 @@
 ---
-layout: default
-title: Home
-permalink: /
-nav: false
-description:
+layout: page
+title: Professor
+permalink: /professor/
+nav: true
+nav_order: 3
+description: Principal Investigator of the Lab of Cancer Biology.
 ---
 
 {% include lcb_style.html %}
 {% include lcb_nav.html %}
 
-<div class="lcb-page lcb-home-page">
-  <section class="lcb-home-hero lcb-full-bleed">
-    <div class="lcb-home-inner">
-      <div class="lcb-hero-copy">
-        <div class="lcb-hero-kicker">SINCE 2021 · HANYANG UNIVERSITY</div>
-        <h1 class="lcb-hero-title">Lab of Cancer<br />Biology</h1>
-        <p class="lcb-hero-kr">한양대학교 생명과학과<br />암생물학연구실</p>
-        <div class="lcb-hero-rule"></div>
-        <p class="lcb-hero-lead">We study how cancer cells adapt, evolve, and acquire resistance to anti-cancer therapies in a perspective of translational research.</p>
+<div class="lcb-page">
+  <section class="lcb-section">
+    <h1 class="lcb-section-title">Professor</h1>
+    <div class="lcb-profile-grid">
+      <div>
+        <img class="lcb-profile-img" src="{{ '/assets/img/professor/kyungmin_lee_portrait.jpg' | relative_url }}" alt="Kyung-min Lee" />
       </div>
-    </div>
-  </section>
-
-  <section class="lcb-home-quick lcb-full-bleed">
-    <div class="lcb-quick-inner">
-      <div class="lcb-quick-card">
-        <span class="lcb-eyebrow">Research</span>
-        <h2>Research &amp; Publications</h2>
-        <p>Explore our research topics, previous projects, and publication record.</p>
-        <div class="lcb-quick-actions">
-          <a href="{{ '/research/' | relative_url }}">Research</a>
-          <a href="{{ '/publications/' | relative_url }}">Publications</a>
-        </div>
-      </div>
-      <div class="lcb-quick-card">
-        <span class="lcb-eyebrow">People</span>
-        <h2>Professor &amp; Members</h2>
-        <p>Meet the principal investigator, current members, and alumni.</p>
-        <div class="lcb-quick-actions">
-          <a href="{{ '/professor/' | relative_url }}">Professor</a>
-          <a href="{{ '/members/' | relative_url }}">Members</a>
+      <div>
+        <h2 class="lcb-professor-name">Kyung-min Lee, PhD<br />이경민</h2>
+        <div class="lcb-timeline">
+          <div class="lcb-timeline-item"><div class="lcb-timeline-year">2024-Current</div><div>Associate professor, Dept. of Life Science, Hanyang Univ.</div></div>
+          <div class="lcb-timeline-item"><div class="lcb-timeline-year">2021-2024</div><div>Assistant professor, Dept. of Life Science, Hanyang Univ.</div></div>
+          <div class="lcb-timeline-item"><div class="lcb-timeline-year">2020-2021</div><div>Research Scientist, Simmons Comprehensive Cancer Center, UT Southwestern Medical Center</div></div>
+          <div class="lcb-timeline-item"><div class="lcb-timeline-year">2017-2020</div><div>PostDoc, Simmons Comprehensive Cancer Center, UT Southwestern Medical Center</div></div>
+          <div class="lcb-timeline-item"><div class="lcb-timeline-year">2014-2017</div><div>PostDoc, Dept. of Medicine, Vanderbilt-Ingram Cancer Center, Vanderbilt Univ.</div></div>
+          <div class="lcb-timeline-item"><div class="lcb-timeline-year">2008-2014</div><div>PhD, Dept. of Life Science, Hanyang Univ.</div></div>
+          <div class="lcb-timeline-item"><div class="lcb-timeline-year">2001-2008</div><div>BS, Dept. of Life Science, Hanyang Univ.</div></div>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="lcb-home-gallery lcb-full-bleed">
-    <div class="lcb-gallery-head">
-      <span class="lcb-eyebrow">Gallery</span>
-      <h2>Recent Lab Moments</h2>
-    </div>
-    <div class="lcb-slider">
-      <div class="lcb-slide"><img src="{{ '/assets/img/gallery/2025_ksmcb_overview.jpg' | relative_url }}" alt="2025 KSMCB" /><div class="lcb-slide-caption"><strong>2025 KSMCB</strong></div></div>
-      <div class="lcb-slide"><img src="{{ '/assets/img/gallery/2025_ksmcb_son_seunghan.jpg' | relative_url }}" alt="손승한 포스터" /><div class="lcb-slide-caption"><strong>2025 KSMCB</strong><br />Poster by 손승한</div></div>
-      <div class="lcb-slide"><img src="{{ '/assets/img/gallery/2025_ksmcb_jo_dayoung.jpg' | relative_url }}" alt="조다영 포스터" /><div class="lcb-slide-caption"><strong>2025 KSMCB</strong><br />Poster by 조다영</div></div>
-      <div class="lcb-slide"><img src="{{ '/assets/img/gallery/teacher_day_2025.jpg' | relative_url }}" alt="스승의 날" /><div class="lcb-slide-caption"><strong>스승의 날</strong> (2025)</div></div>
-      <div class="lcb-slide"><img src="{{ '/assets/img/gallery/lab_picnic_spring_2024.jpg' | relative_url }}" alt="Lab picnic" /><div class="lcb-slide-caption"><strong>Lab Picnic</strong> (Spring 2024)</div></div>
-      <div class="lcb-slide"><img src="{{ '/assets/img/gallery/dr_shigeri_visit_2024.jpg' | relative_url }}" alt="Dr. Shigeri visit" /><div class="lcb-slide-caption"><strong>Dr. Shigeri Visit</strong> (2024)</div></div>
-      <div class="lcb-slide"><img src="{{ '/assets/img/gallery/graduate_lee_taewon_2024.jpg' | relative_url }}" alt="이태원 졸업" /><div class="lcb-slide-caption"><strong>Graduation</strong> - 이태원 (MS 2024)</div></div>
-    </div>
+  <section class="lcb-section compact">
+    <h2 class="lcb-section-title">About</h2>
+    <p class="lcb-section-lead">
+      Prof. Lee received a PhD in Life Science from Hanyang University, where he studied the molecular mechanisms of development and metastasis of cancer. After completing his doctoral studies, he focused on the mechanisms of resistance to anti-cancer drugs including chemotherapy, target therapy and immunotherapy in the laboratory of Carlos L. Arteaga at the Vanderbilt-Ingram Cancer Center of Vanderbilt University Medical Center. Since Prof. Lee joined the Department of Life Science at Hanyang University in 2021 as a faculty member, he has conducted research for curing malignant cancer. In particular, he is conducting research for identifying biomarker-based vulnerability and mechanism of cancer immune evasion using bio-bigdata.
+    </p>
   </section>
 </div>
