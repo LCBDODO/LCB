@@ -36,9 +36,12 @@
   .lcb-topbar {
     position: relative;
     z-index: 50;
-    background: rgba(255,255,255,0.98);
-    border-bottom: 1px solid rgba(226,232,240,0.95);
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.03);
+    height: 32px !important;
+    min-height: 32px !important;
+    overflow: visible;
+    background: rgba(255,255,255,0.99);
+    border-bottom: 1px solid rgba(226,232,240,0.92);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.025);
     backdrop-filter: blur(8px);
   }
   .lcb-topbar-inner {
@@ -46,9 +49,11 @@
     align-items:center;
     justify-content:space-between;
     max-width: 1180px;
-    min-height: 24px;
+    height: 32px !important;
+    min-height: 32px !important;
     margin:0 auto;
-    padding: 0 clamp(14px, 2.6vw, 26px);
+    padding: 0 clamp(14px, 2.6vw, 26px) !important;
+    line-height: 1;
   }
   .lcb-topbar-brand {
     display:inline-flex;
@@ -56,38 +61,42 @@
     align-items:center;
     gap:0.34rem;
     color:#111827 !important;
-    font-size:0.84rem;
+    font-size:0.86rem;
     font-weight:700;
     line-height:1;
     text-decoration:none !important;
     white-space:nowrap;
   }
   .lcb-topbar-logo {
-    width:20px;
-    height:20px;
+    width:22px !important;
+    height:22px !important;
     object-fit:contain;
-    opacity:0.82;
+    opacity:0.86;
     margin-left:-2px;
   }
   .lcb-topbar-links {
     display:flex;
     align-items:center;
-    gap: clamp(0.55rem, 1.3vw, 1.2rem);
+    gap: clamp(0.55rem, 1.25vw, 1.15rem);
+    height: 32px;
   }
   .lcb-topbar-links a {
     position:relative;
-    padding:0.06rem 0;
+    display:inline-flex;
+    align-items:center;
+    height:32px;
+    padding:0 !important;
     color:#4b5563 !important;
-    font-size:0.77rem;
+    font-size:0.79rem;
     font-weight:400;
-    line-height:1.2;
+    line-height:1;
     text-decoration:none !important;
     white-space:nowrap;
     transition: color .15s ease;
   }
   .lcb-topbar-links a::after {
     position:absolute;
-    right:0; left:0; bottom:-3px;
+    right:0; left:0; bottom:1px;
     height:1.5px;
     content:"";
     background:var(--lcb-coral);
@@ -123,51 +132,68 @@
 
   .lcb-home-page { max-width:none; padding:0; }
   .lcb-home-hero {
-    position:relative; display:flex; align-items:flex-start; min-height:clamp(430px, 58vh, 560px); overflow:hidden; color:#fff;
-    background: linear-gradient(135deg, #081d40 0%, #003478 58%, #0e5db8 100%);
+    position:relative;
+    display:flex;
+    align-items:flex-start;
+    min-height:clamp(455px, 58vh, 570px);
+    overflow:hidden;
+    color:#fff;
+    background: linear-gradient(135deg, #061b3d 0%, #003478 62%, #0756ab 100%);
   }
   .lcb-home-hero::before {
     position:absolute; inset:0; content:"";
     background-image:
-      radial-gradient(circle at 72% 22%, rgba(120,170,255,0.18), transparent 22%),
-      radial-gradient(circle at 86% 30%, rgba(120,170,255,0.12), transparent 28%),
-      linear-gradient(108deg, rgba(6, 22, 49, 0.98) 0%, rgba(0, 52, 120, 0.95) 52%, rgba(0, 52, 120, 0.88) 100%);
+      radial-gradient(circle at 74% 22%, rgba(118,168,255,0.18), transparent 23%),
+      radial-gradient(circle at 92% 52%, rgba(120,170,255,0.12), transparent 30%),
+      linear-gradient(110deg, rgba(6, 22, 49, 0.99) 0%, rgba(0, 52, 120, 0.96) 56%, rgba(0, 52, 120, 0.90) 100%);
     background-repeat:no-repeat;
     background-size:cover;
     opacity:1;
   }
-  .lcb-home-hero::after {
-    position:absolute; top:28px; right:clamp(18px, 6vw, 84px); bottom:28px; width:clamp(210px, 26vw, 380px); content:"";
-    background-image:url("/LCB/assets/img/home/hero_cancer_cells_transparent.png");
-    background-repeat:no-repeat;
-    background-position:center right;
-    background-size:contain;
-    opacity:0.36;
-    filter:drop-shadow(0 10px 30px rgba(0,0,0,0.18));
-    pointer-events:none;
-  }
+  .lcb-home-hero::after { display:none; }
   .lcb-home-inner {
-    position:relative; z-index:2; width:100%; max-width:1180px; min-height:inherit; margin:0 auto; padding:clamp(1.25rem, 2vw, 1.85rem) clamp(14px, 2.6vw, 26px) clamp(2rem, 3vw, 2.6rem);
-    display:flex; align-items:flex-start; justify-content:flex-start;
+    position:relative;
+    z-index:2;
+    width:100%;
+    max-width:1180px;
+    min-height:inherit;
+    margin:0 auto;
+    padding:clamp(1.05rem, 2vw, 1.65rem) clamp(14px, 2.6vw, 26px) clamp(2rem, 3vw, 2.6rem);
+    display:grid;
+    grid-template-columns:minmax(0, 600px) minmax(260px, 1fr);
+    gap:clamp(28px, 5vw, 70px);
+    align-items:start;
   }
   .lcb-hero-copy {
     width:min(600px, 100%);
     margin:0;
+    padding-top:0;
   }
   .lcb-hero-kicker {
-    margin-bottom:0.55rem; color:#cfe0ff; font-size:0.7rem; font-weight:700; letter-spacing:0.32em; text-transform:uppercase;
+    margin-bottom:1rem;
+    color:#cfe0ff;
+    font-size:0.7rem;
+    font-weight:700;
+    letter-spacing:0.32em;
+    text-transform:uppercase;
   }
   .lcb-hero-title {
-    margin:0 0 0.55rem; color:#fff; font-size:clamp(3rem, 5vw, 4.8rem); font-weight:780; line-height:0.98; letter-spacing:-0.035em;
+    margin:0 0 1.05rem;
+    color:#fff;
+    font-size:clamp(3rem, 5vw, 4.85rem);
+    font-weight:780;
+    line-height:1.08;
+    letter-spacing:-0.035em;
     text-wrap:balance;
   }
   .lcb-hero-kr {
-    margin:0; color:#f2f6ff; font-size:clamp(1.08rem, 1.5vw, 1.34rem); font-weight:620; line-height:1.55;
+    margin:0;
+    color:#f2f6ff;
+    font-size:clamp(1.08rem, 1.5vw, 1.34rem);
+    font-weight:620;
+    line-height:1.85;
   }
-  .lcb-hero-rule { width:48px; height:2px; margin:1.35rem 0 1.05rem; background:var(--lcb-gold); }
-  .lcb-hero-lead {
-    max-width:620px; margin:0; color:#dce9ff; font-size:clamp(0.92rem, 1.15vw, 1.06rem); font-weight:400; line-height:1.7;
-  }
+  .lcb-hero-rule { width:48px; height:2px; margin:1.25rem 0 1.05rem; background:var(--lcb-gold); }
 
   .lcb-home-quick {
     background:linear-gradient(180deg, #ffffff 0%, #f7f9fd 100%);
@@ -218,11 +244,11 @@
   .lcb-profile-grid { display:grid; grid-template-columns:minmax(200px, 280px) 1fr; gap:1.5rem; align-items:start; }
   .lcb-profile-img { width:100%; object-fit:cover; border-radius:12px; box-shadow:0 6px 22px rgba(0,52,120,0.08); }
   .lcb-professor-name {
-    margin: 0 0 0.8rem;
-    color: var(--lcb-blue);
-    font-size: 1.06rem;
-    font-weight: 760;
-    line-height: 1.45;
+    margin:0 0 0.8rem;
+    color:var(--lcb-blue) !important;
+    font-size:1.6rem;
+    font-weight:760;
+    line-height:1.25;
   }
   .lcb-timeline { padding-left:1rem; border-left:2px solid var(--lcb-line); }
   .lcb-timeline-item { margin-bottom:0.62rem; }
@@ -254,37 +280,35 @@
 
   @media (max-width: 920px) {
     .lcb-quick-inner { grid-template-columns:1fr; }
-    .lcb-home-hero { min-height:470px; }
-    .lcb-home-hero::after { right: 22px; width: clamp(210px, 34vw, 320px); top: 72px; bottom: 26px; opacity: 0.36; }
+    .lcb-home-hero { min-height:455px; }
+    .lcb-home-inner { grid-template-columns:minmax(0,1fr); }
+    .lcb-hero-visual { display:none; }
   }
 
   @media (max-width: 800px) {
-    .lcb-topbar-inner { min-height:36px; }
-    .lcb-topbar-logo { width:30px; height:30px; }
-    .lcb-topbar-brand { font-size:0.84rem; }
+    .lcb-topbar-inner { height:30px !important; min-height:30px !important; }
+    .lcb-topbar-logo { width:20px !important; height:20px !important; }
+    .lcb-topbar-brand { font-size:0.82rem; }
     .lcb-hamburger { display:flex; }
     .lcb-topbar-links {
-      position:absolute; top:36px; right:0; left:0; display:none; flex-direction:column; gap:0; padding:0.45rem 0; background:#fff; border-bottom:1px solid var(--lcb-line); box-shadow:0 4px 12px rgba(0,0,0,0.06);
+      position:absolute; top:30px; right:0; left:0; display:none; flex-direction:column; gap:0; height:auto; padding:0.45rem 0; background:#fff; border-bottom:1px solid var(--lcb-line); box-shadow:0 4px 12px rgba(0,0,0,0.06);
     }
     .lcb-topbar-links.open { display:flex; }
-    .lcb-topbar-links a { padding:0.62rem clamp(16px,3vw,36px); font-size:0.9rem; }
+    .lcb-topbar-links a { height:auto; padding:0.62rem clamp(16px,3vw,36px) !important; font-size:0.9rem; }
     .lcb-topbar-links a::after { display:none; }
     .lcb-project-grid { grid-template-columns:1fr; }
   }
 
   @media (max-width: 720px) {
     .lcb-home-hero { min-height:auto; }
-    .lcb-home-hero::after { display:none; }
-    .lcb-home-inner { padding:2.4rem clamp(16px, 4vw, 24px) 2.6rem; justify-content:flex-start; }
+    .lcb-home-inner { padding:2.2rem clamp(16px,4vw,24px) 2.6rem; justify-content:flex-start; }
     .lcb-hero-copy { width:100%; }
-    .lcb-hero-title { font-size:2.65rem; }
+    .lcb-hero-title { font-size:2.65rem; line-height:1.08; }
+    .lcb-hero-kr { line-height:1.75; }
     .lcb-slide { flex-basis:230px; }
     .lcb-slide img, .lcb-gallery-item img { height:220px; }
     .lcb-profile-grid { grid-template-columns:1fr; }
     .lcb-member-grid { grid-template-columns:repeat(auto-fill, minmax(145px,1fr)); }
-    .lcb-topbar-inner { min-height: 26px; }
-    .lcb-topbar-brand { font-size: 0.82rem; }
-    .lcb-topbar-logo { width: 20px; height: 20px; }
   }
 </style> <header class="lcb-topbar" role="banner"> <div class="lcb-topbar-inner"> <a class="lcb-topbar-brand" href="/LCB/"> <img src="/LCB/assets/img/lab_logo_mark_transparent.png" alt="" class="lcb-topbar-logo"> Lab of Cancer Biology </a> <button class="lcb-hamburger" aria-label="Toggle menu" onclick="this.closest('.lcb-topbar').querySelector('.lcb-topbar-links').classList.toggle('open')"> <span></span><span></span><span></span> </button> <nav class="lcb-topbar-links" aria-label="Main navigation"> <a class="" href="/LCB/">Home</a> <a class="" href="/LCB/research/">Research</a> <a class="" href="/LCB/professor/">Professor</a> <a class="" href="/LCB/members/">Members</a> <a class="" href="/LCB/publications/">Publications</a> <a class="" href="/LCB/gallery/">Gallery</a> <a class="" href="/LCB/contact/">Contact</a> </nav> </div> </header> <div class="lcb-page"> <section class="lcb-section"> <h1 class="lcb-section-title">Approaches</h1> <p class="lcb-section-lead">Research approaches are summarized on the Research page.</p> <p><a class="lcb-btn primary" href="/LCB/research/">Go to Research</a></p> </section> </div> </article> </div> </div> <footer class="lcb-footer"> © Lab of Cancer Biology, Department of Life Science, Hanyang University. All rights reserved. </footer> <script>
   window.alFolio = {
