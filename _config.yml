@@ -16,7 +16,7 @@ footer_text: >
   © Lab of Cancer Biology, Department of Life Science, Hanyang University. All rights reserved.
 keywords: cancer biology, therapy resistance, translational research, Hanyang University, omics, immune evasion
 lang: en
-icon:
+icon: favicon.png
 url: https://lcbdodo.github.io
 baseurl: /LCB
 last_updated: false # set to true if you want to display last updated in the footer
