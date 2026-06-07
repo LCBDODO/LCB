@@ -2,7 +2,7 @@
   :root {
     --max-content-width: 1180px;
   }
-</style> <link rel="stylesheet" href="/LCB/assets/css/tailwind.css?v=50c64c15cbb9fd1ce6056fdb8bcb4b62"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css" integrity="sha256-MVopmdyC2tYTiJ8wlktf0uh0v4NgT+vNdyVFepi7Q0c=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.5/css/academicons.min.css" integrity="sha256-SzrCOBJbGVFMahewkgjwnApaV2+av1DwMAA+/QGLyZw=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/scholar-icons@1.0.3/css/scholar-icons.css" integrity="sha256-VY3hHVj/hNX3fYG6wtbA6TcKJQl7+FthzGSyIB64klY=" crossorigin="anonymous"> <link defer rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons&amp;display=swap"> <link defer rel="stylesheet" href="/LCB/assets/css/jekyll-pygments-themes-github.css?v=591dab5a4e56573bf4ef7fd332894c99" media="" id="highlight_theme_light"> <link rel="stylesheet" href="/LCB/assets/css/main.css?v=f0b101217084a90093badfe99ff9a7d1"> <link rel="canonical" href="https://lcbdodo.github.io/LCB/projects/"> </head> <body class="fixed-top-nav sticky-bottom-footer"> <header class="lcb-site-header"> <nav id="navbar" class="navbar navbar-expand-lg lcb-navbar" aria-label="Main navigation"> <div class="container-fluid lcb-nav-container"> <a class="navbar-brand lcb-brand" href="/LCB/" aria-label="Lab of Cancer Biology home"> <img src="/LCB/assets/img/lab_logo_wide.png" alt="Lab of Cancer Biology"> </a> <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button> <div class="collapse navbar-collapse" id="navbarNav"> <ul class="navbar-nav ml-auto align-items-lg-center"> <li class="nav-item"><a class="nav-link " href="/LCB/">Home</a></li> <li class="nav-item"><a class="nav-link " href="/LCB/research/">Research</a></li> <li class="nav-item"><a class="nav-link " href="/LCB/professor/">Professor</a></li> <li class="nav-item"><a class="nav-link " href="/LCB/members/">Members</a></li> <li class="nav-item"><a class="nav-link " href="/LCB/publications/">Publications</a></li> <li class="nav-item"><a class="nav-link " href="/LCB/gallery/">Gallery</a></li> <li class="nav-item"><a class="nav-link " href="/LCB/contact/">Contact</a></li> </ul> </div> </div> </nav> </header> <div class="container mt-5" role="main"> <div class="post"> <header class="post-header"> <h1 class="post-title">Projects</h1> <p class="post-description"></p> </header> <article> <style>
+</style> <link rel="stylesheet" href="/LCB/assets/css/tailwind.css?v=50c64c15cbb9fd1ce6056fdb8bcb4b62"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css" integrity="sha256-MVopmdyC2tYTiJ8wlktf0uh0v4NgT+vNdyVFepi7Q0c=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.5/css/academicons.min.css" integrity="sha256-SzrCOBJbGVFMahewkgjwnApaV2+av1DwMAA+/QGLyZw=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/scholar-icons@1.0.3/css/scholar-icons.css" integrity="sha256-VY3hHVj/hNX3fYG6wtbA6TcKJQl7+FthzGSyIB64klY=" crossorigin="anonymous"> <link defer rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons&amp;display=swap"> <link defer rel="stylesheet" href="/LCB/assets/css/jekyll-pygments-themes-github.css?v=591dab5a4e56573bf4ef7fd332894c99" media="" id="highlight_theme_light"> <link rel="stylesheet" href="/LCB/assets/css/main.css?v=f0b101217084a90093badfe99ff9a7d1"> <link rel="canonical" href="https://lcbdodo.github.io/LCB/projects/"> </head> <body class=" sticky-bottom-footer"> <div class="container mt-5" role="main"> <div class="post"> <header class="post-header"> <h1 class="post-title">Projects</h1> <p class="post-description"></p> </header> <article> <style>
 :root {
   --global-theme-color: #003478;
   --global-hover-color: #005bac;
@@ -319,7 +319,173 @@ footer {
   .lcb-slide { width: 280px; height: 188px; }
   .lcb-profile-grid { grid-template-columns: 1fr; }
 }
-</style> <div class="lcb-page"> <section class="lcb-section"> <h1 class="lcb-section-title">Projects</h1> <p class="lcb-section-lead">Previous projects of the Lab of Cancer Biology are summarized on the Research page.</p> <p><a class="lcb-btn primary" href="/LCB/research/">Go to Research</a></p> </section> </div> </article> </div> </div> <footer class="lcb-footer"> <div class="container">© Lab of Cancer Biology, Department of Life Science, Hanyang University.</div> </footer> <script>
+
+
+/* ===== LCB v8 forced navigation and refined homepage ===== */
+body > header:not(.lcb-force-header),
+header.lcb-site-header,
+#navbar:not(.lcb-force-navbar),
+.navbar:not(.lcb-force-navbar) {
+  display: none !important;
+}
+.lcb-force-header {
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+  background: rgba(255,255,255,.985);
+  border-bottom: 1px solid rgba(0,52,120,.13);
+  box-shadow: 0 8px 24px rgba(6,22,49,.075);
+  backdrop-filter: blur(14px);
+}
+.lcb-force-nav-wrap {
+  width: min(1240px, calc(100% - 56px));
+  min-height: 72px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+.lcb-force-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: .72rem;
+  color: #08285c !important;
+  text-decoration: none !important;
+  font-weight: 900;
+  letter-spacing: -.025em;
+  font-size: 1.16rem;
+  white-space: nowrap;
+  margin-left: -8px;
+}
+.lcb-force-brand img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  display: block;
+}
+.lcb-force-nav {
+  display: flex;
+  align-items: center;
+  gap: clamp(.55rem, 1.25vw, 1.55rem);
+  white-space: nowrap;
+}
+.lcb-force-nav a {
+  color: #18233c !important;
+  text-decoration: none !important;
+  font-size: .96rem;
+  font-weight: 820;
+  letter-spacing: .01em;
+  padding: .8rem .1rem;
+  position: relative;
+}
+.lcb-force-nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: .48rem;
+  height: 2px;
+  background: #e05a4f;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform .18s ease;
+}
+.lcb-force-nav a:hover,
+.lcb-force-nav a.active { color: #003478 !important; }
+.lcb-force-nav a:hover::after,
+.lcb-force-nav a.active::after { transform: scaleX(1); }
+.lcb-home-hero {
+  min-height: 610px !important;
+  background: linear-gradient(135deg, #061631 0%, #003478 52%, #0a57a6 100%) !important;
+}
+.lcb-home-hero::before {
+  background-image:
+    linear-gradient(90deg, rgba(4,16,39,0.98) 0%, rgba(0,52,120,0.92) 46%, rgba(0,52,120,0.70) 62%, rgba(0,52,120,0.28) 100%),
+    url("/LCB/assets/img/home/hero_cancer_cells.jpg") !important;
+  background-size: cover, min(58vw, 820px) auto !important;
+  background-repeat: no-repeat !important;
+  background-position: center, right 8% center !important;
+  transform: none !important;
+  opacity: 1 !important;
+}
+.lcb-home-hero::after {
+  background:
+    radial-gradient(circle at 18% 78%, rgba(0,91,172,.28), transparent 31%),
+    radial-gradient(circle at 88% 18%, rgba(224,90,79,.12), transparent 22%) !important;
+}
+.lcb-home-inner { padding: 5rem 0 5.2rem !important; }
+.lcb-hero-copy { max-width: 700px !important; }
+.lcb-hero-title {
+  font-family: -apple-system, BlinkMacSystemFont, "Inter", "Noto Sans KR", "Segoe UI", sans-serif !important;
+  font-size: clamp(3.55rem, 6.1vw, 6.35rem) !important;
+  letter-spacing: -.06em !important;
+  font-weight: 900 !important;
+}
+.lcb-hero-kicker { color: #d4e3ff !important; }
+.lcb-hero-kr { font-size: clamp(1.45rem, 2.1vw, 1.95rem) !important; }
+.lcb-home-quick {
+  background: linear-gradient(180deg, #ffffff 0%, #f4f8ff 100%);
+  border-bottom: 1px solid var(--lcb-line);
+}
+.lcb-quick-inner {
+  width: min(1180px, calc(100% - 56px));
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.2rem;
+  padding: 3rem 0;
+}
+.lcb-quick-card {
+  background: #fff;
+  border: 1px solid var(--lcb-line);
+  border-radius: 22px;
+  padding: 1.7rem;
+  box-shadow: 0 16px 36px rgba(0,52,120,.08);
+}
+.lcb-quick-card h2 {
+  color: var(--lcb-blue);
+  font-size: clamp(1.7rem, 2.5vw, 2.4rem);
+  font-weight: 900;
+  letter-spacing: -.035em;
+  margin: 0 0 .6rem;
+}
+.lcb-quick-card p { color: #4b5873; line-height: 1.7; margin: 0 0 1.25rem; }
+.lcb-quick-actions { display: flex; gap: .75rem; flex-wrap: wrap; }
+.lcb-quick-actions a {
+  text-decoration: none !important;
+  border: 1px solid var(--lcb-line);
+  border-radius: 999px;
+  padding: .72rem 1.05rem;
+  font-weight: 850;
+  color: var(--lcb-blue) !important;
+  background: #f8fbff;
+}
+.lcb-quick-actions a:hover { background: var(--lcb-blue); color: #fff !important; }
+.lcb-home-people { display: none !important; }
+.lcb-member-grid { grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)) !important; align-items: stretch; }
+.lcb-member { min-height: 100%; display: flex; flex-direction: column; }
+.lcb-member img { height: auto; aspect-ratio: 1 / 1; }
+.lcb-member h3 { margin-bottom: .35rem; }
+.lcb-project-card img { object-fit: contain !important; background: #f7faff; padding: .8rem; }
+.lcb-profile-img { object-fit: cover; background: #f5f8fc; }
+@media (max-width: 880px) {
+  .lcb-force-nav-wrap { width: min(100% - 28px, 1240px); min-height: auto; padding: .65rem 0 .55rem; align-items: flex-start; flex-direction: column; gap: .3rem; }
+  .lcb-force-brand { font-size: 1rem; margin-left: 0; }
+  .lcb-force-brand img { width: 36px; height: 36px; }
+  .lcb-force-nav { width: 100%; overflow-x: auto; padding-bottom: .25rem; gap: 1rem; }
+  .lcb-force-nav a { font-size: .9rem; }
+}
+@media (max-width: 920px) {
+  .lcb-home-hero::before {
+    background-image: linear-gradient(90deg, rgba(4,16,39,0.96), rgba(0,52,120,0.86)), url("/LCB/assets/img/home/hero_cancer_cells.jpg") !important;
+    background-size: cover, min(78vw, 680px) auto !important;
+    background-position: center, right 12% bottom 12% !important;
+  }
+  .lcb-quick-inner { grid-template-columns: 1fr; width: min(100% - 30px, 1180px); }
+}
+
+</style> <header class="lcb-force-header" role="banner"> <div class="lcb-force-nav-wrap"> <a class="lcb-force-brand" href="/LCB/" aria-label="Lab of Cancer Biology home"> <img src="/LCB/assets/img/lab_logo_mark_transparent.png" alt="Lab of Cancer Biology logo"> <span>Lab of Cancer Biology</span> </a> <nav class="lcb-force-nav" aria-label="Main navigation"> <a class="" href="/LCB/">Home</a> <a class="active" href="/LCB/research/">Research</a> <a class="" href="/LCB/professor/">Professor</a> <a class="" href="/LCB/members/">Members</a> <a class="" href="/LCB/publications/">Publications</a> <a class="" href="/LCB/gallery/">Gallery</a> <a class="" href="/LCB/contact/">Contact</a> </nav> </div> </header> <div class="lcb-page"> <section class="lcb-section"> <h1 class="lcb-section-title">Projects</h1> <p class="lcb-section-lead">Previous projects of the Lab of Cancer Biology are summarized on the Research page.</p> <p><a class="lcb-btn primary" href="/LCB/research/">Go to Research</a></p> </section> </div> </article> </div> </div> <footer class="lcb-footer"> <div class="container">© Lab of Cancer Biology, Department of Life Science, Hanyang University.</div> </footer> <script>
   window.alFolio = {
     compatBootstrap: false
   };
