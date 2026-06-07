@@ -18,7 +18,7 @@ description: Principal Investigator of the Lab of Cancer Biology.
         <img class="lcb-profile-img" src="{{ '/assets/img/professor/kyungmin_lee_portrait.jpg' | relative_url }}" alt="Kyung-min Lee" />
       </div>
       <div>
-        <h2 style="color: var(--lcb-blue); font-weight: 900; margin-top: 0;">Kyung-min Lee, PhD<br />이경민</h2>
+        <h2 class="lcb-professor-name">Kyung-min Lee, PhD<br />이경민</h2>
         <div class="lcb-timeline">
           <div class="lcb-timeline-item"><div class="lcb-timeline-year">2024-Current</div><div>Associate professor, Dept. of Life Science, Hanyang Univ.</div></div>
           <div class="lcb-timeline-item"><div class="lcb-timeline-year">2021-2024</div><div>Assistant professor, Dept. of Life Science, Hanyang Univ.</div></div>
@@ -37,13 +37,5 @@ description: Principal Investigator of the Lab of Cancer Biology.
     <p class="lcb-section-lead">
       Prof. Lee received a PhD in Life Science from Hanyang University, where he studied the molecular mechanisms of development and metastasis of cancer. After completing his doctoral studies, he focused on the mechanisms of resistance to anti-cancer drugs including chemotherapy, target therapy and immunotherapy in the laboratory of Carlos L. Arteaga at the Vanderbilt-Ingram Cancer Center of Vanderbilt University Medical Center. Since Prof. Lee joined the Department of Life Science at Hanyang University in 2021 as a faculty member, he has conducted research for curing malignant cancer. In particular, he is conducting research for identifying biomarker-based vulnerability and mechanism of cancer immune evasion using bio-bigdata.
     </p>
-  </section>
-
-  <section class="lcb-section compact">
-    <h2 class="lcb-section-title">Get in Touch</h2>
-    <div class="lcb-contact-box">
-      <p><strong>Phone</strong><br />02-2220-0956</p>
-      <p><strong>Email</strong><br /><a href="mailto:kyungminlee@hanyang.ac.kr">kyungminlee@hanyang.ac.kr</a></p>
-    </div>
   </section>
 </div>
