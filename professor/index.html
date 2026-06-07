@@ -6,7 +6,7 @@
   :root {
     --lcb-blue: #003478;
     --lcb-blue2: #005bac;
-    --lcb-navy: #0a1e3d;
+    --lcb-navy: #071833;
     --lcb-gold: #c7a45b;
     --lcb-coral: #d9534f;
     --lcb-ink: #1f2937;
@@ -17,804 +17,271 @@
     --global-hover-color: #005bac;
   }
 
-  html {
-    scroll-behavior: smooth;
-  }
-
+  html { scroll-behavior: smooth; }
   body {
     margin: 0;
     padding: 0 !important;
     overflow-x: hidden;
     background: #fff;
     color: var(--lcb-ink);
-    font-family:
-      "Inter",
-      "Noto Sans KR",
-      -apple-system,
-      BlinkMacSystemFont,
-      "Segoe UI",
-      sans-serif;
+    font-family: "Inter", "Noto Sans KR", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   }
-
-  a {
-    color: var(--lcb-blue);
-  }
-
-  a:hover {
-    color: var(--lcb-blue2);
-  }
-
-  .post-title,
-  .page-title,
-  h1.post-title,
-  header.post-header,
-  .post-header {
-    display: none !important;
-  }
-
-  body.fixed-top-nav,
-  body.sticky-bottom-footer {
-    padding-top: 0 !important;
-  }
-
-  main,
-  main.container,
-  .container.mt-5,
-  .post {
-    margin-top: 0 !important;
-    padding-top: 0 !important;
-  }
-
-  body > div.container.mt-5 {
-    width: 100% !important;
-    max-width: none !important;
-    padding-right: 0 !important;
-    padding-left: 0 !important;
-    margin-top: 0 !important;
-  }
-
-  body > header:not(.lcb-topbar),
-  header.lcb-site-header,
-  #navbar,
-  .navbar {
-    display: none !important;
-  }
+  a { color: var(--lcb-blue); }
+  a:hover { color: var(--lcb-blue2); }
+  .post-title, .page-title, h1.post-title, header.post-header, .post-header { display:none !important; }
+  body.fixed-top-nav, body.sticky-bottom-footer, main, main.container, .container.mt-5, .post { padding-top:0 !important; margin-top:0 !important; }
+  body > div.container.mt-5 { width:100% !important; max-width:none !important; padding-right:0 !important; padding-left:0 !important; margin-top:0 !important; }
+  body > header:not(.lcb-topbar), header.lcb-site-header, #navbar, .navbar { display:none !important; }
 
   .lcb-topbar {
-    position: sticky;
-    top: 0;
-    z-index: 9999;
-    background: #fff;
-    border-bottom: 1px solid var(--lcb-line);
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
-  }
-
-  .lcb-topbar-inner {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    max-width: 1160px;
-    height: 38px;
-    margin: 0 auto;
-    padding: 0 clamp(10px, 2vw, 22px);
-  }
-
-  .lcb-topbar-brand {
-    display: inline-flex;
-    flex-shrink: 0;
-    align-items: center;
-    gap: 0.34rem;
-    color: var(--lcb-blue) !important;
-    font-size: 0.96rem;
-    font-weight: 680;
-    text-decoration: none !important;
-    white-space: nowrap;
-  }
-
-  .lcb-topbar-logo {
-    width: 24px;
-    height: 24px;
-    object-fit: contain;
-  }
-
-  .lcb-topbar-links {
-    display: flex;
-    align-items: center;
-    gap: clamp(0.35rem, 1.1vw, 1.25rem);
-  }
-
-  .lcb-topbar-links a {
     position: relative;
-    padding: 0.25rem 0;
-    color: #4b5563 !important;
-    font-size: 0.9rem;
-    font-weight: 430;
-    text-decoration: none !important;
-    white-space: nowrap;
-    transition: color 0.15s;
+    z-index: 50;
+    background: rgba(255,255,255,0.98);
+    border-bottom: 1px solid rgba(226,232,240,0.95);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.03);
+    backdrop-filter: blur(8px);
   }
-
+  .lcb-topbar-inner {
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    max-width: 1220px;
+    min-height: 58px;
+    margin:0 auto;
+    padding: 4px clamp(14px, 2.8vw, 30px);
+  }
+  .lcb-topbar-brand {
+    display:inline-flex;
+    flex-shrink:0;
+    align-items:center;
+    gap:0.55rem;
+    color:#111827 !important;
+    font-size:1rem;
+    font-weight:700;
+    line-height:1;
+    text-decoration:none !important;
+    white-space:nowrap;
+  }
+  .lcb-topbar-logo {
+    width:56px;
+    height:56px;
+    object-fit:contain;
+    opacity:0.82;
+    margin-left:-6px;
+  }
+  .lcb-topbar-links {
+    display:flex;
+    align-items:center;
+    gap: clamp(0.6rem, 1.5vw, 1.5rem);
+  }
+  .lcb-topbar-links a {
+    position:relative;
+    padding:0.12rem 0;
+    color:#4b5563 !important;
+    font-size:0.94rem;
+    font-weight:400;
+    line-height:1.2;
+    text-decoration:none !important;
+    white-space:nowrap;
+    transition: color .15s ease;
+  }
   .lcb-topbar-links a::after {
-    position: absolute;
-    right: 0;
-    bottom: -2px;
-    left: 0;
-    height: 1.5px;
-    content: "";
-    background: var(--lcb-coral);
-    transform: scaleX(0);
-    transition: transform 0.18s;
+    position:absolute;
+    right:0; left:0; bottom:-8px;
+    height:1.5px;
+    content:"";
+    background:var(--lcb-coral);
+    transform:scaleX(0);
+    transform-origin:center;
+    transition:transform .18s ease;
   }
-
   .lcb-topbar-links a:hover,
-  .lcb-topbar-links a.active {
-    color: var(--lcb-blue) !important;
-  }
-
-  .lcb-topbar-links a.active {
-    font-weight: 600;
-  }
-
+  .lcb-topbar-links a.active { color:var(--lcb-blue) !important; }
+  .lcb-topbar-links a.active { font-weight:600; }
   .lcb-topbar-links a:hover::after,
-  .lcb-topbar-links a.active::after {
-    transform: scaleX(1);
-  }
+  .lcb-topbar-links a.active::after { transform:scaleX(1); }
 
   .lcb-hamburger {
-    display: none;
-    flex-direction: column;
-    gap: 4px;
-    padding: 6px;
-    cursor: pointer;
-    background: none;
-    border: 0;
+    display:none; flex-direction:column; gap:4px; padding:6px; cursor:pointer; background:none; border:0;
   }
+  .lcb-hamburger span { display:block; width:18px; height:1.5px; background:#4b5563; border-radius:1px; }
 
-  .lcb-hamburger span {
-    display: block;
-    width: 18px;
-    height: 1.5px;
-    background: #4b5563;
-    border-radius: 1px;
-  }
-
-  footer.fixed-bottom,
-  footer {
-    position: static !important;
-    bottom: auto !important;
-  }
-
+  footer.fixed-bottom, footer { position:static !important; bottom:auto !important; }
   .lcb-footer {
-    width: 100%;
-    padding: 1rem 0;
-    margin-top: 2.5rem;
-    color: var(--lcb-muted);
-    font-size: 0.8rem;
-    text-align: center;
-    background: var(--lcb-soft);
-    border-top: 1px solid var(--lcb-line);
+    width:100%; padding:1rem 0; margin-top:2.5rem; color:var(--lcb-muted); font-size:0.8rem; text-align:center; background:var(--lcb-soft); border-top:1px solid var(--lcb-line);
   }
 
-  .lcb-page {
-    max-width: 1060px;
-    padding: 0 clamp(14px, 2.4vw, 30px);
-    margin: 0 auto;
-  }
-
-  .lcb-full-bleed {
-    width: 100vw;
-    margin-right: calc(50% - 50vw);
-    margin-left: calc(50% - 50vw);
-  }
-
-  .lcb-section {
-    padding: 2rem 0 1rem;
-  }
-
-  .lcb-section.compact {
-    padding: 0.65rem 0 1rem;
-  }
-
-  .lcb-section-title {
-    margin: 0 0 0.55rem;
-    color: var(--lcb-blue);
-    font-size: 1.48rem;
-    font-weight: 720;
-  }
-
-  .lcb-section-lead {
-    max-width: 780px;
-    color: #374151;
-    font-size: 0.95rem;
-    line-height: 1.72;
-  }
-
+  .lcb-page { max-width:1120px; padding:0 clamp(16px, 3vw, 30px); margin:0 auto; }
+  .lcb-full-bleed { width:100vw; margin-left:calc(50% - 50vw); margin-right:calc(50% - 50vw); }
+  .lcb-section { padding:2rem 0 1rem; }
+  .lcb-section.compact { padding:1rem 0; }
+  .lcb-section-title { margin:0 0 0.55rem; color:var(--lcb-blue); font-size:1.55rem; font-weight:740; }
+  .lcb-section-lead { max-width:780px; color:#374151; font-size:0.96rem; line-height:1.74; }
   .lcb-eyebrow {
-    display: inline-block;
-    margin-bottom: 0.35rem;
-    color: var(--lcb-gold);
-    font-size: 0.68rem;
-    font-weight: 650;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
+    display:inline-block; margin-bottom:0.35rem; color:var(--lcb-gold); font-size:0.68rem; font-weight:700; letter-spacing:0.16em; text-transform:uppercase;
   }
 
-  .lcb-home-page {
-    max-width: none;
-    padding: 0;
-  }
-
+  .lcb-home-page { max-width:none; padding:0; }
   .lcb-home-hero {
-    position: relative;
-    display: flex;
-    align-items: center;
-    min-height: clamp(430px, 54vh, 560px);
-    overflow: hidden;
-    color: #fff;
-    background: linear-gradient(135deg, #071a3d 0%, #003478 54%, #1e63c7 100%);
+    position:relative; display:flex; align-items:center; min-height:clamp(500px, 72vh, 720px); overflow:hidden; color:#fff;
+    background: linear-gradient(135deg, #081d40 0%, #003478 58%, #0e5db8 100%);
   }
-
   .lcb-home-hero::before {
-    position: absolute;
-    inset: 0;
-    content: "";
+    position:absolute; inset:0; content:"";
     background-image:
-      linear-gradient(90deg, rgba(7, 26, 61, 0.97) 0%, rgba(0, 52, 120, 0.88) 47%, rgba(0, 86, 172, 0.32) 100%),
+      radial-gradient(circle at 72% 24%, rgba(112,165,255,0.18), transparent 23%),
+      linear-gradient(108deg, rgba(6, 22, 49, 0.97) 0%, rgba(0, 52, 120, 0.93) 48%, rgba(0, 52, 120, 0.86) 100%),
       url("/LCB/assets/img/home/hero_cancer_cells.jpg");
-    background-repeat: no-repeat;
-    background-position:
-      center,
-      right 10% center;
-    background-size:
-      cover,
-      auto min(72%, 430px);
+    background-repeat:no-repeat;
+    background-position:center, center, 90% 52%;
+    background-size:cover, cover, clamp(380px, 36vw, 700px);
+    opacity:1;
   }
-
+  .lcb-home-hero::after {
+    position:absolute; inset:0; content:"";
+    background: linear-gradient(0deg, rgba(7,24,51,0.10), rgba(7,24,51,0.10));
+  }
   .lcb-home-inner {
-    position: relative;
-    z-index: 2;
-    width: 100%;
-    max-width: 1060px;
-    padding: 2.7rem clamp(16px, 3vw, 36px);
-    margin: 0 auto;
+    position:relative; z-index:2; width:100%; max-width:1220px; min-height:inherit; margin:0 auto; padding:clamp(3.6rem, 7vw, 5rem) clamp(18px, 4vw, 44px);
+    display:flex; align-items:center; justify-content:center;
   }
-
   .lcb-hero-copy {
-    max-width: 620px;
+    width:min(760px, 100%);
+    margin:0 auto;
   }
-
   .lcb-hero-kicker {
-    margin-bottom: 1.2rem;
-    color: #c4d8f8;
-    font-size: 0.68rem;
-    font-weight: 650;
-    letter-spacing: 0.32em;
-    text-transform: uppercase;
+    margin-bottom:1.1rem; color:#cfe0ff; font-size:0.72rem; font-weight:700; letter-spacing:0.34em; text-transform:uppercase;
   }
-
   .lcb-hero-title {
-    margin: 0 0 1.05rem;
-    color: #fff;
-    font-size: clamp(2.65rem, 5vw, 4.7rem);
-    font-weight: 760;
-    line-height: 1.06;
+    margin:0 0 1rem; color:#fff; font-size:clamp(3rem, 5.5vw, 5.25rem); font-weight:780; line-height:1.02; letter-spacing:-0.03em;
+    text-wrap:balance;
   }
-
   .lcb-hero-kr {
-    margin: 0;
-    color: #e8f0ff;
-    font-size: clamp(1.12rem, 1.65vw, 1.42rem);
-    font-weight: 520;
-    line-height: 1.9;
+    margin:0; color:#f2f6ff; font-size:clamp(1.14rem, 1.7vw, 1.48rem); font-weight:620; line-height:1.75;
   }
-
-  .lcb-hero-rule {
-    width: 42px;
-    height: 2px;
-    margin: 1.35rem 0 1rem;
-    background: var(--lcb-gold);
-  }
-
+  .lcb-hero-rule { width:48px; height:2px; margin:1.35rem 0 1.05rem; background:var(--lcb-gold); }
   .lcb-hero-lead {
-    max-width: 580px;
-    margin: 0;
-    color: #d4e3ff;
-    font-size: clamp(0.88rem, 1.1vw, 1rem);
-    font-weight: 400;
-    line-height: 1.72;
+    max-width:660px; margin:0; color:#dce9ff; font-size:clamp(0.94rem, 1.22vw, 1.12rem); font-weight:400; line-height:1.75;
   }
-
-
-  .lcb-hero-actions {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.7rem;
-    margin-top: 1.25rem;
+  .lcb-hero-actions { display:flex; flex-wrap:wrap; gap:0.85rem; margin-top:1.55rem; }
+  .lcb-hero-btn {
+    display:inline-flex; align-items:center; justify-content:center; min-width:132px; padding:0.86rem 1.35rem; border-radius:999px; text-decoration:none !important; font-size:0.96rem; font-weight:650; transition:all .18s ease;
   }
-
-  .lcb-hero-actions a {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    min-width: 132px;
-    padding: 0.68rem 1.15rem;
-    color: #fff !important;
-    font-size: 0.9rem;
-    font-weight: 560;
-    text-decoration: none !important;
-    background: rgba(255, 255, 255, 0.14);
-    border: 1px solid rgba(255, 255, 255, 0.32);
-    border-radius: 999px;
-    backdrop-filter: blur(6px);
-  }
-
-  .lcb-hero-actions a:first-child {
-    color: var(--lcb-blue) !important;
-    background: #fff;
-    border-color: #fff;
-  }
-
-  .lcb-hero-actions a:hover {
-    color: #fff !important;
-    background: var(--lcb-blue2);
-    border-color: var(--lcb-blue2);
-  }
+  .lcb-hero-btn.primary { color:var(--lcb-blue) !important; background:#fff; border:1px solid rgba(255,255,255,0.25); }
+  .lcb-hero-btn.primary:hover { transform:translateY(-1px); background:#f5f9ff; }
+  .lcb-hero-btn.secondary { color:#fff !important; background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.35); }
+  .lcb-hero-btn.secondary:hover { background:rgba(255,255,255,0.16); transform:translateY(-1px); }
 
   .lcb-home-quick {
-    background: linear-gradient(180deg, #fff, #f7f9fd);
-    border-bottom: 1px solid var(--lcb-line);
+    background:linear-gradient(180deg, #ffffff 0%, #f7f9fd 100%);
+    border-bottom:1px solid var(--lcb-line);
   }
-
   .lcb-quick-inner {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 0.9rem;
-    max-width: 1060px;
-    padding: 1.45rem clamp(16px, 3vw, 36px);
-    margin: 0 auto;
+    display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:1rem; max-width:1120px; padding:1.55rem clamp(16px, 3vw, 30px); margin:0 auto;
   }
+  .lcb-quick-card, .lcb-card, .lcb-project-card, .lcb-member, .lcb-gallery-item {
+    background:#fff; border:1px solid var(--lcb-line); box-shadow:0 2px 10px rgba(0,52,120,0.035);
+  }
+  .lcb-quick-card { padding:1.1rem; border-radius:12px; }
+  .lcb-quick-card h2 { margin:0 0 0.3rem; color:var(--lcb-blue); font-size:1.16rem; font-weight:680; }
+  .lcb-quick-card p { margin:0 0 0.8rem; color:#4b5563; font-size:0.88rem; line-height:1.6; }
+  .lcb-quick-actions { display:flex; flex-wrap:wrap; gap:0.55rem; }
+  .lcb-quick-actions a, .lcb-tab-btn {
+    padding:0.45rem 0.82rem; color:var(--lcb-blue) !important; font-size:0.8rem; font-weight:580; text-decoration:none !important; background:#f8faff; border:1px solid var(--lcb-line); border-radius:999px;
+  }
+  .lcb-quick-actions a:hover, .lcb-tab-btn:hover { color:#fff !important; background:var(--lcb-blue); }
 
-  .lcb-quick-card,
-  .lcb-card,
-  .lcb-project-card,
-  .lcb-member,
-  .lcb-gallery-item {
-    background: #fff;
-    border: 1px solid var(--lcb-line);
-    box-shadow: 0 2px 10px rgba(0, 52, 120, 0.035);
-  }
+  .lcb-home-gallery { padding:1.7rem 0 2rem; }
+  .lcb-gallery-head { max-width:1120px; padding:0 clamp(16px, 3vw, 30px) 0.8rem; margin:0 auto; }
+  .lcb-gallery-head h2 { margin:0; color:var(--lcb-blue); font-size:1.28rem; font-weight:680; }
+  .lcb-slider { display:flex; gap:12px; padding:0 clamp(16px, 3vw, 30px) 0.7rem; overflow-x:auto; scrollbar-color:#c5d2e8 transparent; scrollbar-width:thin; scroll-snap-type:x mandatory; }
+  .lcb-slide { flex:0 0 clamp(235px, 24vw, 315px); overflow:hidden; background:#f1f5fb; border-radius:12px; scroll-snap-align:start; border:1px solid #e8eef7; }
+  .lcb-slide img, .lcb-gallery-item img { display:block; width:100%; height:245px; object-fit:cover; object-position:center; background:#f1f5fb; }
+  .lcb-slide-caption, .lcb-gallery-item figcaption { min-height:56px; padding:0.52rem 0.7rem; color:#4b5563; font-size:0.76rem; line-height:1.45; background:#fff; border-top:1px solid #eef2f8; }
+  .lcb-slide-caption strong, .lcb-gallery-item figcaption strong { color:var(--lcb-ink); font-weight:660; }
+  .lcb-gallery-grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(250px,1fr)); gap:0.95rem; align-items:stretch; margin-top:0.7rem; }
+  .lcb-gallery-item { overflow:hidden; border-radius:12px; }
 
-  .lcb-quick-card {
-    padding: 1.05rem;
-    border-radius: 8px;
-  }
-
-  .lcb-quick-card h2 {
-    margin: 0 0 0.3rem;
-    color: var(--lcb-blue);
-    font-size: 1.12rem;
-    font-weight: 660;
-  }
-
-  .lcb-quick-card p {
-    margin: 0 0 0.75rem;
-    color: #4b5563;
-    font-size: 0.86rem;
-    line-height: 1.58;
-  }
-
-  .lcb-quick-actions {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-  }
-
-  .lcb-quick-actions a,
-  .lcb-tab-btn {
-    padding: 0.42rem 0.75rem;
-    color: var(--lcb-blue) !important;
-    font-size: 0.78rem;
-    font-weight: 560;
-    text-decoration: none !important;
-    background: #f8faff;
-    border: 1px solid var(--lcb-line);
-    border-radius: 999px;
-  }
-
-  .lcb-quick-actions a:hover,
-  .lcb-tab-btn:hover {
-    color: #fff !important;
-    background: var(--lcb-blue);
-  }
-
-  .lcb-home-gallery {
-    padding: 1.55rem 0 2rem;
-  }
-
-  .lcb-gallery-head {
-    max-width: 1060px;
-    padding: 0 clamp(16px, 3vw, 36px) 0.8rem;
-    margin: 0 auto;
-  }
-
-  .lcb-gallery-head h2 {
-    margin: 0;
-    color: var(--lcb-blue);
-    font-size: 1.24rem;
-    font-weight: 660;
-  }
-
-  .lcb-slider {
-    display: flex;
-    gap: 12px;
-    padding: 0 clamp(16px, 3vw, 36px) 0.7rem;
-    overflow-x: auto;
-    scrollbar-color: #c5d2e8 transparent;
-    scrollbar-width: thin;
-    scroll-snap-type: x mandatory;
-  }
-
-  .lcb-slide {
-    flex: 0 0 clamp(230px, 25vw, 310px);
-    overflow: hidden;
-    background: #f1f5fb;
-    border-radius: 8px;
-    scroll-snap-align: start;
-  }
-
-  .lcb-slide img,
-  .lcb-gallery-item img {
-    display: block;
-    width: 100%;
-    height: 245px;
-    object-fit: contain;
-    object-position: center top;
-    background: #f1f5fb;
-  }
-
-  .lcb-slide-caption,
-  .lcb-gallery-item figcaption {
-    min-height: 54px;
-    padding: 0.48rem 0.62rem;
-    color: #4b5563;
-    font-size: 0.76rem;
-    line-height: 1.4;
-    background: #fff;
-    border-top: 1px solid #eef2f8;
-  }
-
-  .lcb-slide-caption strong,
-  .lcb-gallery-item figcaption strong {
-    color: var(--lcb-ink);
-    font-weight: 650;
-  }
-
-  .lcb-gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 0.9rem;
-    align-items: stretch;
-    margin-top: 0.7rem;
-  }
-
-  .lcb-gallery-item {
-    overflow: hidden;
-    border-radius: 8px;
-  }
-
-  .lcb-card-grid,
-  .lcb-project-grid {
-    display: grid;
-    gap: 0.85rem;
-  }
-
-  .lcb-card-grid {
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  }
-
-  .lcb-card {
-    padding: 1rem;
-    border-radius: 8px;
-  }
-
-  .lcb-card h3,
-  .lcb-project-body h3 {
-    margin: 0 0 0.3rem;
-    color: var(--lcb-blue);
-    font-size: 0.92rem;
-    font-weight: 660;
-  }
-
-  .lcb-card p,
-  .lcb-project-body p {
-    margin: 0;
-    color: #4b5563;
-    font-size: 0.84rem;
-    line-height: 1.58;
-  }
+  .lcb-card-grid, .lcb-project-grid { display:grid; gap:1rem; }
+  .lcb-card-grid { grid-template-columns:repeat(auto-fit, minmax(220px,1fr)); }
+  .lcb-card { padding:1rem; border-radius:12px; }
+  .lcb-card h3, .lcb-project-body h3 { margin:0 0 0.35rem; color:var(--lcb-blue); font-size:1rem; font-weight:680; line-height:1.35; }
+  .lcb-card p, .lcb-project-body p { margin:0; color:#4b5563; font-size:0.86rem; line-height:1.62; }
 
   .lcb-project-grid {
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    margin-top: 0.9rem;
+    grid-template-columns: repeat(3, minmax(0,1fr));
+    margin-top:0.95rem;
   }
-
-  .lcb-project-card {
-    overflow: hidden;
-    border-radius: 8px;
-  }
-
+  .lcb-project-card { overflow:hidden; border-radius:12px; }
   .lcb-project-card img {
-    display: block;
-    width: 100%;
-    height: 215px;
-    padding: 0.35rem;
-    object-fit: contain;
-    background: #f7faff;
+    display:block; width:100%; aspect-ratio:3 / 2; height:auto; object-fit:cover; object-position:center; background:#fff; border-bottom:1px solid #edf2f8;
   }
+  .lcb-project-body { padding:0.95rem 1rem 1rem; }
 
-  .lcb-project-body {
-    padding: 0.85rem 0.95rem 0.95rem;
-  }
+  .lcb-profile-grid { display:grid; grid-template-columns:minmax(200px, 280px) 1fr; gap:1.5rem; align-items:start; }
+  .lcb-profile-img { width:100%; object-fit:cover; border-radius:12px; box-shadow:0 6px 22px rgba(0,52,120,0.08); }
+  .lcb-timeline { padding-left:1rem; border-left:2px solid var(--lcb-line); }
+  .lcb-timeline-item { margin-bottom:0.62rem; }
+  .lcb-timeline-year { color:var(--lcb-blue); font-size:0.88rem; font-weight:670; }
+  .lcb-timeline-item div:not(.lcb-timeline-year) { color:#4b5563; font-size:0.84rem; }
 
-  .lcb-profile-grid {
-    display: grid;
-    grid-template-columns: minmax(200px, 280px) 1fr;
-    gap: 1.5rem;
-    align-items: start;
-  }
+  .lcb-member-grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(170px,1fr)); gap:0.95rem; }
+  .lcb-member { display:flex; flex-direction:column; padding:0.9rem; border-radius:12px; }
+  .lcb-member img { width:100%; aspect-ratio:1 / 1; margin-bottom:0.58rem; object-fit:cover; object-position:center 42%; background:#f1f5fb; border-radius:10px; }
+  .lcb-member h3 { margin:0 0 0.15rem; color:var(--lcb-blue); font-size:0.94rem; font-weight:680; }
+  .lcb-role { color:var(--lcb-blue2); font-weight:580; }
+  .lcb-member p { margin:0.12rem 0; color:#6b7280; font-size:0.8rem; line-height:1.42; }
+  .lcb-people-tabs { display:flex; flex-wrap:wrap; gap:0.5rem; margin:0.95rem 0 1.15rem; }
 
-  .lcb-profile-img {
-    width: 100%;
-    object-fit: cover;
-    border-radius: 8px;
-    box-shadow: 0 6px 22px rgba(0, 52, 120, 0.08);
-  }
+  .lcb-contact-box { padding:1.05rem; background:linear-gradient(135deg, #f8faff, #eff4ff); border:1px solid var(--lcb-line); border-radius:12px; }
+  .lcb-contact-box p { margin:0.35rem 0; font-size:0.9rem; }
 
-  .lcb-timeline {
-    padding-left: 1rem;
-    border-left: 2px solid var(--lcb-line);
-  }
+  .lcb-publications { counter-reset: pubs; }
+  .lcb-pub-list { padding-left:0; list-style:none; }
+  .lcb-pub-item { display:grid; grid-template-columns:2.8rem 1fr; gap:0.7rem; padding:0.8rem 0; border-bottom:1px solid var(--lcb-line); counter-increment:pubs; }
+  .lcb-pub-item::before { padding-top:0.08rem; color:var(--lcb-blue); font-size:0.92rem; font-weight:700; content:counter(pubs); }
+  .lcb-pub-title { color:#1f2937; font-size:0.9rem; font-weight:600; line-height:1.55; }
+  .lcb-pub-meta { color:#6b7280; font-size:0.83rem; line-height:1.58; }
+  .lcb-year { margin-top:1.8rem; color:var(--lcb-blue); font-size:1.42rem; font-weight:760; }
 
-  .lcb-timeline-item {
-    margin-bottom: 0.62rem;
-  }
-
-  .lcb-timeline-year {
-    color: var(--lcb-blue);
-    font-size: 0.86rem;
-    font-weight: 660;
-  }
-
-  .lcb-timeline-item div:not(.lcb-timeline-year) {
-    color: #4b5563;
-    font-size: 0.84rem;
-  }
-
-  .lcb-member-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(155px, 1fr));
-    gap: 0.85rem;
-  }
-
-  .lcb-member {
-    display: flex;
-    flex-direction: column;
-    padding: 0.85rem;
-    border-radius: 8px;
-  }
-
-  .lcb-member img {
-    width: 100%;
-    aspect-ratio: 1 / 1;
-    margin-bottom: 0.55rem;
-    object-fit: cover;
-    object-position: center 42%;
-    background: #f1f5fb;
-    border-radius: 7px;
-  }
-
-
-  .lcb-member.placeholder img {
-    object-fit: contain;
-    padding: 1.1rem;
-    background: linear-gradient(135deg, #f3f7ff, #e8eef9);
-  }
-
-  .lcb-member.focus-dayeon img {
-    object-position: center 58%;
-  }
-
-  .lcb-member h3 {
-    margin: 0 0 0.15rem;
-    color: var(--lcb-blue);
-    font-size: 0.9rem;
-    font-weight: 660;
-  }
-
-  .lcb-role {
-    color: var(--lcb-blue2);
-    font-weight: 560;
-  }
-
-  .lcb-member p {
-    margin: 0.1rem 0;
-    color: #6b7280;
-    font-size: 0.78rem;
-    line-height: 1.4;
-  }
-
-  .lcb-people-tabs {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    margin: 0.9rem 0 1.1rem;
-  }
-
-  .lcb-contact-box {
-    padding: 1.05rem;
-    background: linear-gradient(135deg, #f8faff, #eff4ff);
-    border: 1px solid var(--lcb-line);
-    border-radius: 8px;
-  }
-
-  .lcb-contact-box p {
-    margin: 0.35rem 0;
-    font-size: 0.9rem;
-  }
-
-  .lcb-pub-title a {
-    color: var(--lcb-blue) !important;
-    text-decoration: none !important;
-  }
-
-  .lcb-pub-title a:hover {
-    color: var(--lcb-blue2) !important;
-    text-decoration: underline !important;
-  }
-
-  .lcb-publications {
-    counter-reset: pubs;
-  }
-
-  .lcb-pub-list {
-    padding-left: 0;
-    list-style: none;
-  }
-
-  .lcb-pub-item {
-    display: grid;
-    grid-template-columns: 2.8rem 1fr;
-    gap: 0.7rem;
-    padding: 0.75rem 0;
-    border-bottom: 1px solid var(--lcb-line);
-    counter-increment: pubs;
-  }
-
-  .lcb-pub-item::before {
-    padding-top: 0.1rem;
-    color: var(--lcb-blue);
-    font-size: 0.9rem;
-    font-weight: 700;
-    content: counter(pubs);
-  }
-
-  .lcb-pub-title {
-    color: #1f2937;
-    font-size: 0.88rem;
-    font-weight: 600;
-  }
-
-  .lcb-pub-meta {
-    color: #6b7280;
-    font-size: 0.82rem;
-    line-height: 1.55;
-  }
-
-  .lcb-year {
-    margin-top: 1.8rem;
-    color: var(--lcb-blue);
-    font-size: 1.4rem;
-    font-weight: 750;
+  @media (max-width: 1120px) {
+    .lcb-project-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
   }
 
   @media (max-width: 920px) {
-    .lcb-quick-inner {
-      grid-template-columns: 1fr;
-    }
-
-    .lcb-home-hero {
-      min-height: 430px;
-    }
-
-    .lcb-home-hero::before {
-      background-image:
-        linear-gradient(90deg, rgba(7, 26, 61, 0.96), rgba(0, 52, 120, 0.82)), url("/LCB/assets/img/home/hero_cancer_cells.jpg") !important;
-      background-position:
-        center,
-        right 8% center !important;
-      background-size:
-        cover,
-        auto min(62%, 360px) !important;
-    }
+    .lcb-quick-inner { grid-template-columns:1fr; }
+    .lcb-home-hero { min-height:470px; }
+    .lcb-home-hero::before { background-position:center, center, 90% 52%; background-size:cover, cover, min(66vw, 520px); }
   }
 
   @media (max-width: 800px) {
-    .lcb-topbar-inner {
-      height: 40px;
-    }
-
-    .lcb-topbar-logo {
-      width: 22px;
-      height: 22px;
-    }
-
-    .lcb-hamburger {
-      display: flex;
-    }
-
+    .lcb-topbar-inner { min-height:52px; }
+    .lcb-topbar-logo { width:42px; height:42px; }
+    .lcb-topbar-brand { font-size:0.92rem; }
+    .lcb-hamburger { display:flex; }
     .lcb-topbar-links {
-      position: absolute;
-      top: 40px;
-      right: 0;
-      left: 0;
-      display: none;
-      flex-direction: column;
-      gap: 0;
-      padding: 0.45rem 0;
-      background: #fff;
-      border-bottom: 1px solid var(--lcb-line);
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+      position:absolute; top:52px; right:0; left:0; display:none; flex-direction:column; gap:0; padding:0.45rem 0; background:#fff; border-bottom:1px solid var(--lcb-line); box-shadow:0 4px 12px rgba(0,0,0,0.06);
     }
-
-    .lcb-topbar-links.open {
-      display: flex;
-    }
-
-    .lcb-topbar-links a {
-      padding: 0.58rem clamp(16px, 3vw, 36px);
-      font-size: 0.86rem;
-    }
-
-    .lcb-topbar-links a::after {
-      display: none;
-    }
+    .lcb-topbar-links.open { display:flex; }
+    .lcb-topbar-links a { padding:0.62rem clamp(16px,3vw,36px); font-size:0.9rem; }
+    .lcb-topbar-links a::after { display:none; }
+    .lcb-project-grid { grid-template-columns:1fr; }
   }
 
   @media (max-width: 720px) {
-    .lcb-home-hero {
-      min-height: auto;
-    }
-
-    .lcb-home-inner {
-      padding: 2.6rem clamp(16px, 3vw, 36px) 2.9rem;
-    }
-
-    .lcb-hero-title {
-      font-size: 2.45rem;
-    }
-
-    .lcb-hero-lead br {
-      display: none;
-    }
-
-    .lcb-slide {
-      flex-basis: 230px;
-    }
-
-    .lcb-slide img,
-    .lcb-gallery-item img {
-      height: 220px;
-    }
-
-    .lcb-profile-grid {
-      grid-template-columns: 1fr;
-    }
-
-    .lcb-member-grid {
-      grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-    }
+    .lcb-home-hero { min-height:auto; }
+    .lcb-home-hero::before { background-position:center, center, 90% 20%; background-size:cover, cover, 78vw; }
+    .lcb-home-inner { padding:3rem clamp(16px, 4vw, 24px) 3.2rem; justify-content:flex-start; }
+    .lcb-hero-copy { width:100%; }
+    .lcb-hero-title { font-size:2.65rem; }
+    .lcb-hero-actions { gap:0.65rem; }
+    .lcb-hero-btn { min-width:120px; padding:0.74rem 1.05rem; font-size:0.9rem; }
+    .lcb-slide { flex-basis:230px; }
+    .lcb-slide img, .lcb-gallery-item img { height:220px; }
+    .lcb-profile-grid { grid-template-columns:1fr; }
+    .lcb-member-grid { grid-template-columns:repeat(auto-fill, minmax(145px,1fr)); }
   }
-</style> <header class="lcb-topbar" role="banner"> <div class="lcb-topbar-inner"> <a class="lcb-topbar-brand" href="/LCB/" aria-label="Lab of Cancer Biology home"> <img src="/LCB/assets/img/lab_logo_mark_transparent.png" alt="" class="lcb-topbar-logo"> <span>Lab of Cancer Biology</span> </a> <button class="lcb-hamburger" aria-label="Toggle menu" onclick="this.closest('.lcb-topbar').querySelector('.lcb-topbar-links').classList.toggle('open')"> <span></span><span></span><span></span> </button> <nav class="lcb-topbar-links" aria-label="Main navigation"> <a class="" href="/LCB/">Home</a> <a class="" href="/LCB/research/">Research</a> <a class="active" href="/LCB/professor/">Professor</a> <a class="" href="/LCB/members/">Members</a> <a class="" href="/LCB/publications/">Publications</a> <a class="" href="/LCB/gallery/">Gallery</a> <a class="" href="/LCB/contact/">Contact</a> </nav> </div> </header> <div class="lcb-page"> <section class="lcb-section"> <h1 class="lcb-section-title">Professor</h1> <div class="lcb-profile-grid"> <div> <img class="lcb-profile-img" src="/LCB/assets/img/professor/kyungmin_lee_portrait.jpg" alt="Kyung-min Lee"> </div> <div> <h2 style="color: var(--lcb-blue); font-weight: 900; margin-top: 0;">Kyung-min Lee, PhD<br>이경민</h2> <div class="lcb-timeline"> <div class="lcb-timeline-item"> <div class="lcb-timeline-year">2024-Current</div> <div>Associate professor, Dept. of Life Science, Hanyang Univ.</div> </div> <div class="lcb-timeline-item"> <div class="lcb-timeline-year">2021-2024</div> <div>Assistant professor, Dept. of Life Science, Hanyang Univ.</div> </div> <div class="lcb-timeline-item"> <div class="lcb-timeline-year">2020-2021</div> <div>Research Scientist, Simmons Comprehensive Cancer Center, UT Southwestern Medical Center</div> </div> <div class="lcb-timeline-item"> <div class="lcb-timeline-year">2017-2020</div> <div>PostDoc, Simmons Comprehensive Cancer Center, UT Southwestern Medical Center</div> </div> <div class="lcb-timeline-item"> <div class="lcb-timeline-year">2014-2017</div> <div>PostDoc, Dept. of Medicine, Vanderbilt-Ingram Cancer Center, Vanderbilt Univ.</div> </div> <div class="lcb-timeline-item"> <div class="lcb-timeline-year">2008-2014</div> <div>PhD, Dept. of Life Science, Hanyang Univ.</div> </div> <div class="lcb-timeline-item"> <div class="lcb-timeline-year">2001-2008</div> <div>BS, Dept. of Life Science, Hanyang Univ.</div> </div> </div> </div> </div> </section> <section class="lcb-section compact"> <h2 class="lcb-section-title">About</h2> <p class="lcb-section-lead"> Prof. Lee received a PhD in Life Science from Hanyang University, where he studied the molecular mechanisms of development and metastasis of cancer. After completing his doctoral studies, he focused on the mechanisms of resistance to anti-cancer drugs including chemotherapy, target therapy and immunotherapy in the laboratory of Carlos L. Arteaga at the Vanderbilt-Ingram Cancer Center of Vanderbilt University Medical Center. Since Prof. Lee joined the Department of Life Science at Hanyang University in 2021 as a faculty member, he has conducted research for curing malignant cancer. In particular, he is conducting research for identifying biomarker-based vulnerability and mechanism of cancer immune evasion using bio-bigdata. </p> </section> <section class="lcb-section compact"> <h2 class="lcb-section-title">Get in Touch</h2> <div class="lcb-contact-box"> <p><strong>Phone</strong><br>02-2220-0956</p> <p><strong>Email</strong><br><a href="mailto:kyungminlee@hanyang.ac.kr">kyungminlee@hanyang.ac.kr</a></p> </div> </section> </div> </article> </div> </div> <footer class="lcb-footer"> © Lab of Cancer Biology, Department of Life Science, Hanyang University. All rights reserved. </footer> <script>
+</style> <header class="lcb-topbar" role="banner"> <div class="lcb-topbar-inner"> <a class="lcb-topbar-brand" href="/LCB/"> <img src="/LCB/assets/img/lab_logo_mark_transparent.png" alt="" class="lcb-topbar-logo"> Lab of Cancer Biology </a> <button class="lcb-hamburger" aria-label="Toggle menu" onclick="this.closest('.lcb-topbar').querySelector('.lcb-topbar-links').classList.toggle('open')"> <span></span><span></span><span></span> </button> <nav class="lcb-topbar-links" aria-label="Main navigation"> <a class="" href="/LCB/">Home</a> <a class="" href="/LCB/research/">Research</a> <a class="active" href="/LCB/professor/">Professor</a> <a class="" href="/LCB/members/">Members</a> <a class="" href="/LCB/publications/">Publications</a> <a class="" href="/LCB/gallery/">Gallery</a> <a class="" href="/LCB/contact/">Contact</a> </nav> </div> </header> <div class="lcb-page"> <section class="lcb-section"> <h1 class="lcb-section-title">Professor</h1> <div class="lcb-profile-grid"> <div> <img class="lcb-profile-img" src="/LCB/assets/img/professor/kyungmin_lee_portrait.jpg" alt="Kyung-min Lee"> </div> <div> <h2 style="color: var(--lcb-blue); font-weight: 900; margin-top: 0;">Kyung-min Lee, PhD<br>이경민</h2> <div class="lcb-timeline"> <div class="lcb-timeline-item"> <div class="lcb-timeline-year">2024-Current</div> <div>Associate professor, Dept. of Life Science, Hanyang Univ.</div> </div> <div class="lcb-timeline-item"> <div class="lcb-timeline-year">2021-2024</div> <div>Assistant professor, Dept. of Life Science, Hanyang Univ.</div> </div> <div class="lcb-timeline-item"> <div class="lcb-timeline-year">2020-2021</div> <div>Research Scientist, Simmons Comprehensive Cancer Center, UT Southwestern Medical Center</div> </div> <div class="lcb-timeline-item"> <div class="lcb-timeline-year">2017-2020</div> <div>PostDoc, Simmons Comprehensive Cancer Center, UT Southwestern Medical Center</div> </div> <div class="lcb-timeline-item"> <div class="lcb-timeline-year">2014-2017</div> <div>PostDoc, Dept. of Medicine, Vanderbilt-Ingram Cancer Center, Vanderbilt Univ.</div> </div> <div class="lcb-timeline-item"> <div class="lcb-timeline-year">2008-2014</div> <div>PhD, Dept. of Life Science, Hanyang Univ.</div> </div> <div class="lcb-timeline-item"> <div class="lcb-timeline-year">2001-2008</div> <div>BS, Dept. of Life Science, Hanyang Univ.</div> </div> </div> </div> </div> </section> <section class="lcb-section compact"> <h2 class="lcb-section-title">About</h2> <p class="lcb-section-lead"> Prof. Lee received a PhD in Life Science from Hanyang University, where he studied the molecular mechanisms of development and metastasis of cancer. After completing his doctoral studies, he focused on the mechanisms of resistance to anti-cancer drugs including chemotherapy, target therapy and immunotherapy in the laboratory of Carlos L. Arteaga at the Vanderbilt-Ingram Cancer Center of Vanderbilt University Medical Center. Since Prof. Lee joined the Department of Life Science at Hanyang University in 2021 as a faculty member, he has conducted research for curing malignant cancer. In particular, he is conducting research for identifying biomarker-based vulnerability and mechanism of cancer immune evasion using bio-bigdata. </p> </section> <section class="lcb-section compact"> <h2 class="lcb-section-title">Get in Touch</h2> <div class="lcb-contact-box"> <p><strong>Phone</strong><br>02-2220-0956</p> <p><strong>Email</strong><br><a href="mailto:kyungminlee@hanyang.ac.kr">kyungminlee@hanyang.ac.kr</a></p> </div> </section> </div> </article> </div> </div> <footer class="lcb-footer"> © Lab of Cancer Biology, Department of Life Science, Hanyang University. All rights reserved. </footer> <script>
   window.alFolio = {
     compatBootstrap: false
   };
