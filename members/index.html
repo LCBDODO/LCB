@@ -11,9 +11,11 @@
   --global-theme-color:#003478;--global-hover-color:#005bac;
 }
 html{scroll-behavior:smooth}
-body{font-family:"Inter","Noto Sans KR",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--lcb-ink);overflow-x:hidden;background:#fff;margin:0;padding-bottom:0!important}
+body{font-family:"Inter","Noto Sans KR",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--lcb-ink);overflow-x:hidden;background:#fff;margin:0;padding:0 0 0!important}
 a{color:var(--lcb-blue)}a:hover{color:var(--lcb-blue2)}
 .post-title,.page-title,h1.post-title,header.post-header,.post-header{display:none!important}
+body.fixed-top-nav,body.sticky-bottom-footer{padding-top:0!important}
+main,main.container,.container.mt-5,.post{margin-top:0!important;padding-top:0!important}
 
 /* ── hide al-folio default header ── */
 body>header:not(.lcb-topbar),header.lcb-site-header,#navbar,.navbar{display:none!important}
@@ -55,8 +57,8 @@ footer.fixed-bottom,footer{position:static!important;bottom:auto!important}
 
 /* ── Hero ── */
 .lcb-home-page{max-width:none;padding:0}
-.lcb-home-hero{position:relative;min-height:520px;overflow:hidden;color:#fff;display:flex;align-items:center;background:linear-gradient(135deg,#081d40 0%,var(--lcb-blue) 55%,#1565c0 100%)}
-.lcb-home-hero::before{content:"";position:absolute;inset:0;background-image:linear-gradient(90deg,rgba(8,29,64,.96) 0%,rgba(0,52,120,.88) 42%,rgba(0,52,120,.3) 100%),url("/LCB/assets/img/home/hero_cancer_cells.jpg");background-size:cover,clamp(320px,48vw,700px) auto;background-repeat:no-repeat;background-position:center,right 5% center}
+.lcb-home-hero{position:relative;min-height:clamp(500px,68vh,680px);overflow:hidden;color:#fff;display:flex;align-items:center;background:linear-gradient(135deg,#081d40 0%,var(--lcb-blue) 55%,#1565c0 100%)}
+.lcb-home-hero::before{content:"";position:absolute;inset:0;background-image:linear-gradient(90deg,rgba(8,29,64,.95) 0%,rgba(0,52,120,.86) 43%,rgba(0,52,120,.34) 100%),url("/LCB/assets/img/home/hero_cancer_cells.jpg");background-size:cover,cover;background-repeat:no-repeat;background-position:center,center 42%}
 .lcb-home-hero::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 12% 82%,rgba(0,91,172,.2),transparent 28%);pointer-events:none}
 .lcb-home-inner{position:relative;z-index:2;max-width:1060px;width:100%;margin:0 auto;padding:4rem clamp(16px,3vw,36px) 3.8rem}
 .lcb-hero-copy{max-width:640px}
@@ -85,15 +87,15 @@ footer.fixed-bottom,footer{position:static!important;bottom:auto!important}
 .lcb-gallery-head{max-width:1060px;margin:0 auto;padding:0 clamp(16px,3vw,36px) 1rem}
 .lcb-gallery-head h2{color:var(--lcb-blue);font-weight:650;letter-spacing:-.025em;margin:0;font-size:1.3rem}
 .lcb-slider{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding:0 clamp(16px,3vw,36px) .8rem;scrollbar-width:thin;scrollbar-color:#c5d2e8 transparent;-webkit-overflow-scrolling:touch}
-.lcb-slide{flex:0 0 270px;scroll-snap-align:start;border-radius:10px;overflow:hidden;background:#f1f5fb;box-shadow:0 2px 10px rgba(0,52,120,.06)}
-.lcb-slide img{width:100%;height:195px;object-fit:cover;display:block}
+.lcb-slide{flex:0 0 clamp(220px,26vw,320px);scroll-snap-align:start;border-radius:10px;overflow:hidden;background:#f1f5fb;box-shadow:0 2px 10px rgba(0,52,120,.06)}
+.lcb-slide img{width:100%;height:auto;max-height:360px;object-fit:contain;display:block;background:#f1f5fb}
 .lcb-slide-caption{padding:.45rem .6rem;background:#fff;font-size:.74rem;color:#4b5563;line-height:1.4;border-top:1px solid #eef2f8}
 .lcb-slide-caption strong{color:var(--lcb-ink);font-weight:600}
 
 /* ── Gallery page grid ── */
-.lcb-gallery-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:.9rem;margin-top:1rem}
+.lcb-gallery-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1rem;margin-top:1rem;align-items:start}
 .lcb-gallery-item{border-radius:10px;overflow:hidden;background:#fff;border:1px solid var(--lcb-line);box-shadow:0 2px 10px rgba(0,52,120,.04)}
-.lcb-gallery-item img{width:100%;height:210px;object-fit:cover;display:block}
+.lcb-gallery-item img{width:100%;height:auto;display:block;background:#f1f5fb}
 .lcb-gallery-item figcaption{padding:.5rem .7rem;font-size:.78rem;color:#4b5563;line-height:1.4}
 .lcb-gallery-item figcaption strong{color:var(--lcb-ink)}
 
@@ -144,8 +146,8 @@ footer.fixed-bottom,footer{position:static!important;bottom:auto!important}
 .lcb-year{margin-top:1.8rem;color:var(--lcb-blue);font-size:1.4rem;font-weight:750}
 
 /* ── Responsive ── */
-@media(max-width:920px){.lcb-quick-inner{grid-template-columns:1fr}.lcb-home-hero{min-height:440px}.lcb-home-hero::before{background-size:cover!important;background-image:linear-gradient(90deg,rgba(8,29,64,.95),rgba(0,52,120,.82)),url("/LCB/assets/img/home/hero_cancer_cells.jpg")!important}}
-@media(max-width:720px){.lcb-home-hero{min-height:auto}.lcb-home-inner{padding:3rem clamp(16px,3vw,36px) 3.2rem}.lcb-hero-title{font-size:2.5rem}.lcb-hero-lead br{display:none}.lcb-slide{flex:0 0 240px}.lcb-slide img{height:170px}.lcb-profile-grid{grid-template-columns:1fr}.lcb-member-grid{grid-template-columns:repeat(auto-fill,minmax(140px,1fr))}}
+@media(max-width:920px){.lcb-quick-inner{grid-template-columns:1fr}.lcb-home-hero{min-height:460px}.lcb-home-hero::before{background-image:linear-gradient(90deg,rgba(8,29,64,.95),rgba(0,52,120,.78)),url("/LCB/assets/img/home/hero_cancer_cells.jpg")!important;background-size:cover,cover!important;background-position:center,center!important}}
+@media(max-width:720px){.lcb-home-hero{min-height:auto}.lcb-home-inner{padding:3rem clamp(16px,3vw,36px) 3.2rem}.lcb-hero-title{font-size:2.5rem}.lcb-hero-lead br{display:none}.lcb-slide{flex:0 0 230px}.lcb-slide img{max-height:300px}.lcb-profile-grid{grid-template-columns:1fr}.lcb-member-grid{grid-template-columns:repeat(auto-fill,minmax(140px,1fr))}}
 </style> <header class="lcb-topbar" role="banner"> <div class="lcb-topbar-inner"> <a class="lcb-topbar-brand" href="/LCB/"> <img src="/LCB/assets/img/lab_logo_mark_transparent.png" alt="" class="lcb-topbar-logo"> Lab of Cancer Biology </a> <button class="lcb-hamburger" aria-label="Toggle menu" onclick="this.closest('.lcb-topbar').querySelector('.lcb-topbar-links').classList.toggle('open')"> <span></span><span></span><span></span> </button> <nav class="lcb-topbar-links" aria-label="Main navigation"> <a href="/LCB/">Home</a> <a href="/LCB/research/">Research</a> <a href="/LCB/professor/">Professor</a> <a class="active" href="/LCB/members/">Members</a> <a href="/LCB/publications/">Publications</a> <a href="/LCB/gallery/">Gallery</a> <a href="/LCB/contact/">Contact</a> </nav> </div> </header> <div class="lcb-page"> <section class="lcb-section"> <h1 class="lcb-section-title">Members</h1> <div class="lcb-people-tabs"> <a class="lcb-tab-btn" href="#current-members">Current Members</a> <a class="lcb-tab-btn" href="#alumni">Alumni</a> </div> </section> <section id="current-members" class="lcb-section compact"> <h2 class="lcb-section-title">Current Members</h2> <div class="lcb-member-grid"> <div class="lcb-member"> <img src="https://static.wixstatic.com/media/b4730b_65350c8a023a494da63b436525400ca3~mv2.jpg/v1/crop/x_0,y_113,w_582,h_582/fill/w_220,h_220,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/KakaoTalk_20240102_165923527.jpg" alt="손승한"> <h3>손승한</h3> <p class="lcb-role">연구조교수</p> <p>2023.9–</p> </div> <div class="lcb-member"> <img src="https://static.wixstatic.com/media/b4730b_6d040a93b7244322875e0d7bd8b68b4a~mv2.jpg/v1/crop/x_0,y_209,w_1913,h_1913/fill/w_220,h_220,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/KakaoTalk_20230209_214229561.jpg" alt="이태원"> <h3>이태원</h3> <p class="lcb-role">박사과정</p> <p>2023.9–</p> </div> <div class="lcb-member"> <img src="https://static.wixstatic.com/media/b4730b_8e30554319f6425ab5f21173f4691e4b~mv2.jpg/v1/crop/x_0,y_28,w_347,h_347/fill/w_220,h_220,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/KakaoTalk_20230209_214312733.jpg" alt="박수빈"> <h3>박수빈</h3> <p class="lcb-role">석박사통합과정</p> <p>2022.9–</p> </div> <div class="lcb-member"> <img src="https://static.wixstatic.com/media/b4730b_ec7fea28bc0f4b5eabd5a935a26384e0~mv2.jpg/v1/crop/x_0,y_4,w_354,h_354/fill/w_220,h_220,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/KakaoTalk_20240102_165642236.jpg" alt="유혜빈"> <h3>유혜빈</h3> <p class="lcb-role">석박사통합과정</p> <p>2024.3–</p> </div> <div class="lcb-member"> <img src="https://static.wixstatic.com/media/b4730b_d8a594213ca84e9fa1373daea4fd3045~mv2.jpg/v1/crop/x_0,y_34,w_1119,h_1119/fill/w_220,h_220,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/KakaoTalk_20240102_164530011.jpg" alt="현도도"> <h3>현도도</h3> <p class="lcb-role">석박사통합과정</p> <p>2024.3–</p> </div> <div class="lcb-member"> <img src="https://static.wixstatic.com/media/b4730b_c93a1c318f784ae7bff82835e1555bf8~mv2.jpg/v1/crop/x_0,y_347,w_2427,h_2427/fill/w_220,h_220,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/%EA%B3%A0%EB%8B%A4%EC%97%B0.jpg" alt="고다연"> <h3>고다연</h3> <p class="lcb-role">석박사통합과정</p> <p>2025.3–</p> </div> <div class="lcb-member"> <img src="/LCB/assets/img/members/placeholder_kim_jinsung.jpg" alt="김진성"> <h3>김진성</h3> <p class="lcb-role">석박사통합과정</p> <p>2026.3–</p> </div> </div> </section> <section id="alumni" class="lcb-section compact"> <h2 class="lcb-section-title">Alumni</h2> <div class="lcb-member-grid"> <div class="lcb-member"> <img src="https://static.wixstatic.com/media/b4730b_946ce2ee7780483194237b56a30972de~mv2.jpg/v1/crop/x_0,y_10,w_409,h_409/fill/w_220,h_220,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/%EB%82%B4%EC%82%AC%EC%A7%84_001.jpg" alt="이창준"> <h3>이창준</h3> <p class="lcb-role">석사</p> <p>2023.2 졸업</p> </div> <div class="lcb-member"> <img src="https://static.wixstatic.com/media/b4730b_0f77aead514a49d99383e4fee3b89252~mv2.jpg/v1/crop/x_0,y_0,w_2569,h_2564/fill/w_220,h_220,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/KakaoTalk_20240102_165657435.jpg" alt="조다영"> <h3>조다영</h3> <p class="lcb-role">석사</p> <p>2026.2 졸업</p> </div> </div> </section> </div> </article> </div> </div> <footer class="lcb-footer"> © Lab of Cancer Biology, Department of Life Science, Hanyang University. All rights reserved. </footer> <script>
   window.alFolio = {
     compatBootstrap: false

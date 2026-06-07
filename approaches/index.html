@@ -11,9 +11,11 @@
   --global-theme-color:#003478;--global-hover-color:#005bac;
 }
 html{scroll-behavior:smooth}
-body{font-family:"Inter","Noto Sans KR",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--lcb-ink);overflow-x:hidden;background:#fff;margin:0;padding-bottom:0!important}
+body{font-family:"Inter","Noto Sans KR",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--lcb-ink);overflow-x:hidden;background:#fff;margin:0;padding:0 0 0!important}
 a{color:var(--lcb-blue)}a:hover{color:var(--lcb-blue2)}
 .post-title,.page-title,h1.post-title,header.post-header,.post-header{display:none!important}
+body.fixed-top-nav,body.sticky-bottom-footer{padding-top:0!important}
+main,main.container,.container.mt-5,.post{margin-top:0!important;padding-top:0!important}
 
 /* ── hide al-folio default header ── */
 body>header:not(.lcb-topbar),header.lcb-site-header,#navbar,.navbar{display:none!important}
@@ -55,8 +57,8 @@ footer.fixed-bottom,footer{position:static!important;bottom:auto!important}
 
 /* ── Hero ── */
 .lcb-home-page{max-width:none;padding:0}
-.lcb-home-hero{position:relative;min-height:520px;overflow:hidden;color:#fff;display:flex;align-items:center;background:linear-gradient(135deg,#081d40 0%,var(--lcb-blue) 55%,#1565c0 100%)}
-.lcb-home-hero::before{content:"";position:absolute;inset:0;background-image:linear-gradient(90deg,rgba(8,29,64,.96) 0%,rgba(0,52,120,.88) 42%,rgba(0,52,120,.3) 100%),url("/LCB/assets/img/home/hero_cancer_cells.jpg");background-size:cover,clamp(320px,48vw,700px) auto;background-repeat:no-repeat;background-position:center,right 5% center}
+.lcb-home-hero{position:relative;min-height:clamp(500px,68vh,680px);overflow:hidden;color:#fff;display:flex;align-items:center;background:linear-gradient(135deg,#081d40 0%,var(--lcb-blue) 55%,#1565c0 100%)}
+.lcb-home-hero::before{content:"";position:absolute;inset:0;background-image:linear-gradient(90deg,rgba(8,29,64,.95) 0%,rgba(0,52,120,.86) 43%,rgba(0,52,120,.34) 100%),url("/LCB/assets/img/home/hero_cancer_cells.jpg");background-size:cover,cover;background-repeat:no-repeat;background-position:center,center 42%}
 .lcb-home-hero::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 12% 82%,rgba(0,91,172,.2),transparent 28%);pointer-events:none}
 .lcb-home-inner{position:relative;z-index:2;max-width:1060px;width:100%;margin:0 auto;padding:4rem clamp(16px,3vw,36px) 3.8rem}
 .lcb-hero-copy{max-width:640px}
@@ -85,15 +87,15 @@ footer.fixed-bottom,footer{position:static!important;bottom:auto!important}
 .lcb-gallery-head{max-width:1060px;margin:0 auto;padding:0 clamp(16px,3vw,36px) 1rem}
 .lcb-gallery-head h2{color:var(--lcb-blue);font-weight:650;letter-spacing:-.025em;margin:0;font-size:1.3rem}
 .lcb-slider{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding:0 clamp(16px,3vw,36px) .8rem;scrollbar-width:thin;scrollbar-color:#c5d2e8 transparent;-webkit-overflow-scrolling:touch}
-.lcb-slide{flex:0 0 270px;scroll-snap-align:start;border-radius:10px;overflow:hidden;background:#f1f5fb;box-shadow:0 2px 10px rgba(0,52,120,.06)}
-.lcb-slide img{width:100%;height:195px;object-fit:cover;display:block}
+.lcb-slide{flex:0 0 clamp(220px,26vw,320px);scroll-snap-align:start;border-radius:10px;overflow:hidden;background:#f1f5fb;box-shadow:0 2px 10px rgba(0,52,120,.06)}
+.lcb-slide img{width:100%;height:auto;max-height:360px;object-fit:contain;display:block;background:#f1f5fb}
 .lcb-slide-caption{padding:.45rem .6rem;background:#fff;font-size:.74rem;color:#4b5563;line-height:1.4;border-top:1px solid #eef2f8}
 .lcb-slide-caption strong{color:var(--lcb-ink);font-weight:600}
 
 /* ── Gallery page grid ── */
-.lcb-gallery-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:.9rem;margin-top:1rem}
+.lcb-gallery-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1rem;margin-top:1rem;align-items:start}
 .lcb-gallery-item{border-radius:10px;overflow:hidden;background:#fff;border:1px solid var(--lcb-line);box-shadow:0 2px 10px rgba(0,52,120,.04)}
-.lcb-gallery-item img{width:100%;height:210px;object-fit:cover;display:block}
+.lcb-gallery-item img{width:100%;height:auto;display:block;background:#f1f5fb}
 .lcb-gallery-item figcaption{padding:.5rem .7rem;font-size:.78rem;color:#4b5563;line-height:1.4}
 .lcb-gallery-item figcaption strong{color:var(--lcb-ink)}
 
@@ -144,8 +146,8 @@ footer.fixed-bottom,footer{position:static!important;bottom:auto!important}
 .lcb-year{margin-top:1.8rem;color:var(--lcb-blue);font-size:1.4rem;font-weight:750}
 
 /* ── Responsive ── */
-@media(max-width:920px){.lcb-quick-inner{grid-template-columns:1fr}.lcb-home-hero{min-height:440px}.lcb-home-hero::before{background-size:cover!important;background-image:linear-gradient(90deg,rgba(8,29,64,.95),rgba(0,52,120,.82)),url("/LCB/assets/img/home/hero_cancer_cells.jpg")!important}}
-@media(max-width:720px){.lcb-home-hero{min-height:auto}.lcb-home-inner{padding:3rem clamp(16px,3vw,36px) 3.2rem}.lcb-hero-title{font-size:2.5rem}.lcb-hero-lead br{display:none}.lcb-slide{flex:0 0 240px}.lcb-slide img{height:170px}.lcb-profile-grid{grid-template-columns:1fr}.lcb-member-grid{grid-template-columns:repeat(auto-fill,minmax(140px,1fr))}}
+@media(max-width:920px){.lcb-quick-inner{grid-template-columns:1fr}.lcb-home-hero{min-height:460px}.lcb-home-hero::before{background-image:linear-gradient(90deg,rgba(8,29,64,.95),rgba(0,52,120,.78)),url("/LCB/assets/img/home/hero_cancer_cells.jpg")!important;background-size:cover,cover!important;background-position:center,center!important}}
+@media(max-width:720px){.lcb-home-hero{min-height:auto}.lcb-home-inner{padding:3rem clamp(16px,3vw,36px) 3.2rem}.lcb-hero-title{font-size:2.5rem}.lcb-hero-lead br{display:none}.lcb-slide{flex:0 0 230px}.lcb-slide img{max-height:300px}.lcb-profile-grid{grid-template-columns:1fr}.lcb-member-grid{grid-template-columns:repeat(auto-fill,minmax(140px,1fr))}}
 </style> <header class="lcb-topbar" role="banner"> <div class="lcb-topbar-inner"> <a class="lcb-topbar-brand" href="/LCB/"> <img src="/LCB/assets/img/lab_logo_mark_transparent.png" alt="" class="lcb-topbar-logo"> Lab of Cancer Biology </a> <button class="lcb-hamburger" aria-label="Toggle menu" onclick="this.closest('.lcb-topbar').querySelector('.lcb-topbar-links').classList.toggle('open')"> <span></span><span></span><span></span> </button> <nav class="lcb-topbar-links" aria-label="Main navigation"> <a href="/LCB/">Home</a> <a href="/LCB/research/">Research</a> <a href="/LCB/professor/">Professor</a> <a href="/LCB/members/">Members</a> <a href="/LCB/publications/">Publications</a> <a href="/LCB/gallery/">Gallery</a> <a href="/LCB/contact/">Contact</a> </nav> </div> </header> <div class="lcb-page"> <section class="lcb-section"> <h1 class="lcb-section-title">Approaches</h1> <p class="lcb-section-lead">Research approaches are summarized on the Research page.</p> <p><a class="lcb-btn primary" href="/LCB/research/">Go to Research</a></p> </section> </div> </article> </div> </div> <footer class="lcb-footer"> © Lab of Cancer Biology, Department of Life Science, Hanyang University. All rights reserved. </footer> <script>
   window.alFolio = {
     compatBootstrap: false
