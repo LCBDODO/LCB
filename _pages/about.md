@@ -55,13 +55,13 @@ description:
       <h2>Moments from Our Lab</h2>
     </div>
     <div class="lcb-slider">
-      <div class="lcb-slide"><img src="https://static.wixstatic.com/media/b4730b_12e989d77a274a5aaad1a448257dc7be~mv2.jpg/v1/fill/w_580,h_387,al_c,q_80,enc_avif,quality_auto/b4730b_12e989d77a274a5aaad1a448257dc7be~mv2.jpg" alt="2025 KSMCB" /><div class="lcb-slide-caption"><strong>2025 KSMCB</strong></div></div>
-      <div class="lcb-slide"><img src="https://static.wixstatic.com/media/b4730b_91fb609e7e41467b8e2e78e65f6365ba~mv2.jpg/v1/fill/w_400,h_600,al_c,q_80,enc_avif,quality_auto/b4730b_91fb609e7e41467b8e2e78e65f6365ba~mv2.jpg" alt="손승한 포스터" /><div class="lcb-slide-caption"><strong>2025 KSMCB</strong><br>Poster by 손승한</div></div>
-      <div class="lcb-slide"><img src="https://static.wixstatic.com/media/b4730b_7630af320eaa40efb6b07ef8897e3311~mv2.jpg/v1/fill/w_400,h_600,al_c,q_80,enc_avif,quality_auto/b4730b_7630af320eaa40efb6b07ef8897e3311~mv2.jpg" alt="조다영 포스터" /><div class="lcb-slide-caption"><strong>2025 KSMCB</strong><br>Poster by 조다영</div></div>
-      <div class="lcb-slide"><img src="https://static.wixstatic.com/media/b4730b_349971b877d2428881af8c53f8e5af2a~mv2.jpg/v1/fill/w_450,h_600,al_c,q_80,enc_avif,quality_auto/b4730b_349971b877d2428881af8c53f8e5af2a~mv2.jpg" alt="스승의 날" /><div class="lcb-slide-caption"><strong>스승의 날 (2025)</strong></div></div>
-      <div class="lcb-slide"><img src="https://static.wixstatic.com/media/b4730b_bead737641d04fda8476282047a5ae92~mv2.jpg/v1/fill/w_450,h_600,al_c,q_80,enc_avif,quality_auto/b4730b_bead737641d04fda8476282047a5ae92~mv2.jpg" alt="Lab picnic" /><div class="lcb-slide-caption"><strong>Lab Picnic</strong> (Spring 2024)</div></div>
-      <div class="lcb-slide"><img src="https://static.wixstatic.com/media/b4730b_bbe30303dd0b4c94bc90ee6e0d929b5a~mv2.jpg/v1/fill/w_580,h_435,al_c,q_80,enc_avif,quality_auto/b4730b_bbe30303dd0b4c94bc90ee6e0d929b5a~mv2.jpg" alt="Dr. Shigeri" /><div class="lcb-slide-caption"><strong>Dr. Shigeri Visit</strong> (2024)</div></div>
-      <div class="lcb-slide"><img src="https://static.wixstatic.com/media/b4730b_1f3d6cf700844f44a0fed0cb077dbdf8~mv2.jpg/v1/fill/w_450,h_600,al_c,q_80,enc_avif,quality_auto/b4730b_1f3d6cf700844f44a0fed0cb077dbdf8~mv2.jpg" alt="이태원 졸업" /><div class="lcb-slide-caption"><strong>Graduation</strong> — 이태원 (MS 2024)</div></div>
+      <div class="lcb-slide"><img src="{{ '/assets/img/gallery/2025_ksmcb_overview.jpg' | relative_url }}" alt="2025 KSMCB" /><div class="lcb-slide-caption"><strong>2025 KSMCB</strong></div></div>
+      <div class="lcb-slide"><img src="{{ '/assets/img/gallery/2025_ksmcb_son_seunghan.jpg' | relative_url }}" alt="손승한 포스터" /><div class="lcb-slide-caption"><strong>2025 KSMCB</strong><br>Poster by 손승한</div></div>
+      <div class="lcb-slide"><img src="{{ '/assets/img/gallery/2025_ksmcb_jo_dayoung.jpg' | relative_url }}" alt="조다영 포스터" /><div class="lcb-slide-caption"><strong>2025 KSMCB</strong><br>Poster by 조다영</div></div>
+      <div class="lcb-slide"><img src="{{ '/assets/img/gallery/teacher_day_2025.jpg' | relative_url }}" alt="스승의 날" /><div class="lcb-slide-caption"><strong>스승의 날 (2025)</strong></div></div>
+      <div class="lcb-slide"><img src="{{ '/assets/img/gallery/lab_picnic_spring_2024.jpg' | relative_url }}" alt="Lab picnic" /><div class="lcb-slide-caption"><strong>Lab Picnic</strong> (Spring 2024)</div></div>
+      <div class="lcb-slide"><img src="{{ '/assets/img/gallery/dr_shigeri_visit_2024.jpg' | relative_url }}" alt="Dr. Shigeri visit" /><div class="lcb-slide-caption"><strong>Dr. Shigeri Visit</strong> (2024)</div></div>
+      <div class="lcb-slide"><img src="{{ '/assets/img/gallery/graduate_lee_taewon_2024.jpg' | relative_url }}" alt="이태원 졸업" /><div class="lcb-slide-caption"><strong>Graduation</strong> — 이태원 (MS 2024)</div></div>
     </div>
   </section>
 </div>
