@@ -77,9 +77,9 @@
   }
 
   .lcb-topbar {
-    position: relative;
-    top: auto;
-    z-index: 20;
+    position: sticky;
+    top: 0;
+    z-index: 9999;
     background: #fff;
     border-bottom: 1px solid var(--lcb-line);
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
@@ -90,26 +90,26 @@
     align-items: center;
     justify-content: space-between;
     max-width: 1160px;
-    height: 44px;
+    height: 38px;
     margin: 0 auto;
-    padding: 0 clamp(12px, 2.4vw, 28px);
+    padding: 0 clamp(10px, 2vw, 22px);
   }
 
   .lcb-topbar-brand {
     display: inline-flex;
     flex-shrink: 0;
     align-items: center;
-    gap: 0.38rem;
+    gap: 0.34rem;
     color: var(--lcb-blue) !important;
-    font-size: 0.78rem;
-    font-weight: 650;
+    font-size: 0.96rem;
+    font-weight: 680;
     text-decoration: none !important;
     white-space: nowrap;
   }
 
   .lcb-topbar-logo {
-    width: 34px;
-    height: 34px;
+    width: 24px;
+    height: 24px;
     object-fit: contain;
   }
 
@@ -123,8 +123,8 @@
     position: relative;
     padding: 0.25rem 0;
     color: #4b5563 !important;
-    font-size: 0.8rem;
-    font-weight: 440;
+    font-size: 0.9rem;
+    font-weight: 430;
     text-decoration: none !important;
     white-space: nowrap;
     transition: color 0.15s;
@@ -244,10 +244,10 @@
     position: relative;
     display: flex;
     align-items: center;
-    min-height: clamp(455px, 58vh, 600px);
+    min-height: clamp(430px, 54vh, 560px);
     overflow: hidden;
     color: #fff;
-    background: linear-gradient(135deg, #081d40 0%, var(--lcb-blue) 58%, #1565c0 100%);
+    background: linear-gradient(135deg, #071a3d 0%, #003478 54%, #1e63c7 100%);
   }
 
   .lcb-home-hero::before {
@@ -255,15 +255,15 @@
     inset: 0;
     content: "";
     background-image:
-      linear-gradient(90deg, rgba(8, 29, 64, 0.96) 0%, rgba(0, 52, 120, 0.86) 45%, rgba(0, 52, 120, 0.34) 100%),
+      linear-gradient(90deg, rgba(7, 26, 61, 0.97) 0%, rgba(0, 52, 120, 0.88) 47%, rgba(0, 86, 172, 0.32) 100%),
       url("{{ '/assets/img/home/hero_cancer_cells.jpg' | relative_url }}");
     background-repeat: no-repeat;
     background-position:
       center,
-      right 12% center;
+      right 10% center;
     background-size:
       cover,
-      auto min(86%, 520px);
+      auto min(72%, 430px);
   }
 
   .lcb-home-inner {
@@ -271,7 +271,7 @@
     z-index: 2;
     width: 100%;
     max-width: 1060px;
-    padding: 3.2rem clamp(16px, 3vw, 36px);
+    padding: 2.7rem clamp(16px, 3vw, 36px);
     margin: 0 auto;
   }
 
@@ -318,6 +318,42 @@
     font-size: clamp(0.88rem, 1.1vw, 1rem);
     font-weight: 400;
     line-height: 1.72;
+  }
+
+
+  .lcb-hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.7rem;
+    margin-top: 1.25rem;
+  }
+
+  .lcb-hero-actions a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 132px;
+    padding: 0.68rem 1.15rem;
+    color: #fff !important;
+    font-size: 0.9rem;
+    font-weight: 560;
+    text-decoration: none !important;
+    background: rgba(255, 255, 255, 0.14);
+    border: 1px solid rgba(255, 255, 255, 0.32);
+    border-radius: 999px;
+    backdrop-filter: blur(6px);
+  }
+
+  .lcb-hero-actions a:first-child {
+    color: var(--lcb-blue) !important;
+    background: #fff;
+    border-color: #fff;
+  }
+
+  .lcb-hero-actions a:hover {
+    color: #fff !important;
+    background: var(--lcb-blue2);
+    border-color: var(--lcb-blue2);
   }
 
   .lcb-home-quick {
@@ -573,6 +609,13 @@
     border-radius: 7px;
   }
 
+
+  .lcb-member.placeholder img {
+    object-fit: contain;
+    padding: 1.1rem;
+    background: linear-gradient(135deg, #f3f7ff, #e8eef9);
+  }
+
   .lcb-member.focus-dayeon img {
     object-position: center 58%;
   }
@@ -613,6 +656,16 @@
   .lcb-contact-box p {
     margin: 0.35rem 0;
     font-size: 0.9rem;
+  }
+
+  .lcb-pub-title a {
+    color: var(--lcb-blue) !important;
+    text-decoration: none !important;
+  }
+
+  .lcb-pub-title a:hover {
+    color: var(--lcb-blue2) !important;
+    text-decoration: underline !important;
   }
 
   .lcb-publications {
@@ -671,24 +724,24 @@
 
     .lcb-home-hero::before {
       background-image:
-        linear-gradient(90deg, rgba(8, 29, 64, 0.95), rgba(0, 52, 120, 0.78)), url("{{ '/assets/img/home/hero_cancer_cells.jpg' | relative_url }}") !important;
+        linear-gradient(90deg, rgba(7, 26, 61, 0.96), rgba(0, 52, 120, 0.82)), url("{{ '/assets/img/home/hero_cancer_cells.jpg' | relative_url }}") !important;
       background-position:
         center,
-        right 12% center !important;
+        right 8% center !important;
       background-size:
         cover,
-        auto min(78%, 430px) !important;
+        auto min(62%, 360px) !important;
     }
   }
 
   @media (max-width: 800px) {
     .lcb-topbar-inner {
-      height: 42px;
+      height: 40px;
     }
 
     .lcb-topbar-logo {
-      width: 31px;
-      height: 31px;
+      width: 22px;
+      height: 22px;
     }
 
     .lcb-hamburger {
@@ -697,7 +750,7 @@
 
     .lcb-topbar-links {
       position: absolute;
-      top: 42px;
+      top: 40px;
       right: 0;
       left: 0;
       display: none;

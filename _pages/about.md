@@ -18,6 +18,10 @@ description:
         <p class="lcb-hero-kr">암생물학연구실<br />한양대학교 생명과학과</p>
         <div class="lcb-hero-rule"></div>
         <p class="lcb-hero-lead">We study how cancer cells adapt, evolve, and acquire resistance to anti-cancer therapies in a perspective of translational research.</p>
+        <div class="lcb-hero-actions">
+          <a href="{{ '/research/' | relative_url }}">Research</a>
+          <a href="{{ '/publications/' | relative_url }}">Publications</a>
+        </div>
       </div>
     </div>
   </section>

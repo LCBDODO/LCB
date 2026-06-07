@@ -25,50 +25,44 @@ description: Members of the Lab of Cancer Biology.
       <div class="lcb-member">
         <img src="{{ '/assets/img/members/son_seunghan.jpg' | relative_url }}" alt="손승한" />
         <h3>손승한</h3>
-        <p class="lcb-role">Research Assistant</p>
+        <p class="lcb-role">연구조교수</p>
         <p>2023.9-</p>
       </div>
       <div class="lcb-member">
         <img src="{{ '/assets/img/members/lee_taewon.jpg' | relative_url }}" alt="이태원" />
         <h3>이태원</h3>
-        <p class="lcb-role">PhD Course</p>
+        <p class="lcb-role">박사과정</p>
         <p>2023.9-</p>
       </div>
       <div class="lcb-member">
         <img src="{{ '/assets/img/members/park_subin.jpg' | relative_url }}" alt="박수빈" />
         <h3>박수빈</h3>
-        <p class="lcb-role">Department of Life Science</p>
+        <p class="lcb-role">석박사통합과정</p>
         <p>2022.9-</p>
       </div>
       <div class="lcb-member">
         <img src="{{ '/assets/img/members/yu_hyebin.jpg' | relative_url }}" alt="유혜빈" />
         <h3>유혜빈</h3>
-        <p class="lcb-role">Department of Life Science</p>
+        <p class="lcb-role">석박사통합과정</p>
         <p>2024.3-</p>
       </div>
       <div class="lcb-member">
         <img src="{{ '/assets/img/members/hyun_dodo.jpg' | relative_url }}" alt="현도도" />
         <h3>현도도</h3>
-        <p class="lcb-role">Department of Life Science</p>
+        <p class="lcb-role">석박사통합과정</p>
         <p>2024.3-</p>
-      </div>
-      <div class="lcb-member">
-        <img src="{{ '/assets/img/members/jo_dayoung.jpg' | relative_url }}" alt="조다영" />
-        <h3>조다영</h3>
-        <p class="lcb-role">Department of Life Science</p>
-        <p>2024.3-</p>
-      </div>
-      <div class="lcb-member">
-        <img src="{{ '/assets/img/members/kim_jinsung.jpg' | relative_url }}" alt="김진성" />
-        <h3>김진성</h3>
-        <p class="lcb-role">Department of Life Science</p>
-        <p>2026.3-</p>
       </div>
       <div class="lcb-member focus-dayeon">
         <img src="{{ '/assets/img/members/ko_dayeon.jpg' | relative_url }}" alt="고다연" />
         <h3>고다연</h3>
-        <p class="lcb-role">Department of Life Science</p>
+        <p class="lcb-role">석박사통합과정</p>
         <p>2025.3-</p>
+      </div>
+      <div class="lcb-member placeholder">
+        <img src="{{ '/assets/img/members/placeholder_kim_jinsung.jpg' | relative_url }}" alt="김진성" />
+        <h3>김진성</h3>
+        <p class="lcb-role">석박사통합과정</p>
+        <p>2026.03-</p>
       </div>
     </div>
   </section>
@@ -79,8 +73,14 @@ description: Members of the Lab of Cancer Biology.
       <div class="lcb-member">
         <img src="{{ '/assets/img/members/lee_changjun.jpg' | relative_url }}" alt="이창준" />
         <h3>이창준</h3>
-        <p class="lcb-role">MS</p>
-        <p>Graduated 2023.2</p>
+        <p class="lcb-role">석사</p>
+        <p>2023.2 졸업</p>
+      </div>
+      <div class="lcb-member">
+        <img src="{{ '/assets/img/members/jo_dayoung.jpg' | relative_url }}" alt="조다영" />
+        <h3>조다영</h3>
+        <p class="lcb-role">석사</p>
+        <p>2026.02 졸업</p>
       </div>
     </div>
   </section>
