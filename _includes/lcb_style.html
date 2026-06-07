@@ -41,29 +41,29 @@
     display:flex;
     align-items:center;
     justify-content:space-between;
-    max-width: 1220px;
-    min-height: 58px;
+    max-width: 1180px;
+    min-height: 46px;
     margin:0 auto;
-    padding: 4px clamp(14px, 2.8vw, 30px);
+    padding: 0 clamp(14px, 2.6vw, 26px);
   }
   .lcb-topbar-brand {
     display:inline-flex;
     flex-shrink:0;
     align-items:center;
-    gap:0.55rem;
+    gap:0.48rem;
     color:#111827 !important;
-    font-size:1rem;
+    font-size:0.98rem;
     font-weight:700;
     line-height:1;
     text-decoration:none !important;
     white-space:nowrap;
   }
   .lcb-topbar-logo {
-    width:56px;
-    height:56px;
+    width:42px;
+    height:42px;
     object-fit:contain;
     opacity:0.82;
-    margin-left:-6px;
+    margin-left:-4px;
   }
   .lcb-topbar-links {
     display:flex;
@@ -74,7 +74,7 @@
     position:relative;
     padding:0.12rem 0;
     color:#4b5563 !important;
-    font-size:0.94rem;
+    font-size:0.88rem;
     font-weight:400;
     line-height:1.2;
     text-decoration:none !important;
@@ -83,7 +83,7 @@
   }
   .lcb-topbar-links a::after {
     position:absolute;
-    right:0; left:0; bottom:-8px;
+    right:0; left:0; bottom:-6px;
     height:1.5px;
     content:"";
     background:var(--lcb-coral);
@@ -119,7 +119,7 @@
 
   .lcb-home-page { max-width:none; padding:0; }
   .lcb-home-hero {
-    position:relative; display:flex; align-items:center; min-height:clamp(500px, 72vh, 720px); overflow:hidden; color:#fff;
+    position:relative; display:flex; align-items:center; min-height:clamp(500px, 68vh, 690px); overflow:hidden; color:#fff;
     background: linear-gradient(135deg, #081d40 0%, #003478 58%, #0e5db8 100%);
   }
   .lcb-home-hero::before {
@@ -129,8 +129,8 @@
       linear-gradient(108deg, rgba(6, 22, 49, 0.97) 0%, rgba(0, 52, 120, 0.93) 48%, rgba(0, 52, 120, 0.86) 100%),
       url("{{ '/assets/img/home/hero_cancer_cells.jpg' | relative_url }}");
     background-repeat:no-repeat;
-    background-position:center, center, 90% 52%;
-    background-size:cover, cover, clamp(380px, 36vw, 700px);
+    background-position:center, center, right clamp(48px, 11vw, 180px) center;
+    background-size:cover, cover, clamp(380px, 34vw, 640px);
     opacity:1;
   }
   .lcb-home-hero::after {
@@ -138,18 +138,18 @@
     background: linear-gradient(0deg, rgba(7,24,51,0.10), rgba(7,24,51,0.10));
   }
   .lcb-home-inner {
-    position:relative; z-index:2; width:100%; max-width:1220px; min-height:inherit; margin:0 auto; padding:clamp(3.6rem, 7vw, 5rem) clamp(18px, 4vw, 44px);
-    display:flex; align-items:center; justify-content:center;
+    position:relative; z-index:2; width:100%; max-width:1180px; min-height:inherit; margin:0 auto; padding:clamp(3.4rem, 6vw, 4.7rem) clamp(14px, 2.6vw, 26px);
+    display:flex; align-items:center; justify-content:flex-start;
   }
   .lcb-hero-copy {
-    width:min(760px, 100%);
-    margin:0 auto;
+    width:min(660px, 100%);
+    margin:0;
   }
   .lcb-hero-kicker {
     margin-bottom:1.1rem; color:#cfe0ff; font-size:0.72rem; font-weight:700; letter-spacing:0.34em; text-transform:uppercase;
   }
   .lcb-hero-title {
-    margin:0 0 1rem; color:#fff; font-size:clamp(3rem, 5.5vw, 5.25rem); font-weight:780; line-height:1.02; letter-spacing:-0.03em;
+    margin:0 0 1rem; color:#fff; font-size:clamp(3rem, 5.15vw, 5rem); font-weight:780; line-height:1.02; letter-spacing:-0.03em;
     text-wrap:balance;
   }
   .lcb-hero-kr {
@@ -173,7 +173,7 @@
     border-bottom:1px solid var(--lcb-line);
   }
   .lcb-quick-inner {
-    display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:1rem; max-width:1120px; padding:1.55rem clamp(16px, 3vw, 30px); margin:0 auto;
+    display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:1rem; max-width:1180px; padding:1.55rem clamp(14px, 2.6vw, 26px); margin:0 auto;
   }
   .lcb-quick-card, .lcb-card, .lcb-project-card, .lcb-member, .lcb-gallery-item {
     background:#fff; border:1px solid var(--lcb-line); box-shadow:0 2px 10px rgba(0,52,120,0.035);
@@ -188,9 +188,9 @@
   .lcb-quick-actions a:hover, .lcb-tab-btn:hover { color:#fff !important; background:var(--lcb-blue); }
 
   .lcb-home-gallery { padding:1.7rem 0 2rem; }
-  .lcb-gallery-head { max-width:1120px; padding:0 clamp(16px, 3vw, 30px) 0.8rem; margin:0 auto; }
+  .lcb-gallery-head { max-width:1180px; padding:0 clamp(14px, 2.6vw, 26px) 0.8rem; margin:0 auto; }
   .lcb-gallery-head h2 { margin:0; color:var(--lcb-blue); font-size:1.28rem; font-weight:680; }
-  .lcb-slider { display:flex; gap:12px; padding:0 clamp(16px, 3vw, 30px) 0.7rem; overflow-x:auto; scrollbar-color:#c5d2e8 transparent; scrollbar-width:thin; scroll-snap-type:x mandatory; }
+  .lcb-slider { display:flex; gap:12px; padding:0 clamp(14px, 2.6vw, 26px) 0.7rem; overflow-x:auto; scrollbar-color:#c5d2e8 transparent; scrollbar-width:thin; scroll-snap-type:x mandatory; }
   .lcb-slide { flex:0 0 clamp(235px, 24vw, 315px); overflow:hidden; background:#f1f5fb; border-radius:12px; scroll-snap-align:start; border:1px solid #e8eef7; }
   .lcb-slide img, .lcb-gallery-item img { display:block; width:100%; height:245px; object-fit:cover; object-position:center; background:#f1f5fb; }
   .lcb-slide-caption, .lcb-gallery-item figcaption { min-height:56px; padding:0.52rem 0.7rem; color:#4b5563; font-size:0.76rem; line-height:1.45; background:#fff; border-top:1px solid #eef2f8; }
@@ -210,7 +210,7 @@
   }
   .lcb-project-card { overflow:hidden; border-radius:12px; }
   .lcb-project-card img {
-    display:block; width:100%; aspect-ratio:3 / 2; height:auto; object-fit:cover; object-position:center; background:#fff; border-bottom:1px solid #edf2f8;
+    display:block; width:100%; aspect-ratio:3 / 2; height:auto; object-fit:contain; object-position:center; background:#fff; border-bottom:1px solid #edf2f8; padding:0.35rem;
   }
   .lcb-project-body { padding:0.95rem 1rem 1rem; }
 
@@ -223,7 +223,7 @@
 
   .lcb-member-grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(170px,1fr)); gap:0.95rem; }
   .lcb-member { display:flex; flex-direction:column; padding:0.9rem; border-radius:12px; }
-  .lcb-member img { width:100%; aspect-ratio:1 / 1; margin-bottom:0.58rem; object-fit:cover; object-position:center 42%; background:#f1f5fb; border-radius:10px; }
+  .lcb-member img { width:100%; aspect-ratio:1 / 1; margin-bottom:0.58rem; object-fit:cover; object-position:center 35%; background:#f1f5fb; border-radius:10px; }
   .lcb-member h3 { margin:0 0 0.15rem; color:var(--lcb-blue); font-size:0.94rem; font-weight:680; }
   .lcb-role { color:var(--lcb-blue2); font-weight:580; }
   .lcb-member p { margin:0.12rem 0; color:#6b7280; font-size:0.8rem; line-height:1.42; }
@@ -247,16 +247,16 @@
   @media (max-width: 920px) {
     .lcb-quick-inner { grid-template-columns:1fr; }
     .lcb-home-hero { min-height:470px; }
-    .lcb-home-hero::before { background-position:center, center, 90% 52%; background-size:cover, cover, min(66vw, 520px); }
+    .lcb-home-hero::before { background-position:center, center, right 8% center; background-size:cover, cover, min(62vw, 500px); }
   }
 
   @media (max-width: 800px) {
-    .lcb-topbar-inner { min-height:52px; }
-    .lcb-topbar-logo { width:42px; height:42px; }
+    .lcb-topbar-inner { min-height:46px; }
+    .lcb-topbar-logo { width:38px; height:38px; }
     .lcb-topbar-brand { font-size:0.92rem; }
     .lcb-hamburger { display:flex; }
     .lcb-topbar-links {
-      position:absolute; top:52px; right:0; left:0; display:none; flex-direction:column; gap:0; padding:0.45rem 0; background:#fff; border-bottom:1px solid var(--lcb-line); box-shadow:0 4px 12px rgba(0,0,0,0.06);
+      position:absolute; top:46px; right:0; left:0; display:none; flex-direction:column; gap:0; padding:0.45rem 0; background:#fff; border-bottom:1px solid var(--lcb-line); box-shadow:0 4px 12px rgba(0,0,0,0.06);
     }
     .lcb-topbar-links.open { display:flex; }
     .lcb-topbar-links a { padding:0.62rem clamp(16px,3vw,36px); font-size:0.9rem; }
@@ -266,7 +266,7 @@
 
   @media (max-width: 720px) {
     .lcb-home-hero { min-height:auto; }
-    .lcb-home-hero::before { background-position:center, center, 90% 20%; background-size:cover, cover, 78vw; }
+    .lcb-home-hero::before { background-position:center, center, right 6% top 20%; background-size:cover, cover, 72vw; }
     .lcb-home-inner { padding:3rem clamp(16px, 4vw, 24px) 3.2rem; justify-content:flex-start; }
     .lcb-hero-copy { width:100%; }
     .lcb-hero-title { font-size:2.65rem; }
