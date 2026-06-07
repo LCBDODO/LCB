@@ -63,23 +63,24 @@
     align-items:center;
     gap:0.34rem;
     color:#111827 !important;
-    font-size:0.84rem;
-    font-weight:700;
+    font-size:1.35rem;
+    font-weight:800;
     line-height:1;
     text-decoration:none !important;
     white-space:nowrap;
   }
   .lcb-topbar-logo {
-    width:20px !important;
-    height:20px !important;
+    width:36px !important;
+    height:36px !important;
     object-fit:contain;
-    opacity:0.86;
+    opacity:0.95;
     margin-left:-2px;
+    transform: translateY(1px);
   }
   .lcb-topbar-links {
     display:flex;
     align-items:center;
-    gap: clamp(0.55rem, 1.25vw, 1.15rem);
+    gap: clamp(0.72rem, 1.6vw, 1.5rem);
     height: 30px;
   }
   .lcb-topbar-links a {
@@ -89,8 +90,8 @@
     height:30px;
     padding:0 !important;
     color:#4b5563 !important;
-    font-size:0.78rem;
-    font-weight:400;
+    font-size:1.01rem;
+    font-weight:500;
     line-height:1;
     text-decoration:none !important;
     white-space:nowrap;
@@ -150,17 +151,18 @@
   .lcb-home-hero::after {
     position:absolute;
     z-index:1;
-    top:16px;
-    right:clamp(-18px, 3.5vw, 52px);
-    bottom:8px;
-    width:clamp(330px, 47vw, 700px);
+    top:0;
+    right:clamp(-95px, -2vw, -28px);
+    bottom:0;
+    width:clamp(460px, 58vw, 820px);
     content:"";
     background-image:url("/LCB/assets/img/home/hero_cancer_cells_transparent.png");
     background-repeat:no-repeat;
-    background-position:center right;
+    background-position:top right;
     background-size:contain;
-    opacity:0.48;
-    filter:drop-shadow(0 18px 38px rgba(0,0,0,0.30));
+    opacity:0.25;
+    mix-blend-mode:screen;
+    filter:saturate(0.55) hue-rotate(180deg) brightness(1.25) contrast(0.82) blur(0.15px) drop-shadow(0 16px 34px rgba(0,0,0,0.10));
     pointer-events:none;
   }
   .lcb-home-inner {
@@ -170,14 +172,14 @@
     max-width:1180px;
     min-height:inherit;
     margin:0 auto;
-    padding:clamp(1.05rem, 2vw, 1.65rem) clamp(14px, 2.6vw, 26px) clamp(2rem, 3vw, 2.6rem);
+    padding:clamp(0.55rem, 1.2vw, 1rem) clamp(14px, 2.6vw, 26px) clamp(2rem, 3vw, 2.6rem);
     display:flex;
     align-items:flex-start;
     justify-content:flex-start;
   }
   .lcb-hero-copy { width:min(640px, 100%); margin:0; padding-top:0; text-shadow:0 2px 18px rgba(0,0,0,0.18); }
   .lcb-hero-kicker { margin-bottom:1rem; color:#cfe0ff; font-size:0.7rem; font-weight:700; letter-spacing:0.32em; text-transform:uppercase; }
-  .lcb-hero-title { margin:0 0 1.05rem; color:#fff !important; font-size:clamp(3rem, 5vw, 4.85rem); font-weight:780; line-height:1.08; letter-spacing:-0.035em; text-wrap:balance; }
+  .lcb-hero-title { margin:0 0 1.05rem; color:#fff !important; font-size:clamp(4.5rem, 7.5vw, 7.25rem); font-weight:780; line-height:1.08; letter-spacing:-0.035em; text-wrap:balance; }
   .lcb-hero-kr { margin:0; color:#f2f6ff !important; font-size:clamp(1.08rem, 1.5vw, 1.34rem); font-weight:620; line-height:1.85; }
   .lcb-hero-rule { width:48px; height:2px; margin:1.25rem 0 1.05rem; background:var(--lcb-gold); }
   .lcb-hero-lead { max-width:660px; margin:0; color:#ffffff !important; font-size:clamp(0.96rem, 1.2vw, 1.08rem); font-weight:420; line-height:1.72; letter-spacing:-0.005em; }
@@ -248,27 +250,66 @@
   @media (max-width: 800px) {
     .lcb-topbar { height:30px !important; min-height:30px !important; }
     .lcb-topbar-inner { height:30px !important; min-height:30px !important; }
-    .lcb-topbar-logo { width:19px !important; height:19px !important; }
-    .lcb-topbar-brand { font-size:0.8rem; }
+    .lcb-topbar-logo { width:30px !important; height:30px !important; }
+    .lcb-topbar-brand { font-size:1.02rem; }
     .lcb-hamburger { display:flex; }
     .lcb-topbar-links { position:absolute; top:30px; right:0; left:0; display:none; flex-direction:column; gap:0; height:auto; padding:0.45rem 0; background:#fff; border-bottom:1px solid var(--lcb-line); box-shadow:0 4px 12px rgba(0,0,0,0.06); }
     .lcb-topbar-links.open { display:flex; }
-    .lcb-topbar-links a { height:auto; padding:0.62rem clamp(16px,3vw,36px) !important; font-size:0.9rem; }
+    .lcb-topbar-links a { height:auto; padding:0.62rem clamp(16px,3vw,36px) !important; font-size:1.05rem; }
     .lcb-topbar-links a::after { display:none; }
     .lcb-project-grid { grid-template-columns:1fr; }
   }
   @media (max-width: 720px) {
     .lcb-home-hero { min-height:auto; }
-    .lcb-home-hero::after { opacity:0.22; right:-150px; width:520px; }
+    .lcb-home-hero::after { display:block; opacity:0.16; top:0; right:-210px; width:560px; background-position:top right; }
     .lcb-home-inner { padding:2.2rem clamp(16px,4vw,24px) 2.6rem; justify-content:flex-start; }
     .lcb-hero-copy { width:100%; }
-    .lcb-hero-title { font-size:2.65rem; line-height:1.08; }
+    .lcb-hero-title { font-size:3.35rem; line-height:1.05; }
     .lcb-hero-kr { line-height:1.75; }
     .lcb-slide { flex-basis:230px; }
     .lcb-slide img, .lcb-gallery-item img { height:220px; }
     .lcb-profile-grid { grid-template-columns:1fr; }
     .lcb-member-grid { grid-template-columns:repeat(auto-fill, minmax(145px,1fr)); }
   }
+
+
+  /* ===== V20 requested refinements =====
+     Keep the topbar physically compact, but enlarge the brand/logo/menu text.
+     Place cancer-cell artwork directly below the nav line as a muted background. */
+  .lcb-topbar,
+  .lcb-topbar-inner { height:30px !important; min-height:30px !important; max-height:30px !important; }
+  .lcb-topbar { overflow:visible !important; }
+  .lcb-topbar-brand { font-size:1.35rem !important; font-weight:800 !important; transform:translateY(1px); transform-origin:left center; }
+  .lcb-topbar-logo { width:36px !important; height:36px !important; opacity:0.95 !important; }
+  .lcb-topbar-links { height:30px !important; align-items:center !important; }
+  .lcb-topbar-links a { height:30px !important; font-size:1.01rem !important; font-weight:500 !important; line-height:1 !important; }
+  .lcb-home-hero { margin-top:0 !important; }
+  .lcb-home-inner { padding-top:clamp(0.55rem, 1.2vw, 1rem) !important; }
+  .lcb-hero-title { font-size:clamp(4.5rem, 7.5vw, 7.25rem) !important; }
+  .lcb-home-hero::after {
+    top:0 !important;
+    right:clamp(-95px, -2vw, -28px) !important;
+    bottom:0 !important;
+    width:clamp(460px, 58vw, 820px) !important;
+    background-position:top right !important;
+    opacity:0.25 !important;
+    mix-blend-mode:screen !important;
+    filter:saturate(0.55) hue-rotate(180deg) brightness(1.25) contrast(0.82) blur(0.15px) drop-shadow(0 16px 34px rgba(0,0,0,0.10)) !important;
+  }
+  @media (max-width:800px) {
+    .lcb-topbar,
+    .lcb-topbar-inner { height:30px !important; min-height:30px !important; max-height:30px !important; }
+    .lcb-topbar-logo { width:30px !important; height:30px !important; }
+    .lcb-topbar-brand { font-size:1.02rem !important; }
+    .lcb-topbar-links { top:30px !important; }
+    .lcb-topbar-links a { height:auto !important; font-size:1.05rem !important; }
+  }
+  @media (max-width:720px) {
+    .lcb-home-inner { padding-top:1rem !important; }
+    .lcb-hero-title { font-size:3.35rem !important; line-height:1.05 !important; }
+    .lcb-home-hero::after { display:block !important; top:0 !important; right:-210px !important; width:560px !important; opacity:0.16 !important; background-position:top right !important; }
+  }
+
 </style> <header class="lcb-topbar" role="banner"> <div class="lcb-topbar-inner"> <a class="lcb-topbar-brand" href="/LCB/"> <img src="/LCB/assets/img/lab_logo_mark_transparent.png" alt="" class="lcb-topbar-logo"> Lab of Cancer Biology </a> <button class="lcb-hamburger" aria-label="Toggle menu" onclick="this.closest('.lcb-topbar').querySelector('.lcb-topbar-links').classList.toggle('open')"> <span></span><span></span><span></span> </button> <nav class="lcb-topbar-links" aria-label="Main navigation"> <a class="" href="/LCB/">Home</a> <a class="" href="/LCB/research/">Research</a> <a class="" href="/LCB/professor/">Professor</a> <a class="" href="/LCB/members/">Members</a> <a class="" href="/LCB/publications/">Publications</a> <a class="" href="/LCB/gallery/">Gallery</a> <a class="" href="/LCB/contact/">Contact</a> </nav> </div> </header> <div class="lcb-page"> <section class="lcb-section"> <h1 class="lcb-section-title">Members</h1> <p class="lcb-section-lead">Current members and alumni of the Lab of Cancer Biology.</p> </section> <section class="lcb-section compact" id="current-members"> <h2 class="lcb-section-title">Current Members</h2> <div class="lcb-member-grid"> <div class="lcb-member"> <h3>손승한</h3> <p class="lcb-role">연구조교수</p> <p>2023.9-</p> </div> <div class="lcb-member"> <h3>이태원</h3> <p class="lcb-role">박사과정</p> <p>2023.9-</p> </div> <div class="lcb-member"> <h3>박수빈</h3> <p class="lcb-role">석박사통합과정</p> <p>2022.9-</p> </div> <div class="lcb-member"> <h3>유혜빈</h3> <p class="lcb-role">석박사통합과정</p> <p>2024.3-</p> </div> <div class="lcb-member"> <h3>현도도</h3> <p class="lcb-role">석박사통합과정</p> <p>2024.3-</p> </div> <div class="lcb-member"> <h3>고다연</h3> <p class="lcb-role">석박사통합과정</p> <p>2025.3-</p> </div> <div class="lcb-member"> <h3>김진성</h3> <p class="lcb-role">석박통합과정</p> <p>2026.03-</p> </div> </div> </section> <section class="lcb-section compact" id="alumni"> <h2 class="lcb-section-title">Alumni</h2> <div class="lcb-member-grid"> <div class="lcb-member"> <h3>이창준</h3> <p class="lcb-role">석사</p> <p>2023.2 졸업</p> </div> <div class="lcb-member"> <h3>조다영</h3> <p class="lcb-role">석사</p> <p>2024.3-2026.02</p> </div> </div> </section> </div> </article> </div> </div> <footer class="lcb-footer"> © Lab of Cancer Biology, Department of Life Science, Hanyang University. All rights reserved. </footer> <script>
   window.alFolio = {
     compatBootstrap: false
