@@ -1,19 +1,18 @@
-LCB v6 업로드 안내
+LCB v10 — Lab of Cancer Biology 홈페이지
 
+적용 방법:
 1. 이 zip을 압축 해제합니다.
-2. 압축을 푼 폴더 안의 내용물(_config.yml, _pages, _includes, _data, _bibliography, assets, .prettierignore)을 모두 선택합니다.
-3. GitHub 저장소 LCBDODO/LCB의 루트에 Upload files로 올립니다.
-4. zip 파일 자체나 폴더 껍데기를 올리지 말고, 안의 내용물만 올립니다.
+2. GitHub 저장소 (LCBDODO/LCB)에서 기존 파일을 모두 삭제합니다.
+3. 압축 해제된 파일과 폴더를 저장소 루트에 직접 업로드합니다.
+4. Actions 탭에서 Deploy site 워크플로우가 초록 체크로 완료되는지 확인합니다.
+5. https://lcbdodo.github.io/LCB/ 접속하여 확인합니다.
 
-수정 반영 사항:
-- 상단 nav에서 Home 복원, 중복 Home 제거
-- 한양대 마크는 header에서 제거하고 lab logo를 가장 왼쪽에 배치
-- 탭/창의 유전자 이모티콘 제거
-- Home을 Wix 참고 디자인보다 전문적인 한양대 블루 계열 hero로 재구성
-- Home의 스크린샷 이미지 제거
-- 사진 난삽 배열 제거, 단일 hero image + 4개 panel 구성
-- Research/Publications 버튼, Professor/Lab Members 버튼 유지
-- Gallery는 사진이 계속 흐르는 carousel 형식
-- Members 얼굴 사진 반영, 김진성은 photo pending 처리
-- 조다영 Alumni: 석사, 2026.02 졸업
-- Footer는 화면에 고정하지 않고 맨 아래 한 줄만 표시
+주요 변경사항 (v9 → v10):
+- 상단바: 얇은 한 줄 가로 메뉴 (52px), 작은 로고, 가벼운 글씨
+- Members: 조다영/김민정을 Current에서 제거, 조다영은 Alumni로 이동
+- Publications: 연속 번호 매기기, 부제목 제거
+- Contact: 주소는 Contact 페이지에만 표시
+- Footer: 한 줄로 간소화, 주소 제거
+- 브라우저 탭: 유전자 이모지 제거
+- .prettierignore: 모든 파일 무시 (Prettier 실패 방지)
+- 전체 디자인: 한양대 블루 계열, 얇은 sans-serif, 미니멀

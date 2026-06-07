@@ -3,489 +3,150 @@
     --max-content-width: 1180px;
   }
 </style> <link rel="stylesheet" href="/LCB/assets/css/tailwind.css?v=50c64c15cbb9fd1ce6056fdb8bcb4b62"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css" integrity="sha256-MVopmdyC2tYTiJ8wlktf0uh0v4NgT+vNdyVFepi7Q0c=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.5/css/academicons.min.css" integrity="sha256-SzrCOBJbGVFMahewkgjwnApaV2+av1DwMAA+/QGLyZw=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/scholar-icons@1.0.3/css/scholar-icons.css" integrity="sha256-VY3hHVj/hNX3fYG6wtbA6TcKJQl7+FthzGSyIB64klY=" crossorigin="anonymous"> <link defer rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons&amp;display=swap"> <link defer rel="stylesheet" href="/LCB/assets/css/jekyll-pygments-themes-github.css?v=591dab5a4e56573bf4ef7fd332894c99" media="" id="highlight_theme_light"> <link rel="stylesheet" href="/LCB/assets/css/main.css?v=f0b101217084a90093badfe99ff9a7d1"> <link rel="canonical" href="https://lcbdodo.github.io/LCB/alumni/"> </head> <body class=" sticky-bottom-footer"> <div class="container mt-5" role="main"> <div class="post"> <header class="post-header"> <h1 class="post-title">Alumni</h1> <p class="post-description"></p> </header> <article> <style>
-:root {
-  --global-theme-color: #003478;
-  --global-hover-color: #005bac;
-  --lcb-blue: #003478;
-  --lcb-blue-2: #005bac;
-  --lcb-navy: #061631;
-  --lcb-navy-2: #08285c;
-  --lcb-gold: #c7a45b;
-  --lcb-coral: #e05a4f;
-  --lcb-ink: #10203f;
-  --lcb-muted: #617089;
-  --lcb-line: #dbe5f3;
-  --lcb-soft: #f5f8fc;
+/* ===== LCB v10 ===== */
+:root{
+  --lcb-blue:#003478;--lcb-blue2:#005bac;--lcb-navy:#0a1e3d;
+  --lcb-gold:#c7a45b;--lcb-coral:#d9534f;--lcb-ink:#1f2937;
+  --lcb-muted:#6b7280;--lcb-line:#e2e8f0;--lcb-soft:#f8fafc;
+  --global-theme-color:#003478;--global-hover-color:#005bac;
 }
-html { scroll-behavior: smooth; }
-body {
-  font-family: -apple-system, BlinkMacSystemFont, "Inter", "Noto Sans KR", "Segoe UI", sans-serif;
-  color: var(--lcb-ink);
-  padding-bottom: 0 !important;
-  overflow-x: hidden;
-  background: #fff;
-}
-a { color: var(--lcb-blue); }
-a:hover { color: var(--lcb-blue-2); }
-.post-title, .page-title, h1.post-title, header.post-header, .post-header { display: none !important; }
+html{scroll-behavior:smooth}
+body{font-family:"Inter","Noto Sans KR",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--lcb-ink);overflow-x:hidden;background:#fff;margin:0;padding-bottom:0!important}
+a{color:var(--lcb-blue)}a:hover{color:var(--lcb-blue2)}
+.post-title,.page-title,h1.post-title,header.post-header,.post-header{display:none!important}
 
-/* Header: force a clean visible top bar even when al-folio fallback header is used */
-#navbar,
-.lcb-navbar {
-  position: sticky !important;
-  top: 0;
-  z-index: 1040;
-  min-height: 76px;
-  background: rgba(255,255,255,0.985) !important;
-  border-bottom: 1px solid rgba(0,52,120,0.12) !important;
-  box-shadow: 0 10px 30px rgba(3,22,58,0.08);
-  backdrop-filter: blur(14px);
-}
-.lcb-nav-container,
-#navbar .container,
-#navbar .container-fluid {
-  width: 100%;
-  padding-left: clamp(20px, 4vw, 56px) !important;
-  padding-right: clamp(20px, 4vw, 56px) !important;
-}
-.lcb-brand,
-#navbar .navbar-brand {
-  display: inline-flex !important;
-  align-items: center !important;
-  margin-right: 2rem;
-  color: var(--lcb-blue) !important;
-  font-weight: 900 !important;
-  letter-spacing: -0.02em;
-  text-decoration: none !important;
-}
-.lcb-brand img { height: 48px; width: auto; object-fit: contain; display: block; }
-#navbar .nav-link,
-.lcb-navbar .nav-link {
-  color: #111827 !important;
-  font-size: 0.95rem;
-  font-weight: 760;
-  letter-spacing: 0.01em;
-  padding: 0.64rem 0.82rem !important;
-  position: relative;
-}
-#navbar .nav-link::after,
-.lcb-navbar .nav-link::after {
-  content: "";
-  position: absolute;
-  left: 0.82rem;
-  right: 0.82rem;
-  bottom: 0.26rem;
-  height: 2px;
-  background: var(--lcb-coral);
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform .18s ease;
-}
-#navbar .nav-link.active,
-#navbar .nav-link:hover,
-.lcb-navbar .nav-link.active,
-.lcb-navbar .nav-link:hover { color: var(--lcb-blue) !important; }
-#navbar .nav-link.active::after,
-#navbar .nav-link:hover::after,
-.lcb-navbar .nav-link.active::after,
-.lcb-navbar .nav-link:hover::after { transform: scaleX(1); }
+/* ── hide al-folio default header ── */
+body>header:not(.lcb-topbar),header.lcb-site-header,#navbar,.navbar{display:none!important}
 
-.lcb-footer,
-footer.fixed-bottom,
-footer {
-  position: static !important;
-  bottom: auto !important;
-  width: 100%;
-  border-top: 1px solid var(--lcb-line);
-  padding: 1rem 0;
-  margin-top: 4rem;
-  background: #f8fafc;
-  color: #6b7280;
-  font-size: 0.86rem;
-  text-align: center;
-}
-.lcb-page { max-width: 1180px; margin: 0 auto; }
-.lcb-full-bleed { width: 100vw; margin-left: calc(50% - 50vw); margin-right: calc(50% - 50vw); }
-
-/* Home */
-.lcb-home-page { max-width: none; }
-.lcb-home-hero {
-  position: relative;
-  min-height: 660px;
-  overflow: hidden;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  background: var(--lcb-navy);
-}
-.lcb-home-hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image:
-    linear-gradient(90deg, rgba(4,16,39,0.98) 0%, rgba(0,52,120,0.92) 43%, rgba(0,70,150,0.45) 74%, rgba(0,52,120,0.58) 100%),
-    url("/LCB/assets/img/home/hero_cancer_cells.jpg");
-  background-size: cover;
-  background-position: center right;
-  transform: scale(1.015);
-}
-.lcb-home-hero::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(circle at 11% 80%, rgba(0,91,172,.34), transparent 30%),
-    radial-gradient(circle at 80% 20%, rgba(224,90,79,.20), transparent 24%);
-  pointer-events: none;
-}
-.lcb-home-inner {
-  position: relative;
-  z-index: 2;
-  width: min(1180px, calc(100% - 56px));
-  margin: 0 auto;
-  padding: 5.8rem 0 5.4rem;
-}
-.lcb-hero-copy { max-width: 760px; }
-.lcb-hero-kicker {
-  color: #bdd4ff;
-  letter-spacing: .42em;
-  font-size: .78rem;
-  font-weight: 900;
-  text-transform: uppercase;
-  margin-bottom: 1.35rem;
-}
-.lcb-hero-title {
-  color: #fff;
-  font-size: clamp(4.1rem, 7.4vw, 7.1rem);
-  line-height: .96;
-  letter-spacing: -.055em;
-  font-weight: 880;
-  margin: 0 0 1.15rem;
-}
-.lcb-hero-kr {
-  color: #f3f7ff;
-  font-size: clamp(1.55rem, 2.5vw, 2.12rem);
-  font-weight: 800;
-  line-height: 1.45;
-  margin: 0;
-  letter-spacing: -.02em;
-}
-.lcb-hero-rule { width: 58px; height: 3px; background: var(--lcb-gold); margin: 1.35rem 0 1.15rem; }
-.lcb-hero-lead {
-  color: #edf4ff;
-  font-size: clamp(1.05rem, 1.55vw, 1.24rem);
-  line-height: 1.72;
-  max-width: 760px;
-  margin: 0 0 2.1rem;
-}
-.lcb-hero-buttons { display: flex; gap: 1rem; flex-wrap: wrap; }
-.lcb-hero-btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 172px;
-  padding: 1rem 1.45rem;
-  border-radius: 999px;
-  border: 1px solid rgba(255,255,255,.62);
-  color: #fff !important;
-  font-weight: 850;
-  letter-spacing: .01em;
-  text-decoration: none !important;
-  background: rgba(255,255,255,.06);
-  transition: transform .18s ease, background .18s ease, border-color .18s ease;
-}
-.lcb-hero-btn::after { content: "→"; margin-left: .7rem; }
-.lcb-hero-btn.primary {
-  background: #fff;
-  color: var(--lcb-blue) !important;
-  border-color: #fff;
-}
-.lcb-hero-btn.secondary { background: rgba(255,255,255,.10); }
-.lcb-hero-btn:hover { transform: translateY(-2px); background: var(--lcb-blue-2); border-color: var(--lcb-blue-2); color: #fff !important; }
-
-.lcb-home-people {
-  background: linear-gradient(180deg, #ffffff 0%, #f4f8ff 100%);
-  border-bottom: 1px solid var(--lcb-line);
-}
-.lcb-people-inner {
-  width: min(1180px, calc(100% - 56px));
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 2rem;
-  align-items: center;
-  padding: 3.2rem 0;
-}
-.lcb-eyebrow { display: inline-block; color: var(--lcb-gold); font-weight: 900; letter-spacing: .18em; text-transform: uppercase; font-size: .78rem; margin-bottom: .6rem; }
-.lcb-people-copy h2,
-.lcb-gallery-head h2 { color: var(--lcb-blue); font-weight: 900; letter-spacing: -.035em; margin: 0 0 .65rem; font-size: clamp(2rem, 3.2vw, 3rem); }
-.lcb-people-copy p { margin: 0; color: #485670; line-height: 1.72; max-width: 760px; }
-.lcb-people-actions { display: flex; gap: .9rem; flex-wrap: wrap; justify-content: flex-end; }
-.lcb-people-actions a {
-  min-width: 168px;
-  text-align: center;
-  border: 1px solid var(--lcb-line);
-  border-radius: 14px;
-  padding: 1.05rem 1.25rem;
-  background: #fff;
-  color: var(--lcb-blue) !important;
-  text-decoration: none !important;
-  font-weight: 850;
-  box-shadow: 0 12px 26px rgba(0,52,120,.08);
-}
-.lcb-people-actions a::after { content: " →"; }
-.lcb-people-actions a:hover { background: var(--lcb-blue); color: #fff !important; transform: translateY(-2px); }
-
-.lcb-home-gallery {
-  width: 100vw;
-  margin-left: calc(50% - 50vw);
-  margin-right: calc(50% - 50vw);
-  background: #071638;
-  padding: 2.4rem 0 2.7rem;
-  overflow: hidden;
-  border-top: 1px solid rgba(255,255,255,.09);
-}
-.lcb-gallery-head { width: min(1180px, calc(100% - 56px)); margin: 0 auto 1.4rem; }
-.lcb-gallery-head h2 { color: #fff; font-size: clamp(1.8rem, 2.6vw, 2.55rem); }
-.lcb-slider { display: flex; gap: 1rem; width: max-content; animation: lcb-slide 58s linear infinite; will-change: transform; }
-.lcb-slider:hover { animation-play-state: paused; }
-.lcb-slide { width: 360px; height: 230px; flex: 0 0 auto; overflow: hidden; border-radius: 16px; background: #0b1f45; box-shadow: 0 16px 34px rgba(0,0,0,.24); }
-.lcb-slide img { width: 100%; height: 100%; object-fit: cover; display: block; filter: saturate(1.03) contrast(1.02); }
-@keyframes lcb-slide { from { transform: translateX(0); } to { transform: translateX(calc(-50% - .5rem)); } }
-
-/* General pages */
-.lcb-section { padding: 4.2rem 0 2rem; }
-.lcb-section.compact { padding-top: 2.8rem; }
-.lcb-section-title { color: var(--lcb-blue); font-size: clamp(2.4rem, 5vw, 4.4rem); font-weight: 900; line-height: 1.04; letter-spacing: -.045em; margin: 0 0 1.2rem; }
-.lcb-section-title::after { content: ""; display: block; width: 56px; height: 3px; background: var(--lcb-gold); margin-top: .85rem; }
-.lcb-section-lead { color: #334155; max-width: 900px; font-size: 1.08rem; line-height: 1.82; }
-.lcb-card-grid,
-.lcb-project-grid,
-.lcb-member-grid { display: grid; gap: 1.2rem; }
-.lcb-card-grid { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
-.lcb-card,
-.lcb-project-card,
-.lcb-member,
-.lcb-contact-box { border: 1px solid var(--lcb-line); border-radius: 18px; background: #fff; box-shadow: 0 15px 38px rgba(0,52,120,.08); overflow: hidden; }
-.lcb-card { padding: 1.35rem; }
-.lcb-card h3,
-.lcb-project-body h3,
-.lcb-member h3 { color: var(--lcb-blue); font-weight: 900; margin-top: 0; }
-.lcb-card p,
-.lcb-project-body p,
-.lcb-member p { line-height: 1.65; }
-.lcb-project-grid { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); margin-top: 1.5rem; }
-.lcb-project-card img { width: 100%; height: 220px; object-fit: cover; display: block; background: #f0f4fa; }
-.lcb-project-body { padding: 1.2rem 1.25rem 1.35rem; }
-.lcb-profile-grid { display: grid; grid-template-columns: minmax(260px, 360px) 1fr; gap: 2rem; align-items: start; }
-.lcb-profile-img { width: 100%; border-radius: 18px; box-shadow: 0 16px 40px rgba(0,52,120,.14); }
-.lcb-timeline { border-left: 3px solid var(--lcb-line); padding-left: 1.2rem; }
-.lcb-timeline-item { margin-bottom: 1rem; }
-.lcb-timeline-year { font-weight: 900; color: var(--lcb-blue); }
-.lcb-member-grid { grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); }
-.lcb-member { padding: 1.15rem; }
-.lcb-member img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 14px; margin-bottom: 1rem; background: #f2f6ff; }
-.lcb-role { color: var(--lcb-blue); font-weight: 840; }
-.lcb-member p { margin: .18rem 0; }
-.lcb-people-tabs { display: flex; gap: .75rem; flex-wrap: wrap; margin: 1.5rem 0 2rem; }
-.lcb-tab-btn { border-radius: 999px; padding: .7rem 1rem; border: 1px solid var(--lcb-line); background: #fff; color: var(--lcb-blue); font-weight: 850; text-decoration: none !important; }
-.lcb-tab-btn:hover { background: var(--lcb-blue); color: #fff; }
-.lcb-gallery-carousel { width: 100vw; margin-left: calc(50% - 50vw); background: #071638; padding: 2rem 0; overflow: hidden; }
-.lcb-gallery-caption-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; margin-top: 1.7rem; }
-.lcb-gallery-note { padding: 1rem 1.1rem; border-left: 3px solid var(--lcb-blue); background: #f5f8fc; color: #34405a; }
-.lcb-publications { counter-reset: pubs; }
-.lcb-pub-list { padding-left: 0; list-style: none; }
-.lcb-pub-item { counter-increment: pubs; display: grid; grid-template-columns: 3.4rem 1fr; gap: 1rem; padding: 1.08rem 0; border-bottom: 1px solid var(--lcb-line); }
-.lcb-pub-item::before { content: counter(pubs, decimal-leading-zero); color: var(--lcb-blue); font-weight: 920; font-size: 1.06rem; }
-.lcb-pub-title { font-weight: 820; color: #18233c; }
-.lcb-pub-meta { color: #5c667a; line-height: 1.55; }
-.lcb-year { margin-top: 2.4rem; color: var(--lcb-blue); font-size: 2.1rem; font-weight: 900; }
-.lcb-contact-box { padding: 1.45rem; background: linear-gradient(135deg, #f7faff 0%, #eef4ff 100%); }
-.lcb-note { color: var(--lcb-muted); font-size: .95rem; }
-
-@media (max-width: 1050px) {
-  .lcb-home-hero { min-height: 600px; }
-  .lcb-people-inner { grid-template-columns: 1fr; }
-  .lcb-people-actions { justify-content: flex-start; }
-}
-@media (max-width: 720px) {
-  .lcb-brand img { height: 38px; }
-  #navbar, .lcb-navbar { min-height: 66px; }
-  .lcb-home-hero { min-height: auto; }
-  .lcb-home-inner { width: min(100% - 30px, 1180px); padding: 4.6rem 0 4.8rem; }
-  .lcb-hero-title { font-size: 3.4rem; }
-  .lcb-hero-lead br { display: none; }
-  .lcb-people-inner, .lcb-gallery-head { width: min(100% - 30px, 1180px); }
-  .lcb-slide { width: 280px; height: 188px; }
-  .lcb-profile-grid { grid-template-columns: 1fr; }
+/* ── Topbar ── */
+.lcb-topbar{position:sticky;top:0;z-index:9999;background:#fff;border-bottom:1px solid var(--lcb-line);box-shadow:0 1px 4px rgba(0,0,0,.04)}
+.lcb-topbar-inner{max-width:1160px;margin:0 auto;padding:0 clamp(16px,3vw,36px);height:50px;display:flex;align-items:center;justify-content:space-between}
+.lcb-topbar-brand{display:inline-flex;align-items:center;gap:.45rem;color:var(--lcb-blue)!important;text-decoration:none!important;font-weight:600;font-size:.95rem;letter-spacing:-.015em;white-space:nowrap;flex-shrink:0}
+.lcb-topbar-logo{height:26px;width:26px;object-fit:contain}
+.lcb-topbar-links{display:flex;align-items:center;gap:clamp(.3rem,1.4vw,1.6rem)}
+.lcb-topbar-links a{color:#4b5563!important;text-decoration:none!important;font-size:.84rem;font-weight:420;padding:.3rem 0;position:relative;white-space:nowrap;transition:color .15s}
+.lcb-topbar-links a::after{content:"";position:absolute;left:0;right:0;bottom:-2px;height:1.5px;background:var(--lcb-coral);transform:scaleX(0);transition:transform .18s}
+.lcb-topbar-links a:hover{color:var(--lcb-blue)!important}
+.lcb-topbar-links a.active{color:var(--lcb-blue)!important;font-weight:550}
+.lcb-topbar-links a:hover::after,.lcb-topbar-links a.active::after{transform:scaleX(1)}
+.lcb-hamburger{display:none;background:none;border:none;cursor:pointer;padding:6px;flex-direction:column;gap:4px}
+.lcb-hamburger span{display:block;width:18px;height:1.5px;background:#4b5563;border-radius:1px}
+@media(max-width:800px){
+  .lcb-topbar-inner{height:46px}
+  .lcb-hamburger{display:flex}
+  .lcb-topbar-links{display:none;position:absolute;top:46px;left:0;right:0;background:#fff;border-bottom:1px solid var(--lcb-line);box-shadow:0 4px 12px rgba(0,0,0,.06);flex-direction:column;padding:.5rem 0;gap:0}
+  .lcb-topbar-links.open{display:flex}
+  .lcb-topbar-links a{padding:.6rem clamp(16px,3vw,36px);font-size:.88rem}
+  .lcb-topbar-links a::after{display:none}
 }
 
+/* ── Footer ── */
+footer.fixed-bottom,footer{position:static!important;bottom:auto!important}
+.lcb-footer{width:100%;border-top:1px solid var(--lcb-line);padding:1rem 0;margin-top:3.5rem;background:var(--lcb-soft);text-align:center;font-size:.8rem;color:var(--lcb-muted)}
 
-/* ===== LCB v8 forced navigation and refined homepage ===== */
-body > header:not(.lcb-force-header),
-header.lcb-site-header,
-#navbar:not(.lcb-force-navbar),
-.navbar:not(.lcb-force-navbar) {
-  display: none !important;
-}
-.lcb-force-header {
-  position: sticky;
-  top: 0;
-  z-index: 9999;
-  background: rgba(255,255,255,.985);
-  border-bottom: 1px solid rgba(0,52,120,.13);
-  box-shadow: 0 8px 24px rgba(6,22,49,.075);
-  backdrop-filter: blur(14px);
-}
-.lcb-force-nav-wrap {
-  width: min(1240px, calc(100% - 56px));
-  min-height: 72px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 2rem;
-}
-.lcb-force-brand {
-  display: inline-flex;
-  align-items: center;
-  gap: .72rem;
-  color: #08285c !important;
-  text-decoration: none !important;
-  font-weight: 900;
-  letter-spacing: -.025em;
-  font-size: 1.16rem;
-  white-space: nowrap;
-  margin-left: -8px;
-}
-.lcb-force-brand img {
-  width: 40px;
-  height: 40px;
-  object-fit: contain;
-  display: block;
-}
-.lcb-force-nav {
-  display: flex;
-  align-items: center;
-  gap: clamp(.55rem, 1.25vw, 1.55rem);
-  white-space: nowrap;
-}
-.lcb-force-nav a {
-  color: #18233c !important;
-  text-decoration: none !important;
-  font-size: .96rem;
-  font-weight: 820;
-  letter-spacing: .01em;
-  padding: .8rem .1rem;
-  position: relative;
-}
-.lcb-force-nav a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: .48rem;
-  height: 2px;
-  background: #e05a4f;
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform .18s ease;
-}
-.lcb-force-nav a:hover,
-.lcb-force-nav a.active { color: #003478 !important; }
-.lcb-force-nav a:hover::after,
-.lcb-force-nav a.active::after { transform: scaleX(1); }
-.lcb-home-hero {
-  min-height: 610px !important;
-  background: linear-gradient(135deg, #061631 0%, #003478 52%, #0a57a6 100%) !important;
-}
-.lcb-home-hero::before {
-  background-image:
-    linear-gradient(90deg, rgba(4,16,39,0.98) 0%, rgba(0,52,120,0.92) 46%, rgba(0,52,120,0.70) 62%, rgba(0,52,120,0.28) 100%),
-    url("/LCB/assets/img/home/hero_cancer_cells.jpg") !important;
-  background-size: cover, min(58vw, 820px) auto !important;
-  background-repeat: no-repeat !important;
-  background-position: center, right 8% center !important;
-  transform: none !important;
-  opacity: 1 !important;
-}
-.lcb-home-hero::after {
-  background:
-    radial-gradient(circle at 18% 78%, rgba(0,91,172,.28), transparent 31%),
-    radial-gradient(circle at 88% 18%, rgba(224,90,79,.12), transparent 22%) !important;
-}
-.lcb-home-inner { padding: 5rem 0 5.2rem !important; }
-.lcb-hero-copy { max-width: 700px !important; }
-.lcb-hero-title {
-  font-family: -apple-system, BlinkMacSystemFont, "Inter", "Noto Sans KR", "Segoe UI", sans-serif !important;
-  font-size: clamp(3.55rem, 6.1vw, 6.35rem) !important;
-  letter-spacing: -.06em !important;
-  font-weight: 900 !important;
-}
-.lcb-hero-kicker { color: #d4e3ff !important; }
-.lcb-hero-kr { font-size: clamp(1.45rem, 2.1vw, 1.95rem) !important; }
-.lcb-home-quick {
-  background: linear-gradient(180deg, #ffffff 0%, #f4f8ff 100%);
-  border-bottom: 1px solid var(--lcb-line);
-}
-.lcb-quick-inner {
-  width: min(1180px, calc(100% - 56px));
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1.2rem;
-  padding: 3rem 0;
-}
-.lcb-quick-card {
-  background: #fff;
-  border: 1px solid var(--lcb-line);
-  border-radius: 22px;
-  padding: 1.7rem;
-  box-shadow: 0 16px 36px rgba(0,52,120,.08);
-}
-.lcb-quick-card h2 {
-  color: var(--lcb-blue);
-  font-size: clamp(1.7rem, 2.5vw, 2.4rem);
-  font-weight: 900;
-  letter-spacing: -.035em;
-  margin: 0 0 .6rem;
-}
-.lcb-quick-card p { color: #4b5873; line-height: 1.7; margin: 0 0 1.25rem; }
-.lcb-quick-actions { display: flex; gap: .75rem; flex-wrap: wrap; }
-.lcb-quick-actions a {
-  text-decoration: none !important;
-  border: 1px solid var(--lcb-line);
-  border-radius: 999px;
-  padding: .72rem 1.05rem;
-  font-weight: 850;
-  color: var(--lcb-blue) !important;
-  background: #f8fbff;
-}
-.lcb-quick-actions a:hover { background: var(--lcb-blue); color: #fff !important; }
-.lcb-home-people { display: none !important; }
-.lcb-member-grid { grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)) !important; align-items: stretch; }
-.lcb-member { min-height: 100%; display: flex; flex-direction: column; }
-.lcb-member img { height: auto; aspect-ratio: 1 / 1; }
-.lcb-member h3 { margin-bottom: .35rem; }
-.lcb-project-card img { object-fit: contain !important; background: #f7faff; padding: .8rem; }
-.lcb-profile-img { object-fit: cover; background: #f5f8fc; }
-@media (max-width: 880px) {
-  .lcb-force-nav-wrap { width: min(100% - 28px, 1240px); min-height: auto; padding: .65rem 0 .55rem; align-items: flex-start; flex-direction: column; gap: .3rem; }
-  .lcb-force-brand { font-size: 1rem; margin-left: 0; }
-  .lcb-force-brand img { width: 36px; height: 36px; }
-  .lcb-force-nav { width: 100%; overflow-x: auto; padding-bottom: .25rem; gap: 1rem; }
-  .lcb-force-nav a { font-size: .9rem; }
-}
-@media (max-width: 920px) {
-  .lcb-home-hero::before {
-    background-image: linear-gradient(90deg, rgba(4,16,39,0.96), rgba(0,52,120,0.86)), url("/LCB/assets/img/home/hero_cancer_cells.jpg") !important;
-    background-size: cover, min(78vw, 680px) auto !important;
-    background-position: center, right 12% bottom 12% !important;
-  }
-  .lcb-quick-inner { grid-template-columns: 1fr; width: min(100% - 30px, 1180px); }
-}
+/* ── Layout ── */
+.lcb-page{max-width:1060px;margin:0 auto;padding:0 clamp(16px,3vw,36px)}
+.lcb-full-bleed{width:100vw;margin-left:calc(50% - 50vw);margin-right:calc(50% - 50vw)}
+.lcb-section{padding:2.5rem 0 1.2rem}
+.lcb-section.compact{padding:.8rem 0 1.2rem}
+.lcb-section-title{color:var(--lcb-blue);font-weight:700;letter-spacing:-.025em;font-size:1.55rem;margin:0 0 .6rem}
+.lcb-section-lead{color:#374151;max-width:780px;font-size:.96rem;line-height:1.75}
+.lcb-eyebrow{display:inline-block;color:var(--lcb-gold);font-weight:650;letter-spacing:.14em;text-transform:uppercase;font-size:.7rem;margin-bottom:.4rem}
 
-</style> <header class="lcb-force-header" role="banner"> <div class="lcb-force-nav-wrap"> <a class="lcb-force-brand" href="/LCB/" aria-label="Lab of Cancer Biology home"> <img src="/LCB/assets/img/lab_logo_mark_transparent.png" alt="Lab of Cancer Biology logo"> <span>Lab of Cancer Biology</span> </a> <nav class="lcb-force-nav" aria-label="Main navigation"> <a class="" href="/LCB/">Home</a> <a class="" href="/LCB/research/">Research</a> <a class="" href="/LCB/professor/">Professor</a> <a class="active" href="/LCB/members/">Members</a> <a class="" href="/LCB/publications/">Publications</a> <a class="" href="/LCB/gallery/">Gallery</a> <a class="" href="/LCB/contact/">Contact</a> </nav> </div> </header> <div class="lcb-page"> <section class="lcb-section"> <h1 class="lcb-section-title">Alumni</h1> <div class="lcb-member-grid"> <div class="lcb-member"> <img src="https://static.wixstatic.com/media/b4730b_946ce2ee7780483194237b56a30972de~mv2.jpg/v1/crop/x_0%2Cy_10%2Cw_409%2Ch_409/fill/w_220%2Ch_220%2Cal_c%2Cq_80%2Cusm_0.66_1.00_0.01%2Cenc_avif%2Cquality_auto/%EB%82%B4%EC%82%AC%EC%A7%84_001.jpg" alt="이창준"> <h3>이창준</h3> <p class="lcb-role">석사</p> <p>2023.2 졸업</p> </div> <div class="lcb-member"> <img src="https://static.wixstatic.com/media/b4730b_0f77aead514a49d99383e4fee3b89252~mv2.jpg/v1/crop/x_0%2Cy_0%2Cw_2569%2Ch_2564/fill/w_220%2Ch_220%2Cal_c%2Cq_80%2Cusm_0.66_1.00_0.01%2Cenc_avif%2Cquality_auto/KakaoTalk_20240102_165657435.jpg" alt="조다영"> <h3>조다영</h3> <p class="lcb-role">석사</p> <p>2026.02 졸업</p> </div> </div> </section> </div> </article> </div> </div> <footer class="lcb-footer"> <div class="container">© Lab of Cancer Biology, Department of Life Science, Hanyang University.</div> </footer> <script>
+/* ── Hero ── */
+.lcb-home-page{max-width:none;padding:0}
+.lcb-home-hero{position:relative;min-height:520px;overflow:hidden;color:#fff;display:flex;align-items:center;background:linear-gradient(135deg,#081d40 0%,var(--lcb-blue) 55%,#1565c0 100%)}
+.lcb-home-hero::before{content:"";position:absolute;inset:0;background-image:linear-gradient(90deg,rgba(8,29,64,.96) 0%,rgba(0,52,120,.88) 42%,rgba(0,52,120,.3) 100%),url("/LCB/assets/img/home/hero_cancer_cells.jpg");background-size:cover,clamp(320px,48vw,700px) auto;background-repeat:no-repeat;background-position:center,right 5% center}
+.lcb-home-hero::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 12% 82%,rgba(0,91,172,.2),transparent 28%);pointer-events:none}
+.lcb-home-inner{position:relative;z-index:2;max-width:1060px;width:100%;margin:0 auto;padding:4rem clamp(16px,3vw,36px) 3.8rem}
+.lcb-hero-copy{max-width:640px}
+.lcb-hero-kicker{color:#c4d8f8;letter-spacing:.35em;font-size:.68rem;font-weight:600;text-transform:uppercase;margin-bottom:.9rem}
+.lcb-hero-title{color:#fff;font-size:clamp(2.8rem,5.5vw,5rem);line-height:.97;letter-spacing:-.045em;font-weight:750;margin:0 0 .7rem}
+.lcb-hero-kr{color:#e8f0ff;font-size:clamp(1.15rem,1.8vw,1.5rem);font-weight:500;line-height:1.5;margin:0;letter-spacing:-.01em}
+.lcb-hero-rule{width:42px;height:2px;background:var(--lcb-gold);margin:1rem 0 .85rem}
+.lcb-hero-lead{color:#d4e3ff;font-size:clamp(.88rem,1.15vw,1rem);line-height:1.72;max-width:580px;margin:0 0 1.5rem;font-weight:400}
+.lcb-hero-buttons{display:flex;gap:.7rem;flex-wrap:wrap}
+.lcb-hero-btn{display:inline-flex;align-items:center;justify-content:center;min-width:136px;padding:.7rem 1.15rem;border-radius:999px;border:1px solid rgba(255,255,255,.45);color:#fff!important;font-weight:550;font-size:.84rem;text-decoration:none!important;background:rgba(255,255,255,.07);transition:all .18s}
+.lcb-hero-btn.primary{background:#fff;color:var(--lcb-blue)!important;border-color:#fff}
+.lcb-hero-btn:hover{transform:translateY(-1px);background:var(--lcb-blue2);border-color:var(--lcb-blue2);color:#fff!important}
+
+/* ── Quick cards ── */
+.lcb-home-quick{background:linear-gradient(180deg,#fff,#f7f9fd);border-bottom:1px solid var(--lcb-line)}
+.lcb-quick-inner{max-width:1060px;margin:0 auto;padding:2rem clamp(16px,3vw,36px);display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}
+.lcb-quick-card{background:#fff;border:1px solid var(--lcb-line);border-radius:14px;padding:1.3rem;box-shadow:0 4px 16px rgba(0,52,120,.04)}
+.lcb-quick-card h2{color:var(--lcb-blue);font-size:1.2rem;font-weight:650;letter-spacing:-.02em;margin:0 0 .35rem}
+.lcb-quick-card p{color:#4b5563;line-height:1.6;margin:0 0 .9rem;font-size:.88rem}
+.lcb-quick-actions{display:flex;gap:.5rem;flex-wrap:wrap}
+.lcb-quick-actions a{text-decoration:none!important;border:1px solid var(--lcb-line);border-radius:999px;padding:.45rem .8rem;font-weight:550;font-size:.8rem;color:var(--lcb-blue)!important;background:#f8faff}
+.lcb-quick-actions a:hover{background:var(--lcb-blue);color:#fff!important}
+
+/* ── Slider (home gallery) ── */
+.lcb-home-gallery{padding:2rem 0 2.5rem}
+.lcb-gallery-head{max-width:1060px;margin:0 auto;padding:0 clamp(16px,3vw,36px) 1rem}
+.lcb-gallery-head h2{color:var(--lcb-blue);font-weight:650;letter-spacing:-.025em;margin:0;font-size:1.3rem}
+.lcb-slider{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding:0 clamp(16px,3vw,36px) .8rem;scrollbar-width:thin;scrollbar-color:#c5d2e8 transparent;-webkit-overflow-scrolling:touch}
+.lcb-slide{flex:0 0 270px;scroll-snap-align:start;border-radius:10px;overflow:hidden;background:#f1f5fb;box-shadow:0 2px 10px rgba(0,52,120,.06)}
+.lcb-slide img{width:100%;height:195px;object-fit:cover;display:block}
+.lcb-slide-caption{padding:.45rem .6rem;background:#fff;font-size:.74rem;color:#4b5563;line-height:1.4;border-top:1px solid #eef2f8}
+.lcb-slide-caption strong{color:var(--lcb-ink);font-weight:600}
+
+/* ── Gallery page grid ── */
+.lcb-gallery-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:.9rem;margin-top:1rem}
+.lcb-gallery-item{border-radius:10px;overflow:hidden;background:#fff;border:1px solid var(--lcb-line);box-shadow:0 2px 10px rgba(0,52,120,.04)}
+.lcb-gallery-item img{width:100%;height:210px;object-fit:cover;display:block}
+.lcb-gallery-item figcaption{padding:.5rem .7rem;font-size:.78rem;color:#4b5563;line-height:1.4}
+.lcb-gallery-item figcaption strong{color:var(--lcb-ink)}
+
+/* ── Cards ── */
+.lcb-card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:.9rem}
+.lcb-card{border:1px solid var(--lcb-line);border-radius:12px;background:#fff;padding:1.1rem;box-shadow:0 2px 10px rgba(0,52,120,.03)}
+.lcb-card h3{color:var(--lcb-blue);font-weight:650;font-size:.94rem;margin:0 0 .3rem}
+.lcb-card p{line-height:1.6;font-size:.86rem;color:#4b5563;margin:0}
+
+/* ── Project cards ── */
+.lcb-project-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:.9rem;margin-top:1rem}
+.lcb-project-card{border:1px solid var(--lcb-line);border-radius:12px;background:#fff;overflow:hidden;box-shadow:0 2px 10px rgba(0,52,120,.03)}
+.lcb-project-card img{width:100%;height:190px;object-fit:contain;background:#f7faff;padding:.4rem;display:block}
+.lcb-project-body{padding:.9rem 1rem 1rem}
+.lcb-project-body h3{color:var(--lcb-blue);font-weight:650;font-size:.92rem;margin:0 0 .3rem}
+.lcb-project-body p{line-height:1.6;font-size:.84rem;color:#4b5563;margin:0}
+
+/* ── Professor ── */
+.lcb-profile-grid{display:grid;grid-template-columns:minmax(200px,280px) 1fr;gap:1.8rem;align-items:start}
+.lcb-profile-img{width:100%;border-radius:12px;box-shadow:0 6px 22px rgba(0,52,120,.08);object-fit:cover}
+.lcb-timeline{border-left:2px solid var(--lcb-line);padding-left:1rem}
+.lcb-timeline-item{margin-bottom:.65rem}
+.lcb-timeline-year{font-weight:650;color:var(--lcb-blue);font-size:.88rem}
+.lcb-timeline-item div:not(.lcb-timeline-year){font-size:.86rem;color:#4b5563}
+
+/* ── Members ── */
+.lcb-member-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(155px,1fr));gap:.9rem}
+.lcb-member{border:1px solid var(--lcb-line);border-radius:12px;background:#fff;padding:.9rem;box-shadow:0 2px 10px rgba(0,52,120,.03);display:flex;flex-direction:column}
+.lcb-member img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:8px;margin-bottom:.55rem;background:#f1f5fb}
+.lcb-member h3{color:var(--lcb-blue);font-weight:650;font-size:.9rem;margin:0 0 .15rem}
+.lcb-role{color:var(--lcb-blue2);font-weight:550;font-size:.78rem}
+.lcb-member p{margin:.1rem 0;font-size:.78rem;color:#6b7280;line-height:1.4}
+.lcb-people-tabs{display:flex;gap:.5rem;flex-wrap:wrap;margin:1rem 0 1.3rem}
+.lcb-tab-btn{border-radius:999px;padding:.45rem .8rem;border:1px solid var(--lcb-line);background:#fff;color:var(--lcb-blue);font-weight:550;font-size:.8rem;text-decoration:none!important}
+.lcb-tab-btn:hover{background:var(--lcb-blue);color:#fff}
+
+/* ── Contact ── */
+.lcb-contact-box{border:1px solid var(--lcb-line);border-radius:12px;padding:1.2rem;background:linear-gradient(135deg,#f8faff,#eff4ff);box-shadow:0 2px 10px rgba(0,52,120,.03)}
+.lcb-contact-box p{margin:.35rem 0;font-size:.9rem}
+
+/* ── Publications ── */
+.lcb-publications{counter-reset:pubs}
+.lcb-pub-list{padding-left:0;list-style:none}
+.lcb-pub-item{counter-increment:pubs;display:grid;grid-template-columns:2.8rem 1fr;gap:.7rem;padding:.75rem 0;border-bottom:1px solid var(--lcb-line)}
+.lcb-pub-item::before{content:counter(pubs);color:var(--lcb-blue);font-weight:700;font-size:.9rem;padding-top:.1rem}
+.lcb-pub-title{font-weight:600;color:#1f2937;font-size:.88rem}
+.lcb-pub-meta{color:#6b7280;line-height:1.55;font-size:.82rem}
+.lcb-year{margin-top:1.8rem;color:var(--lcb-blue);font-size:1.4rem;font-weight:750}
+
+/* ── Responsive ── */
+@media(max-width:920px){.lcb-quick-inner{grid-template-columns:1fr}.lcb-home-hero{min-height:440px}.lcb-home-hero::before{background-size:cover!important;background-image:linear-gradient(90deg,rgba(8,29,64,.95),rgba(0,52,120,.82)),url("/LCB/assets/img/home/hero_cancer_cells.jpg")!important}}
+@media(max-width:720px){.lcb-home-hero{min-height:auto}.lcb-home-inner{padding:3rem clamp(16px,3vw,36px) 3.2rem}.lcb-hero-title{font-size:2.5rem}.lcb-hero-lead br{display:none}.lcb-slide{flex:0 0 240px}.lcb-slide img{height:170px}.lcb-profile-grid{grid-template-columns:1fr}.lcb-member-grid{grid-template-columns:repeat(auto-fill,minmax(140px,1fr))}}
+</style> <header class="lcb-topbar" role="banner"> <div class="lcb-topbar-inner"> <a class="lcb-topbar-brand" href="/LCB/"> <img src="/LCB/assets/img/lab_logo_mark_transparent.png" alt="" class="lcb-topbar-logo"> Lab of Cancer Biology </a> <button class="lcb-hamburger" aria-label="Toggle menu" onclick="this.closest('.lcb-topbar').querySelector('.lcb-topbar-links').classList.toggle('open')"> <span></span><span></span><span></span> </button> <nav class="lcb-topbar-links" aria-label="Main navigation"> <a href="/LCB/">Home</a> <a href="/LCB/research/">Research</a> <a href="/LCB/professor/">Professor</a> <a href="/LCB/members/">Members</a> <a href="/LCB/publications/">Publications</a> <a href="/LCB/gallery/">Gallery</a> <a href="/LCB/contact/">Contact</a> </nav> </div> </header> <div class="lcb-page"> <section class="lcb-section"> <h1 class="lcb-section-title">Alumni</h1> <p><a class="lcb-tab-btn" href="/LCB/members/#alumni">View all members</a></p> </section> </div> </article> </div> </div> <footer class="lcb-footer"> © Lab of Cancer Biology, Department of Life Science, Hanyang University. All rights reserved. </footer> <script>
   window.alFolio = {
     compatBootstrap: false
   };
