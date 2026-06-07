@@ -7,6 +7,7 @@ nav_order: 5
 description: Publications of the Lab of Cancer Biology.
 ---
 {% include lcb_style.html %}
+{% include lcb_nav.html %}
 <div class="lcb-page lcb-publications">
   <section class="lcb-section">
     <h1 class="lcb-section-title">Publications</h1>

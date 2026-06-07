@@ -7,6 +7,7 @@ description: Members of the Lab of Cancer Biology.
 ---
 
 {% include lcb_style.html %}
+{% include lcb_nav.html %}
 
 <div class="lcb-page">
   <section class="lcb-section">

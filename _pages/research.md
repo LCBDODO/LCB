@@ -8,6 +8,7 @@ description: Research of the Lab of Cancer Biology.
 ---
 
 {% include lcb_style.html %}
+{% include lcb_nav.html %}
 
 <div class="lcb-page">
   <section class="lcb-section">
@@ -31,7 +32,7 @@ description: Research of the Lab of Cancer Biology.
     <h2 class="lcb-section-title">Previous Projects</h2>
     <div class="lcb-project-grid">
       <div class="lcb-project-card">
-        <img src="{{ '/assets/img/projects/sting_myc_immune_evasion.png' | relative_url }}" alt="MYC-STING immune evasion project" />
+        <img src="https://static.wixstatic.com/media/b4730b_24d7f7f29c0b40029dc0d84fa504ebb2~mv2.jpg/v1/crop/x_598%2Cy_90%2Cw_1842%2Ch_1230/fill/w_543%2Ch_362%2Cal_c%2Cq_80%2Cusm_0.66_1.00_0.01%2Cenc_avif%2Cquality_auto/%EC%8A%AC%EB%9D%BC%EC%9D%B4%EB%93%9C9_edited_edited_edited_edited.jpg" alt="MYC-STING immune evasion project" />
         <div class="lcb-project-body"><h3>Epigenetic Repression of STING by MYC</h3><p>MYC-mediated epigenetic repression of STING promotes immune evasion and resistance to immune checkpoint inhibitors in triple-negative breast cancer.</p></div>
       </div>
       <div class="lcb-project-card">

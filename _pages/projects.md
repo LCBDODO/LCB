@@ -6,6 +6,7 @@ nav: false
 ---
 
 {% include lcb_style.html %}
+{% include lcb_nav.html %}
 
 <div class="lcb-page">
   <section class="lcb-section">
