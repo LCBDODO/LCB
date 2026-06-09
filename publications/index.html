@@ -17,22 +17,59 @@
     --global-hover-color: #005bac;
   }
 
-  html { scroll-behavior: smooth; }
+  html {
+    scroll-behavior: smooth;
+  }
   body {
     margin: 0;
     padding: 0 !important;
     overflow-x: hidden;
     background: #fff;
     color: var(--lcb-ink);
-    font-family: "Inter", "Noto Sans KR", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-family:
+      "Inter",
+      "Noto Sans KR",
+      -apple-system,
+      BlinkMacSystemFont,
+      "Segoe UI",
+      sans-serif;
   }
-  a { color: var(--lcb-blue); }
-  a:hover { color: var(--lcb-blue2); }
+  a {
+    color: var(--lcb-blue);
+  }
+  a:hover {
+    color: var(--lcb-blue2);
+  }
 
-  .post-title, .page-title, h1.post-title, header.post-header, .post-header { display:none !important; }
-  body.fixed-top-nav, body.sticky-bottom-footer, main, main.container, .container.mt-5, .post { padding-top:0 !important; margin-top:0 !important; }
-  body > div.container.mt-5 { width:100% !important; max-width:none !important; padding-right:0 !important; padding-left:0 !important; margin-top:0 !important; }
-  body > header:not(.lcb-topbar), header.lcb-site-header, #navbar, .navbar { display:none !important; }
+  .post-title,
+  .page-title,
+  h1.post-title,
+  header.post-header,
+  .post-header {
+    display: none !important;
+  }
+  body.fixed-top-nav,
+  body.sticky-bottom-footer,
+  main,
+  main.container,
+  .container.mt-5,
+  .post {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+  }
+  body > div.container.mt-5 {
+    width: 100% !important;
+    max-width: none !important;
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+    margin-top: 0 !important;
+  }
+  body > header:not(.lcb-topbar),
+  header.lcb-site-header,
+  #navbar,
+  .navbar {
+    display: none !important;
+  }
 
   /* ===== Top white navigation bar: forced compact height ===== */
   .lcb-topbar {
@@ -41,829 +78,1577 @@
     height: 30px !important;
     min-height: 30px !important;
     overflow: visible;
-    background: rgba(255,255,255,0.99);
-    border-bottom: 1px solid rgba(226,232,240,0.92);
-    box-shadow: 0 1px 3px rgba(0,0,0,0.025);
+    background: rgba(255, 255, 255, 0.99);
+    border-bottom: 1px solid rgba(226, 232, 240, 0.92);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.025);
     backdrop-filter: blur(8px);
   }
   .lcb-topbar-inner {
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     max-width: 1180px;
     height: 30px !important;
     min-height: 30px !important;
-    margin:0 auto;
+    margin: 0 auto;
     padding: 0 clamp(14px, 2.6vw, 26px) !important;
     line-height: 1;
   }
   .lcb-topbar-brand {
-    display:inline-flex;
-    flex-shrink:0;
-    align-items:center;
-    gap:0.34rem;
-    color:#111827 !important;
-    font-size:1.35rem;
-    font-weight:800;
-    line-height:1;
-    text-decoration:none !important;
-    white-space:nowrap;
+    display: inline-flex;
+    flex-shrink: 0;
+    align-items: center;
+    gap: 0.34rem;
+    color: #111827 !important;
+    font-size: 1.35rem;
+    font-weight: 800;
+    line-height: 1;
+    text-decoration: none !important;
+    white-space: nowrap;
   }
   .lcb-topbar-logo {
-    width:36px !important;
-    height:36px !important;
-    object-fit:contain;
-    opacity:0.95;
-    margin-left:-2px;
+    width: 36px !important;
+    height: 36px !important;
+    object-fit: contain;
+    opacity: 0.95;
+    margin-left: -2px;
     transform: translateY(1px);
   }
   .lcb-topbar-links {
-    display:flex;
-    align-items:center;
+    display: flex;
+    align-items: center;
     gap: clamp(0.72rem, 1.6vw, 1.5rem);
     height: 30px;
   }
   .lcb-topbar-links a {
-    position:relative;
-    display:inline-flex;
-    align-items:center;
-    height:30px;
-    padding:0 !important;
-    color:#4b5563 !important;
-    font-size:1.01rem;
-    font-weight:500;
-    line-height:1;
-    text-decoration:none !important;
-    white-space:nowrap;
-    transition: color .15s ease;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    height: 30px;
+    padding: 0 !important;
+    color: #4b5563 !important;
+    font-size: 1.01rem;
+    font-weight: 500;
+    line-height: 1;
+    text-decoration: none !important;
+    white-space: nowrap;
+    transition: color 0.15s ease;
   }
   .lcb-topbar-links a::after {
-    position:absolute;
-    right:0; left:0; bottom:1px;
-    height:1.5px;
-    content:"";
-    background:var(--lcb-coral);
-    transform:scaleX(0);
-    transform-origin:center;
-    transition:transform .18s ease;
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 1px;
+    height: 1.5px;
+    content: "";
+    background: var(--lcb-coral);
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.18s ease;
   }
   .lcb-topbar-links a:hover,
-  .lcb-topbar-links a.active { color:var(--lcb-blue) !important; }
-  .lcb-topbar-links a.active { font-weight:600; }
+  .lcb-topbar-links a.active {
+    color: var(--lcb-blue) !important;
+  }
+  .lcb-topbar-links a.active {
+    font-weight: 600;
+  }
   .lcb-topbar-links a:hover::after,
-  .lcb-topbar-links a.active::after { transform:scaleX(1); }
+  .lcb-topbar-links a.active::after {
+    transform: scaleX(1);
+  }
 
-  .lcb-hamburger { display:none; flex-direction:column; gap:4px; padding:6px; cursor:pointer; background:none; border:0; }
-  .lcb-hamburger span { display:block; width:18px; height:1.5px; background:#4b5563; border-radius:1px; }
+  .lcb-hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    padding: 6px;
+    cursor: pointer;
+    background: none;
+    border: 0;
+  }
+  .lcb-hamburger span {
+    display: block;
+    width: 18px;
+    height: 1.5px;
+    background: #4b5563;
+    border-radius: 1px;
+  }
 
-  footer.fixed-bottom, footer { position:static !important; bottom:auto !important; }
-  .lcb-footer { width:100%; padding:1rem 0; margin-top:2.5rem; color:var(--lcb-muted); font-size:0.8rem; text-align:center; background:var(--lcb-soft); border-top:1px solid var(--lcb-line); }
+  footer.fixed-bottom,
+  footer {
+    position: static !important;
+    bottom: auto !important;
+  }
+  .lcb-footer {
+    width: 100%;
+    padding: 1rem 0;
+    margin-top: 2.5rem;
+    color: var(--lcb-muted);
+    font-size: 0.8rem;
+    text-align: center;
+    background: var(--lcb-soft);
+    border-top: 1px solid var(--lcb-line);
+  }
 
-  .lcb-page { max-width:1120px; padding:0 clamp(16px, 3vw, 30px); margin:0 auto; }
-  .lcb-full-bleed { width:100vw; margin-left:calc(50% - 50vw); margin-right:calc(50% - 50vw); }
-  .lcb-section { padding:2rem 0 1rem; }
-  .lcb-section.compact { padding:1rem 0; }
-  .lcb-section-title { margin:0 0 0.55rem; color:var(--lcb-blue); font-size:1.55rem; font-weight:740; }
-  .lcb-section-lead { max-width:780px; color:#374151; font-size:0.96rem; line-height:1.74; }
-  .lcb-eyebrow { display:inline-block; margin-bottom:0.35rem; color:var(--lcb-gold); font-size:0.68rem; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; }
+  .lcb-page {
+    max-width: 1120px;
+    padding: 0 clamp(16px, 3vw, 30px);
+    margin: 0 auto;
+  }
+  .lcb-full-bleed {
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+  }
+  .lcb-section {
+    padding: 2rem 0 1rem;
+  }
+  .lcb-section.compact {
+    padding: 1rem 0;
+  }
+  .lcb-section-title {
+    margin: 0 0 0.55rem;
+    color: var(--lcb-blue);
+    font-size: 1.55rem;
+    font-weight: 740;
+  }
+  .lcb-section-lead {
+    max-width: 780px;
+    color: #374151;
+    font-size: 0.96rem;
+    line-height: 1.74;
+  }
+  .lcb-eyebrow {
+    display: inline-block;
+    margin-bottom: 0.35rem;
+    color: var(--lcb-gold);
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+  }
 
   /* ===== Home hero ===== */
-  .lcb-home-page { max-width:none; padding:0; }
+  .lcb-home-page {
+    max-width: none;
+    padding: 0;
+  }
   .lcb-home-hero {
-    position:relative;
-    display:flex;
-    align-items:flex-start;
-    min-height:clamp(455px, 58vh, 570px);
-    overflow:hidden;
-    color:#fff;
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    min-height: clamp(455px, 58vh, 570px);
+    overflow: hidden;
+    color: #fff;
     background: linear-gradient(135deg, #061b3d 0%, #003478 62%, #0756ab 100%);
   }
   .lcb-home-hero::before {
-    position:absolute; inset:0; content:"";
+    position: absolute;
+    inset: 0;
+    content: "";
     background-image:
-      radial-gradient(circle at 74% 22%, rgba(118,168,255,0.18), transparent 23%),
-      radial-gradient(circle at 92% 52%, rgba(120,170,255,0.12), transparent 30%),
-      linear-gradient(110deg, rgba(6,22,49,0.99) 0%, rgba(0,52,120,0.96) 54%, rgba(0,52,120,0.90) 100%);
-    background-repeat:no-repeat;
-    background-size:cover;
-    opacity:1;
+      radial-gradient(circle at 74% 22%, rgba(118, 168, 255, 0.18), transparent 23%),
+      radial-gradient(circle at 92% 52%, rgba(120, 170, 255, 0.12), transparent 30%),
+      linear-gradient(110deg, rgba(6, 22, 49, 0.99) 0%, rgba(0, 52, 120, 0.96) 54%, rgba(0, 52, 120, 0.9) 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 1;
   }
   .lcb-home-hero::after {
-    position:absolute;
-    z-index:1;
-    top:0;
-    right:clamp(-95px, -2vw, -28px);
-    bottom:0;
-    width:clamp(460px, 58vw, 820px);
-    content:"";
-    background-image:url("/LCB/assets/img/home/hero_cancer_cells_transparent.png");
-    background-repeat:no-repeat;
-    background-position:top right;
-    background-size:contain;
-    opacity:0.25;
-    mix-blend-mode:screen;
-    filter:saturate(0.55) hue-rotate(180deg) brightness(1.25) contrast(0.82) blur(0.15px) drop-shadow(0 16px 34px rgba(0,0,0,0.10));
-    pointer-events:none;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: clamp(-95px, -2vw, -28px);
+    bottom: 0;
+    width: clamp(460px, 58vw, 820px);
+    content: "";
+    background-image: url("/LCB/assets/img/home/hero_cancer_cells_transparent.png");
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: contain;
+    opacity: 0.25;
+    mix-blend-mode: screen;
+    filter: saturate(0.55) hue-rotate(180deg) brightness(1.25) contrast(0.82) blur(0.15px) drop-shadow(0 16px 34px rgba(0, 0, 0, 0.1));
+    pointer-events: none;
   }
   .lcb-home-inner {
-    position:relative;
-    z-index:2;
-    width:100%;
-    max-width:1180px;
-    min-height:inherit;
-    margin:0 auto;
-    padding:clamp(0.55rem, 1.2vw, 1rem) clamp(14px, 2.6vw, 26px) clamp(2rem, 3vw, 2.6rem);
-    display:flex;
-    align-items:flex-start;
-    justify-content:flex-start;
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 1180px;
+    min-height: inherit;
+    margin: 0 auto;
+    padding: clamp(0.55rem, 1.2vw, 1rem) clamp(14px, 2.6vw, 26px) clamp(2rem, 3vw, 2.6rem);
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
   }
-  .lcb-hero-copy { width:min(640px, 100%); margin:0; padding-top:0; text-shadow:0 2px 18px rgba(0,0,0,0.18); }
-  .lcb-hero-kicker { margin-bottom:1rem; color:#cfe0ff; font-size:0.7rem; font-weight:700; letter-spacing:0.32em; text-transform:uppercase; }
-  .lcb-hero-title { margin:0 0 1.05rem; color:#fff !important; font-size:clamp(4.5rem, 7.5vw, 7.25rem); font-weight:780; line-height:1.08; letter-spacing:-0.035em; text-wrap:balance; }
-  .lcb-hero-kr { margin:0; color:#f2f6ff !important; font-size:clamp(1.08rem, 1.5vw, 1.34rem); font-weight:620; line-height:1.85; }
-  .lcb-hero-rule { width:48px; height:2px; margin:1.25rem 0 1.05rem; background:var(--lcb-gold); }
-  .lcb-hero-lead { max-width:660px; margin:0; color:#ffffff !important; font-size:clamp(0.96rem, 1.2vw, 1.08rem); font-weight:420; line-height:1.72; letter-spacing:-0.005em; }
-  .lcb-hero-visual { display:none !important; }
+  .lcb-hero-copy {
+    width: min(640px, 100%);
+    margin: 0;
+    padding-top: 0;
+    text-shadow: 0 2px 18px rgba(0, 0, 0, 0.18);
+  }
+  .lcb-hero-kicker {
+    margin-bottom: 1rem;
+    color: #cfe0ff;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+  }
+  .lcb-hero-title {
+    margin: 0 0 1.05rem;
+    color: #fff !important;
+    font-size: clamp(4.5rem, 7.5vw, 7.25rem);
+    font-weight: 780;
+    line-height: 1.08;
+    letter-spacing: -0.035em;
+    text-wrap: balance;
+  }
+  .lcb-hero-kr {
+    margin: 0;
+    color: #f2f6ff !important;
+    font-size: clamp(1.08rem, 1.5vw, 1.34rem);
+    font-weight: 620;
+    line-height: 1.85;
+  }
+  .lcb-hero-rule {
+    width: 48px;
+    height: 2px;
+    margin: 1.25rem 0 1.05rem;
+    background: var(--lcb-gold);
+  }
+  .lcb-hero-lead {
+    max-width: 660px;
+    margin: 0;
+    color: #ffffff !important;
+    font-size: clamp(0.96rem, 1.2vw, 1.08rem);
+    font-weight: 420;
+    line-height: 1.72;
+    letter-spacing: -0.005em;
+  }
+  .lcb-hero-visual {
+    display: none !important;
+  }
 
-  .lcb-home-quick { background:linear-gradient(180deg, #ffffff 0%, #f7f9fd 100%); border-bottom:1px solid var(--lcb-line); }
-  .lcb-quick-inner { display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:1rem; max-width:1180px; padding:1.55rem clamp(14px, 2.6vw, 26px); margin:0 auto; }
-  .lcb-quick-card, .lcb-card, .lcb-project-card, .lcb-member, .lcb-gallery-item { background:#fff; border:1px solid var(--lcb-line); box-shadow:0 2px 10px rgba(0,52,120,0.035); }
-  .lcb-quick-card { padding:1.1rem; border-radius:12px; }
-  .lcb-quick-card h2 { margin:0 0 0.3rem; color:var(--lcb-blue); font-size:1.16rem; font-weight:680; }
-  .lcb-quick-card p { margin:0 0 0.8rem; color:#4b5563; font-size:0.82rem; line-height:1.6; }
-  .lcb-quick-actions { display:flex; flex-wrap:wrap; gap:0.55rem; }
-  .lcb-quick-actions a, .lcb-tab-btn { padding:0.45rem 0.82rem; color:var(--lcb-blue) !important; font-size:0.8rem; font-weight:580; text-decoration:none !important; background:#f8faff; border:1px solid var(--lcb-line); border-radius:999px; }
-  .lcb-quick-actions a:hover, .lcb-tab-btn:hover { color:#fff !important; background:var(--lcb-blue); }
+  .lcb-home-quick {
+    background: linear-gradient(180deg, #ffffff 0%, #f7f9fd 100%);
+    border-bottom: 1px solid var(--lcb-line);
+  }
+  .lcb-quick-inner {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+    max-width: 1180px;
+    padding: 1.55rem clamp(14px, 2.6vw, 26px);
+    margin: 0 auto;
+  }
+  .lcb-quick-card,
+  .lcb-card,
+  .lcb-project-card,
+  .lcb-member,
+  .lcb-gallery-item {
+    background: #fff;
+    border: 1px solid var(--lcb-line);
+    box-shadow: 0 2px 10px rgba(0, 52, 120, 0.035);
+  }
+  .lcb-quick-card {
+    padding: 1.1rem;
+    border-radius: 12px;
+  }
+  .lcb-quick-card h2 {
+    margin: 0 0 0.3rem;
+    color: var(--lcb-blue);
+    font-size: 1.16rem;
+    font-weight: 680;
+  }
+  .lcb-quick-card p {
+    margin: 0 0 0.8rem;
+    color: #4b5563;
+    font-size: 0.82rem;
+    line-height: 1.6;
+  }
+  .lcb-quick-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.55rem;
+  }
+  .lcb-quick-actions a,
+  .lcb-tab-btn {
+    padding: 0.45rem 0.82rem;
+    color: var(--lcb-blue) !important;
+    font-size: 0.8rem;
+    font-weight: 580;
+    text-decoration: none !important;
+    background: #f8faff;
+    border: 1px solid var(--lcb-line);
+    border-radius: 999px;
+  }
+  .lcb-quick-actions a:hover,
+  .lcb-tab-btn:hover {
+    color: #fff !important;
+    background: var(--lcb-blue);
+  }
 
-  .lcb-home-gallery { padding:1.7rem 0 2rem; }
-  .lcb-gallery-head { max-width:1180px; padding:0 clamp(14px, 2.6vw, 26px) 0.8rem; margin:0 auto; }
-  .lcb-gallery-head h2 { margin:0; color:var(--lcb-blue); font-size:1.28rem; font-weight:680; }
-  .lcb-slider { display:flex; gap:12px; padding:0 clamp(14px, 2.6vw, 26px) 0.7rem; overflow-x:auto; scrollbar-color:#c5d2e8 transparent; scrollbar-width:thin; scroll-snap-type:x mandatory; }
-  .lcb-slide { flex:0 0 clamp(235px, 24vw, 315px); overflow:hidden; background:#f1f5fb; border-radius:12px; scroll-snap-align:start; border:1px solid #e8eef7; }
-  .lcb-slide img, .lcb-gallery-item img { display:block; width:100%; height:245px; object-fit:cover; object-position:center; background:#f1f5fb; }
-  .lcb-slide-caption, .lcb-gallery-item figcaption { min-height:56px; padding:0.52rem 0.7rem; color:#4b5563; font-size:0.76rem; line-height:1.45; background:#fff; border-top:1px solid #eef2f8; }
-  .lcb-slide-caption strong, .lcb-gallery-item figcaption strong { color:var(--lcb-ink); font-weight:660; }
-  .lcb-gallery-grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(250px,1fr)); gap:0.95rem; align-items:stretch; margin-top:0.7rem; }
-  .lcb-gallery-item { overflow:hidden; border-radius:12px; }
+  .lcb-home-gallery {
+    padding: 1.7rem 0 2rem;
+  }
+  .lcb-gallery-head {
+    max-width: 1180px;
+    padding: 0 clamp(14px, 2.6vw, 26px) 0.8rem;
+    margin: 0 auto;
+  }
+  .lcb-gallery-head h2 {
+    margin: 0;
+    color: var(--lcb-blue);
+    font-size: 1.28rem;
+    font-weight: 680;
+  }
+  .lcb-slider {
+    display: flex;
+    gap: 12px;
+    padding: 0 clamp(14px, 2.6vw, 26px) 0.7rem;
+    overflow-x: auto;
+    scrollbar-color: #c5d2e8 transparent;
+    scrollbar-width: thin;
+    scroll-snap-type: x mandatory;
+  }
+  .lcb-slide {
+    flex: 0 0 clamp(235px, 24vw, 315px);
+    overflow: hidden;
+    background: #f1f5fb;
+    border-radius: 12px;
+    scroll-snap-align: start;
+    border: 1px solid #e8eef7;
+  }
+  .lcb-slide img,
+  .lcb-gallery-item img {
+    display: block;
+    width: 100%;
+    height: 245px;
+    object-fit: cover;
+    object-position: center;
+    background: #f1f5fb;
+  }
+  .lcb-slide-caption,
+  .lcb-gallery-item figcaption {
+    min-height: 56px;
+    padding: 0.52rem 0.7rem;
+    color: #4b5563;
+    font-size: 0.76rem;
+    line-height: 1.45;
+    background: #fff;
+    border-top: 1px solid #eef2f8;
+  }
+  .lcb-slide-caption strong,
+  .lcb-gallery-item figcaption strong {
+    color: var(--lcb-ink);
+    font-weight: 660;
+  }
+  .lcb-gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 0.95rem;
+    align-items: stretch;
+    margin-top: 0.7rem;
+  }
+  .lcb-gallery-item {
+    overflow: hidden;
+    border-radius: 12px;
+  }
 
-  .lcb-card-grid, .lcb-project-grid { display:grid; gap:1rem; }
-  .lcb-card-grid { grid-template-columns:repeat(auto-fit, minmax(220px,1fr)); }
-  .lcb-card { padding:1rem; border-radius:12px; }
-  .lcb-card h3, .lcb-project-body h3 { margin:0 0 0.35rem; color:var(--lcb-blue); font-size:1rem; font-weight:680; line-height:1.35; }
-  .lcb-card p, .lcb-project-body p { margin:0; color:#4b5563; font-size:0.86rem; line-height:1.62; }
-  .lcb-project-grid { grid-template-columns: repeat(3, minmax(0,1fr)); margin-top:0.95rem; }
-  .lcb-project-card { overflow:hidden; border-radius:12px; }
-  .lcb-project-card img { display:block; width:100%; aspect-ratio:3 / 2; height:auto; object-fit:contain; object-position:center; background:#fff; border-bottom:1px solid #edf2f8; padding:0.35rem; }
-  .lcb-project-body { padding:0.95rem 1rem 1rem; }
+  .lcb-card-grid,
+  .lcb-project-grid {
+    display: grid;
+    gap: 1rem;
+  }
+  .lcb-card-grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+  .lcb-card {
+    padding: 1rem;
+    border-radius: 12px;
+  }
+  .lcb-card h3,
+  .lcb-project-body h3 {
+    margin: 0 0 0.35rem;
+    color: var(--lcb-blue);
+    font-size: 1rem;
+    font-weight: 680;
+    line-height: 1.35;
+  }
+  .lcb-card p,
+  .lcb-project-body p {
+    margin: 0;
+    color: #4b5563;
+    font-size: 0.86rem;
+    line-height: 1.62;
+  }
+  .lcb-project-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    margin-top: 0.95rem;
+  }
+  .lcb-project-card {
+    overflow: hidden;
+    border-radius: 12px;
+  }
+  .lcb-project-card img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 3 / 2;
+    height: auto;
+    object-fit: contain;
+    object-position: center;
+    background: #fff;
+    border-bottom: 1px solid #edf2f8;
+    padding: 0.35rem;
+  }
+  .lcb-project-body {
+    padding: 0.95rem 1rem 1rem;
+  }
 
-  .lcb-profile-grid { display:grid; grid-template-columns:minmax(200px, 280px) 1fr; gap:1.5rem; align-items:start; }
-  .lcb-profile-img { width:100%; object-fit:cover; border-radius:12px; box-shadow:0 6px 22px rgba(0,52,120,0.08); }
-  .lcb-professor-name { margin:0 0 0.8rem; color:var(--lcb-blue) !important; font-size:1.6rem; font-weight:760; line-height:1.25; }
-  .lcb-timeline { padding-left:1rem; border-left:2px solid var(--lcb-line); }
-  .lcb-timeline-item { margin-bottom:0.62rem; }
-  .lcb-timeline-year { color:var(--lcb-blue); font-size:0.82rem; font-weight:670; }
-  .lcb-timeline-item div:not(.lcb-timeline-year) { color:#4b5563; font-size:0.84rem; }
+  .lcb-profile-grid {
+    display: grid;
+    grid-template-columns: minmax(200px, 280px) 1fr;
+    gap: 1.5rem;
+    align-items: start;
+  }
+  .lcb-profile-img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 6px 22px rgba(0, 52, 120, 0.08);
+  }
+  .lcb-professor-name {
+    margin: 0 0 0.8rem;
+    color: var(--lcb-blue) !important;
+    font-size: 1.6rem;
+    font-weight: 760;
+    line-height: 1.25;
+  }
+  .lcb-timeline {
+    padding-left: 1rem;
+    border-left: 2px solid var(--lcb-line);
+  }
+  .lcb-timeline-item {
+    margin-bottom: 0.62rem;
+  }
+  .lcb-timeline-year {
+    color: var(--lcb-blue);
+    font-size: 0.82rem;
+    font-weight: 670;
+  }
+  .lcb-timeline-item div:not(.lcb-timeline-year) {
+    color: #4b5563;
+    font-size: 0.84rem;
+  }
 
-  .lcb-member-grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(170px,1fr)); gap:0.95rem; }
-  .lcb-member { display:flex; flex-direction:column; padding:0.9rem; border-radius:12px; }
-  .lcb-member img { width:100%; aspect-ratio:1 / 1; margin-bottom:0.58rem; object-fit:cover; object-position:center 35%; background:#f1f5fb; border-radius:10px; }
-  .lcb-member h3 { margin:0 0 0.15rem; color:var(--lcb-blue); font-size:0.94rem; font-weight:680; }
-  .lcb-role { color:var(--lcb-blue2); font-weight:580; }
-  .lcb-member p { margin:0.12rem 0; color:#6b7280; font-size:0.8rem; line-height:1.42; }
-  .lcb-people-tabs { display:flex; flex-wrap:wrap; gap:0.5rem; margin:0.95rem 0 1.15rem; }
-  .lcb-contact-box { padding:1.05rem; background:linear-gradient(135deg, #f8faff, #eff4ff); border:1px solid var(--lcb-line); border-radius:12px; }
-  .lcb-contact-box p { margin:0.35rem 0; font-size:0.9rem; }
-  .lcb-publications { counter-reset: pubs; }
-  .lcb-pub-list { padding-left:0; list-style:none; }
-  .lcb-pub-item { display:grid; grid-template-columns:2.8rem 1fr; gap:0.7rem; padding:0.8rem 0; border-bottom:1px solid var(--lcb-line); counter-increment:pubs; }
-  .lcb-pub-item::before { padding-top:0.08rem; color:var(--lcb-blue); font-size:0.92rem; font-weight:700; content:counter(pubs); }
-  .lcb-pub-title { color:#1f2937; font-size:0.9rem; font-weight:600; line-height:1.55; }
-  .lcb-pub-meta { color:#6b7280; font-size:0.83rem; line-height:1.58; }
-  .lcb-year { margin-top:1.8rem; color:var(--lcb-blue); font-size:1.42rem; font-weight:760; }
+  .lcb-member-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+    gap: 0.95rem;
+  }
+  .lcb-member {
+    display: flex;
+    flex-direction: column;
+    padding: 0.9rem;
+    border-radius: 12px;
+  }
+  .lcb-member img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    margin-bottom: 0.58rem;
+    object-fit: cover;
+    object-position: center 35%;
+    background: #f1f5fb;
+    border-radius: 10px;
+  }
+  .lcb-member h3 {
+    margin: 0 0 0.15rem;
+    color: var(--lcb-blue);
+    font-size: 0.94rem;
+    font-weight: 680;
+  }
+  .lcb-role {
+    color: var(--lcb-blue2);
+    font-weight: 580;
+  }
+  .lcb-member p {
+    margin: 0.12rem 0;
+    color: #6b7280;
+    font-size: 0.8rem;
+    line-height: 1.42;
+  }
+  .lcb-people-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 0.95rem 0 1.15rem;
+  }
+  .lcb-contact-box {
+    padding: 1.05rem;
+    background: linear-gradient(135deg, #f8faff, #eff4ff);
+    border: 1px solid var(--lcb-line);
+    border-radius: 12px;
+  }
+  .lcb-contact-box p {
+    margin: 0.35rem 0;
+    font-size: 0.9rem;
+  }
+  .lcb-publications {
+    counter-reset: pubs;
+  }
+  .lcb-pub-list {
+    padding-left: 0;
+    list-style: none;
+  }
+  .lcb-pub-item {
+    display: grid;
+    grid-template-columns: 2.8rem 1fr;
+    gap: 0.7rem;
+    padding: 0.8rem 0;
+    border-bottom: 1px solid var(--lcb-line);
+    counter-increment: pubs;
+  }
+  .lcb-pub-item::before {
+    padding-top: 0.08rem;
+    color: var(--lcb-blue);
+    font-size: 0.92rem;
+    font-weight: 700;
+    content: counter(pubs);
+  }
+  .lcb-pub-title {
+    color: #1f2937;
+    font-size: 0.9rem;
+    font-weight: 600;
+    line-height: 1.55;
+  }
+  .lcb-pub-meta {
+    color: #6b7280;
+    font-size: 0.83rem;
+    line-height: 1.58;
+  }
+  .lcb-year {
+    margin-top: 1.8rem;
+    color: var(--lcb-blue);
+    font-size: 1.42rem;
+    font-weight: 760;
+  }
 
-  @media (max-width: 1120px) { .lcb-project-grid { grid-template-columns: repeat(2, minmax(0,1fr)); } }
+  @media (max-width: 1120px) {
+    .lcb-project-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
   @media (max-width: 920px) {
-    .lcb-quick-inner { grid-template-columns:1fr; }
-    .lcb-home-hero { min-height:455px; }
-    .lcb-home-hero::after { right:-70px; width:clamp(310px, 58vw, 560px); opacity:0.34; }
+    .lcb-quick-inner {
+      grid-template-columns: 1fr;
+    }
+    .lcb-home-hero {
+      min-height: 455px;
+    }
+    .lcb-home-hero::after {
+      right: -70px;
+      width: clamp(310px, 58vw, 560px);
+      opacity: 0.34;
+    }
   }
   @media (max-width: 800px) {
-    .lcb-topbar { height:30px !important; min-height:30px !important; }
-    .lcb-topbar-inner { height:30px !important; min-height:30px !important; }
-    .lcb-topbar-logo { width:30px !important; height:30px !important; }
-    .lcb-topbar-brand { font-size:1.02rem; }
-    .lcb-hamburger { display:flex; }
-    .lcb-topbar-links { position:absolute; top:30px; right:0; left:0; display:none; flex-direction:column; gap:0; height:auto; padding:0.45rem 0; background:#fff; border-bottom:1px solid var(--lcb-line); box-shadow:0 4px 12px rgba(0,0,0,0.06); }
-    .lcb-topbar-links.open { display:flex; }
-    .lcb-topbar-links a { height:auto; padding:0.62rem clamp(16px,3vw,36px) !important; font-size:1.05rem; }
-    .lcb-topbar-links a::after { display:none; }
-    .lcb-project-grid { grid-template-columns:1fr; }
+    .lcb-topbar {
+      height: 30px !important;
+      min-height: 30px !important;
+    }
+    .lcb-topbar-inner {
+      height: 30px !important;
+      min-height: 30px !important;
+    }
+    .lcb-topbar-logo {
+      width: 30px !important;
+      height: 30px !important;
+    }
+    .lcb-topbar-brand {
+      font-size: 1.02rem;
+    }
+    .lcb-hamburger {
+      display: flex;
+    }
+    .lcb-topbar-links {
+      position: absolute;
+      top: 30px;
+      right: 0;
+      left: 0;
+      display: none;
+      flex-direction: column;
+      gap: 0;
+      height: auto;
+      padding: 0.45rem 0;
+      background: #fff;
+      border-bottom: 1px solid var(--lcb-line);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    }
+    .lcb-topbar-links.open {
+      display: flex;
+    }
+    .lcb-topbar-links a {
+      height: auto;
+      padding: 0.62rem clamp(16px, 3vw, 36px) !important;
+      font-size: 1.05rem;
+    }
+    .lcb-topbar-links a::after {
+      display: none;
+    }
+    .lcb-project-grid {
+      grid-template-columns: 1fr;
+    }
   }
   @media (max-width: 720px) {
-    .lcb-home-hero { min-height:auto; }
-    .lcb-home-hero::after { display:block; opacity:0.16; top:0; right:-210px; width:560px; background-position:top right; }
-    .lcb-home-inner { padding:2.2rem clamp(16px,4vw,24px) 2.6rem; justify-content:flex-start; }
-    .lcb-hero-copy { width:100%; }
-    .lcb-hero-title { font-size:3.35rem; line-height:1.05; }
-    .lcb-hero-kr { line-height:1.75; }
-    .lcb-slide { flex-basis:230px; }
-    .lcb-slide img, .lcb-gallery-item img { height:220px; }
-    .lcb-profile-grid { grid-template-columns:1fr; }
-    .lcb-member-grid { grid-template-columns:repeat(auto-fill, minmax(145px,1fr)); }
+    .lcb-home-hero {
+      min-height: auto;
+    }
+    .lcb-home-hero::after {
+      display: block;
+      opacity: 0.16;
+      top: 0;
+      right: -210px;
+      width: 560px;
+      background-position: top right;
+    }
+    .lcb-home-inner {
+      padding: 2.2rem clamp(16px, 4vw, 24px) 2.6rem;
+      justify-content: flex-start;
+    }
+    .lcb-hero-copy {
+      width: 100%;
+    }
+    .lcb-hero-title {
+      font-size: 3.35rem;
+      line-height: 1.05;
+    }
+    .lcb-hero-kr {
+      line-height: 1.75;
+    }
+    .lcb-slide {
+      flex-basis: 230px;
+    }
+    .lcb-slide img,
+    .lcb-gallery-item img {
+      height: 220px;
+    }
+    .lcb-profile-grid {
+      grid-template-columns: 1fr;
+    }
+    .lcb-member-grid {
+      grid-template-columns: repeat(auto-fill, minmax(145px, 1fr));
+    }
   }
-
 
   /* ===== V20 requested refinements =====
      Keep the topbar physically compact, but enlarge the brand/logo/menu text.
      Place cancer-cell artwork directly below the nav line as a muted background. */
   .lcb-topbar,
-  .lcb-topbar-inner { height:30px !important; min-height:30px !important; max-height:30px !important; }
-  .lcb-topbar { overflow:visible !important; }
-  .lcb-topbar-brand { font-size:1.35rem !important; font-weight:800 !important; transform:translateY(1px); transform-origin:left center; }
-  .lcb-topbar-logo { width:36px !important; height:36px !important; opacity:0.95 !important; }
-  .lcb-topbar-links { height:30px !important; align-items:center !important; }
-  .lcb-topbar-links a { height:30px !important; font-size:1.01rem !important; font-weight:500 !important; line-height:1 !important; }
-  .lcb-home-hero { margin-top:0 !important; }
-  .lcb-home-inner { padding-top:clamp(0.55rem, 1.2vw, 1rem) !important; }
-  .lcb-hero-title { font-size:clamp(4.5rem, 7.5vw, 7.25rem) !important; }
+  .lcb-topbar-inner {
+    height: 30px !important;
+    min-height: 30px !important;
+    max-height: 30px !important;
+  }
+  .lcb-topbar {
+    overflow: visible !important;
+  }
+  .lcb-topbar-brand {
+    font-size: 1.35rem !important;
+    font-weight: 800 !important;
+    transform: translateY(1px);
+    transform-origin: left center;
+  }
+  .lcb-topbar-logo {
+    width: 36px !important;
+    height: 36px !important;
+    opacity: 0.95 !important;
+  }
+  .lcb-topbar-links {
+    height: 30px !important;
+    align-items: center !important;
+  }
+  .lcb-topbar-links a {
+    height: 30px !important;
+    font-size: 1.01rem !important;
+    font-weight: 500 !important;
+    line-height: 1 !important;
+  }
+  .lcb-home-hero {
+    margin-top: 0 !important;
+  }
+  .lcb-home-inner {
+    padding-top: clamp(0.55rem, 1.2vw, 1rem) !important;
+  }
+  .lcb-hero-title {
+    font-size: clamp(4.5rem, 7.5vw, 7.25rem) !important;
+  }
   .lcb-home-hero::after {
-    top:0 !important;
-    right:clamp(-95px, -2vw, -28px) !important;
-    bottom:0 !important;
-    width:clamp(460px, 58vw, 820px) !important;
-    background-position:top right !important;
-    opacity:0.25 !important;
-    mix-blend-mode:screen !important;
-    filter:saturate(0.55) hue-rotate(180deg) brightness(1.25) contrast(0.82) blur(0.15px) drop-shadow(0 16px 34px rgba(0,0,0,0.10)) !important;
+    top: 0 !important;
+    right: clamp(-95px, -2vw, -28px) !important;
+    bottom: 0 !important;
+    width: clamp(460px, 58vw, 820px) !important;
+    background-position: top right !important;
+    opacity: 0.25 !important;
+    mix-blend-mode: screen !important;
+    filter: saturate(0.55) hue-rotate(180deg) brightness(1.25) contrast(0.82) blur(0.15px) drop-shadow(0 16px 34px rgba(0, 0, 0, 0.1)) !important;
   }
-  @media (max-width:800px) {
+  @media (max-width: 800px) {
     .lcb-topbar,
-    .lcb-topbar-inner { height:30px !important; min-height:30px !important; max-height:30px !important; }
-    .lcb-topbar-logo { width:30px !important; height:30px !important; }
-    .lcb-topbar-brand { font-size:1.02rem !important; }
-    .lcb-topbar-links { top:30px !important; }
-    .lcb-topbar-links a { height:auto !important; font-size:1.05rem !important; }
+    .lcb-topbar-inner {
+      height: 30px !important;
+      min-height: 30px !important;
+      max-height: 30px !important;
+    }
+    .lcb-topbar-logo {
+      width: 30px !important;
+      height: 30px !important;
+    }
+    .lcb-topbar-brand {
+      font-size: 1.02rem !important;
+    }
+    .lcb-topbar-links {
+      top: 30px !important;
+    }
+    .lcb-topbar-links a {
+      height: auto !important;
+      font-size: 1.05rem !important;
+    }
   }
-  @media (max-width:720px) {
-    .lcb-home-inner { padding-top:1rem !important; }
-    .lcb-hero-title { font-size:3.35rem !important; line-height:1.05 !important; }
-    .lcb-home-hero::after { display:block !important; top:0 !important; right:-210px !important; width:560px !important; opacity:0.16 !important; background-position:top right !important; }
+  @media (max-width: 720px) {
+    .lcb-home-inner {
+      padding-top: 1rem !important;
+    }
+    .lcb-hero-title {
+      font-size: 3.35rem !important;
+      line-height: 1.05 !important;
+    }
+    .lcb-home-hero::after {
+      display: block !important;
+      top: 0 !important;
+      right: -210px !important;
+      width: 560px !important;
+      opacity: 0.16 !important;
+      background-position: top right !important;
+    }
+  }
+</style> <style>
+  body > div.container.mt-5 .lcb-topbar {
+    margin-top: -3rem !important;
   }
 
+  .lcb-topbar {
+    position: relative !important;
+    top: auto !important;
+    margin-bottom: 0 !important;
+  }
+
+  .lcb-topbar,
+  .lcb-topbar-inner {
+    height: 28px !important;
+    min-height: 28px !important;
+    max-height: 28px !important;
+  }
+
+  .lcb-topbar-logo {
+    width: 30px !important;
+    height: 30px !important;
+    opacity: 0.94 !important;
+    transform: translateY(1px) !important;
+  }
+
+  .lcb-topbar-brand {
+    gap: 0.34rem !important;
+    font-size: 0.76rem !important;
+    font-weight: 560 !important;
+    line-height: 1 !important;
+  }
+
+  .lcb-topbar-links {
+    height: 28px !important;
+    align-items: center !important;
+  }
+
+  .lcb-topbar-links a {
+    height: 28px !important;
+    font-size: 0.78rem !important;
+    line-height: 1 !important;
+  }
+
+  .lcb-slide,
+  .lcb-gallery-item {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  .lcb-slide img,
+  .lcb-gallery-item img {
+    flex-shrink: 0 !important;
+    width: 100% !important;
+    height: 245px !important;
+    object-fit: contain !important;
+    object-position: center top !important;
+    background: #f1f5fb !important;
+  }
+
+  .lcb-slide-caption,
+  .lcb-gallery-item figcaption {
+    flex: 1 1 auto !important;
+  }
+
+  .lcb-member.focus-dayeon img {
+    object-position: center 58% !important;
+  }
+
+  @media (max-width: 800px) {
+    .lcb-topbar,
+    .lcb-topbar-inner {
+      height: 28px !important;
+      min-height: 28px !important;
+      max-height: 28px !important;
+    }
+
+    .lcb-topbar-logo {
+      width: 28px !important;
+      height: 28px !important;
+    }
+
+    .lcb-topbar-links {
+      top: 28px !important;
+      height: auto !important;
+    }
+
+    .lcb-topbar-links a {
+      height: auto !important;
+      font-size: 0.9rem !important;
+    }
+  }
+
+  @media (max-width: 720px) {
+    .lcb-slide img,
+    .lcb-gallery-item img {
+      height: 220px !important;
+    }
+  }
 </style> <style>
   /* Make the white topbar physically thinner; no extra top/bottom spacing. */
   .lcb-topbar,
   .lcb-topbar-inner {
-    height:24px !important;
-    min-height:24px !important;
-    max-height:24px !important;
+    height: 24px !important;
+    min-height: 24px !important;
+    max-height: 24px !important;
   }
   .lcb-topbar {
-    overflow:visible !important;
-    border-bottom:1px solid rgba(226,232,240,0.9) !important;
+    overflow: visible !important;
+    border-bottom: 1px solid rgba(226, 232, 240, 0.9) !important;
   }
   .lcb-topbar-inner {
-    padding-top:0 !important;
-    padding-bottom:0 !important;
-    line-height:1 !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    line-height: 1 !important;
   }
 
   /* Restore top-left lab brand and menu text size. */
   .lcb-topbar-brand {
-    font-size:0.86rem !important;
-    font-weight:700 !important;
-    transform:none !important;
-    line-height:1 !important;
+    font-size: 0.86rem !important;
+    font-weight: 700 !important;
+    transform: none !important;
+    line-height: 1 !important;
   }
   .lcb-topbar-logo {
-    width:22px !important;
-    height:22px !important;
-    opacity:0.88 !important;
-    transform:none !important;
+    width: 22px !important;
+    height: 22px !important;
+    opacity: 0.88 !important;
+    transform: none !important;
   }
   .lcb-topbar-links {
-    height:24px !important;
-    gap:clamp(0.55rem, 1.25vw, 1.15rem) !important;
-    align-items:center !important;
+    height: 24px !important;
+    gap: clamp(0.55rem, 1.25vw, 1.15rem) !important;
+    align-items: center !important;
   }
   .lcb-topbar-links a {
-    height:24px !important;
-    font-size:0.79rem !important;
-    font-weight:400 !important;
-    line-height:1 !important;
+    height: 24px !important;
+    font-size: 0.79rem !important;
+    font-weight: 400 !important;
+    line-height: 1 !important;
   }
-  .lcb-topbar-links a.active { font-weight:600 !important; }
-  .lcb-topbar-links a::after { bottom:0 !important; }
+  .lcb-topbar-links a.active {
+    font-weight: 600 !important;
+  }
+  .lcb-topbar-links a::after {
+    bottom: 0 !important;
+  }
 
   /* Remove the feeling of a gap between browser/topbar and the blue hero. */
   .lcb-home-hero {
-    margin-top:0 !important;
-    min-height:clamp(455px, 58vh, 570px) !important;
+    margin-top: 0 !important;
+    min-height: clamp(455px, 58vh, 570px) !important;
   }
   .lcb-home-inner {
-    padding-top:clamp(0.85rem, 1.5vw, 1.25rem) !important;
+    padding-top: clamp(0.85rem, 1.5vw, 1.25rem) !important;
   }
 
   /* Reduce the oversized central title. */
   .lcb-hero-title {
-    font-size:clamp(3.55rem, 5vw, 5.25rem) !important;
-    line-height:1.05 !important;
-    margin-bottom:0.9rem !important;
+    font-size: clamp(3.55rem, 5vw, 5.25rem) !important;
+    line-height: 1.05 !important;
+    margin-bottom: 0.9rem !important;
   }
 
   /* Put cancer-cell image exactly under the nav line, on the right, as a muted background. */
   .lcb-home-hero::after {
-    display:block !important;
-    top:0 !important;
-    right:0 !important;
-    bottom:0 !important;
-    width:clamp(410px, 42vw, 680px) !important;
-    background-image:url("/LCB/assets/img/home/hero_cancer_cells_transparent.png") !important;
-    background-repeat:no-repeat !important;
-    background-position:top right !important;
-    background-size:cover !important;
-    opacity:0.18 !important;
-    mix-blend-mode:screen !important;
-    filter:grayscale(1) sepia(0.18) hue-rotate(170deg) saturate(1.35) brightness(1.15) contrast(0.72) blur(0.2px) !important;
-    pointer-events:none !important;
+    display: block !important;
+    top: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    width: clamp(410px, 42vw, 680px) !important;
+    background-image: url("/LCB/assets/img/home/hero_cancer_cells_transparent.png") !important;
+    background-repeat: no-repeat !important;
+    background-position: top right !important;
+    background-size: cover !important;
+    opacity: 0.18 !important;
+    mix-blend-mode: screen !important;
+    filter: grayscale(1) sepia(0.18) hue-rotate(170deg) saturate(1.35) brightness(1.15) contrast(0.72) blur(0.2px) !important;
+    pointer-events: none !important;
   }
 
-  @media (max-width:800px) {
+  @media (max-width: 800px) {
     .lcb-topbar,
     .lcb-topbar-inner {
-      height:24px !important;
-      min-height:24px !important;
-      max-height:24px !important;
+      height: 24px !important;
+      min-height: 24px !important;
+      max-height: 24px !important;
     }
-    .lcb-topbar-logo { width:20px !important; height:20px !important; }
-    .lcb-topbar-brand { font-size:0.82rem !important; }
-    .lcb-topbar-links { top:24px !important; }
-    .lcb-topbar-links a { height:auto !important; font-size:0.9rem !important; }
+    .lcb-topbar-logo {
+      width: 20px !important;
+      height: 20px !important;
+    }
+    .lcb-topbar-brand {
+      font-size: 0.82rem !important;
+    }
+    .lcb-topbar-links {
+      top: 24px !important;
+    }
+    .lcb-topbar-links a {
+      height: auto !important;
+      font-size: 0.9rem !important;
+    }
   }
 
-  @media (max-width:720px) {
-    .lcb-home-inner { padding-top:1.4rem !important; }
-    .lcb-hero-title { font-size:2.9rem !important; line-height:1.07 !important; }
+  @media (max-width: 720px) {
+    .lcb-home-inner {
+      padding-top: 1.4rem !important;
+    }
+    .lcb-hero-title {
+      font-size: 2.9rem !important;
+      line-height: 1.07 !important;
+    }
     .lcb-home-hero::after {
-      top:0 !important;
-      right:-170px !important;
-      width:520px !important;
-      opacity:0.13 !important;
-      background-position:top right !important;
+      top: 0 !important;
+      right: -170px !important;
+      width: 520px !important;
+      opacity: 0.13 !important;
+      background-position: top right !important;
     }
   }
 </style> <style>
   /* topbar: keep it thin; do not enlarge the white area */
   .lcb-topbar,
   .lcb-topbar-inner {
-    height:22px !important;
-    min-height:22px !important;
-    max-height:22px !important;
+    height: 22px !important;
+    min-height: 22px !important;
+    max-height: 22px !important;
   }
   .lcb-topbar {
-    overflow:visible !important;
-    margin:0 !important;
-    padding:0 !important;
-    border-bottom:1px solid rgba(226,232,240,0.9) !important;
+    overflow: visible !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border-bottom: 1px solid rgba(226, 232, 240, 0.9) !important;
   }
   .lcb-topbar-inner {
-    padding-top:0 !important;
-    padding-bottom:0 !important;
-    line-height:1 !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    line-height: 1 !important;
   }
 
   /* restore menu text size */
   .lcb-topbar-brand {
-    font-size:0.86rem !important;
-    font-weight:700 !important;
-    line-height:1 !important;
-    transform:none !important;
+    font-size: 0.86rem !important;
+    font-weight: 700 !important;
+    line-height: 1 !important;
+    transform: none !important;
   }
   .lcb-topbar-logo {
-    width:20px !important;
-    height:20px !important;
-    opacity:0.88 !important;
-    transform:none !important;
+    width: 20px !important;
+    height: 20px !important;
+    opacity: 0.88 !important;
+    transform: none !important;
   }
   .lcb-topbar-links {
-    height:22px !important;
-    gap:clamp(0.55rem, 1.25vw, 1.15rem) !important;
-    align-items:center !important;
+    height: 22px !important;
+    gap: clamp(0.55rem, 1.25vw, 1.15rem) !important;
+    align-items: center !important;
   }
   .lcb-topbar-links a {
-    height:22px !important;
-    font-size:0.79rem !important;
-    font-weight:400 !important;
-    line-height:1 !important;
-    padding-top:0 !important;
-    padding-bottom:0 !important;
+    height: 22px !important;
+    font-size: 0.79rem !important;
+    font-weight: 400 !important;
+    line-height: 1 !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
   }
-  .lcb-topbar-links a.active { font-weight:600 !important; }
-  .lcb-topbar-links a::after { bottom:0 !important; }
+  .lcb-topbar-links a.active {
+    font-weight: 600 !important;
+  }
+  .lcb-topbar-links a::after {
+    bottom: 0 !important;
+  }
 
   /* blue hero starts immediately below the thin topbar */
   .lcb-home-hero {
-    margin-top:0 !important;
-    min-height:clamp(430px, 56vh, 540px) !important;
+    margin-top: 0 !important;
+    min-height: clamp(430px, 56vh, 540px) !important;
   }
   .lcb-home-inner {
-    padding-top:clamp(0.75rem, 1.15vw, 1rem) !important;
+    padding-top: clamp(0.75rem, 1.15vw, 1rem) !important;
   }
 
   /* central Lab of Cancer Biology: shrink back down */
   .lcb-hero-title {
-    font-size:clamp(3rem, 4.2vw, 4.6rem) !important;
-    line-height:1.05 !important;
-    margin-bottom:0.75rem !important;
-    letter-spacing:-0.035em !important;
+    font-size: clamp(3rem, 4.2vw, 4.6rem) !important;
+    line-height: 1.05 !important;
+    margin-bottom: 0.75rem !important;
+    letter-spacing: -0.035em !important;
   }
   .lcb-hero-kr {
-    font-size:clamp(1.02rem, 1.32vw, 1.2rem) !important;
-    line-height:1.72 !important;
+    font-size: clamp(1.02rem, 1.32vw, 1.2rem) !important;
+    line-height: 1.72 !important;
   }
   .lcb-hero-lead {
-    font-size:clamp(0.9rem, 1.05vw, 1rem) !important;
-    line-height:1.68 !important;
+    font-size: clamp(0.9rem, 1.05vw, 1rem) !important;
+    line-height: 1.68 !important;
   }
 
   /* cancer-cell: left edge begins around the Home menu position, then fills to the right */
   .lcb-home-hero::after {
-    content:"" !important;
-    display:block !important;
-    position:absolute !important;
-    z-index:1 !important;
-    top:0 !important;
-    right:0 !important;
-    bottom:0 !important;
-    left:calc(50% - 120px) !important;
-    width:auto !important;
-    height:auto !important;
-    background-image:url("/LCB/assets/img/home/hero_cancer_cells_transparent.png") !important;
-    background-repeat:no-repeat !important;
-    background-position:top right !important;
-    background-size:cover !important;
-    opacity:0.16 !important;
-    mix-blend-mode:screen !important;
-    filter:grayscale(100%) brightness(1.32) contrast(0.72) saturate(0.7) blur(0.15px) !important;
-    pointer-events:none !important;
+    content: "" !important;
+    display: block !important;
+    position: absolute !important;
+    z-index: 1 !important;
+    top: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    left: calc(50% - 120px) !important;
+    width: auto !important;
+    height: auto !important;
+    background-image: url("/LCB/assets/img/home/hero_cancer_cells_transparent.png") !important;
+    background-repeat: no-repeat !important;
+    background-position: top right !important;
+    background-size: cover !important;
+    opacity: 0.16 !important;
+    mix-blend-mode: screen !important;
+    filter: grayscale(100%) brightness(1.32) contrast(0.72) saturate(0.7) blur(0.15px) !important;
+    pointer-events: none !important;
   }
 
-  @media (max-width:800px) {
+  @media (max-width: 800px) {
     .lcb-topbar,
     .lcb-topbar-inner {
-      height:24px !important;
-      min-height:24px !important;
-      max-height:24px !important;
+      height: 24px !important;
+      min-height: 24px !important;
+      max-height: 24px !important;
     }
-    .lcb-topbar-logo { width:20px !important; height:20px !important; }
-    .lcb-topbar-brand { font-size:0.82rem !important; }
-    .lcb-topbar-links { top:24px !important; height:auto !important; }
-    .lcb-topbar-links a { height:auto !important; font-size:0.9rem !important; }
-    .lcb-home-hero::after { left:42% !important; opacity:0.14 !important; }
+    .lcb-topbar-logo {
+      width: 20px !important;
+      height: 20px !important;
+    }
+    .lcb-topbar-brand {
+      font-size: 0.82rem !important;
+    }
+    .lcb-topbar-links {
+      top: 24px !important;
+      height: auto !important;
+    }
+    .lcb-topbar-links a {
+      height: auto !important;
+      font-size: 0.9rem !important;
+    }
+    .lcb-home-hero::after {
+      left: 42% !important;
+      opacity: 0.14 !important;
+    }
   }
 
-  @media (max-width:720px) {
-    .lcb-home-inner { padding-top:1.2rem !important; }
-    .lcb-hero-title { font-size:2.55rem !important; line-height:1.06 !important; }
+  @media (max-width: 720px) {
+    .lcb-home-inner {
+      padding-top: 1.2rem !important;
+    }
+    .lcb-hero-title {
+      font-size: 2.55rem !important;
+      line-height: 1.06 !important;
+    }
     .lcb-home-hero::after {
-      left:30% !important;
-      right:-180px !important;
-      opacity:0.11 !important;
-      background-position:top right !important;
+      left: 30% !important;
+      right: -180px !important;
+      opacity: 0.11 !important;
+      background-position: top right !important;
     }
   }
 </style> <style>
   /* 상단 흰 바: 더 얇게, 하지만 메뉴 글씨는 원상복구 */
   .lcb-topbar,
   .lcb-topbar-inner {
-    height:22px !important;
-    min-height:22px !important;
-    max-height:22px !important;
+    height: 22px !important;
+    min-height: 22px !important;
+    max-height: 22px !important;
   }
-  .lcb-topbar { margin:0 !important; padding:0 !important; overflow:visible !important; }
-  .lcb-topbar-inner { padding-top:0 !important; padding-bottom:0 !important; }
-  .lcb-topbar-brand { font-size:0.86rem !important; font-weight:700 !important; line-height:1 !important; transform:none !important; }
-  .lcb-topbar-logo { width:20px !important; height:20px !important; opacity:0.9 !important; transform:none !important; }
-  .lcb-topbar-links { height:22px !important; align-items:center !important; gap:clamp(0.55rem, 1.25vw, 1.15rem) !important; }
-  .lcb-topbar-links a { height:22px !important; font-size:0.79rem !important; font-weight:400 !important; line-height:1 !important; padding:0 !important; }
-  .lcb-topbar-links a.active { font-weight:600 !important; }
+  .lcb-topbar {
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: visible !important;
+  }
+  .lcb-topbar-inner {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+  .lcb-topbar-brand {
+    font-size: 0.86rem !important;
+    font-weight: 700 !important;
+    line-height: 1 !important;
+    transform: none !important;
+  }
+  .lcb-topbar-logo {
+    width: 20px !important;
+    height: 20px !important;
+    opacity: 0.9 !important;
+    transform: none !important;
+  }
+  .lcb-topbar-links {
+    height: 22px !important;
+    align-items: center !important;
+    gap: clamp(0.55rem, 1.25vw, 1.15rem) !important;
+  }
+  .lcb-topbar-links a {
+    height: 22px !important;
+    font-size: 0.79rem !important;
+    font-weight: 400 !important;
+    line-height: 1 !important;
+    padding: 0 !important;
+  }
+  .lcb-topbar-links a.active {
+    font-weight: 600 !important;
+  }
 
   /* 파란 hero가 상단바 바로 아래 붙게 */
   .lcb-home-hero {
-    margin-top:0 !important;
-    min-height:clamp(420px, 54vh, 520px) !important;
+    margin-top: 0 !important;
+    min-height: clamp(420px, 54vh, 520px) !important;
   }
   .lcb-home-inner {
-    padding-top:clamp(0.75rem, 1vw, 0.95rem) !important;
+    padding-top: clamp(0.75rem, 1vw, 0.95rem) !important;
   }
 
   /* 중앙 Lab of Cancer Biology 너무 커진 것 확실히 축소 */
   .lcb-hero-title {
-    font-size:clamp(2.75rem, 3.75vw, 4.0rem) !important;
-    line-height:1.08 !important;
-    margin-bottom:0.72rem !important;
-    letter-spacing:-0.035em !important;
+    font-size: clamp(2.75rem, 3.75vw, 4rem) !important;
+    line-height: 1.08 !important;
+    margin-bottom: 0.72rem !important;
+    letter-spacing: -0.035em !important;
   }
-  .lcb-hero-kicker { margin-bottom:0.75rem !important; }
+  .lcb-hero-kicker {
+    margin-bottom: 0.75rem !important;
+  }
   .lcb-hero-kr {
-    font-size:clamp(0.98rem, 1.22vw, 1.14rem) !important;
-    line-height:1.7 !important;
+    font-size: clamp(0.98rem, 1.22vw, 1.14rem) !important;
+    line-height: 1.7 !important;
   }
-  .lcb-hero-rule { margin:1.05rem 0 0.85rem !important; }
+  .lcb-hero-rule {
+    margin: 1.05rem 0 0.85rem !important;
+  }
   .lcb-hero-lead {
-    font-size:clamp(0.88rem, 1vw, 0.96rem) !important;
-    line-height:1.65 !important;
-    max-width:620px !important;
+    font-size: clamp(0.88rem, 1vw, 0.96rem) !important;
+    line-height: 1.65 !important;
+    max-width: 620px !important;
   }
 
   /* cancer cell: Home 메뉴 아래 x좌표부터 이미지가 시작되게 */
   .lcb-home-hero::after {
-    content:"" !important;
-    display:block !important;
-    position:absolute !important;
-    z-index:1 !important;
-    top:0 !important;
-    bottom:0 !important;
-    left:42.5% !important;      /* Home 메뉴 아래쪽부터 시작 */
-    right:0 !important;
-    width:auto !important;
-    height:auto !important;
-    background-image:url("/LCB/assets/img/home/hero_cancer_cells_transparent.png") !important;
-    background-repeat:no-repeat !important;
-    background-position:left top !important;
-    background-size:auto 100% !important;
-    opacity:0.15 !important;
-    mix-blend-mode:screen !important;
-    filter:grayscale(100%) brightness(1.35) contrast(0.72) saturate(0.65) blur(0.12px) !important;
-    pointer-events:none !important;
+    content: "" !important;
+    display: block !important;
+    position: absolute !important;
+    z-index: 1 !important;
+    top: 0 !important;
+    bottom: 0 !important;
+    left: 42.5% !important; /* Home 메뉴 아래쪽부터 시작 */
+    right: 0 !important;
+    width: auto !important;
+    height: auto !important;
+    background-image: url("/LCB/assets/img/home/hero_cancer_cells_transparent.png") !important;
+    background-repeat: no-repeat !important;
+    background-position: left top !important;
+    background-size: auto 100% !important;
+    opacity: 0.15 !important;
+    mix-blend-mode: screen !important;
+    filter: grayscale(100%) brightness(1.35) contrast(0.72) saturate(0.65) blur(0.12px) !important;
+    pointer-events: none !important;
   }
 
-  @media (max-width:800px) {
+  @media (max-width: 800px) {
     .lcb-topbar,
-    .lcb-topbar-inner { height:24px !important; min-height:24px !important; max-height:24px !important; }
-    .lcb-topbar-logo { width:20px !important; height:20px !important; }
-    .lcb-topbar-brand { font-size:0.82rem !important; }
-    .lcb-topbar-links { top:24px !important; height:auto !important; }
-    .lcb-topbar-links a { height:auto !important; font-size:0.9rem !important; }
-    .lcb-hero-title { font-size:2.75rem !important; }
-    .lcb-home-hero::after { left:38% !important; opacity:0.12 !important; background-size:auto 100% !important; }
+    .lcb-topbar-inner {
+      height: 24px !important;
+      min-height: 24px !important;
+      max-height: 24px !important;
+    }
+    .lcb-topbar-logo {
+      width: 20px !important;
+      height: 20px !important;
+    }
+    .lcb-topbar-brand {
+      font-size: 0.82rem !important;
+    }
+    .lcb-topbar-links {
+      top: 24px !important;
+      height: auto !important;
+    }
+    .lcb-topbar-links a {
+      height: auto !important;
+      font-size: 0.9rem !important;
+    }
+    .lcb-hero-title {
+      font-size: 2.75rem !important;
+    }
+    .lcb-home-hero::after {
+      left: 38% !important;
+      opacity: 0.12 !important;
+      background-size: auto 100% !important;
+    }
   }
 
-  @media (max-width:720px) {
-    .lcb-home-inner { padding-top:1.2rem !important; }
-    .lcb-hero-title { font-size:2.4rem !important; line-height:1.07 !important; }
-    .lcb-home-hero::after { left:26% !important; opacity:0.1 !important; }
+  @media (max-width: 720px) {
+    .lcb-home-inner {
+      padding-top: 1.2rem !important;
+    }
+    .lcb-hero-title {
+      font-size: 2.4rem !important;
+      line-height: 1.07 !important;
+    }
+    .lcb-home-hero::after {
+      left: 26% !important;
+      opacity: 0.1 !important;
+    }
   }
 </style> <style>
   /* 상단바를 18px로 더 얇게. 로고/랩명은 원래 얇은 느낌으로 복구. */
   .lcb-topbar,
   .lcb-topbar-inner {
-    height:18px !important;
-    min-height:18px !important;
-    max-height:18px !important;
+    height: 18px !important;
+    min-height: 18px !important;
+    max-height: 18px !important;
   }
   .lcb-topbar {
-    margin:0 !important;
-    padding:0 !important;
-    overflow:visible !important;
-    border-bottom:1px solid rgba(226,232,240,0.88) !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: visible !important;
+    border-bottom: 1px solid rgba(226, 232, 240, 0.88) !important;
   }
   .lcb-topbar-inner {
-    padding-top:0 !important;
-    padding-bottom:0 !important;
-    line-height:1 !important;
-    align-items:center !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    line-height: 1 !important;
+    align-items: center !important;
   }
   .lcb-topbar-brand {
-    font-size:0.84rem !important;
-    font-weight:500 !important;
-    line-height:1 !important;
-    transform:none !important;
-    gap:0.32rem !important;
+    font-size: 0.84rem !important;
+    font-weight: 500 !important;
+    line-height: 1 !important;
+    transform: none !important;
+    gap: 0.32rem !important;
   }
   .lcb-topbar-logo {
-    width:18px !important;
-    height:18px !important;
-    opacity:0.86 !important;
-    transform:none !important;
-    margin-left:-2px !important;
+    width: 18px !important;
+    height: 18px !important;
+    opacity: 0.86 !important;
+    transform: none !important;
+    margin-left: -2px !important;
   }
   .lcb-topbar-links {
-    height:18px !important;
-    align-items:center !important;
-    gap:clamp(0.55rem, 1.25vw, 1.15rem) !important;
+    height: 18px !important;
+    align-items: center !important;
+    gap: clamp(0.55rem, 1.25vw, 1.15rem) !important;
   }
   .lcb-topbar-links a {
-    height:18px !important;
-    font-size:0.79rem !important;
-    font-weight:400 !important;
-    line-height:1 !important;
-    padding:0 !important;
+    height: 18px !important;
+    font-size: 0.79rem !important;
+    font-weight: 400 !important;
+    line-height: 1 !important;
+    padding: 0 !important;
   }
-  .lcb-topbar-links a.active { font-weight:600 !important; }
-  .lcb-topbar-links a::after { bottom:0 !important; }
+  .lcb-topbar-links a.active {
+    font-weight: 600 !important;
+  }
+  .lcb-topbar-links a::after {
+    bottom: 0 !important;
+  }
 
   /* 파란 hero는 상단바 바로 아래에 붙이고, 큰 제목은 다시 줄임. */
   .lcb-home-hero {
-    margin-top:0 !important;
-    min-height:clamp(410px, 53vh, 510px) !important;
+    margin-top: 0 !important;
+    min-height: clamp(410px, 53vh, 510px) !important;
   }
   .lcb-home-inner {
-    padding-top:clamp(0.7rem, 1vw, 0.9rem) !important;
+    padding-top: clamp(0.7rem, 1vw, 0.9rem) !important;
   }
   .lcb-hero-title {
-    font-size:clamp(2.65rem, 3.6vw, 3.85rem) !important;
-    line-height:1.08 !important;
-    margin-bottom:0.68rem !important;
-    letter-spacing:-0.035em !important;
+    font-size: clamp(2.65rem, 3.6vw, 3.85rem) !important;
+    line-height: 1.08 !important;
+    margin-bottom: 0.68rem !important;
+    letter-spacing: -0.035em !important;
   }
-  .lcb-hero-kicker { margin-bottom:0.72rem !important; }
+  .lcb-hero-kicker {
+    margin-bottom: 0.72rem !important;
+  }
   .lcb-hero-kr {
-    font-size:clamp(0.96rem, 1.18vw, 1.1rem) !important;
-    line-height:1.68 !important;
+    font-size: clamp(0.96rem, 1.18vw, 1.1rem) !important;
+    line-height: 1.68 !important;
   }
-  .lcb-hero-rule { margin:1rem 0 0.8rem !important; }
+  .lcb-hero-rule {
+    margin: 1rem 0 0.8rem !important;
+  }
   .lcb-hero-lead {
-    font-size:clamp(0.86rem, 0.98vw, 0.94rem) !important;
-    line-height:1.65 !important;
-    max-width:620px !important;
+    font-size: clamp(0.86rem, 0.98vw, 0.94rem) !important;
+    line-height: 1.65 !important;
+    max-width: 620px !important;
   }
 
   /* 암세포 이미지: 고정이 아니라 화면 크기에 맞춰 움직이되, 시작점이 Home 메뉴 아래쪽에 오도록 설정. */
   .lcb-home-hero::after {
-    content:"" !important;
-    display:block !important;
-    position:absolute !important;
-    z-index:1 !important;
-    top:0 !important;
-    bottom:0 !important;
-    left:clamp(520px, 52vw, 820px) !important;  /* Home 메뉴 아래쪽 시작점 */
-    right:0 !important;
-    width:auto !important;
-    height:auto !important;
-    background-image:url("/LCB/assets/img/home/hero_cancer_cells_transparent.png") !important;
-    background-repeat:no-repeat !important;
-    background-position:left top !important;
-    background-size:auto 100% !important;
-    opacity:0.14 !important;
-    mix-blend-mode:screen !important;
-    filter:grayscale(100%) brightness(1.35) contrast(0.72) saturate(0.65) blur(0.12px) !important;
-    pointer-events:none !important;
+    content: "" !important;
+    display: block !important;
+    position: absolute !important;
+    z-index: 1 !important;
+    top: 0 !important;
+    bottom: 0 !important;
+    left: clamp(520px, 52vw, 820px) !important; /* Home 메뉴 아래쪽 시작점 */
+    right: 0 !important;
+    width: auto !important;
+    height: auto !important;
+    background-image: url("/LCB/assets/img/home/hero_cancer_cells_transparent.png") !important;
+    background-repeat: no-repeat !important;
+    background-position: left top !important;
+    background-size: auto 100% !important;
+    opacity: 0.14 !important;
+    mix-blend-mode: screen !important;
+    filter: grayscale(100%) brightness(1.35) contrast(0.72) saturate(0.65) blur(0.12px) !important;
+    pointer-events: none !important;
   }
 
-  @media (max-width:1000px) {
+  @media (max-width: 1000px) {
     .lcb-home-hero::after {
-      left:clamp(420px, 50vw, 560px) !important;
-      opacity:0.12 !important;
+      left: clamp(420px, 50vw, 560px) !important;
+      opacity: 0.12 !important;
     }
   }
 
-  @media (max-width:800px) {
+  @media (max-width: 800px) {
     .lcb-topbar,
     .lcb-topbar-inner {
-      height:22px !important;
-      min-height:22px !important;
-      max-height:22px !important;
+      height: 22px !important;
+      min-height: 22px !important;
+      max-height: 22px !important;
     }
-    .lcb-topbar-logo { width:18px !important; height:18px !important; }
-    .lcb-topbar-brand { font-size:0.8rem !important; font-weight:500 !important; }
-    .lcb-topbar-links { top:22px !important; height:auto !important; }
-    .lcb-topbar-links a { height:auto !important; font-size:0.88rem !important; }
-    .lcb-hero-title { font-size:2.65rem !important; }
+    .lcb-topbar-logo {
+      width: 18px !important;
+      height: 18px !important;
+    }
+    .lcb-topbar-brand {
+      font-size: 0.8rem !important;
+      font-weight: 500 !important;
+    }
+    .lcb-topbar-links {
+      top: 22px !important;
+      height: auto !important;
+    }
+    .lcb-topbar-links a {
+      height: auto !important;
+      font-size: 0.88rem !important;
+    }
+    .lcb-hero-title {
+      font-size: 2.65rem !important;
+    }
     .lcb-home-hero::after {
-      left:45% !important;
-      opacity:0.10 !important;
-      background-size:auto 100% !important;
+      left: 45% !important;
+      opacity: 0.1 !important;
+      background-size: auto 100% !important;
     }
   }
 
-  @media (max-width:720px) {
-    .lcb-home-inner { padding-top:1.1rem !important; }
-    .lcb-hero-title { font-size:2.35rem !important; line-height:1.07 !important; }
-    .lcb-home-hero::after { left:34% !important; opacity:0.09 !important; }
+  @media (max-width: 720px) {
+    .lcb-home-inner {
+      padding-top: 1.1rem !important;
+    }
+    .lcb-hero-title {
+      font-size: 2.35rem !important;
+      line-height: 1.07 !important;
+    }
+    .lcb-home-hero::after {
+      left: 34% !important;
+      opacity: 0.09 !important;
+    }
   }
 </style> <style>
   /* Desktop topbar back to 22px, with restored thin brand/logo/menu proportions. */
   .lcb-topbar,
   .lcb-topbar-inner {
-    height:22px !important;
-    min-height:22px !important;
-    max-height:22px !important;
+    height: 22px !important;
+    min-height: 22px !important;
+    max-height: 22px !important;
   }
   .lcb-topbar {
-    margin:0 !important;
-    padding:0 !important;
-    overflow:visible !important;
-    border-bottom:1px solid rgba(226,232,240,0.88) !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: visible !important;
+    border-bottom: 1px solid rgba(226, 232, 240, 0.88) !important;
   }
   .lcb-topbar-inner {
-    padding-top:0 !important;
-    padding-bottom:0 !important;
-    line-height:1 !important;
-    align-items:center !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    line-height: 1 !important;
+    align-items: center !important;
   }
   .lcb-topbar-brand {
-    font-size:0.84rem !important;
-    font-weight:500 !important;
-    line-height:1 !important;
-    transform:none !important;
-    gap:0.32rem !important;
+    font-size: 0.84rem !important;
+    font-weight: 500 !important;
+    line-height: 1 !important;
+    transform: none !important;
+    gap: 0.32rem !important;
   }
   .lcb-topbar-logo {
-    width:18px !important;
-    height:18px !important;
-    opacity:0.86 !important;
-    transform:none !important;
-    margin-left:-2px !important;
+    width: 18px !important;
+    height: 18px !important;
+    opacity: 0.86 !important;
+    transform: none !important;
+    margin-left: -2px !important;
   }
   .lcb-topbar-links {
-    height:22px !important;
-    align-items:center !important;
-    gap:clamp(0.55rem, 1.25vw, 1.15rem) !important;
+    height: 22px !important;
+    align-items: center !important;
+    gap: clamp(0.55rem, 1.25vw, 1.15rem) !important;
   }
   .lcb-topbar-links a {
-    height:22px !important;
-    font-size:0.79rem !important;
-    font-weight:400 !important;
-    line-height:1 !important;
-    padding:0 !important;
+    height: 22px !important;
+    font-size: 0.79rem !important;
+    font-weight: 400 !important;
+    line-height: 1 !important;
+    padding: 0 !important;
   }
-  .lcb-topbar-links a.active { font-weight:600 !important; }
-  .lcb-topbar-links a::after { bottom:0 !important; }
+  .lcb-topbar-links a.active {
+    font-weight: 600 !important;
+  }
+  .lcb-topbar-links a::after {
+    bottom: 0 !important;
+  }
 
   /* Keep the hero compact and the main title smaller. */
   .lcb-home-hero {
-    margin-top:0 !important;
-    min-height:clamp(410px, 53vh, 510px) !important;
+    margin-top: 0 !important;
+    min-height: clamp(410px, 53vh, 510px) !important;
   }
-  .lcb-home-inner { padding-top:clamp(0.7rem, 1vw, 0.9rem) !important; }
+  .lcb-home-inner {
+    padding-top: clamp(0.7rem, 1vw, 0.9rem) !important;
+  }
   .lcb-hero-title {
-    font-size:clamp(2.65rem, 3.6vw, 3.85rem) !important;
-    line-height:1.08 !important;
-    margin-bottom:0.68rem !important;
-    letter-spacing:-0.035em !important;
+    font-size: clamp(2.65rem, 3.6vw, 3.85rem) !important;
+    line-height: 1.08 !important;
+    margin-bottom: 0.68rem !important;
+    letter-spacing: -0.035em !important;
   }
 
   /* Cancer-cell background: move the start point to the right-side marked area.
      It is not fixed to the right edge; the left start point scales with viewport width. */
   .lcb-home-hero::after {
-    content:"" !important;
-    display:block !important;
-    position:absolute !important;
-    z-index:1 !important;
-    top:0 !important;
-    bottom:0 !important;
-    left:clamp(680px, 56vw, 980px) !important;
-    right:0 !important;
-    width:auto !important;
-    height:auto !important;
-    background-image:url("/LCB/assets/img/home/hero_cancer_cells_transparent.png") !important;
-    background-repeat:no-repeat !important;
-    background-position:left top !important;
-    background-size:auto 100% !important;
-    opacity:0.14 !important;
-    mix-blend-mode:screen !important;
-    filter:grayscale(100%) brightness(1.35) contrast(0.72) saturate(0.65) blur(0.12px) !important;
-    pointer-events:none !important;
+    content: "" !important;
+    display: block !important;
+    position: absolute !important;
+    z-index: 1 !important;
+    top: 0 !important;
+    bottom: 0 !important;
+    left: clamp(680px, 56vw, 980px) !important;
+    right: 0 !important;
+    width: auto !important;
+    height: auto !important;
+    background-image: url("/LCB/assets/img/home/hero_cancer_cells_transparent.png") !important;
+    background-repeat: no-repeat !important;
+    background-position: left top !important;
+    background-size: auto 100% !important;
+    opacity: 0.14 !important;
+    mix-blend-mode: screen !important;
+    filter: grayscale(100%) brightness(1.35) contrast(0.72) saturate(0.65) blur(0.12px) !important;
+    pointer-events: none !important;
   }
 
-  @media (max-width:1200px) {
+  @media (max-width: 1200px) {
     .lcb-home-hero::after {
-      left:clamp(560px, 55vw, 720px) !important;
-      opacity:0.13 !important;
+      left: clamp(560px, 55vw, 720px) !important;
+      opacity: 0.13 !important;
     }
   }
 
-  @media (max-width:1000px) {
+  @media (max-width: 1000px) {
     .lcb-home-hero::after {
-      left:clamp(460px, 52vw, 590px) !important;
-      opacity:0.11 !important;
+      left: clamp(460px, 52vw, 590px) !important;
+      opacity: 0.11 !important;
     }
   }
 
-  @media (max-width:800px) {
+  @media (max-width: 800px) {
     .lcb-topbar,
     .lcb-topbar-inner {
-      height:22px !important;
-      min-height:22px !important;
-      max-height:22px !important;
+      height: 22px !important;
+      min-height: 22px !important;
+      max-height: 22px !important;
     }
-    .lcb-topbar-logo { width:18px !important; height:18px !important; }
-    .lcb-topbar-brand { font-size:0.8rem !important; font-weight:500 !important; }
-    .lcb-topbar-links { top:22px !important; height:auto !important; }
-    .lcb-topbar-links a { height:auto !important; font-size:0.88rem !important; }
-    .lcb-hero-title { font-size:2.65rem !important; }
+    .lcb-topbar-logo {
+      width: 18px !important;
+      height: 18px !important;
+    }
+    .lcb-topbar-brand {
+      font-size: 0.8rem !important;
+      font-weight: 500 !important;
+    }
+    .lcb-topbar-links {
+      top: 22px !important;
+      height: auto !important;
+    }
+    .lcb-topbar-links a {
+      height: auto !important;
+      font-size: 0.88rem !important;
+    }
+    .lcb-hero-title {
+      font-size: 2.65rem !important;
+    }
     .lcb-home-hero::after {
-      left:52% !important;
-      opacity:0.10 !important;
-      background-size:auto 100% !important;
+      left: 52% !important;
+      opacity: 0.1 !important;
+      background-size: auto 100% !important;
     }
   }
 
-  @media (max-width:720px) {
-    .lcb-home-inner { padding-top:1.1rem !important; }
-    .lcb-hero-title { font-size:2.35rem !important; line-height:1.07 !important; }
-    .lcb-home-hero::after { left:48% !important; opacity:0.09 !important; }
+  @media (max-width: 720px) {
+    .lcb-home-inner {
+      padding-top: 1.1rem !important;
+    }
+    .lcb-hero-title {
+      font-size: 2.35rem !important;
+      line-height: 1.07 !important;
+    }
+    .lcb-home-hero::after {
+      left: 48% !important;
+      opacity: 0.09 !important;
+    }
   }
 </style> <header class="lcb-topbar" role="banner"> <div class="lcb-topbar-inner"> <a class="lcb-topbar-brand" href="/LCB/"> <img src="/LCB/assets/img/lab_logo_mark_transparent.png" alt="" class="lcb-topbar-logo"> Lab of Cancer Biology </a> <button class="lcb-hamburger" aria-label="Toggle menu" onclick="this.closest('.lcb-topbar').querySelector('.lcb-topbar-links').classList.toggle('open')"> <span></span><span></span><span></span> </button> <nav class="lcb-topbar-links" aria-label="Main navigation"> <a class="" href="/LCB/">Home</a> <a class="" href="/LCB/research/">Research</a> <a class="" href="/LCB/professor/">Professor</a> <a class="" href="/LCB/members/">Members</a> <a class="active" href="/LCB/publications/">Publications</a> <a class="" href="/LCB/gallery/">Gallery</a> <a class="" href="/LCB/contact/">Contact</a> </nav> </div> </header> <div class="lcb-page lcb-publications"> <section class="lcb-section"> <h1 class="lcb-section-title">Publications</h1> </section> <section class="lcb-section compact"> <h2 class="lcb-year">2025</h2> <ol class="lcb-pub-list"> <li class="lcb-pub-item"><div> <div class="lcb-pub-title">CCN3/IMP3/HIF1alpha positive feedback loop enhances malignant progression of triple-negative breast cancer</div> <div class="lcb-pub-meta">Son, S., Jo, S., Lim, H., Kang, M. G., Lee, J. H., Lee, C. J., Lee, K. M., Shin, I.. <em>Cell Signal</em>. 2025.</div> </div></li> <li class="lcb-pub-item"><div> <div class="lcb-pub-title">CD8+ T cells in the tumor microenvironment modulate response to endocrine therapy in breast cancer</div> <div class="lcb-pub-meta">Napolitano, F., Wang, Y., Sudhan, D. R., Gonzalez-Ericsson, P. I., Formisano, L., Unni, N., Shakeel, S., Zhu, J. Z., Ahuja, K., Guo, L., Chica-Parrado, M. R., Matsunaga, Y., Luna, P., Lin, C. A., Uemoto, Y., Lee, K. M., Ma, H., Evans, N. J., Servetto, A., Mendiratta, S., Barnes, S. D., Bianco, R., Fang, Y. V., Xu, L., Lee, J., Wang, T., Balko, J. M., Mills, G. B., Labrie, M., Hanker, A. B., Arteaga, C. L.. <em>J Clin Invest</em>. 2025.</div> </div></li> <li class="lcb-pub-item"><div> <div class="lcb-pub-title">Nidogen-1 suppresses cell proliferation, migration, and glycolysis via integrin beta1-mediated HIF-1alpha downregulation in triple-negative breast cancer</div> <div class="lcb-pub-meta">Lee, J. H., Son, S., Ko, Y., Lim, H., Lee, M., Kang, M. G., Kim, H., Lee, K. M., Shin, I.. <em>Sci Rep</em>. 2025.</div> </div></li> </ol> </section> <section class="lcb-section compact"> <h2 class="lcb-year">2024</h2> <ol class="lcb-pub-list"> <li class="lcb-pub-item"><div> <div class="lcb-pub-title">Combined inhibition of CDK4/6 and AKT is highly effective against the luminal androgen receptor subtype of triple negative breast cancer</div> <div class="lcb-pub-meta">Chica-Parrado, M. R., Kim, G. M., Uemoto, Y., Napolitano, F., Lin, C. C., Ye, D., Bikorimana, E., Fang, Y., Lee, K. M., Mendiratta, S., Hanker, A. B., Arteaga, C. L.. <em>Cancer Lett</em>. 2024.</div> </div></li> <li class="lcb-pub-item"><div> <div class="lcb-pub-title">PRMT5 is an actionable therapeutic target in CDK4/6 inhibitor-resistant ER+/RB-deficient breast cancer</div> <div class="lcb-pub-meta">Lin, C. C., Chang, T. C., Wang, Y., Guo, L., Gao, Y., Bikorimana, E., Lemoff, A., Fang, Y. V., Zhang, H., Zhang, Y., Ye, D., Soria-Bretones, I., Servetto, A., Lee, K. M., Luo, X., Otto, J. J., Akamatsu, H., Napolitano, F., Mani, R., Cescon, D. W., Xu, L., Xie, Y., Mendell, J. T., Hanker, A. B., Arteaga, C. L.. <em>Nat Commun</em>. 2024.</div> </div></li> </ol> </section> <section class="lcb-section compact"> <h2 class="lcb-year">2023</h2> <ol class="lcb-pub-list"> <li class="lcb-pub-item"><div> <div class="lcb-pub-title">Special Issue: Resistance to Targeted Therapies in Human Cancer</div> <div class="lcb-pub-meta">Lee, T. W., Choi, H. J., Lee, K. M., Lee, J. Y.. <em>Biomedicines</em>. 2023.</div> </div></li> <li class="lcb-pub-item"><div> <div class="lcb-pub-title">CCN3/NOV promotes metastasis and tumor progression via GPNMB-induced EGFR activation in triple-negative breast cancer</div> <div class="lcb-pub-meta">Son, S., Kim, H., Lim, H., Lee, J. H., Lee, K. M., Shin, I.. <em>Cell Death Dis</em>. 2023.</div> </div></li> </ol> </section> <section class="lcb-section compact"> <h2 class="lcb-year">2022</h2> <ol class="lcb-pub-list"> <li class="lcb-pub-item"><div> <div class="lcb-pub-title">Brain type of creatine kinase induces doxorubicin resistance via TGF-beta signaling in MDA-MB-231 breast cancer cells</div> <div class="lcb-pub-meta">Son, S., Yoo, S. A., Nam, K., Oh, S., Lee, K. M., Yi, J. Y., Shin, I.. <em>Anim Cells Syst (Seoul)</em>. 2022.</div> </div></li> <li class="lcb-pub-item"><div> <div class="lcb-pub-title">Epigenetic Repression of STING by MYC Promotes Immune Evasion and Resistance to Immune Checkpoint Inhibitors in Triple-Negative Breast Cancer</div> <div class="lcb-pub-meta">Lee, K. M., Lin, C. C., Servetto, A., Bae, J., Kandagatla, V., Ye, D., Kim, G., Sudhan, D. R., Mendiratta, S., Gonzalez Ericsson, P. I., Balko, J. M., Lee, J., Barnes, S., Malladi, V. S., Tabrizi, S., Reddy, S. M., Yum, S., Chang, C. W., Hutchinson, K. E., Yost, S. E., Yuan, Y., Chen, Z. J., Fu, Y. X., Hanker, A. B., Arteaga, C. L.. <em>Cancer Immunol Res</em>. 2022.</div> </div></li> <li class="lcb-pub-item"><div> <div class="lcb-pub-title">Immune Checkpoint Blockades in Triple-Negative Breast Cancer: Current State and Molecular Mechanisms of Resistance</div> <div class="lcb-pub-meta">Kim, H., Choi, J. M., Lee, K. M.. <em>Biomedicines</em>. 2022.</div> </div></li> <li class="lcb-pub-item"><div> <div class="lcb-pub-title">ECM1 is associated with endocrine resistance in ER+ breast cancers</div> <div class="lcb-pub-meta">Lee, T. W., Lee, K. M.. <em>Anim Cells Syst (Seoul)</em>. 2022.</div> </div></li> </ol> </section> <section class="lcb-section compact"> <h2 class="lcb-year">2021</h2> <ol class="lcb-pub-list"> <li class="lcb-pub-item"><div> <div class="lcb-pub-title">Nuclear FGFR1 Regulates Gene Transcription and Promotes Antiestrogen Resistance in ER+ Breast Cancer</div> <div class="lcb-pub-meta">Servetto, A., Kollipara, R., Formisano, L., Lin, C. C., Lee, K. M., Sudhan, D. R., Gonzalez-Ericsson, P. I., Chatterjee, S., Guerrero-Zotano, A., Mendiratta, S., Akamatsu, H., James, N., Bianco, R., Hanker, A. B., Kittler, R., Arteaga, C. L.. <em>Clin Cancer Res</em>. 2021.</div> </div></li> <li class="lcb-pub-item"><div> <div class="lcb-pub-title">Co-occurring gain-of-function mutations in HER2 and HER3 modulate HER2/HER3 activation, oncogenesis, and HER2 inhibitor sensitivity</div> <div class="lcb-pub-meta">Hanker, A. B., Brown, B. P., Meiler, J., Marin, A., Jayanthan, H. S., Ye, D., Lin, C. C., Akamatsu, H., Lee, K. M., Chatterjee, S., Sudhan, D. R., Servetto, A., Brewer, M. R., Koch, J. P., Sheehan, J. H., He, J., Lalani, A. S., Arteaga, C. L.. <em>Cancer Cell</em>. 2021.</div> </div></li> </ol> </section> <section class="lcb-section compact"> <h2 class="lcb-year">2020</h2> <ol class="lcb-pub-list"> <li class="lcb-pub-item"><div> <div class="lcb-pub-title">Proline rich 11 overexpression amplifies PI3K signaling and promotes antiestrogen resistance in breast cancer</div> <div class="lcb-pub-meta">Lee, K. M., Guerrero-Zotano, A. L., Servetto, A., Sudhan, D. R., Lin, C. C., Formisano, L., Jansen, V. M., Gonzalez-Ericsson, P., Sanders, M. E., Stricker, T. P., Raj, G., Dean, K. M., Fiolka, R., Cantley, L. C., Hanker, A. B., Arteaga, C. L.. <em>Nat Commun</em>. 2020.</div> </div></li> <li class="lcb-pub-item"><div> <div class="lcb-pub-title">A versatile oblique plane microscope for large-scale and high-resolution imaging of subcellular dynamics</div> <div class="lcb-pub-meta">Sapoznik, E., Chang, B. J., Huh, J., Ju, R. J., Azarova, E. V., Pohlkamp, T., Welf, E. S., Broadbent, D., Carisey, A. F., Stehbens, S. J., Lee, K. M., Marin, A., Hanker, A. B., Schmidt, J. C., Arteaga, C. L., Yang, B., Kobayashi, Y., Tata, P. R., Kruithoff, R., Doubrovinski, K., Shepherd, D. P., Millett-Sikking, A., York, A. G., Dean, K. M., Fiolka, R. P.. <em>eLife</em>. 2020.</div> </div></li> <li class="lcb-pub-item"><div> <div class="lcb-pub-title">Hyperactivation of TORC1 Drives Resistance to the Pan-HER Tyrosine Kinase Inhibitor Neratinib in HER2-Mutant Cancers</div> <div class="lcb-pub-meta">Sudhan, D. R., Guerrero-Zotano, A., Won, H., Ericsson, P. G., Servetto, A., Huerta-Rosario, M., Ye, D., Lee, K. M., Formisano, L., Guo, Y., Liu, Q., Kinch, L. N., Brewer, M. R., Dugger, T., Koch, J., Wick, M. J., Cutler, R. E., Lalani, A. S., Bryce, R., Auerbach, A., Hanker, A. B., Arteaga, C. L.. <em>Cancer Cell</em>. 2020.</div> </div></li> </ol> </section> <section class="lcb-section compact"> <h2 class="lcb-year">2019</h2> <ol class="lcb-pub-list"> <li class="lcb-pub-item"><div> <div class="lcb-pub-title">Elacestrant exhibits anti-tumor activity in multiple ER+ breast cancer models resistant to CDK4/6 inhibitors</div> <div class="lcb-pub-meta">Patel, H. K., Tao, N., Lee, K. M., Huerta, M., Arlt, H., Mullarkey, T., Troy, S., Arteaga, C. L., Bihani, T.. <em>Breast Cancer Res</em>. 2019.</div> </div></li> <li class="lcb-pub-item"><div> <div class="lcb-pub-title">Discovery of Potent Myeloid Cell Leukemia-1 Inhibitors That Demonstrate in Vivo Activity in Mouse Xenograft Models of Human Cancer</div> <div class="lcb-pub-meta">Lee, T., Christov, P. P., Shaw, S., Tarr, J. C., Zhao, B., Veerasamy, N., Jeon, K. O., Mills, J. J., Bian, Z., Sensintaffar, J. L., Arnold, A. L., Fogarty, S. A., Perry, E., Ramsey, H. E., Cook, R. S., Hollingshead, M., Davis Millin, M., Lee, K. M., Koss, B., Budhraja, A., Opferman, J. T., Kim, K., Arteaga, C. L., Moore, W. J., Olejniczak, E. T., Savona, M. R., Fesik, S. W.. <em>J Med Chem</em>. 2019.</div> </div></li> <li class="lcb-pub-item"><div> <div class="lcb-pub-title">Aberrant FGFR signaling mediates resistance to CDK4/6 inhibitors in ER+ breast cancer</div> <div class="lcb-pub-meta">Formisano, L., Lu, Y., Servetto, A., Hanker, A. B., Jansen, V. M., Bauer, J. A., Sudhan, D. R., Guerrero-Zotano, A. L., Croessmann, S., Guo, Y., Ericsson, P. G., Lee, K. M., Nixon, M. J., Schwarz, L. J., Sanders, M. E., Dugger, T. C., Cruz, M. R., Behdad, A., Cristofanilli, M., Bardia, A., O'Shaughnessy, J., Nagy, R. J., Lanman, R. B., Solovieff, N., He, W., Miller, M., Su, F., Shyr, Y., Mayer, I. A., Balko, J. M., Arteaga, C. L.. <em>Nat Commun</em>. 2019.</div> </div></li> </ol> </section> <section class="lcb-section compact"> <h2 class="lcb-year">2018</h2> <ol class="lcb-pub-list"> <li class="lcb-pub-item"><div> <div class="lcb-pub-title">ER+ Breast Cancers Resistant to Prolonged Neoadjuvant Letrozole Exhibit an E2F4 Transcriptional Program Sensitive to CDK4/6 Inhibitors</div> <div class="lcb-pub-meta">Guerrero-Zotano, A. L., Stricker, T. P., Formisano, L., Hutchinson, K. E., Stover, D. G., Lee, K. M., Schwarz, L. J., Giltnane, J. M., Estrada, M. V., Jansen, V. M., Servetto, A., Gavila, J., Perez-Fidalgo, J. A., Lluch, A., Llombart-Cussac, A., Bayar, M. A., Michiels, S., Andre, F., Arnedos, M., Guillem, V., Ruiz-Simon, A., Arteaga, C. L.. <em>Clin Cancer Res</em>. 2018.</div> </div></li> <li class="lcb-pub-item"><div> <div class="lcb-pub-title">PIK3CA C2 Domain Deletions Hyperactivate Phosphoinositide 3-kinase, Generate Oncogene Dependence, and Are Exquisitely Sensitive to PI3Kalpha Inhibitors</div> <div class="lcb-pub-meta">Croessmann, S., Sheehan, J. H., Lee, K. M., Sliwoski, G., He, J., Nagy, R., Riddle, D., Mayer, I. A., Balko, J. M., Lanman, R., Miller, V. A., Cantley, L. C., Meiler, J., Arteaga, C. L.. <em>Clin Cancer Res</em>. 2018.</div> </div></li> </ol> </section> <section class="lcb-section compact"> <h2 class="lcb-year">2017</h2> <ol class="lcb-pub-list"> <li class="lcb-pub-item"><div> <div class="lcb-pub-title">MYC and MCL1 Cooperatively Promote Chemotherapy-Resistant Breast Cancer Stem Cells via Regulation of Mitochondrial Oxidative Phosphorylation</div> <div class="lcb-pub-meta">Lee, K. M., Giltnane, J. M., Balko, J. M., Schwarz, L. J., Guerrero-Zotano, A. L., Hutchinson, K. E., Nixon, M. J., Estrada, M. V., Sanchez, V., Sanders, M. E., Lee, T., Gomez, H., Lluch, A., Perez-Fidalgo, J. A., Wolf, M. M., Andrejeva, G., Rathmell, J. C., Fesik, S. W., Arteaga, C. L.. <em>Cell Metab</em>. 2017.</div> </div></li> <li class="lcb-pub-item"><div> <div class="lcb-pub-title">Kinome-Wide RNA Interference Screen Reveals a Role for PDK1 in Acquired Resistance to CDK4/6 Inhibition in ER-Positive Breast Cancer</div> <div class="lcb-pub-meta">Jansen, V. M., Bhola, N. E., Bauer, J. A., Formisano, L., Lee, K. M., Hutchinson, K. E., Witkiewicz, A. K., Moore, P. D., Estrada, M. V., Sanchez, V., Ericsson, P. G., Sanders, M. E., Pohlmann, P. R., Pishvaian, M. J., Riddle, D. A., Dugger, T. C., Wei, W., Knudsen, E. S., Arteaga, C. L.. <em>Cancer Res</em>. 2017.</div> </div></li> </ol> </section> <section class="lcb-section compact"> <h2 class="lcb-year">2015</h2> <ol class="lcb-pub-list"> <li class="lcb-pub-item"><div> <div class="lcb-pub-title">CD44 regulates cell proliferation, migration, and invasion via modulation of c-Src transcription in human breast cancer cells</div> <div class="lcb-pub-meta">Nam, K., Oh, S., Lee, K. M., Yoo, S. A., Shin, I.. <em>Cell Signal</em>. 2015.</div> </div></li> <li class="lcb-pub-item"><div> <div class="lcb-pub-title">EGFR negates the proliferative effect of oncogenic HER2 in MDA-MB-231 cells</div> <div class="lcb-pub-meta">Oh, S., Ju, J. H., Yang, W., Lee, K. M., Nam, K., Shin, I.. <em>Arch Biochem Biophys</em>. 2015.</div> </div></li> <li class="lcb-pub-item"><div> <div class="lcb-pub-title">Cytokeratin19 induced by HER2/ERK binds and stabilizes HER2 on cell membranes</div> <div class="lcb-pub-meta">Ju, J. H., Oh, S., Lee, K. M., Yang, W., Nam, K. S., Moon, H. G., Noh, D. Y., Kim, C. G., Park, G., Park, J. B., Lee, T., Arteaga, C. L., Shin, I.. <em>Cell Death Differ</em>. 2015.</div> </div></li> <li class="lcb-pub-item"><div> <div class="lcb-pub-title">ECM1 regulates tumor metastasis and CSC-like property through stabilization of beta-catenin</div> <div class="lcb-pub-meta">Lee, K. M., Nam, K., Oh, S., Lim, J., Kim, R. K., Shim, D., Choi, J. H., Lee, S. J., Yu, J. H., Lee, J. W., Ahn, S. H., Shin, I.. <em>Oncogene</em>. 2015.</div> </div></li> <li class="lcb-pub-item"><div> <div class="lcb-pub-title">ECM1 promotes the Warburg effect through EGF-mediated activation of PKM2</div> <div class="lcb-pub-meta">Lee, K. M., Nam, K., Oh, S., Lim, J., Lee, T., Shin, I.. <em>Cell Signal</em>. 2015.</div> </div></li> </ol> </section> <section class="lcb-section compact"> <h2 class="lcb-year">2014</h2> <ol class="lcb-pub-list"> <li class="lcb-pub-item"><div> <div class="lcb-pub-title">Extracellular matrix protein 1 regulates cell proliferation and trastuzumab resistance through activation of epidermal growth factor signaling</div> <div class="lcb-pub-meta">Lee, K. M., Nam, K., Oh, S., Lim, J., Kim, Y. P., Lee, J. W., Yu, J. H., Ahn, S. H., Kim, S. B., Noh, D. Y., Lee, T., Shin, I.. <em>Breast Cancer Res</em>. 2014.</div> </div></li> <li class="lcb-pub-item"><div> <div class="lcb-pub-title">CD24 regulates stemness and the epithelial to mesenchymal transition through modulation of Notch1 mRNA stability by p38MAPK</div> <div class="lcb-pub-meta">Lim, J., Lee, K. M., Shim, J., Shin, I.. <em>Arch Biochem Biophys</em>. 2014.</div> </div></li> <li class="lcb-pub-item"><div> <div class="lcb-pub-title">S100A4 negatively regulates beta-catenin by inducing the Egr-1-PTEN-Akt-GSK3beta degradation pathway</div> <div class="lcb-pub-meta">Yang, W., Nam, K., Ju, J. H., Lee, K. M., Oh, S., Shin, I.. <em>Cell Signal</em>. 2014.</div> </div></li> </ol> </section> <section class="lcb-section compact"> <h2 class="lcb-year">2013</h2> <ol class="lcb-pub-list"> <li class="lcb-pub-item"><div> <div class="lcb-pub-title">Regulation of cell proliferation and migration by keratin19-induced nuclear import of early growth response-1 in breast cancer cells</div> <div class="lcb-pub-meta">Ju, J. H., Yang, W., Lee, K. M., Oh, S., Nam, K., Shim, S., Shin, S. Y., Gye, M. C., Chu, I. S., Shin, I.. <em>Clin Cancer Res</em>. 2013.</div> </div></li> <li class="lcb-pub-item"><div> <div class="lcb-pub-title">HER2 stabilizes survivin while concomitantly down-regulating survivin gene transcription by suppressing Notch cleavage</div> <div class="lcb-pub-meta">Ju, J. H., Yang, W., Oh, S., Nam, K., Lee, K. M., Noh, D. Y., Shin, I.. <em>Biochem J</em>. 2013.</div> </div></li> <li class="lcb-pub-item"><div> <div class="lcb-pub-title">Protein kinase B/Akt1 inhibits autophagy by down-regulating UVRAG expression</div> <div class="lcb-pub-meta">Yang, W., Ju, J. H., Lee, K. M., Nam, K., Oh, S., Shin, I.. <em>Exp Cell Res</em>. 2013.</div> </div></li> </ol> </section> <section class="lcb-section compact"> <h2 class="lcb-year">2012</h2> <ol class="lcb-pub-list"> <li class="lcb-pub-item"><div> <div class="lcb-pub-title">CD24 regulates cell proliferation and transforming growth factor beta-induced epithelial to mesenchymal transition through modulation of integrin beta1 stability</div> <div class="lcb-pub-meta">Lee, K. M., Ju, J. H., Jang, K., Yang, W., Yi, J. Y., Noh, D. Y., Shin, I.. <em>Cell Signal</em>. 2012.</div> </div></li> </ol> </section> <section class="lcb-section compact"> <h2 class="lcb-year">2011</h2> <ol class="lcb-pub-list"> <li class="lcb-pub-item"><div> <div class="lcb-pub-title">CD24 enhances DNA damage-induced apoptosis by modulating NF-kappaB signaling in CD44-expressing breast cancer cells</div> <div class="lcb-pub-meta">Ju, J. H., Jang, K., Lee, K. M., Kim, M., Kim, J., Yi, J. Y., Noh, D. Y., Shin, I.. <em>Carcinogenesis</em>. 2011.</div> </div></li> <li class="lcb-pub-item"><div> <div class="lcb-pub-title">Induction of apoptotic cell death by Pharbitis nil extract in HER2-overexpressing MCF-7 cells</div> <div class="lcb-pub-meta">Ju, J. H., Jeon, M. J., Yang, W., Lee, K. M., Seo, H. S., Shin, I.. <em>J Ethnopharmacol</em>. 2011.</div> </div></li> <li class="lcb-pub-item"><div> <div class="lcb-pub-title">Akt isoform-specific inhibition of MDA-MB-231 cell proliferation</div> <div class="lcb-pub-meta">Yang, W., Ju, J. H., Lee, K. M., Shin, I.. <em>Cell Signal</em>. 2011.</div> </div></li> </ol> </section> <section class="lcb-section compact"> <h2 class="lcb-year">2010</h2> <ol class="lcb-pub-list"> <li class="lcb-pub-item"><div> <div class="lcb-pub-title">Effects of endocrine disruptors on Bombina orientalis P450 aromatase activity</div> <div class="lcb-pub-meta">Lee, K. M., Yang, W., Rhee, J. S., Hwang, D. S., Park, C. J., Gye, M. C., Lee, J. S., Shin, I.. <em>Zoolog Sci</em>. 2010.</div> </div></li> <li class="lcb-pub-item"><div> <div class="lcb-pub-title">Protein expression profiling of primary mammary epithelial cells derived from MMTV-neu mice revealed that HER2/NEU-driven changes in protein expression are functionally clustered</div> <div class="lcb-pub-meta">Park, S., Lee, K. M., Ju, J. H., Kim, J., Noh, D. Y., Lee, T., Shin, I.. <em>IUBMB Life</em>. 2010.</div> </div></li> </ol> </section> </div> </article> </div> </div> <footer class="lcb-footer"> © Lab of Cancer Biology, Department of Life Science, Hanyang University. All rights reserved. </footer> <script>
   window.alFolio = {
