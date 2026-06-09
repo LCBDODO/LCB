@@ -1650,6 +1650,104 @@
       opacity: 0.09 !important;
     }
   }
+</style> <style>
+  body > div.container.mt-5 .lcb-topbar {
+    margin-top: -3rem !important;
+  }
+
+  .lcb-topbar {
+    position: relative !important;
+    top: auto !important;
+    margin-bottom: 0 !important;
+  }
+
+  .lcb-topbar,
+  .lcb-topbar-inner {
+    height: 28px !important;
+    min-height: 28px !important;
+    max-height: 28px !important;
+  }
+
+  .lcb-topbar-logo {
+    width: 30px !important;
+    height: 30px !important;
+    opacity: 0.94 !important;
+    transform: translateY(1px) !important;
+  }
+
+  .lcb-topbar-brand {
+    gap: 0.34rem !important;
+    font-size: 0.76rem !important;
+    font-weight: 560 !important;
+    line-height: 1 !important;
+  }
+
+  .lcb-topbar-links {
+    height: 28px !important;
+    align-items: center !important;
+  }
+
+  .lcb-topbar-links a {
+    height: 28px !important;
+    font-size: 0.78rem !important;
+    line-height: 1 !important;
+  }
+
+  .lcb-slide,
+  .lcb-gallery-item {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  .lcb-slide img,
+  .lcb-gallery-item img {
+    flex-shrink: 0 !important;
+    width: 100% !important;
+    height: 245px !important;
+    object-fit: contain !important;
+    object-position: center top !important;
+    background: #f1f5fb !important;
+  }
+
+  .lcb-slide-caption,
+  .lcb-gallery-item figcaption {
+    flex: 1 1 auto !important;
+  }
+
+  .lcb-member.focus-dayeon img {
+    object-position: center 58% !important;
+  }
+
+  @media (max-width: 800px) {
+    .lcb-topbar,
+    .lcb-topbar-inner {
+      height: 28px !important;
+      min-height: 28px !important;
+      max-height: 28px !important;
+    }
+
+    .lcb-topbar-logo {
+      width: 28px !important;
+      height: 28px !important;
+    }
+
+    .lcb-topbar-links {
+      top: 28px !important;
+      height: auto !important;
+    }
+
+    .lcb-topbar-links a {
+      height: auto !important;
+      font-size: 0.9rem !important;
+    }
+  }
+
+  @media (max-width: 720px) {
+    .lcb-slide img,
+    .lcb-gallery-item img {
+      height: 220px !important;
+    }
+  }
 </style> <header class="lcb-topbar" role="banner"> <div class="lcb-topbar-inner"> <a class="lcb-topbar-brand" href="/LCB/"> <img src="/LCB/assets/img/lab_logo_mark_transparent.png" alt="" class="lcb-topbar-logo"> Lab of Cancer Biology </a> <button class="lcb-hamburger" aria-label="Toggle menu" onclick="this.closest('.lcb-topbar').querySelector('.lcb-topbar-links').classList.toggle('open')"> <span></span><span></span><span></span> </button> <nav class="lcb-topbar-links" aria-label="Main navigation"> <a class="" href="/LCB/">Home</a> <a class="" href="/LCB/research/">Research</a> <a class="" href="/LCB/professor/">Professor</a> <a class="" href="/LCB/members/">Members</a> <a class="" href="/LCB/publications/">Publications</a> <a class="" href="/LCB/gallery/">Gallery</a> <a class="" href="/LCB/contact/">Contact</a> </nav> </div> </header> <div class="lcb-page"> <section class="lcb-section"> <h1 class="lcb-section-title">Alumni</h1> <p>Please visit the <a href="/LCB/members/#alumni">Members</a> page.</p> </section> </div> </article> </div> </div> <footer class="lcb-footer"> © Lab of Cancer Biology, Department of Life Science, Hanyang University. All rights reserved. </footer> <script>
   window.alFolio = {
     compatBootstrap: false
