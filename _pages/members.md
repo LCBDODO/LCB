@@ -52,7 +52,7 @@ description: Members of the Lab of Cancer Biology.
         <p class="lcb-role">M.S./Ph.D. Integrated Course</p>
         <p>2024.3-</p>
       </div>
-      <div class="lcb-member">
+      <div class="lcb-member focus-dayeon">
         <img src="{{ '/assets/img/members/ko_dayeon.jpg' | relative_url }}" alt="고다연" />
         <h3>고다연</h3>
         <p class="lcb-role">M.S./Ph.D. Integrated Course</p>
