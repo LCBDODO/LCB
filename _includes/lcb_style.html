@@ -1767,65 +1767,71 @@
   }
 </style>
 
-<!-- ===== FINAL: full horizontal lab logo in topbar ===== -->
+<!-- ===== FINAL: icon-only favicon + full horizontal header logo at 1.7x size ===== -->
 <style>
-  /* 흰색 상단바를 기존보다 약 20% 높게 */
+  /* 현재 약 34px 상단바를 기준으로 로고와 흰 바를 약 1.7배 확대 */
   .lcb-topbar,
   .lcb-topbar-inner {
-    height: 34px !important;
-    min-height: 34px !important;
-    max-height: 34px !important;
+    height: 60px !important;
+    min-height: 60px !important;
+    max-height: 60px !important;
   }
 
-  /* 기존 'Lab of Cancer Biology' 글자는 숨기고 전체 로고 이미지만 표시 */
+  /* HTML에 남아 있는 'Lab of Cancer Biology' 텍스트는 숨기고 전체 가로형 로고만 표시 */
   .lcb-topbar-brand {
-    height: 34px !important;
-    gap: 0 !important;
+    display: inline-flex !important;
+    flex-shrink: 0 !important;
     align-items: center !important;
+    height: 60px !important;
+    gap: 0 !important;
     font-size: 0 !important;
     line-height: 0 !important;
+    overflow: visible !important;
   }
 
   .lcb-topbar-logo {
     display: block !important;
     width: auto !important;
-    height: 31px !important;
-    max-width: 150px !important;
+    height: 53px !important;
+    max-width: 255px !important;
     margin: 0 !important;
     object-fit: contain !important;
+    object-position: left center !important;
     opacity: 1 !important;
     transform: none !important;
   }
 
   .lcb-topbar-links {
-    height: 34px !important;
+    height: 60px !important;
     align-items: center !important;
   }
 
   .lcb-topbar-links a {
-    height: 34px !important;
+    height: 60px !important;
+    display: inline-flex !important;
+    align-items: center !important;
   }
 
   @media (max-width: 800px) {
     .lcb-topbar,
     .lcb-topbar-inner {
-      height: 32px !important;
-      min-height: 32px !important;
-      max-height: 32px !important;
+      height: 48px !important;
+      min-height: 48px !important;
+      max-height: 48px !important;
     }
 
     .lcb-topbar-brand {
-      height: 32px !important;
+      height: 48px !important;
     }
 
     .lcb-topbar-logo {
       width: auto !important;
-      height: 28px !important;
-      max-width: 125px !important;
+      height: 41px !important;
+      max-width: 195px !important;
     }
 
     .lcb-topbar-links {
-      top: 32px !important;
+      top: 48px !important;
       height: auto !important;
     }
 
