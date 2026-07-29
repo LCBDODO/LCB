@@ -1749,7 +1749,7 @@
     }
   }
 </style> <style>
-  /* 기존 최종 높이 28px에서 약 20% 증가: 34px */
+  /* 흰색 상단바를 기존보다 약 20% 높게 */
   .lcb-topbar,
   .lcb-topbar-inner {
     height: 34px !important;
@@ -1757,18 +1757,24 @@
     max-height: 34px !important;
   }
 
-  .lcb-topbar-logo {
-    width: 32px !important;
-    height: 32px !important;
-    margin-left: -2px !important;
-    opacity: 1 !important;
-    object-fit: contain !important;
-    transform: none !important;
-  }
-
+  /* 기존 'Lab of Cancer Biology' 글자는 숨기고 전체 로고 이미지만 표시 */
   .lcb-topbar-brand {
     height: 34px !important;
+    gap: 0 !important;
     align-items: center !important;
+    font-size: 0 !important;
+    line-height: 0 !important;
+  }
+
+  .lcb-topbar-logo {
+    display: block !important;
+    width: auto !important;
+    height: 31px !important;
+    max-width: 150px !important;
+    margin: 0 !important;
+    object-fit: contain !important;
+    opacity: 1 !important;
+    transform: none !important;
   }
 
   .lcb-topbar-links {
@@ -1788,13 +1794,14 @@
       max-height: 32px !important;
     }
 
-    .lcb-topbar-logo {
-      width: 30px !important;
-      height: 30px !important;
-    }
-
     .lcb-topbar-brand {
       height: 32px !important;
+    }
+
+    .lcb-topbar-logo {
+      width: auto !important;
+      height: 28px !important;
+      max-width: 125px !important;
     }
 
     .lcb-topbar-links {
