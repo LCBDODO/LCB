@@ -1749,7 +1749,7 @@
     }
   }
 </style> <style>
-  /* ---------- Top white navigation bar ---------- */
+  /* ---------- Top white navigation bar + full logo ---------- */
   .lcb-topbar,
   .lcb-topbar-inner {
     height: 60px !important;
@@ -1757,7 +1757,6 @@
     max-height: 60px !important;
   }
 
-  /* Use the full horizontal logo image and hide the old HTML text */
   .lcb-topbar-brand {
     display: inline-flex !important;
     flex-shrink: 0 !important;
@@ -1792,12 +1791,12 @@
     height: 60px !important;
   }
 
-  /* ---------- Responsive hero cancer-cell image ---------- */
-  /*
-    Desktop:
-    - Align the image to the right edge of the same 1180px content area as the menu.
-    - Its width changes with the viewport, so it remains beneath the Home–Contact area.
-  */
+  /* ---------- Hero image area that follows the real Home–Contact span ---------- */
+  .lcb-home-hero {
+    --hero-overlay-left: 56%;
+    --hero-overlay-width: 40%;
+  }
+
   .lcb-home-hero::after {
     content: "" !important;
     display: block !important;
@@ -1805,30 +1804,25 @@
     z-index: 1 !important;
     top: 0 !important;
     bottom: 0 !important;
-    left: auto !important;
-    right: max(16px, calc((100vw - 1180px) / 2 + 16px)) !important;
-    width: clamp(340px, 36vw, 590px) !important;
+    left: var(--hero-overlay-left) !important;
+    width: var(--hero-overlay-width) !important;
     height: auto !important;
     background-image: url("/LCB/assets/img/home/hero_cancer_cells_transparent.png") !important;
     background-repeat: no-repeat !important;
-    background-position: center top !important;
+    background-position: center center !important;
     background-size: contain !important;
-    opacity: 0.16 !important;
+    opacity: 0.24 !important;
     mix-blend-mode: screen !important;
-    filter: grayscale(100%) brightness(1.34) contrast(0.72) saturate(0.68) blur(0.12px) !important;
+    filter: grayscale(18%) brightness(1.10) contrast(0.98) saturate(1.28) blur(0px) !important;
     pointer-events: none !important;
   }
 
-  /* Medium desktop / tablet */
-  @media (max-width: 1100px) {
-    .lcb-home-hero::after {
-      right: clamp(14px, 2.6vw, 26px) !important;
-      width: clamp(310px, 40vw, 500px) !important;
-      opacity: 0.14 !important;
-    }
+  /* Keep text above the image */
+  .lcb-home-hero > * {
+    position: relative !important;
+    z-index: 2 !important;
   }
 
-  /* Mobile menu */
   @media (max-width: 800px) {
     .lcb-topbar,
     .lcb-topbar-inner {
@@ -1857,23 +1851,54 @@
     }
 
     .lcb-home-hero::after {
-      right: 1rem !important;
-      width: min(58vw, 410px) !important;
-      opacity: 0.11 !important;
-      background-position: center top !important;
-      background-size: contain !important;
+      opacity: 0.19 !important;
+      filter: grayscale(10%) brightness(1.07) contrast(1.00) saturate(1.20) !important;
     }
+  }
+</style> <script>
+(function () {
+  function updateHeroOverlayArea() {
+    const hero = document.querySelector('.lcb-home-hero');
+    const links = document.querySelector('.lcb-topbar-links');
+    const hamburger = document.querySelector('.lcb-hamburger');
+
+    if (!hero || !links) return;
+
+    const heroRect = hero.getBoundingClientRect();
+    const linksRect = links.getBoundingClientRect();
+
+    // Mobile: menu collapses, so use a right-side responsive image area
+    const mobileMode =
+      window.innerWidth <= 800 ||
+      (hamburger && window.getComputedStyle(hamburger).display !== 'none');
+
+    if (mobileMode) {
+      hero.style.setProperty('--hero-overlay-left', '44%');
+      hero.style.setProperty('--hero-overlay-width', '50%');
+      return;
+    }
+
+    // Desktop/tablet: match the real Home–Contact navigation span
+    let leftPx = linksRect.left - heroRect.left;
+    let widthPx = linksRect.width;
+
+    // Keep the overlay within the hero block
+    leftPx = Math.max(0, Math.min(leftPx, heroRect.width - 40));
+    widthPx = Math.max(160, Math.min(widthPx, heroRect.width - leftPx));
+
+    hero.style.setProperty('--hero-overlay-left', leftPx + 'px');
+    hero.style.setProperty('--hero-overlay-width', widthPx + 'px');
   }
 
-  /* Narrow phone */
-  @media (max-width: 600px) {
-    .lcb-home-hero::after {
-      right: -9vw !important;
-      width: 76vw !important;
-      opacity: 0.085 !important;
-    }
-  }
-</style> <header class="lcb-topbar" role="banner"> <div class="lcb-topbar-inner"> <a class="lcb-topbar-brand" href="/LCB/"> <img src="/LCB/assets/img/lab_logo_mark_transparent.png" alt="" class="lcb-topbar-logo"> Lab of Cancer Biology </a> <button class="lcb-hamburger" aria-label="Toggle menu" onclick="this.closest('.lcb-topbar').querySelector('.lcb-topbar-links').classList.toggle('open')"> <span></span><span></span><span></span> </button> <nav class="lcb-topbar-links" aria-label="Main navigation"> <a class="active" href="/LCB/">Home</a> <a class="" href="/LCB/research/">Research</a> <a class="" href="/LCB/professor/">Professor</a> <a class="" href="/LCB/members/">Members</a> <a class="" href="/LCB/publications/">Publications</a> <a class="" href="/LCB/gallery/">Gallery</a> <a class="" href="/LCB/contact/">Contact</a> </nav> </div> </header> <div class="lcb-page lcb-home-page"> <section class="lcb-home-hero lcb-full-bleed"> <div class="lcb-home-inner"> <div class="lcb-hero-copy"> <div class="lcb-hero-kicker">SINCE 2021 · HANYANG UNIVERSITY</div> <h1 class="lcb-hero-title">Lab of Cancer<br>Biology</h1> <p class="lcb-hero-kr">한양대학교 생명과학과<br>암생물학연구실</p> <div class="lcb-hero-rule"></div> <p class="lcb-hero-lead">We study how cancer cells adapt, evolve, and acquire resistance to anti-cancer therapies in a perspective of translational research.</p> </div> </div> </section> <section class="lcb-home-quick lcb-full-bleed"> <div class="lcb-quick-inner"> <div class="lcb-quick-card"> <span class="lcb-eyebrow">Research</span> <h2>Research &amp; Publications</h2> <p>Explore our research topics, previous projects, and publication record.</p> <div class="lcb-quick-actions"> <a href="/LCB/research/">Research</a> <a href="/LCB/publications/">Publications</a> </div> </div> <div class="lcb-quick-card"> <span class="lcb-eyebrow">People</span> <h2>Professor &amp; Members</h2> <p>Meet the principal investigator, current members, and alumni.</p> <div class="lcb-quick-actions"> <a href="/LCB/professor/">Professor</a> <a href="/LCB/members/">Members</a> </div> </div> </div> </section> <section class="lcb-home-gallery lcb-full-bleed"> <div class="lcb-gallery-head"> <span class="lcb-eyebrow">Gallery</span> <h2>Recent Lab Moments</h2> </div> <div class="lcb-slider"> <div class="lcb-slide"> <img src="/LCB/assets/img/gallery/2025_ksmcb_overview.jpg" alt="2025 KSMCB"><div class="lcb-slide-caption"><strong>2025 KSMCB</strong></div> </div> <div class="lcb-slide"> <img src="/LCB/assets/img/gallery/2025_ksmcb_son_seunghan.jpg" alt="손승한 포스터"><div class="lcb-slide-caption"> <strong>2025 KSMCB</strong><br>Poster by 손승한</div> </div> <div class="lcb-slide"> <img src="/LCB/assets/img/gallery/2025_ksmcb_jo_dayoung.jpg" alt="조다영 포스터"><div class="lcb-slide-caption"> <strong>2025 KSMCB</strong><br>Poster by 조다영</div> </div> <div class="lcb-slide"> <img src="/LCB/assets/img/gallery/teacher_day_2025.jpg" alt="스승의 날"><div class="lcb-slide-caption"> <strong>스승의 날</strong> (2025)</div> </div> <div class="lcb-slide"> <img src="/LCB/assets/img/gallery/lab_picnic_spring_2024.jpg" alt="Lab picnic"><div class="lcb-slide-caption"> <strong>Lab Picnic</strong> (Spring 2024)</div> </div> <div class="lcb-slide"> <img src="/LCB/assets/img/gallery/dr_shigeri_visit_2024.jpg" alt="Dr. Shigeri visit"><div class="lcb-slide-caption"> <strong>Dr. Shigeri Visit</strong> (2024)</div> </div> <div class="lcb-slide"> <img src="/LCB/assets/img/gallery/graduate_lee_taewon_2024.jpg" alt="이태원 졸업"><div class="lcb-slide-caption"> <strong>Graduation</strong> - 이태원 (MS 2024)</div> </div> </div> </section> </div> </div> <footer class="lcb-footer"> © Lab of Cancer Biology, Department of Life Science, Hanyang University. All rights reserved. </footer> <script>
+  window.addEventListener('load', updateHeroOverlayArea);
+  window.addEventListener('resize', updateHeroOverlayArea);
+  document.addEventListener('DOMContentLoaded', updateHeroOverlayArea);
+
+  // Recalculate again after fonts/layout settle
+  setTimeout(updateHeroOverlayArea, 200);
+  setTimeout(updateHeroOverlayArea, 800);
+})();
+</script> <header class="lcb-topbar" role="banner"> <div class="lcb-topbar-inner"> <a class="lcb-topbar-brand" href="/LCB/"> <img src="/LCB/assets/img/lab_logo_mark_transparent.png" alt="" class="lcb-topbar-logo"> Lab of Cancer Biology </a> <button class="lcb-hamburger" aria-label="Toggle menu" onclick="this.closest('.lcb-topbar').querySelector('.lcb-topbar-links').classList.toggle('open')"> <span></span><span></span><span></span> </button> <nav class="lcb-topbar-links" aria-label="Main navigation"> <a class="active" href="/LCB/">Home</a> <a class="" href="/LCB/research/">Research</a> <a class="" href="/LCB/professor/">Professor</a> <a class="" href="/LCB/members/">Members</a> <a class="" href="/LCB/publications/">Publications</a> <a class="" href="/LCB/gallery/">Gallery</a> <a class="" href="/LCB/contact/">Contact</a> </nav> </div> </header> <div class="lcb-page lcb-home-page"> <section class="lcb-home-hero lcb-full-bleed"> <div class="lcb-home-inner"> <div class="lcb-hero-copy"> <div class="lcb-hero-kicker">SINCE 2021 · HANYANG UNIVERSITY</div> <h1 class="lcb-hero-title">Lab of Cancer<br>Biology</h1> <p class="lcb-hero-kr">한양대학교 생명과학과<br>암생물학연구실</p> <div class="lcb-hero-rule"></div> <p class="lcb-hero-lead">We study how cancer cells adapt, evolve, and acquire resistance to anti-cancer therapies in a perspective of translational research.</p> </div> </div> </section> <section class="lcb-home-quick lcb-full-bleed"> <div class="lcb-quick-inner"> <div class="lcb-quick-card"> <span class="lcb-eyebrow">Research</span> <h2>Research &amp; Publications</h2> <p>Explore our research topics, previous projects, and publication record.</p> <div class="lcb-quick-actions"> <a href="/LCB/research/">Research</a> <a href="/LCB/publications/">Publications</a> </div> </div> <div class="lcb-quick-card"> <span class="lcb-eyebrow">People</span> <h2>Professor &amp; Members</h2> <p>Meet the principal investigator, current members, and alumni.</p> <div class="lcb-quick-actions"> <a href="/LCB/professor/">Professor</a> <a href="/LCB/members/">Members</a> </div> </div> </div> </section> <section class="lcb-home-gallery lcb-full-bleed"> <div class="lcb-gallery-head"> <span class="lcb-eyebrow">Gallery</span> <h2>Recent Lab Moments</h2> </div> <div class="lcb-slider"> <div class="lcb-slide"> <img src="/LCB/assets/img/gallery/2025_ksmcb_overview.jpg" alt="2025 KSMCB"><div class="lcb-slide-caption"><strong>2025 KSMCB</strong></div> </div> <div class="lcb-slide"> <img src="/LCB/assets/img/gallery/2025_ksmcb_son_seunghan.jpg" alt="손승한 포스터"><div class="lcb-slide-caption"> <strong>2025 KSMCB</strong><br>Poster by 손승한</div> </div> <div class="lcb-slide"> <img src="/LCB/assets/img/gallery/2025_ksmcb_jo_dayoung.jpg" alt="조다영 포스터"><div class="lcb-slide-caption"> <strong>2025 KSMCB</strong><br>Poster by 조다영</div> </div> <div class="lcb-slide"> <img src="/LCB/assets/img/gallery/teacher_day_2025.jpg" alt="스승의 날"><div class="lcb-slide-caption"> <strong>스승의 날</strong> (2025)</div> </div> <div class="lcb-slide"> <img src="/LCB/assets/img/gallery/lab_picnic_spring_2024.jpg" alt="Lab picnic"><div class="lcb-slide-caption"> <strong>Lab Picnic</strong> (Spring 2024)</div> </div> <div class="lcb-slide"> <img src="/LCB/assets/img/gallery/dr_shigeri_visit_2024.jpg" alt="Dr. Shigeri visit"><div class="lcb-slide-caption"> <strong>Dr. Shigeri Visit</strong> (2024)</div> </div> <div class="lcb-slide"> <img src="/LCB/assets/img/gallery/graduate_lee_taewon_2024.jpg" alt="이태원 졸업"><div class="lcb-slide-caption"> <strong>Graduation</strong> - 이태원 (MS 2024)</div> </div> </div> </section> </div> </div> <footer class="lcb-footer"> © Lab of Cancer Biology, Department of Life Science, Hanyang University. All rights reserved. </footer> <script>
   window.alFolio = {
     compatBootstrap: false
   };

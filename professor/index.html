@@ -1749,7 +1749,7 @@
     }
   }
 </style> <style>
-  /* ---------- Top white navigation bar ---------- */
+  /* ---------- Top white navigation bar + full logo ---------- */
   .lcb-topbar,
   .lcb-topbar-inner {
     height: 60px !important;
@@ -1757,7 +1757,6 @@
     max-height: 60px !important;
   }
 
-  /* Use the full horizontal logo image and hide the old HTML text */
   .lcb-topbar-brand {
     display: inline-flex !important;
     flex-shrink: 0 !important;
@@ -1792,12 +1791,12 @@
     height: 60px !important;
   }
 
-  /* ---------- Responsive hero cancer-cell image ---------- */
-  /*
-    Desktop:
-    - Align the image to the right edge of the same 1180px content area as the menu.
-    - Its width changes with the viewport, so it remains beneath the Home–Contact area.
-  */
+  /* ---------- Hero image area that follows the real Home–Contact span ---------- */
+  .lcb-home-hero {
+    --hero-overlay-left: 56%;
+    --hero-overlay-width: 40%;
+  }
+
   .lcb-home-hero::after {
     content: "" !important;
     display: block !important;
@@ -1805,30 +1804,25 @@
     z-index: 1 !important;
     top: 0 !important;
     bottom: 0 !important;
-    left: auto !important;
-    right: max(16px, calc((100vw - 1180px) / 2 + 16px)) !important;
-    width: clamp(340px, 36vw, 590px) !important;
+    left: var(--hero-overlay-left) !important;
+    width: var(--hero-overlay-width) !important;
     height: auto !important;
     background-image: url("/LCB/assets/img/home/hero_cancer_cells_transparent.png") !important;
     background-repeat: no-repeat !important;
-    background-position: center top !important;
+    background-position: center center !important;
     background-size: contain !important;
-    opacity: 0.16 !important;
+    opacity: 0.24 !important;
     mix-blend-mode: screen !important;
-    filter: grayscale(100%) brightness(1.34) contrast(0.72) saturate(0.68) blur(0.12px) !important;
+    filter: grayscale(18%) brightness(1.10) contrast(0.98) saturate(1.28) blur(0px) !important;
     pointer-events: none !important;
   }
 
-  /* Medium desktop / tablet */
-  @media (max-width: 1100px) {
-    .lcb-home-hero::after {
-      right: clamp(14px, 2.6vw, 26px) !important;
-      width: clamp(310px, 40vw, 500px) !important;
-      opacity: 0.14 !important;
-    }
+  /* Keep text above the image */
+  .lcb-home-hero > * {
+    position: relative !important;
+    z-index: 2 !important;
   }
 
-  /* Mobile menu */
   @media (max-width: 800px) {
     .lcb-topbar,
     .lcb-topbar-inner {
@@ -1857,23 +1851,54 @@
     }
 
     .lcb-home-hero::after {
-      right: 1rem !important;
-      width: min(58vw, 410px) !important;
-      opacity: 0.11 !important;
-      background-position: center top !important;
-      background-size: contain !important;
+      opacity: 0.19 !important;
+      filter: grayscale(10%) brightness(1.07) contrast(1.00) saturate(1.20) !important;
     }
+  }
+</style> <script>
+(function () {
+  function updateHeroOverlayArea() {
+    const hero = document.querySelector('.lcb-home-hero');
+    const links = document.querySelector('.lcb-topbar-links');
+    const hamburger = document.querySelector('.lcb-hamburger');
+
+    if (!hero || !links) return;
+
+    const heroRect = hero.getBoundingClientRect();
+    const linksRect = links.getBoundingClientRect();
+
+    // Mobile: menu collapses, so use a right-side responsive image area
+    const mobileMode =
+      window.innerWidth <= 800 ||
+      (hamburger && window.getComputedStyle(hamburger).display !== 'none');
+
+    if (mobileMode) {
+      hero.style.setProperty('--hero-overlay-left', '44%');
+      hero.style.setProperty('--hero-overlay-width', '50%');
+      return;
+    }
+
+    // Desktop/tablet: match the real Home–Contact navigation span
+    let leftPx = linksRect.left - heroRect.left;
+    let widthPx = linksRect.width;
+
+    // Keep the overlay within the hero block
+    leftPx = Math.max(0, Math.min(leftPx, heroRect.width - 40));
+    widthPx = Math.max(160, Math.min(widthPx, heroRect.width - leftPx));
+
+    hero.style.setProperty('--hero-overlay-left', leftPx + 'px');
+    hero.style.setProperty('--hero-overlay-width', widthPx + 'px');
   }
 
-  /* Narrow phone */
-  @media (max-width: 600px) {
-    .lcb-home-hero::after {
-      right: -9vw !important;
-      width: 76vw !important;
-      opacity: 0.085 !important;
-    }
-  }
-</style> <header class="lcb-topbar" role="banner"> <div class="lcb-topbar-inner"> <a class="lcb-topbar-brand" href="/LCB/"> <img src="/LCB/assets/img/lab_logo_mark_transparent.png" alt="" class="lcb-topbar-logo"> Lab of Cancer Biology </a> <button class="lcb-hamburger" aria-label="Toggle menu" onclick="this.closest('.lcb-topbar').querySelector('.lcb-topbar-links').classList.toggle('open')"> <span></span><span></span><span></span> </button> <nav class="lcb-topbar-links" aria-label="Main navigation"> <a class="" href="/LCB/">Home</a> <a class="" href="/LCB/research/">Research</a> <a class="active" href="/LCB/professor/">Professor</a> <a class="" href="/LCB/members/">Members</a> <a class="" href="/LCB/publications/">Publications</a> <a class="" href="/LCB/gallery/">Gallery</a> <a class="" href="/LCB/contact/">Contact</a> </nav> </div> </header> <div class="lcb-page"> <section class="lcb-section"> <h1 class="lcb-section-title">Professor</h1> <div class="lcb-profile-grid"> <div> <img class="lcb-profile-img" src="/LCB/assets/img/professor/kyungmin_lee_portrait.jpg" alt="Kyung-min Lee"> </div> <div> <h2 class="lcb-professor-name">Kyung-min Lee, PhD<br>이경민</h2> <div class="lcb-timeline"> <div class="lcb-timeline-item"> <div class="lcb-timeline-year">2024-Current</div> <div>Associate professor, Dept. of Life Science, Hanyang Univ.</div> </div> <div class="lcb-timeline-item"> <div class="lcb-timeline-year">2021-2024</div> <div>Assistant professor, Dept. of Life Science, Hanyang Univ.</div> </div> <div class="lcb-timeline-item"> <div class="lcb-timeline-year">2020-2021</div> <div>Research Scientist, Simmons Comprehensive Cancer Center, UT Southwestern Medical Center</div> </div> <div class="lcb-timeline-item"> <div class="lcb-timeline-year">2017-2020</div> <div>PostDoc, Simmons Comprehensive Cancer Center, UT Southwestern Medical Center</div> </div> <div class="lcb-timeline-item"> <div class="lcb-timeline-year">2014-2017</div> <div>PostDoc, Dept. of Medicine, Vanderbilt-Ingram Cancer Center, Vanderbilt Univ.</div> </div> <div class="lcb-timeline-item"> <div class="lcb-timeline-year">2008-2014</div> <div>PhD, Dept. of Life Science, Hanyang Univ.</div> </div> <div class="lcb-timeline-item"> <div class="lcb-timeline-year">2001-2008</div> <div>BS, Dept. of Life Science, Hanyang Univ.</div> </div> </div> </div> </div> </section> <section class="lcb-section compact"> <h2 class="lcb-section-title">About</h2> <p class="lcb-section-lead"> Prof. Lee received a PhD in Life Science from Hanyang University, where he studied the molecular mechanisms of development and metastasis of cancer. After completing his doctoral studies, he focused on the mechanisms of resistance to anti-cancer drugs including chemotherapy, target therapy and immunotherapy in the laboratory of Carlos L. Arteaga at the Vanderbilt-Ingram Cancer Center of Vanderbilt University Medical Center. Since Prof. Lee joined the Department of Life Science at Hanyang University in 2021 as a faculty member, he has conducted research for curing malignant cancer. In particular, he is conducting research for identifying biomarker-based vulnerability and mechanism of cancer immune evasion using bio-bigdata. </p> </section> </div> </article> </div> </div> <footer class="lcb-footer"> © Lab of Cancer Biology, Department of Life Science, Hanyang University. All rights reserved. </footer> <script>
+  window.addEventListener('load', updateHeroOverlayArea);
+  window.addEventListener('resize', updateHeroOverlayArea);
+  document.addEventListener('DOMContentLoaded', updateHeroOverlayArea);
+
+  // Recalculate again after fonts/layout settle
+  setTimeout(updateHeroOverlayArea, 200);
+  setTimeout(updateHeroOverlayArea, 800);
+})();
+</script> <header class="lcb-topbar" role="banner"> <div class="lcb-topbar-inner"> <a class="lcb-topbar-brand" href="/LCB/"> <img src="/LCB/assets/img/lab_logo_mark_transparent.png" alt="" class="lcb-topbar-logo"> Lab of Cancer Biology </a> <button class="lcb-hamburger" aria-label="Toggle menu" onclick="this.closest('.lcb-topbar').querySelector('.lcb-topbar-links').classList.toggle('open')"> <span></span><span></span><span></span> </button> <nav class="lcb-topbar-links" aria-label="Main navigation"> <a class="" href="/LCB/">Home</a> <a class="" href="/LCB/research/">Research</a> <a class="active" href="/LCB/professor/">Professor</a> <a class="" href="/LCB/members/">Members</a> <a class="" href="/LCB/publications/">Publications</a> <a class="" href="/LCB/gallery/">Gallery</a> <a class="" href="/LCB/contact/">Contact</a> </nav> </div> </header> <div class="lcb-page"> <section class="lcb-section"> <h1 class="lcb-section-title">Professor</h1> <div class="lcb-profile-grid"> <div> <img class="lcb-profile-img" src="/LCB/assets/img/professor/kyungmin_lee_portrait.jpg" alt="Kyung-min Lee"> </div> <div> <h2 class="lcb-professor-name">Kyung-min Lee, PhD<br>이경민</h2> <div class="lcb-timeline"> <div class="lcb-timeline-item"> <div class="lcb-timeline-year">2024-Current</div> <div>Associate professor, Dept. of Life Science, Hanyang Univ.</div> </div> <div class="lcb-timeline-item"> <div class="lcb-timeline-year">2021-2024</div> <div>Assistant professor, Dept. of Life Science, Hanyang Univ.</div> </div> <div class="lcb-timeline-item"> <div class="lcb-timeline-year">2020-2021</div> <div>Research Scientist, Simmons Comprehensive Cancer Center, UT Southwestern Medical Center</div> </div> <div class="lcb-timeline-item"> <div class="lcb-timeline-year">2017-2020</div> <div>PostDoc, Simmons Comprehensive Cancer Center, UT Southwestern Medical Center</div> </div> <div class="lcb-timeline-item"> <div class="lcb-timeline-year">2014-2017</div> <div>PostDoc, Dept. of Medicine, Vanderbilt-Ingram Cancer Center, Vanderbilt Univ.</div> </div> <div class="lcb-timeline-item"> <div class="lcb-timeline-year">2008-2014</div> <div>PhD, Dept. of Life Science, Hanyang Univ.</div> </div> <div class="lcb-timeline-item"> <div class="lcb-timeline-year">2001-2008</div> <div>BS, Dept. of Life Science, Hanyang Univ.</div> </div> </div> </div> </div> </section> <section class="lcb-section compact"> <h2 class="lcb-section-title">About</h2> <p class="lcb-section-lead"> Prof. Lee received a PhD in Life Science from Hanyang University, where he studied the molecular mechanisms of development and metastasis of cancer. After completing his doctoral studies, he focused on the mechanisms of resistance to anti-cancer drugs including chemotherapy, target therapy and immunotherapy in the laboratory of Carlos L. Arteaga at the Vanderbilt-Ingram Cancer Center of Vanderbilt University Medical Center. Since Prof. Lee joined the Department of Life Science at Hanyang University in 2021 as a faculty member, he has conducted research for curing malignant cancer. In particular, he is conducting research for identifying biomarker-based vulnerability and mechanism of cancer immune evasion using bio-bigdata. </p> </section> </div> </article> </div> </div> <footer class="lcb-footer"> © Lab of Cancer Biology, Department of Life Science, Hanyang University. All rights reserved. </footer> <script>
   window.alFolio = {
     compatBootstrap: false
   };
