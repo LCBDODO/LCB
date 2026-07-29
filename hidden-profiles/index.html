@@ -1748,6 +1748,64 @@
       height: 220px !important;
     }
   }
+</style> <style>
+  /* 기존 최종 높이 28px에서 약 20% 증가: 34px */
+  .lcb-topbar,
+  .lcb-topbar-inner {
+    height: 34px !important;
+    min-height: 34px !important;
+    max-height: 34px !important;
+  }
+
+  .lcb-topbar-logo {
+    width: 32px !important;
+    height: 32px !important;
+    margin-left: -2px !important;
+    opacity: 1 !important;
+    object-fit: contain !important;
+    transform: none !important;
+  }
+
+  .lcb-topbar-brand {
+    height: 34px !important;
+    align-items: center !important;
+  }
+
+  .lcb-topbar-links {
+    height: 34px !important;
+    align-items: center !important;
+  }
+
+  .lcb-topbar-links a {
+    height: 34px !important;
+  }
+
+  @media (max-width: 800px) {
+    .lcb-topbar,
+    .lcb-topbar-inner {
+      height: 32px !important;
+      min-height: 32px !important;
+      max-height: 32px !important;
+    }
+
+    .lcb-topbar-logo {
+      width: 30px !important;
+      height: 30px !important;
+    }
+
+    .lcb-topbar-brand {
+      height: 32px !important;
+    }
+
+    .lcb-topbar-links {
+      top: 32px !important;
+      height: auto !important;
+    }
+
+    .lcb-topbar-links a {
+      height: auto !important;
+    }
+  }
 </style> <header class="lcb-topbar" role="banner"> <div class="lcb-topbar-inner"> <a class="lcb-topbar-brand" href="/LCB/"> <img src="/LCB/assets/img/lab_logo_mark_transparent.png" alt="" class="lcb-topbar-logo"> Lab of Cancer Biology </a> <button class="lcb-hamburger" aria-label="Toggle menu" onclick="this.closest('.lcb-topbar').querySelector('.lcb-topbar-links').classList.toggle('open')"> <span></span><span></span><span></span> </button> <nav class="lcb-topbar-links" aria-label="Main navigation"> <a class="" href="/LCB/">Home</a> <a class="" href="/LCB/research/">Research</a> <a class="" href="/LCB/professor/">Professor</a> <a class="" href="/LCB/members/">Members</a> <a class="" href="/LCB/publications/">Publications</a> <a class="" href="/LCB/gallery/">Gallery</a> <a class="" href="/LCB/contact/">Contact</a> </nav> </div> </header> <div class="lcb-page"> <section class="lcb-section"> <h1 class="lcb-section-title">Members</h1> <p class="lcb-section-lead">Current members and alumni of the Lab of Cancer Biology.</p> </section> <section class="lcb-section compact" id="current-members"> <h2 class="lcb-section-title">Current Members</h2> <div class="lcb-member-grid"> <div class="lcb-member"> <h3>손승한</h3> <p class="lcb-role">연구조교수</p> <p>2023.9-</p> </div> <div class="lcb-member"> <h3>이태원</h3> <p class="lcb-role">박사과정</p> <p>2023.9-</p> </div> <div class="lcb-member"> <h3>박수빈</h3> <p class="lcb-role">석박사통합과정</p> <p>2022.9-</p> </div> <div class="lcb-member"> <h3>유혜빈</h3> <p class="lcb-role">석박사통합과정</p> <p>2024.3-</p> </div> <div class="lcb-member"> <h3>현도도</h3> <p class="lcb-role">석박사통합과정</p> <p>2024.3-</p> </div> <div class="lcb-member"> <h3>고다연</h3> <p class="lcb-role">석박사통합과정</p> <p>2025.3-</p> </div> <div class="lcb-member"> <h3>김진성</h3> <p class="lcb-role">석박통합과정</p> <p>2026.03-</p> </div> </div> </section> <section class="lcb-section compact" id="alumni"> <h2 class="lcb-section-title">Alumni</h2> <div class="lcb-member-grid"> <div class="lcb-member"> <h3>이창준</h3> <p class="lcb-role">석사</p> <p>2023.2 졸업</p> </div> <div class="lcb-member"> <h3>조다영</h3> <p class="lcb-role">석사</p> <p>2024.3-2026.02</p> </div> </div> </section> </div> </article> </div> </div> <footer class="lcb-footer"> © Lab of Cancer Biology, Department of Life Science, Hanyang University. All rights reserved. </footer> <script>
   window.alFolio = {
     compatBootstrap: false
