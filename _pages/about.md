@@ -51,6 +51,8 @@ description:
       <h2>Recent Lab Moments</h2>
     </div>
     <div class="lcb-slider">
+      <div class="lcb-slide"><img src="{{ '/assets/img/gallery/tsix_src_2026_hyun_dodo.jpg' | relative_url }}" alt="1st Annual TSIX-SRC 2026 현도도 포스터 발표" /><div class="lcb-slide-caption"><strong>1st Annual TSIX-SRC (2026)</strong><br />Poster by 현도도</div></div>
+      <div class="lcb-slide"><img src="{{ '/assets/img/gallery/graduate_jo_dayoung_2026.jpg' | relative_url }}" alt="조다영 석사 졸업 2026" /><div class="lcb-slide-caption"><strong>Graduation</strong><br />조다영 (MS,2026)</div></div>
       <div class="lcb-slide"><img src="{{ '/assets/img/gallery/2025_ksmcb_overview.jpg' | relative_url }}" alt="2025 KSMCB" /><div class="lcb-slide-caption"><strong>2025 KSMCB</strong></div></div>
       <div class="lcb-slide"><img src="{{ '/assets/img/gallery/2025_ksmcb_son_seunghan.jpg' | relative_url }}" alt="손승한 포스터" /><div class="lcb-slide-caption"><strong>2025 KSMCB</strong><br />Poster by 손승한</div></div>
       <div class="lcb-slide"><img src="{{ '/assets/img/gallery/2025_ksmcb_jo_dayoung.jpg' | relative_url }}" alt="조다영 포스터" /><div class="lcb-slide-caption"><strong>2025 KSMCB</strong><br />Poster by 조다영</div></div>
