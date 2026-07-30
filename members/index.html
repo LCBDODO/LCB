@@ -2120,7 +2120,61 @@
     setupLcbLightbox();
   }
 })();
-</script> <header class="lcb-topbar" role="banner"> <div class="lcb-topbar-inner"> <a class="lcb-topbar-brand" href="/LCB/"> <img src="/LCB/assets/img/lab_logo_mark_transparent.png" alt="" class="lcb-topbar-logo"> Lab of Cancer Biology </a> <button class="lcb-hamburger" aria-label="Toggle menu" onclick="this.closest('.lcb-topbar').querySelector('.lcb-topbar-links').classList.toggle('open')"> <span></span><span></span><span></span> </button> <nav class="lcb-topbar-links" aria-label="Main navigation"> <a class="" href="/LCB/">Home</a> <a class="" href="/LCB/research/">Research</a> <a class="" href="/LCB/professor/">Professor</a> <a class="active" href="/LCB/members/">Members</a> <a class="" href="/LCB/publications/">Publications</a> <a class="" href="/LCB/gallery/">Gallery</a> <a class="" href="/LCB/contact/">Contact</a> </nav> </div> </header> <div class="lcb-page"> <section class="lcb-section"> <h1 class="lcb-section-title">Members</h1> <div class="lcb-people-tabs"> <a class="lcb-tab-btn" href="#current-members">Current Members</a> <a class="lcb-tab-btn" href="#alumni">Alumni</a> </div> </section> <section id="current-members" class="lcb-section compact"> <h2 class="lcb-section-title">Current Members</h2> <div class="lcb-member-grid"> <div class="lcb-member"> <img src="/LCB/assets/img/members/son_seunghan.jpg" alt="손승한"> <h3>손승한</h3> <p class="lcb-role">Research Professor</p> <p>2023.9-</p> </div> <div class="lcb-member"> <img src="/LCB/assets/img/members/lee_taewon.jpg" alt="이태원"> <h3>이태원</h3> <p class="lcb-role">Ph.D. Course</p> <p>2023.9-</p> </div> <div class="lcb-member"> <img src="/LCB/assets/img/members/park_subin.jpg" alt="박수빈"> <h3>박수빈</h3> <p class="lcb-role">M.S./Ph.D. Integrated Course</p> <p>2022.9-</p> </div> <div class="lcb-member"> <img src="/LCB/assets/img/members/yu_hyebin.jpg" alt="유혜빈"> <h3>유혜빈</h3> <p class="lcb-role">M.S./Ph.D. Integrated Course</p> <p>2024.3-</p> </div> <div class="lcb-member"> <img src="/LCB/assets/img/members/hyun_dodo.jpg" alt="현도도"> <h3>현도도</h3> <p class="lcb-role">M.S./Ph.D. Integrated Course</p> <p>2024.3-</p> </div> <div class="lcb-member focus-dayeon"> <img src="/LCB/assets/img/members/ko_dayeon.jpg" alt="고다연"> <h3>고다연</h3> <p class="lcb-role">M.S./Ph.D. Integrated Course</p> <p>2025.3-</p> </div> <div class="lcb-member"> <img src="/LCB/assets/img/members/kim_jinsung.jpg" alt="김진성"> <h3>김진성</h3> <p class="lcb-role">M.S./Ph.D. Integrated Course</p> <p>2026.03-</p> </div> </div> </section> <section id="alumni" class="lcb-section compact"> <h2 class="lcb-section-title">Alumni</h2> <div class="lcb-member-grid"> <div class="lcb-member"> <img src="/LCB/assets/img/members/lee_changjun.jpg" alt="이창준"> <h3>이창준</h3> <p class="lcb-role">M.S.</p> <p>Graduated 2023.02</p> </div> <div class="lcb-member"> <img src="/LCB/assets/img/members/jo_dayoung.jpg" alt="조다영"> <h3>조다영</h3> <p class="lcb-role">M.S.</p> <p>Graduated 2026.02</p> </div> </div> </section> </div> </article> </div> </div> <footer class="lcb-footer"> © Lab of Cancer Biology, Department of Life Science, Hanyang University. All rights reserved. </footer> <script>
+</script> <style>
+  .lcb-member h3 {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    align-items: baseline !important;
+    column-gap: 0.42rem !important;
+    row-gap: 0.08rem !important;
+    margin-bottom: 0.18rem !important;
+  }
+
+  .lcb-name-ko {
+    color: var(--lcb-blue);
+    font-size: 0.94rem;
+    font-weight: 680;
+  }
+
+  .lcb-name-en {
+    color: #9ca3af;
+    font-size: 0.7rem;
+    font-weight: 480;
+    line-height: 1.2;
+    white-space: nowrap;
+  }
+
+  .lcb-member-email {
+    margin: 0.18rem 0 0.08rem !important;
+    line-height: 1.25 !important;
+  }
+
+  .lcb-member-email a {
+    color: #7b8494 !important;
+    font-size: 0.67rem !important;
+    font-weight: 400 !important;
+    line-height: 1.25 !important;
+    text-decoration: none !important;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+  .lcb-member-email a:hover,
+  .lcb-member-email a:focus-visible {
+    color: var(--lcb-blue2) !important;
+    text-decoration: underline !important;
+  }
+
+  @media (max-width: 720px) {
+    .lcb-name-en {
+      font-size: 0.66rem;
+    }
+
+    .lcb-member-email a {
+      font-size: 0.64rem !important;
+    }
+  }
+</style> <header class="lcb-topbar" role="banner"> <div class="lcb-topbar-inner"> <a class="lcb-topbar-brand" href="/LCB/"> <img src="/LCB/assets/img/lab_logo_mark_transparent.png" alt="" class="lcb-topbar-logo"> Lab of Cancer Biology </a> <button class="lcb-hamburger" aria-label="Toggle menu" onclick="this.closest('.lcb-topbar').querySelector('.lcb-topbar-links').classList.toggle('open')"> <span></span><span></span><span></span> </button> <nav class="lcb-topbar-links" aria-label="Main navigation"> <a class="" href="/LCB/">Home</a> <a class="" href="/LCB/research/">Research</a> <a class="" href="/LCB/professor/">Professor</a> <a class="active" href="/LCB/members/">Members</a> <a class="" href="/LCB/publications/">Publications</a> <a class="" href="/LCB/gallery/">Gallery</a> <a class="" href="/LCB/contact/">Contact</a> </nav> </div> </header> <div class="lcb-page"> <section class="lcb-section"> <h1 class="lcb-section-title">Members</h1> <div class="lcb-people-tabs"> <a class="lcb-tab-btn" href="#current-members">Current Members</a> <a class="lcb-tab-btn" href="#alumni">Alumni</a> </div> </section> <section id="current-members" class="lcb-section compact"> <h2 class="lcb-section-title">Current Members</h2> <div class="lcb-member-grid"> <div class="lcb-member"> <img src="/LCB/assets/img/members/son_seunghan.jpg" alt="손승한"> <h3>손승한</h3> <p class="lcb-role">Research Professor</p> <p>2023.9-</p> </div> <div class="lcb-member"> <img src="/LCB/assets/img/members/lee_taewon.jpg" alt="이태원"> <h3>이태원</h3> <p class="lcb-role">Ph.D. Course</p> <p>2023.9-</p> </div> <div class="lcb-member"> <img src="/LCB/assets/img/members/park_subin.jpg" alt="박수빈"> <h3>박수빈</h3> <p class="lcb-role">M.S./Ph.D. Integrated Course</p> <p>2022.9-</p> </div> <div class="lcb-member"> <img src="/LCB/assets/img/members/yu_hyebin.jpg" alt="유혜빈"> <h3>유혜빈</h3> <p class="lcb-role">M.S./Ph.D. Integrated Course</p> <p>2024.3-</p> </div> <div class="lcb-member"> <img src="/LCB/assets/img/members/hyun_dodo.jpg" alt="현도도"> <h3>현도도</h3> <p class="lcb-role">M.S./Ph.D. Integrated Course</p> <p>2024.3-</p> </div> <div class="lcb-member focus-dayeon"> <img src="/LCB/assets/img/members/ko_dayeon.jpg" alt="고다연"> <h3>고다연</h3> <p class="lcb-role">M.S./Ph.D. Integrated Course</p> <p>2025.3-</p> </div> <div class="lcb-member"> <img src="/LCB/assets/img/members/kim_jinsung.jpg" alt="김진성"> <h3>김진성</h3> <p class="lcb-role">M.S./Ph.D. Integrated Course</p> <p>2026.03-</p> </div> </div> </section> <section id="alumni" class="lcb-section compact"> <h2 class="lcb-section-title">Alumni</h2> <div class="lcb-member-grid"> <div class="lcb-member"> <img src="/LCB/assets/img/members/lee_changjun.jpg" alt="이창준"> <h3>이창준</h3> <p class="lcb-role">M.S.</p> <p>Graduated 2023.02</p> </div> <div class="lcb-member"> <img src="/LCB/assets/img/members/jo_dayoung.jpg" alt="조다영"> <h3>조다영</h3> <p class="lcb-role">M.S.</p> <p>Graduated 2026.02</p> </div> </div> </section> </div> </article> </div> </div> <footer class="lcb-footer"> © Lab of Cancer Biology, Department of Life Science, Hanyang University. All rights reserved. </footer> <script>
   window.alFolio = {
     compatBootstrap: false
   };

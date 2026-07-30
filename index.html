@@ -2120,7 +2120,61 @@
     setupLcbLightbox();
   }
 })();
-</script> <header class="lcb-topbar" role="banner"> <div class="lcb-topbar-inner"> <a class="lcb-topbar-brand" href="/LCB/"> <img src="/LCB/assets/img/lab_logo_mark_transparent.png" alt="" class="lcb-topbar-logo"> Lab of Cancer Biology </a> <button class="lcb-hamburger" aria-label="Toggle menu" onclick="this.closest('.lcb-topbar').querySelector('.lcb-topbar-links').classList.toggle('open')"> <span></span><span></span><span></span> </button> <nav class="lcb-topbar-links" aria-label="Main navigation"> <a class="active" href="/LCB/">Home</a> <a class="" href="/LCB/research/">Research</a> <a class="" href="/LCB/professor/">Professor</a> <a class="" href="/LCB/members/">Members</a> <a class="" href="/LCB/publications/">Publications</a> <a class="" href="/LCB/gallery/">Gallery</a> <a class="" href="/LCB/contact/">Contact</a> </nav> </div> </header> <div class="lcb-page lcb-home-page"> <section class="lcb-home-hero lcb-full-bleed"> <div class="lcb-home-inner"> <div class="lcb-hero-copy"> <div class="lcb-hero-kicker">SINCE 2021 · HANYANG UNIVERSITY</div> <h1 class="lcb-hero-title">Lab of Cancer<br>Biology</h1> <p class="lcb-hero-kr">한양대학교 생명과학과<br>암생물학연구실</p> <div class="lcb-hero-rule"></div> <p class="lcb-hero-lead">We study how cancer cells adapt, evolve, and acquire resistance to anti-cancer therapies in a perspective of translational research.</p> </div> </div> </section> <section class="lcb-home-quick lcb-full-bleed"> <div class="lcb-quick-inner"> <div class="lcb-quick-card"> <span class="lcb-eyebrow">Research</span> <h2>Research &amp; Publications</h2> <p>Explore our research topics, previous projects, and publication record.</p> <div class="lcb-quick-actions"> <a href="/LCB/research/">Research</a> <a href="/LCB/publications/">Publications</a> </div> </div> <div class="lcb-quick-card"> <span class="lcb-eyebrow">People</span> <h2>Professor &amp; Members</h2> <p>Meet the principal investigator, current members, and alumni.</p> <div class="lcb-quick-actions"> <a href="/LCB/professor/">Professor</a> <a href="/LCB/members/">Members</a> </div> </div> </div> </section> <section class="lcb-home-gallery lcb-full-bleed"> <div class="lcb-gallery-head"> <span class="lcb-eyebrow">Gallery</span> <h2>Recent Lab Moments</h2> </div> <div class="lcb-slider"> <div class="lcb-slide"> <img src="/LCB/assets/img/gallery/tsix_src_2026_hyun_dodo.jpg" alt="1st Annual TSIX-SRC 2026 현도도 포스터 발표"><div class="lcb-slide-caption"> <strong>1st Annual TSIX-SRC (2026)</strong><br>Poster by 현도도</div> </div> <div class="lcb-slide"> <img src="/LCB/assets/img/gallery/graduate_jo_dayoung_2026.jpg" alt="조다영 석사 졸업 2026"><div class="lcb-slide-caption"> <strong>Graduation</strong><br>조다영 (MS,2026)</div> </div> <div class="lcb-slide"> <img src="/LCB/assets/img/gallery/2025_ksmcb_overview.jpg" alt="2025 KSMCB"><div class="lcb-slide-caption"><strong>2025 KSMCB</strong></div> </div> <div class="lcb-slide"> <img src="/LCB/assets/img/gallery/2025_ksmcb_son_seunghan.jpg" alt="손승한 포스터"><div class="lcb-slide-caption"> <strong>2025 KSMCB</strong><br>Poster by 손승한</div> </div> <div class="lcb-slide"> <img src="/LCB/assets/img/gallery/2025_ksmcb_jo_dayoung.jpg" alt="조다영 포스터"><div class="lcb-slide-caption"> <strong>2025 KSMCB</strong><br>Poster by 조다영</div> </div> <div class="lcb-slide"> <img src="/LCB/assets/img/gallery/teacher_day_2025.jpg" alt="스승의 날"><div class="lcb-slide-caption"> <strong>스승의 날</strong> (2025)</div> </div> <div class="lcb-slide"> <img src="/LCB/assets/img/gallery/lab_picnic_spring_2024.jpg" alt="Lab picnic"><div class="lcb-slide-caption"> <strong>Lab Picnic</strong> (Spring 2024)</div> </div> <div class="lcb-slide"> <img src="/LCB/assets/img/gallery/dr_shigeri_visit_2024.jpg" alt="Dr. Shigeri visit"><div class="lcb-slide-caption"> <strong>Dr. Shigeri Visit</strong> (2024)</div> </div> <div class="lcb-slide"> <img src="/LCB/assets/img/gallery/graduate_lee_taewon_2024.jpg" alt="이태원 졸업"><div class="lcb-slide-caption"> <strong>Graduation</strong> - 이태원 (MS 2024)</div> </div> </div> </section> </div> </div> <footer class="lcb-footer"> © Lab of Cancer Biology, Department of Life Science, Hanyang University. All rights reserved. </footer> <script>
+</script> <style>
+  .lcb-member h3 {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    align-items: baseline !important;
+    column-gap: 0.42rem !important;
+    row-gap: 0.08rem !important;
+    margin-bottom: 0.18rem !important;
+  }
+
+  .lcb-name-ko {
+    color: var(--lcb-blue);
+    font-size: 0.94rem;
+    font-weight: 680;
+  }
+
+  .lcb-name-en {
+    color: #9ca3af;
+    font-size: 0.7rem;
+    font-weight: 480;
+    line-height: 1.2;
+    white-space: nowrap;
+  }
+
+  .lcb-member-email {
+    margin: 0.18rem 0 0.08rem !important;
+    line-height: 1.25 !important;
+  }
+
+  .lcb-member-email a {
+    color: #7b8494 !important;
+    font-size: 0.67rem !important;
+    font-weight: 400 !important;
+    line-height: 1.25 !important;
+    text-decoration: none !important;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+  .lcb-member-email a:hover,
+  .lcb-member-email a:focus-visible {
+    color: var(--lcb-blue2) !important;
+    text-decoration: underline !important;
+  }
+
+  @media (max-width: 720px) {
+    .lcb-name-en {
+      font-size: 0.66rem;
+    }
+
+    .lcb-member-email a {
+      font-size: 0.64rem !important;
+    }
+  }
+</style> <header class="lcb-topbar" role="banner"> <div class="lcb-topbar-inner"> <a class="lcb-topbar-brand" href="/LCB/"> <img src="/LCB/assets/img/lab_logo_mark_transparent.png" alt="" class="lcb-topbar-logo"> Lab of Cancer Biology </a> <button class="lcb-hamburger" aria-label="Toggle menu" onclick="this.closest('.lcb-topbar').querySelector('.lcb-topbar-links').classList.toggle('open')"> <span></span><span></span><span></span> </button> <nav class="lcb-topbar-links" aria-label="Main navigation"> <a class="active" href="/LCB/">Home</a> <a class="" href="/LCB/research/">Research</a> <a class="" href="/LCB/professor/">Professor</a> <a class="" href="/LCB/members/">Members</a> <a class="" href="/LCB/publications/">Publications</a> <a class="" href="/LCB/gallery/">Gallery</a> <a class="" href="/LCB/contact/">Contact</a> </nav> </div> </header> <div class="lcb-page lcb-home-page"> <section class="lcb-home-hero lcb-full-bleed"> <div class="lcb-home-inner"> <div class="lcb-hero-copy"> <div class="lcb-hero-kicker">SINCE 2021 · HANYANG UNIVERSITY</div> <h1 class="lcb-hero-title">Lab of Cancer<br>Biology</h1> <p class="lcb-hero-kr">한양대학교 생명과학과<br>암생물학연구실</p> <div class="lcb-hero-rule"></div> <p class="lcb-hero-lead">We study how cancer cells adapt, evolve, and acquire resistance to anti-cancer therapies in a perspective of translational research.</p> </div> </div> </section> <section class="lcb-home-quick lcb-full-bleed"> <div class="lcb-quick-inner"> <div class="lcb-quick-card"> <span class="lcb-eyebrow">Research</span> <h2>Research &amp; Publications</h2> <p>Explore our research topics, previous projects, and publication record.</p> <div class="lcb-quick-actions"> <a href="/LCB/research/">Research</a> <a href="/LCB/publications/">Publications</a> </div> </div> <div class="lcb-quick-card"> <span class="lcb-eyebrow">People</span> <h2>Professor &amp; Members</h2> <p>Meet the principal investigator, current members, and alumni.</p> <div class="lcb-quick-actions"> <a href="/LCB/professor/">Professor</a> <a href="/LCB/members/">Members</a> </div> </div> </div> </section> <section class="lcb-home-gallery lcb-full-bleed"> <div class="lcb-gallery-head"> <span class="lcb-eyebrow">Gallery</span> <h2>Recent Lab Moments</h2> </div> <div class="lcb-slider"> <div class="lcb-slide"> <img src="/LCB/assets/img/gallery/tsix_src_2026_hyun_dodo.jpg" alt="1st Annual TSIX-SRC 2026 현도도 포스터 발표"><div class="lcb-slide-caption"> <strong>1st Annual TSIX-SRC (2026)</strong><br>Poster by 현도도</div> </div> <div class="lcb-slide"> <img src="/LCB/assets/img/gallery/graduate_jo_dayoung_2026.jpg" alt="조다영 석사 졸업 2026"><div class="lcb-slide-caption"> <strong>Graduation</strong><br>조다영 (MS,2026)</div> </div> <div class="lcb-slide"> <img src="/LCB/assets/img/gallery/2025_ksmcb_overview.jpg" alt="2025 KSMCB"><div class="lcb-slide-caption"><strong>2025 KSMCB</strong></div> </div> <div class="lcb-slide"> <img src="/LCB/assets/img/gallery/2025_ksmcb_son_seunghan.jpg" alt="손승한 포스터"><div class="lcb-slide-caption"> <strong>2025 KSMCB</strong><br>Poster by 손승한</div> </div> <div class="lcb-slide"> <img src="/LCB/assets/img/gallery/2025_ksmcb_jo_dayoung.jpg" alt="조다영 포스터"><div class="lcb-slide-caption"> <strong>2025 KSMCB</strong><br>Poster by 조다영</div> </div> <div class="lcb-slide"> <img src="/LCB/assets/img/gallery/teacher_day_2025.jpg" alt="스승의 날"><div class="lcb-slide-caption"> <strong>스승의 날</strong> (2025)</div> </div> <div class="lcb-slide"> <img src="/LCB/assets/img/gallery/lab_picnic_spring_2024.jpg" alt="Lab picnic"><div class="lcb-slide-caption"> <strong>Lab Picnic</strong> (Spring 2024)</div> </div> <div class="lcb-slide"> <img src="/LCB/assets/img/gallery/dr_shigeri_visit_2024.jpg" alt="Dr. Shigeri visit"><div class="lcb-slide-caption"> <strong>Dr. Shigeri Visit</strong> (2024)</div> </div> <div class="lcb-slide"> <img src="/LCB/assets/img/gallery/graduate_lee_taewon_2024.jpg" alt="이태원 졸업"><div class="lcb-slide-caption"> <strong>Graduation</strong> - 이태원 (MS 2024)</div> </div> </div> </section> </div> </div> <footer class="lcb-footer"> © Lab of Cancer Biology, Department of Life Science, Hanyang University. All rights reserved. </footer> <script>
   window.alFolio = {
     compatBootstrap: false
   };

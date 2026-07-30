@@ -2120,7 +2120,61 @@
     setupLcbLightbox();
   }
 })();
-</script> <header class="lcb-topbar" role="banner"> <div class="lcb-topbar-inner"> <a class="lcb-topbar-brand" href="/LCB/"> <img src="/LCB/assets/img/lab_logo_mark_transparent.png" alt="" class="lcb-topbar-logo"> Lab of Cancer Biology </a> <button class="lcb-hamburger" aria-label="Toggle menu" onclick="this.closest('.lcb-topbar').querySelector('.lcb-topbar-links').classList.toggle('open')"> <span></span><span></span><span></span> </button> <nav class="lcb-topbar-links" aria-label="Main navigation"> <a class="" href="/LCB/">Home</a> <a class="" href="/LCB/research/">Research</a> <a class="" href="/LCB/professor/">Professor</a> <a class="" href="/LCB/members/">Members</a> <a class="" href="/LCB/publications/">Publications</a> <a class="" href="/LCB/gallery/">Gallery</a> <a class="" href="/LCB/contact/">Contact</a> </nav> </div> </header> <div class="lcb-page"> <section class="lcb-section"> <h1 class="lcb-section-title">Approaches</h1> <p class="lcb-section-lead">Research approaches are summarized on the Research page.</p> <p><a class="lcb-btn primary" href="/LCB/research/">Go to Research</a></p> </section> </div> </article> </div> </div> <footer class="lcb-footer"> © Lab of Cancer Biology, Department of Life Science, Hanyang University. All rights reserved. </footer> <script>
+</script> <style>
+  .lcb-member h3 {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    align-items: baseline !important;
+    column-gap: 0.42rem !important;
+    row-gap: 0.08rem !important;
+    margin-bottom: 0.18rem !important;
+  }
+
+  .lcb-name-ko {
+    color: var(--lcb-blue);
+    font-size: 0.94rem;
+    font-weight: 680;
+  }
+
+  .lcb-name-en {
+    color: #9ca3af;
+    font-size: 0.7rem;
+    font-weight: 480;
+    line-height: 1.2;
+    white-space: nowrap;
+  }
+
+  .lcb-member-email {
+    margin: 0.18rem 0 0.08rem !important;
+    line-height: 1.25 !important;
+  }
+
+  .lcb-member-email a {
+    color: #7b8494 !important;
+    font-size: 0.67rem !important;
+    font-weight: 400 !important;
+    line-height: 1.25 !important;
+    text-decoration: none !important;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+  .lcb-member-email a:hover,
+  .lcb-member-email a:focus-visible {
+    color: var(--lcb-blue2) !important;
+    text-decoration: underline !important;
+  }
+
+  @media (max-width: 720px) {
+    .lcb-name-en {
+      font-size: 0.66rem;
+    }
+
+    .lcb-member-email a {
+      font-size: 0.64rem !important;
+    }
+  }
+</style> <header class="lcb-topbar" role="banner"> <div class="lcb-topbar-inner"> <a class="lcb-topbar-brand" href="/LCB/"> <img src="/LCB/assets/img/lab_logo_mark_transparent.png" alt="" class="lcb-topbar-logo"> Lab of Cancer Biology </a> <button class="lcb-hamburger" aria-label="Toggle menu" onclick="this.closest('.lcb-topbar').querySelector('.lcb-topbar-links').classList.toggle('open')"> <span></span><span></span><span></span> </button> <nav class="lcb-topbar-links" aria-label="Main navigation"> <a class="" href="/LCB/">Home</a> <a class="" href="/LCB/research/">Research</a> <a class="" href="/LCB/professor/">Professor</a> <a class="" href="/LCB/members/">Members</a> <a class="" href="/LCB/publications/">Publications</a> <a class="" href="/LCB/gallery/">Gallery</a> <a class="" href="/LCB/contact/">Contact</a> </nav> </div> </header> <div class="lcb-page"> <section class="lcb-section"> <h1 class="lcb-section-title">Approaches</h1> <p class="lcb-section-lead">Research approaches are summarized on the Research page.</p> <p><a class="lcb-btn primary" href="/LCB/research/">Go to Research</a></p> </section> </div> </article> </div> </div> <footer class="lcb-footer"> © Lab of Cancer Biology, Department of Life Science, Hanyang University. All rights reserved. </footer> <script>
   window.alFolio = {
     compatBootstrap: false
   };
