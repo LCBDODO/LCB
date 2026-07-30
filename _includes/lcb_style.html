@@ -2149,3 +2149,60 @@
 })();
 </script>
 
+<!-- ===== MEMBER ENGLISH NAME + EMAIL OVERRIDE ===== -->
+<style>
+  .lcb-member h3 {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    align-items: baseline !important;
+    column-gap: 0.42rem !important;
+    row-gap: 0.08rem !important;
+    margin-bottom: 0.18rem !important;
+  }
+
+  .lcb-name-ko {
+    color: var(--lcb-blue);
+    font-size: 0.94rem;
+    font-weight: 680;
+  }
+
+  .lcb-name-en {
+    color: #9ca3af;
+    font-size: 0.7rem;
+    font-weight: 480;
+    line-height: 1.2;
+    white-space: nowrap;
+  }
+
+  .lcb-member-email {
+    margin: 0.18rem 0 0.08rem !important;
+    line-height: 1.25 !important;
+  }
+
+  .lcb-member-email a {
+    color: #7b8494 !important;
+    font-size: 0.67rem !important;
+    font-weight: 400 !important;
+    line-height: 1.25 !important;
+    text-decoration: none !important;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+  .lcb-member-email a:hover,
+  .lcb-member-email a:focus-visible {
+    color: var(--lcb-blue2) !important;
+    text-decoration: underline !important;
+  }
+
+  @media (max-width: 720px) {
+    .lcb-name-en {
+      font-size: 0.66rem;
+    }
+
+    .lcb-member-email a {
+      font-size: 0.64rem !important;
+    }
+  }
+</style>
+
