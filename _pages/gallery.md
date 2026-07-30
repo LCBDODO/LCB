@@ -17,6 +17,14 @@ description: Gallery of the Lab of Cancer Biology.
 
   <section class="lcb-section compact">
     <div class="lcb-gallery-grid">
+     <figure class="lcb-gallery-item">
+       <img src="{{ '/assets/img/gallery/tsix_src_2026_hyun_dodo.jpg' | relative_url }}" alt="1st Annual TSIX-SRC 2026 현도도 포스터 발표" />
+        <figcaption><strong>1st Annual TSIX-SRC (2026)</strong><br />Poster by 현도도</figcaption>
+      </figure>
+      <figure class="lcb-gallery-item">
+        <img src="{{ '/assets/img/gallery/graduate_jo_dayoung_2026.jpg' | relative_url }}" alt="조다영 석사 졸업 2026" />
+       <figcaption><strong>Graduation</strong><br />조다영 (MS 2026)</figcaption>
+      </figure>
       <figure class="lcb-gallery-item">
         <img src="{{ '/assets/img/gallery/2025_ksmcb_overview.jpg' | relative_url }}" alt="2025 KSMCB" />
         <figcaption><strong>2025 KSMCB</strong></figcaption>
