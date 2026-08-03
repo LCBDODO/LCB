@@ -310,9 +310,9 @@
   .lcb-hero-kr {
     margin: 0;
     color: #f2f6ff !important;
-    font-size: clamp(1.08rem, 1.5vw, 1.34rem);
+    font-size: clamp(1.4rem, 2.2vw, 1.85rem);
     font-weight: 620;
-    line-height: 1.85;
+    line-height: 1.7;
   }
   .lcb-hero-rule {
     width: 48px;
@@ -2172,58 +2172,6 @@
 
     .lcb-member-email a {
       font-size: 0.64rem !important;
-    }
-  }
-</style> <style>
-  /* Desktop:
-     current topbar 60px × 1.1 = 66px
-     current gap clamp(0.55rem, 1.25vw, 1.15rem) × 1.4
-       = clamp(0.77rem, 1.75vw, 1.61rem)
-     current menu font 0.78rem × 1.5 = 1.17rem
-  */
-  .lcb-topbar,
-  .lcb-topbar-inner {
-    height: 66px !important;
-    min-height: 66px !important;
-    max-height: 66px !important;
-  }
-
-  .lcb-topbar-brand {
-    height: 66px !important;
-  }
-
-  .lcb-topbar-links {
-    height: 66px !important;
-    gap: clamp(0.77rem, 1.75vw, 1.61rem) !important;
-  }
-
-  .lcb-topbar-links a {
-    height: 66px !important;
-    font-size: 1.17rem !important;
-  }
-
-  /* 모바일 메뉴는 기존 크기를 유지 */
-  @media (max-width: 800px) {
-    .lcb-topbar,
-    .lcb-topbar-inner {
-      height: 48px !important;
-      min-height: 48px !important;
-      max-height: 48px !important;
-    }
-
-    .lcb-topbar-brand {
-      height: 48px !important;
-    }
-
-    .lcb-topbar-links {
-      top: 48px !important;
-      height: auto !important;
-      gap: 0 !important;
-    }
-
-    .lcb-topbar-links a {
-      height: auto !important;
-      font-size: 0.9rem !important;
     }
   }
 </style> <header class="lcb-topbar" role="banner"> <div class="lcb-topbar-inner"> <a class="lcb-topbar-brand" href="/"> <img src="/assets/img/lab_logo_mark_transparent.png" alt="" class="lcb-topbar-logo"> Lab of Cancer Biology </a> <button class="lcb-hamburger" aria-label="Toggle menu" onclick="this.closest('.lcb-topbar').querySelector('.lcb-topbar-links').classList.toggle('open')"> <span></span><span></span><span></span> </button> <nav class="lcb-topbar-links" aria-label="Main navigation"> <a class="" href="/">Home</a> <a class="" href="/research/">Research</a> <a class="" href="/professor/">Professor</a> <a class="" href="/members/">Members</a> <a class="" href="/publications/">Publications</a> <a class="active" href="/gallery/">Gallery</a> <a class="" href="/contact/">Contact</a> </nav> </div> </header> <div class="lcb-page"> <section class="lcb-section"> <h1 class="lcb-section-title">Gallery</h1> </section> <section class="lcb-section compact"> <div class="lcb-gallery-grid"> <figure class="lcb-gallery-item"> <img src="/assets/img/gallery/tsix_src_2026_hyun_dodo.jpg" alt="1st Annual TSIX-SRC 2026 현도도 포스터 발표"> <figcaption><strong>1st Annual TSIX-SRC (2026)</strong><br>Poster by 현도도</figcaption> </figure> <figure class="lcb-gallery-item"> <img src="/assets/img/gallery/graduate_jo_dayoung_2026.jpg" alt="조다영 석사 졸업 2026"> <figcaption><strong>Graduation</strong><br>조다영 (MS 2026)</figcaption> </figure> <figure class="lcb-gallery-item"> <img src="/assets/img/gallery/2025_ksmcb_overview.jpg" alt="2025 KSMCB"> <figcaption><strong>2025 KSMCB</strong></figcaption> </figure> <figure class="lcb-gallery-item"> <img src="/assets/img/gallery/2025_ksmcb_son_seunghan.jpg" alt="손승한 포스터 발표"> <figcaption><strong>2025 KSMCB</strong><br>Poster presentation by 손승한</figcaption> </figure> <figure class="lcb-gallery-item"> <img src="/assets/img/gallery/2025_ksmcb_jo_dayoung.jpg" alt="조다영 포스터 발표"> <figcaption><strong>2025 KSMCB</strong><br>Poster presentation by 조다영</figcaption> </figure> <figure class="lcb-gallery-item"> <img src="/assets/img/gallery/teacher_day_2025.jpg" alt="스승의 날 2025"> <figcaption><strong>스승의 날</strong> (2025)</figcaption> </figure> <figure class="lcb-gallery-item"> <img src="/assets/img/gallery/lab_picnic_spring_2024.jpg" alt="Lab picnic"> <figcaption><strong>Lab Picnic</strong> (Spring, 2024)</figcaption> </figure> <figure class="lcb-gallery-item"> <img src="/assets/img/gallery/dr_shigeri_visit_2024.jpg" alt="Dr. Shigeri visit"> <figcaption><strong>Dr. Shigeri Visit</strong> (2024)</figcaption> </figure> <figure class="lcb-gallery-item"> <img src="/assets/img/gallery/graduate_lee_taewon_2024.jpg" alt="이태원 졸업"> <figcaption><strong>Graduation</strong> - 이태원 (MS, 2024)</figcaption> </figure> <figure class="lcb-gallery-item"> <img src="/assets/img/gallery/graduate_lee_changjun_2023.jpg" alt="이창준 졸업"> <figcaption><strong>Graduation</strong> - 이창준 (MS, 2023)</figcaption> </figure> <figure class="lcb-gallery-item"> <img src="/assets/img/gallery/kogo_winter_2023.jpg" alt="KOGO Winter Conference 2023"> <figcaption><strong>KOGO Winter Conference</strong> (2023)<br>Poster presentation by 이창준</figcaption> </figure> </div> </section> </div> </article> </div> </div> <footer class="lcb-footer"> © Lab of Cancer Biology, Department of Life Science, Hanyang University. All rights reserved. </footer> <script>
