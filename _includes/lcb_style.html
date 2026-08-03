@@ -2206,3 +2206,58 @@
   }
 </style>
 
+<!-- ===== FINAL NAV SCALE OVERRIDE: topbar 1.1x, menu gap 1.4x, menu text 1.5x ===== -->
+<style>
+  /* Desktop:
+     current topbar 60px × 1.1 = 66px
+     current gap clamp(0.55rem, 1.25vw, 1.15rem) × 1.4
+       = clamp(0.77rem, 1.75vw, 1.61rem)
+     current menu font 0.78rem × 1.5 = 1.17rem
+  */
+  .lcb-topbar,
+  .lcb-topbar-inner {
+    height: 66px !important;
+    min-height: 66px !important;
+    max-height: 66px !important;
+  }
+
+  .lcb-topbar-brand {
+    height: 66px !important;
+  }
+
+  .lcb-topbar-links {
+    height: 66px !important;
+    gap: clamp(0.77rem, 1.75vw, 1.61rem) !important;
+  }
+
+  .lcb-topbar-links a {
+    height: 66px !important;
+    font-size: 1.17rem !important;
+  }
+
+  /* 모바일 메뉴는 기존 크기를 유지 */
+  @media (max-width: 800px) {
+    .lcb-topbar,
+    .lcb-topbar-inner {
+      height: 48px !important;
+      min-height: 48px !important;
+      max-height: 48px !important;
+    }
+
+    .lcb-topbar-brand {
+      height: 48px !important;
+    }
+
+    .lcb-topbar-links {
+      top: 48px !important;
+      height: auto !important;
+      gap: 0 !important;
+    }
+
+    .lcb-topbar-links a {
+      height: auto !important;
+      font-size: 0.9rem !important;
+    }
+  }
+</style>
+
