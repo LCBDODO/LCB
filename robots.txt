@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://lcbdodo.github.io/LCB/sitemap.xml
+Sitemap: https://www.cancerbio.hanyang.ac.kr/sitemap.xml
