@@ -2174,6 +2174,60 @@
       font-size: 0.64rem !important;
     }
   }
+</style> <style>
+  /* Desktop navigation:
+     - topbar: 60px → 66px
+     - menu spacing: enlarged
+     - Home–Contact text: 1.05rem
+     This block is intentionally placed at the very end so it overrides all earlier V20–V28 rules.
+  */
+  .lcb-topbar,
+  .lcb-topbar-inner {
+    height: 66px !important;
+    min-height: 66px !important;
+    max-height: 66px !important;
+  }
+
+  .lcb-topbar-brand {
+    height: 66px !important;
+  }
+
+  .lcb-topbar-links {
+    height: 66px !important;
+    gap: clamp(0.77rem, 1.75vw, 1.61rem) !important;
+    align-items: center !important;
+  }
+
+  .lcb-topbar-links a {
+    height: 66px !important;
+    font-size: 1.05rem !important;
+    line-height: 1 !important;
+  }
+
+  /* Mobile keeps the compact hamburger layout. */
+  @media (max-width: 800px) {
+    .lcb-topbar,
+    .lcb-topbar-inner {
+      height: 48px !important;
+      min-height: 48px !important;
+      max-height: 48px !important;
+    }
+
+    .lcb-topbar-brand {
+      height: 48px !important;
+    }
+
+    .lcb-topbar-links {
+      top: 48px !important;
+      height: auto !important;
+      gap: 0 !important;
+    }
+
+    .lcb-topbar-links a {
+      height: auto !important;
+      font-size: 0.9rem !important;
+    }
+  }
 </style> <header class="lcb-topbar" role="banner"> <div class="lcb-topbar-inner"> <a class="lcb-topbar-brand" href="/"> <img src="/assets/img/lab_logo_mark_transparent.png" alt="" class="lcb-topbar-logo"> Lab of Cancer Biology </a> <button class="lcb-hamburger" aria-label="Toggle menu" onclick="this.closest('.lcb-topbar').querySelector('.lcb-topbar-links').classList.toggle('open')"> <span></span><span></span><span></span> </button> <nav class="lcb-topbar-links" aria-label="Main navigation"> <a class="" href="/">Home</a> <a class="active" href="/research/">Research</a> <a class="" href="/professor/">Professor</a> <a class="" href="/members/">Members</a> <a class="" href="/publications/">Publications</a> <a class="" href="/gallery/">Gallery</a> <a class="" href="/contact/">Contact</a> </nav> </div> </header> <div class="lcb-page"> <section class="lcb-section"> <h1 class="lcb-section-title">Research</h1> <p class="lcb-section-lead"> We are wholly dedicated to acquiring a better understanding of the mechanisms of cancer drug resistance in order to vastly improve patient survival and quality of life. </p> </section> <section class="lcb-section compact"> <h2 class="lcb-section-title">Research Topics</h2> <div class="lcb-card-grid"> <div class="lcb-card"> <h3>Identifying Vulnerability of Cancer Cells</h3> <p>Discovery of cancer-selective vulnerabilities and therapeutic dependencies for selectively eliminating virulent cancer cells.</p> </div> <div class="lcb-card"> <h3>Epigenetic Mechanism for Immune Evasion</h3> <p>Understanding how malignant cells epigenetically remodel immune recognition and evade tumor immunity.</p> </div> <div class="lcb-card"> <h3>Novel Oncogenic Metabolites</h3> <p>Discovering metabolites and metabolic states that support cancer progression and therapy resistance.</p> </div> <div class="lcb-card"> <h3>Novel Immunotherapy Modalities</h3> <p>Exploring translational strategies including TIL-based therapy and cancer vaccines.</p> </div> </div> </section> <section class="lcb-section compact"> <h2 class="lcb-section-title">Previous Projects</h2> <div class="lcb-project-grid"> <div class="lcb-project-card"> <img src="/assets/img/projects/sting_myc_immune_evasion.jpg" alt="MYC-STING immune evasion"> <div class="lcb-project-body"> <h3>Epigenetic Repression of STING by MYC</h3> <p>MYC-mediated epigenetic repression of STING promotes immune evasion and resistance to immune checkpoint inhibitors in triple-negative breast cancer.</p> </div> </div> <div class="lcb-project-card"> <img src="/assets/img/projects/myc_mcl1_oxphos.jpg" alt="MYC/MCL1 and OXPHOS"> <div class="lcb-project-body"> <h3>MYC/MCL1 and Chemotherapy-Resistant Cancer Stem Cells</h3> <p>MYC and MCL1 cooperatively promote chemotherapy-resistant breast cancer stem cells via regulation of mitochondrial oxidative phosphorylation.</p> </div> </div> <div class="lcb-project-card"> <img src="/assets/img/projects/prr11_pi3k_resistance.jpg" alt="PRR11 and PI3K"> <div class="lcb-project-body"> <h3>PRR11-Driven Antiestrogen Resistance</h3> <p>PRR11 overexpression amplifies PI3K signaling and promotes antiestrogen resistance in breast cancer.</p> </div> </div> </div> </section> <section class="lcb-section compact"> <h2 class="lcb-section-title">Approaches</h2> <p class="lcb-section-lead" style="margin-bottom: 1.2rem;"> We seek to solve problems raised by patient-derived clinical information through comprehensive interpretation of omics data combined with results from molecular biology assays. </p> <div class="lcb-card-grid"> <div class="lcb-card"> <h3>Omics &amp; Bio-Big Data</h3> <p>Transcriptomic, genomic, and patient-data-driven analysis for biomarker discovery.</p> </div> <div class="lcb-card"> <h3>Molecular &amp; Cellular Biology</h3> <p>Mechanistic validation using cancer models, perturbation experiments, and functional assays.</p> </div> <div class="lcb-card"> <h3>Translational Cancer Biology</h3> <p>Connecting molecular mechanisms to therapeutic response, resistance, and patient-relevant hypotheses.</p> </div> </div> <div style="margin-top: 1.2rem; text-align: center;"> <img src="/assets/img/projects/research_strategy.png" alt="Research strategy" style="max-width: 680px; width: 100%; border-radius: 8px; border: 1px solid var(--lcb-line);"> </div> </section> </div> </article> </div> </div> <footer class="lcb-footer"> © Lab of Cancer Biology, Department of Life Science, Hanyang University. All rights reserved. </footer> <script>
   window.alFolio = {
     compatBootstrap: false

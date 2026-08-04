@@ -2174,6 +2174,60 @@
       font-size: 0.64rem !important;
     }
   }
+</style> <style>
+  /* Desktop navigation:
+     - topbar: 60px → 66px
+     - menu spacing: enlarged
+     - Home–Contact text: 1.05rem
+     This block is intentionally placed at the very end so it overrides all earlier V20–V28 rules.
+  */
+  .lcb-topbar,
+  .lcb-topbar-inner {
+    height: 66px !important;
+    min-height: 66px !important;
+    max-height: 66px !important;
+  }
+
+  .lcb-topbar-brand {
+    height: 66px !important;
+  }
+
+  .lcb-topbar-links {
+    height: 66px !important;
+    gap: clamp(0.77rem, 1.75vw, 1.61rem) !important;
+    align-items: center !important;
+  }
+
+  .lcb-topbar-links a {
+    height: 66px !important;
+    font-size: 1.05rem !important;
+    line-height: 1 !important;
+  }
+
+  /* Mobile keeps the compact hamburger layout. */
+  @media (max-width: 800px) {
+    .lcb-topbar,
+    .lcb-topbar-inner {
+      height: 48px !important;
+      min-height: 48px !important;
+      max-height: 48px !important;
+    }
+
+    .lcb-topbar-brand {
+      height: 48px !important;
+    }
+
+    .lcb-topbar-links {
+      top: 48px !important;
+      height: auto !important;
+      gap: 0 !important;
+    }
+
+    .lcb-topbar-links a {
+      height: auto !important;
+      font-size: 0.9rem !important;
+    }
+  }
 </style> <header class="lcb-topbar" role="banner"> <div class="lcb-topbar-inner"> <a class="lcb-topbar-brand" href="/"> <img src="/assets/img/lab_logo_mark_transparent.png" alt="" class="lcb-topbar-logo"> Lab of Cancer Biology </a> <button class="lcb-hamburger" aria-label="Toggle menu" onclick="this.closest('.lcb-topbar').querySelector('.lcb-topbar-links').classList.toggle('open')"> <span></span><span></span><span></span> </button> <nav class="lcb-topbar-links" aria-label="Main navigation"> <a class="" href="/">Home</a> <a class="" href="/research/">Research</a> <a class="active" href="/professor/">Professor</a> <a class="" href="/members/">Members</a> <a class="" href="/publications/">Publications</a> <a class="" href="/gallery/">Gallery</a> <a class="" href="/contact/">Contact</a> </nav> </div> </header> <div class="lcb-page"> <section class="lcb-section"> <h1 class="lcb-section-title">Professor</h1> <div class="lcb-profile-grid"> <div> <img class="lcb-profile-img" src="/assets/img/professor/kyungmin_lee_portrait.jpg" alt="Kyung-min Lee"> </div> <div> <h2 class="lcb-professor-name">Kyung-min Lee, PhD<br>이경민</h2> <div class="lcb-timeline"> <div class="lcb-timeline-item"> <div class="lcb-timeline-year">2024-Current</div> <div>Associate professor, Dept. of Life Science, Hanyang Univ.</div> </div> <div class="lcb-timeline-item"> <div class="lcb-timeline-year">2021-2024</div> <div>Assistant professor, Dept. of Life Science, Hanyang Univ.</div> </div> <div class="lcb-timeline-item"> <div class="lcb-timeline-year">2020-2021</div> <div>Research Scientist, Simmons Comprehensive Cancer Center, UT Southwestern Medical Center</div> </div> <div class="lcb-timeline-item"> <div class="lcb-timeline-year">2017-2020</div> <div>PostDoc, Simmons Comprehensive Cancer Center, UT Southwestern Medical Center</div> </div> <div class="lcb-timeline-item"> <div class="lcb-timeline-year">2014-2017</div> <div>PostDoc, Dept. of Medicine, Vanderbilt-Ingram Cancer Center, Vanderbilt Univ.</div> </div> <div class="lcb-timeline-item"> <div class="lcb-timeline-year">2008-2014</div> <div>PhD, Dept. of Life Science, Hanyang Univ.</div> </div> <div class="lcb-timeline-item"> <div class="lcb-timeline-year">2001-2008</div> <div>BS, Dept. of Life Science, Hanyang Univ.</div> </div> </div> </div> </div> </section> <section class="lcb-section compact"> <h2 class="lcb-section-title">About</h2> <p class="lcb-section-lead"> Prof. Lee received a PhD in Life Science from Hanyang University, where he studied the molecular mechanisms of development and metastasis of cancer. After completing his doctoral studies, he focused on the mechanisms of resistance to anti-cancer drugs including chemotherapy, target therapy and immunotherapy in the laboratory of Carlos L. Arteaga at the Vanderbilt-Ingram Cancer Center of Vanderbilt University Medical Center. Since Prof. Lee joined the Department of Life Science at Hanyang University in 2021 as a faculty member, he has conducted research for curing malignant cancer. In particular, he is conducting research for identifying biomarker-based vulnerability and mechanism of cancer immune evasion using bio-bigdata. </p> </section> </div> </article> </div> </div> <footer class="lcb-footer"> © Lab of Cancer Biology, Department of Life Science, Hanyang University. All rights reserved. </footer> <script>
   window.alFolio = {
     compatBootstrap: false
