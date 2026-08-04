@@ -2206,3 +2206,61 @@
   }
 </style>
 
+<!-- ===== FINAL NAV SIZE OVERRIDE (CORRECTED) ===== -->
+<style>
+  /* Desktop navigation:
+     - topbar: 60px → 66px
+     - menu spacing: enlarged
+     - Home–Contact text: 1.05rem
+     This block is intentionally placed at the very end so it overrides all earlier V20–V28 rules.
+  */
+  .lcb-topbar,
+  .lcb-topbar-inner {
+    height: 66px !important;
+    min-height: 66px !important;
+    max-height: 66px !important;
+  }
+
+  .lcb-topbar-brand {
+    height: 66px !important;
+  }
+
+  .lcb-topbar-links {
+    height: 66px !important;
+    gap: clamp(0.77rem, 1.75vw, 1.61rem) !important;
+    align-items: center !important;
+  }
+
+  .lcb-topbar-links a {
+    height: 66px !important;
+    font-size: 1.05rem !important;
+    line-height: 1 !important;
+  }
+
+  /* Mobile keeps the compact hamburger layout. */
+  @media (max-width: 800px) {
+    .lcb-topbar,
+    .lcb-topbar-inner {
+      height: 48px !important;
+      min-height: 48px !important;
+      max-height: 48px !important;
+    }
+
+    .lcb-topbar-brand {
+      height: 48px !important;
+    }
+
+    .lcb-topbar-links {
+      top: 48px !important;
+      height: auto !important;
+      gap: 0 !important;
+    }
+
+    .lcb-topbar-links a {
+      height: auto !important;
+      font-size: 0.9rem !important;
+    }
+  }
+</style>
+<!-- ===== END FINAL NAV SIZE OVERRIDE (CORRECTED) ===== -->
+
