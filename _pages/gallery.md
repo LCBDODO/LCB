@@ -16,7 +16,6 @@ description: Gallery of the Lab of Cancer Biology.
   </section>
 
   <section class="lcb-section compact">
-    <h2 class="lcb-section-title">Recent Lab Moments</h2>
     <div class="lcb-gallery-grid">
       <figure class="lcb-gallery-item">
         <img src="{{ '/assets/img/picnic2.jpg' | relative_url }}" alt="Lab Picnic Summer 2026" />
