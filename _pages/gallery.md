@@ -1,33 +1,52 @@
 ---
+description: Gallery of the Lab of Cancer Biology.
 layout: page
-title: Gallery
-permalink: /gallery/
 nav: true
 nav_order: 6
-description: Gallery of the Lab of Cancer Biology.
+permalink: /gallery/
+title: Gallery
 ---
 
-{% include lcb_style.html %}
-{% include lcb_nav.html %}
+{% include lcb_style.html %} {% include lcb_nav.html %}
 
+```{=html}
 <div class="lcb-page">
-  <section class="lcb-section">
-    <h1 class="lcb-section-title">Gallery</h1>
-  </section>
-
-  <section class="lcb-section compact">
-    <div class="lcb-gallery-grid">
+```
+```{=html}
+<section class="lcb-section">
+```
+```{=html}
+<h1 class="lcb-section-title">
+```
+Gallery
+```{=html}
+</h1>
+```
+```{=html}
+</section>
+```
+```{=html}
+<section class="lcb-section compact">
+```
+```{=html}
+<h2 class="lcb-section-title">
+```
+Recent Lab Moments
+```{=html}
+</h2>
+```
+::: lcb-gallery-grid
       <figure class="lcb-gallery-item">
-        <img src="{{ '/assets/img/gallery/picnic2.jpg' | relative_url }}" alt="Lab Picnic Summer 2026" />
+        <img src="{{ '/assets/img/picnic2.jpg' | relative_url }}" alt="Lab Picnic Summer 2026" />
         <figcaption><strong>Lab Picnic</strong> (Summer 2026)</figcaption>
       </figure>
-     <figure class="lcb-gallery-item">
-       <img src="{{ '/assets/img/gallery/tsix_src_2026_hyun_dodo.jpg' | relative_url }}" alt="1st Annual TSIX-SRC 2026 현도도 포스터 발표" />
+      <figure class="lcb-gallery-item">
+        <img src="{{ '/assets/img/gallery/tsix_src_2026_hyun_dodo.jpg' | relative_url }}" alt="1st Annual TSIX-SRC 2026 현도도 포스터 발표" />
         <figcaption><strong>1st Annual TSIX-SRC (2026)</strong><br />Poster by 현도도</figcaption>
       </figure>
       <figure class="lcb-gallery-item">
         <img src="{{ '/assets/img/gallery/graduate_jo_dayoung_2026.jpg' | relative_url }}" alt="조다영 석사 졸업 2026" />
-       <figcaption><strong>Graduation</strong><br />조다영 (MS 2026)</figcaption>
+        <figcaption><strong>Graduation</strong><br />조다영 (MS 2026)</figcaption>
       </figure>
       <figure class="lcb-gallery-item">
         <img src="{{ '/assets/img/gallery/2025_ksmcb_overview.jpg' | relative_url }}" alt="2025 KSMCB" />
@@ -66,5 +85,8 @@ description: Gallery of the Lab of Cancer Biology.
         <figcaption><strong>KOGO Winter Conference</strong> (2023)<br />Poster presentation by 이창준</figcaption>
       </figure>
     </div>
-  </section>
-</div>
+
+```{=html}
+</section>
+```
+:::
