@@ -1,41 +1,23 @@
 ---
-description: Gallery of the Lab of Cancer Biology.
 layout: page
+title: Gallery
+permalink: /gallery/
 nav: true
 nav_order: 6
-permalink: /gallery/
-title: Gallery
+description: Gallery of the Lab of Cancer Biology.
 ---
 
-{% include lcb_style.html %} {% include lcb_nav.html %}
+{% include lcb_style.html %}
+{% include lcb_nav.html %}
 
-```{=html}
 <div class="lcb-page">
-```
-```{=html}
-<section class="lcb-section">
-```
-```{=html}
-<h1 class="lcb-section-title">
-```
-Gallery
-```{=html}
-</h1>
-```
-```{=html}
-</section>
-```
-```{=html}
-<section class="lcb-section compact">
-```
-```{=html}
-<h2 class="lcb-section-title">
-```
-Recent Lab Moments
-```{=html}
-</h2>
-```
-::: lcb-gallery-grid
+  <section class="lcb-section">
+    <h1 class="lcb-section-title">Gallery</h1>
+  </section>
+
+  <section class="lcb-section compact">
+    <h2 class="lcb-section-title">Recent Lab Moments</h2>
+    <div class="lcb-gallery-grid">
       <figure class="lcb-gallery-item">
         <img src="{{ '/assets/img/picnic2.jpg' | relative_url }}" alt="Lab Picnic Summer 2026" />
         <figcaption><strong>Lab Picnic</strong> (Summer 2026)</figcaption>
@@ -85,8 +67,5 @@ Recent Lab Moments
         <figcaption><strong>KOGO Winter Conference</strong> (2023)<br />Poster presentation by 이창준</figcaption>
       </figure>
     </div>
-
-```{=html}
-</section>
-```
-:::
+  </section>
+</div>
