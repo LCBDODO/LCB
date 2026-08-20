@@ -17,6 +17,10 @@ description: Gallery of the Lab of Cancer Biology.
 
   <section class="lcb-section compact">
     <div class="lcb-gallery-grid">
+      <figure class="lcb-gallery-item">
+        <img src="{{ '/assets/img/gallery/picnic2.jpg' | relative_url }}" alt="Lab Picnic Summer 2026" />
+        <figcaption><strong>Lab Picnic</strong> (Summer 2026)</figcaption>
+      </figure>
      <figure class="lcb-gallery-item">
        <img src="{{ '/assets/img/gallery/tsix_src_2026_hyun_dodo.jpg' | relative_url }}" alt="1st Annual TSIX-SRC 2026 현도도 포스터 발표" />
         <figcaption><strong>1st Annual TSIX-SRC (2026)</strong><br />Poster by 현도도</figcaption>
